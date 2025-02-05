@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Obidos25
@@ -14,9 +15,13 @@ namespace Obidos25
         public string EyeColor;
         public string ParkingSpot;
         public Sprite Signature;
-        public Sprite[] Picture;
+        public Sprite Picture;
         public Sprite[] Sprite;
-        public bool IsMole = false;
 
+        public Sprite GetMoleSprite()
+        {
+            int spriteId = Random.Range(1, Sprite.Length);
+            return Sprite[spriteId];
+        }
     }
 }

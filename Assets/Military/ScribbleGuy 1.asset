@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
-  m_Name: Diogo
+  m_Name: ScribbleGuy 1
   m_EditorClassIdentifier: 
-  Name: Diogo Nuno Dias Mesquita de Andrade
-  CodeName: GOD
-  Division: 3
-  ID: 075569420
-  Height: 175
-  Features: Bald
-  EyeColor: Brown
-  ParkingSpot: That one
+  Name: Mister Scribble Guy III the Infaliable One
+  CodeName: SO
+  Division: 2
+  ID: 099999999
+  Height: 150
+  Features: Not humman
+  EyeColor: Black ?
+  ParkingSpot: None
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
   Picture:
-  - {fileID: -4067477123947712020, guid: 1fc7c0b64d710c342bf5fcd8b42341f8, type: 3}
-  - {fileID: -253985871927861412, guid: bc2b848ab74e59b44a9829298896ab2d, type: 3}
+  - {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
+  - {fileID: 4672038800764192632, guid: 76d8739d0b615824893f0dc3efe3dd2c, type: 3}
   Sprite: []
-  IsMole: 0
+  IsMole: 1

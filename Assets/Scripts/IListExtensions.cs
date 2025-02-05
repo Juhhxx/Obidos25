@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Obidos25.Assets.Scripts
+namespace Obidos25
 {
     public static class IListExtensions
     {

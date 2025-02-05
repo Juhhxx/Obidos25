@@ -887,7 +887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f794f8fd8e69bf14bb5b12cada16135a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _military: {fileID: 0}
 --- !u!1 &8124994793109776649
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.2, y: 22}
+  m_AnchoredPosition: {x: -135.2, y: 49}
   m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3862217881135191353
@@ -1028,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\tDiogo Nuno Dias Mesquita Gomes de Andrade\n"
+  m_text: "\tDiogoaaaaaaaaaaaaaa aaaaaaaaaa\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebb515613cc7efe4f83c75992b7f8bf2, type: 2}
   m_sharedMaterial: {fileID: 5344958312444249244, guid: ebb515613cc7efe4f83c75992b7f8bf2, type: 2}
@@ -1063,7 +1062,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1093,7 +1092,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -22.028599, z: -96.11265, w: 10.656327}
+  m_margin: {x: 0, y: 2.108014, z: -96.11265, w: -21.82932}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -1,21 +1,25 @@
 using System.Collections.Generic;
 using Obidos25;
-using Obidos25.Assets.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MilitaryManager : MonoBehaviour
 {
     [SerializeField] private List<Military> _militaryList;
     private Queue<Military> _militaryOrder;
     [SerializeField] private Military _mole;
+    [SerializeField] private CardManager _card;
+    [SerializeField] private Image _militaryImage;
 
     private void Start()
     {
         SetMilitaryOrder();
+        StartInterrogation();
     }
+
     private void SetMilitaryOrder()
     {
-        int moleChooser = Random.Range(0,_militaryList.Count - 1);
+        int moleChooser = Random.Range(0,_militaryList.Count);
 
         SetMole(_militaryList[moleChooser]);
 
@@ -26,6 +30,22 @@ public class MilitaryManager : MonoBehaviour
     private void SetMole(Military mole)
     {
         _mole = mole;
-        mole.IsMole = true;
     }
+
+    private void StartInterrogation()
+    {
+        Military military = _militaryOrder.Dequeue();
+        _card.SetUpCard(military);
+        SetMilitary(military);
+    }
+    private void SetMilitary(Military military)
+    {
+        if (military == _mole)
+        {
+            _militaryImage.sprite = military.GetMoleSprite();
+        }
+        else
+            _militaryImage.sprite = military.Sprite[0];
+    }
+
 }
