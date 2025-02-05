@@ -21,8 +21,7 @@ MonoBehaviour:
   EyeColor: Black ?
   ParkingSpot: None
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
-  Picture:
+  Picture: {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
+  Sprite:
   - {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
   - {fileID: 4672038800764192632, guid: 76d8739d0b615824893f0dc3efe3dd2c, type: 3}
-  Sprite: []
-  IsMole: 1
