@@ -32,11 +32,12 @@ public class MilitaryManager : MonoBehaviour
         _mole = mole;
     }
 
-    private void StartInterrogation()
+    public void StartInterrogation()
     {
         Military military = _militaryOrder.Dequeue();
-        _card.SetUpCard(military);
         SetMilitary(military);
+        _card.SetUpCard(military);
+
     }
     private void SetMilitary(Military military)
     {

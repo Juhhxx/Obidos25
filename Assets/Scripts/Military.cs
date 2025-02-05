@@ -14,6 +14,8 @@ namespace Obidos25
         public string Features;
         public string EyeColor;
         public string ParkingSpot;
+        public string Location;
+        public string Rank;
         public Sprite Signature;
         public Sprite Picture;
         public Sprite[] Sprite;
