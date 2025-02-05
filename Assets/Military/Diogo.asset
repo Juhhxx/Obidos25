@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
+  m_Name: Diogo
+  m_EditorClassIdentifier: 
+  Name: Diogo Nuno Dias Mesquita de Andrade
+  CodeName: GOD
+  Division: 0
+  ID: 075569420
+  Height: 175
+  EyeColor: Brown
+  ParkingSpot: That one
+  Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
+  Picture:
+  - {fileID: -4067477123947712020, guid: 1fc7c0b64d710c342bf5fcd8b42341f8, type: 3}
+  - {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
+  IsMole: 0
