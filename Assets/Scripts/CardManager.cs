@@ -6,7 +6,15 @@ using UnityEngine.UI;
 public class CardManager : MonoBehaviour
 {
     [SerializeField] private GameObject _full;
-    private bool isItem = true;
+    private bool _isItem = true;
+    private Vector3 _initialPos; 
+    private RectTransform _rectTrans;
+
+    private void Awake()
+    {
+        _rectTrans = GetComponent<RectTransform>();
+        _initialPos = _rectTrans.anchoredPosition;
+    }
     public void SetUpCard(Military military)
     {
         // Photo
@@ -48,18 +56,30 @@ public class CardManager : MonoBehaviour
         Image signature = _full.transform.GetChild(8).GetComponent<Image>();
 
         signature.sprite = military.Signature;
+
+        // Reset Position and State
+        _rectTrans.anchoredPosition = _initialPos;
+        ToggleCardItemSprite(true);
     }
     public void ToggleCardItemSprite()
     {
         Debug.Log("TOGGLE CARD");
         
-        isItem = !isItem;
+        _isItem = !_isItem;
 
         // Full Sprite
-        transform.GetChild(0).gameObject.SetActive(!isItem);
+        transform.GetChild(0).gameObject.SetActive(!_isItem);
 
         // Item Sprite
-        transform.GetChild(1).gameObject.SetActive(isItem);
+        transform.GetChild(1).gameObject.SetActive(_isItem);
         
+    }
+    public void ToggleCardItemSprite(bool state)
+    {
+        // Full Sprite
+        transform.GetChild(0).gameObject.SetActive(!state);
+
+        // Item Sprite
+        transform.GetChild(1).gameObject.SetActive(state);
     }
 }

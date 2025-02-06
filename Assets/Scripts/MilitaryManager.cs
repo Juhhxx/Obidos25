@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Obidos25;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class MilitaryManager : MonoBehaviour
 {
@@ -10,12 +11,23 @@ public class MilitaryManager : MonoBehaviour
     [SerializeField] private Military _mole;
     [SerializeField] private CardManager _card;
     [SerializeField] private Image _militaryImage;
+    [SerializeField] private GameObject _dialogueSystem;
+    private DialogueRunner _dialogueRunner;
+    private Military _selectedMilitary;
+ 
+    private void Awake()
+    {
+        _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
 
+        _dialogueRunner.AddFunction("get_military_name",GetName);
+    }
     private void Start()
     {
         SetMilitaryOrder();
         StartInterrogation();
     }
+
+    private string GetName() => _selectedMilitary.Name;
 
     private void SetMilitaryOrder()
     {
@@ -34,19 +46,21 @@ public class MilitaryManager : MonoBehaviour
 
     public void StartInterrogation()
     {
-        Military military = _militaryOrder.Dequeue();
-        SetMilitary(military);
-        _card.SetUpCard(military);
+        _selectedMilitary = _militaryOrder?.Dequeue();
+        SetMilitary();
+        _card.SetUpCard(_selectedMilitary);
+        _dialogueRunner.Stop();
+        _dialogueRunner.StartDialogue("Interrogation");
 
     }
-    private void SetMilitary(Military military)
+    private void SetMilitary()
     {
-        if (military == _mole)
+        if (_selectedMilitary == _mole)
         {
-            _militaryImage.sprite = military.GetMoleSprite();
+            _militaryImage.sprite = _selectedMilitary.GetMoleSprite();
         }
         else
-            _militaryImage.sprite = military.Sprite[0];
+            _militaryImage.sprite = _selectedMilitary.Sprite[0];
     }
-
+    
 }
