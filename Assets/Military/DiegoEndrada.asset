@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
-  m_Name: Diogo
+  m_Name: DiegoEndrada
   m_EditorClassIdentifier: 
-  Name: Diogo Nuno Dias Mesquita de Andrade
-  CodeName: GOD
-  Division: 3
+  Name: Diego Endrada
+  CodeName: EGG
+  Division: 0
+  Rank: Marshal
+  Regiment: RI1
   ID: 075569420
-  Height: 175
-  Features: Bald
+  Height: 180
+  Features: Distinct Eyebrows
   EyeColor: Brown
-  ParkingSpot: That one
-  Location: 
-  Rank: 
+  ParkingSpot: A4
+  Location: Viseu
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
   Picture: {fileID: -4067477123947712020, guid: 1fc7c0b64d710c342bf5fcd8b42341f8, type: 3}
   Sprite:

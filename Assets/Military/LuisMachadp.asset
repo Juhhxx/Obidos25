@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
-  m_Name: ScribbleGuy 1
+  m_Name: LuisMachadp
   m_EditorClassIdentifier: 
-  Name: John
-  CodeName: JP
-  Division: 2
-  ID: 067443201
-  Height: 175
-  Features: Nice Smile
+  Name: "Lu\xEDs do Machado"
+  CodeName: BIG
+  Division: 3
+  Rank: Tenente Coronel
+  Regiment: RE1
+  ID: 010335691
+  Height: 170
+  Features: Split Chin
   EyeColor: Green
-  ParkingSpot: A23
-  Location: 
-  Rank: 
+  ParkingSpot: D9
+  Location: Tancos
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
   Picture: {fileID: 4770303393426588635, guid: 0489bafcd71e7e049a2965f2f0e762ec, type: 3}
   Sprite:
