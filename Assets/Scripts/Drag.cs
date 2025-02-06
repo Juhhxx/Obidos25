@@ -4,15 +4,18 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IDragHandler
 {
-    [SerializeField] private Canvas canvas;
-    private RectTransform rectTrans;
+    [SerializeField] private Canvas _canvas;
+    private RectTransform _rectTrans;
+    private int _childCount;
 
     private void Awake()
     {
-        rectTrans = GetComponent<RectTransform>();
+        _rectTrans = GetComponent<RectTransform>();
+        _childCount = _canvas.transform.childCount;
     }
     public void OnDrag(PointerEventData eventData)
     {
-        rectTrans.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        _rectTrans.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        transform.SetSiblingIndex(_childCount);
     }
 }

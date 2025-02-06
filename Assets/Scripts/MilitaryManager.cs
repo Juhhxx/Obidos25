@@ -15,6 +15,7 @@ public class MilitaryManager : MonoBehaviour
     [SerializeField] private Image _militaryImage;
     [SerializeField] private TextMeshProUGUI _passwordText;
     [SerializeField] private GameObject _dialogueSystem;
+    [SerializeField] private string _startDialog;
     private DialogueRunner _dialogueRunner;
     private Military _selectedMilitary;
     private string _selectedPassword;
@@ -24,6 +25,12 @@ public class MilitaryManager : MonoBehaviour
         _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
 
         _dialogueRunner.AddFunction("get_military_name",GetName);
+        _dialogueRunner.AddFunction("get_password_dialog",GetPassword);
+        _dialogueRunner.AddFunction("get_location_dialog",GetLocation);
+        _dialogueRunner.AddFunction("get_park_dialog",GetParking);
+        _dialogueRunner.AddFunction("get_division_dialog",GetDivision);
+        _dialogueRunner.AddFunction("get_rank_dialog",GetRank);
+        _dialogueRunner.AddFunction("get_codename_dialog",GetCodeName);
     }
     private void Start()
     {
@@ -32,11 +39,11 @@ public class MilitaryManager : MonoBehaviour
         StartInterrogation();
     }
 
+    private string GetPassword() => _selectedPassword;
     private string GetName() => _selectedMilitary.Name;
     private string GetCodeName() => _selectedMilitary.CodeName;
     private string GetDivision() => _selectedMilitary.Division.ToString();
     private string GetRank() => _selectedMilitary.Rank;
-    private string GetRegiment() => _selectedMilitary.Regiment;
     private string GetParking() => _selectedMilitary.ParkingSpot;
     private string GetLocation() => _selectedMilitary.Location;
 
@@ -70,7 +77,7 @@ public class MilitaryManager : MonoBehaviour
         SetMilitary();
         _card.SetUpCard(_selectedMilitary);
         _dialogueRunner.Stop();
-        _dialogueRunner.StartDialogue("Interrogation");
+        _dialogueRunner.StartDialogue(_startDialog);
     }
     private void SetMilitary()
     {

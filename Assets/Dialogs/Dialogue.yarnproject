@@ -1,7 +1,7 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "Interrogation.yarn"
+    "dialogotemplate.yarn"
   ],
   "excludeFiles": [
     "**/*~/*"

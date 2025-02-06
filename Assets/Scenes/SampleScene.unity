@@ -367,7 +367,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 170, y: -30}
-  m_SizeDelta: {x: 177.8, y: 70}
+  m_SizeDelta: {x: 127, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &204222779
 MonoBehaviour:
@@ -1972,6 +1972,7 @@ MonoBehaviour:
   _militaryImage: {fileID: 1482887514}
   _passwordText: {fileID: 679987181}
   _dialogueSystem: {fileID: 477704066}
+  _startDialog: Start
 --- !u!1 &933454141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,7 +2702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99cd64de0a4c34782a8e4c02366788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1432997670}
+  _canvas: {fileID: 1069124163}
 --- !u!114 &1213792133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3031,7 +3032,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 170, y: -30}
-  m_SizeDelta: {x: 177.8, y: 70}
+  m_SizeDelta: {x: 127, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1429577251
 MonoBehaviour:
@@ -3725,7 +3726,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 170, y: -30}
-  m_SizeDelta: {x: 177.8, y: 70}
+  m_SizeDelta: {x: 127, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1929641063
 MonoBehaviour:
@@ -4203,7 +4204,11 @@ PrefabInstance:
     - target: {fileID: 7540085919226227901, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 1432997670}
+      objectReference: {fileID: 1069124163}
+    - target: {fileID: 7540085919226227901, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 1069124163}
     - target: {fileID: 8078265491490736222, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
       propertyPath: m_Name
       value: ID Card
