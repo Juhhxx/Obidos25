@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Obidos25;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -8,12 +9,15 @@ public class MilitaryManager : MonoBehaviour
 {
     [SerializeField] private List<Military> _militaryList;
     private Queue<Military> _militaryOrder;
+    [SerializeField] private string[] _passwordList;
     [SerializeField] private Military _mole;
     [SerializeField] private CardManager _card;
     [SerializeField] private Image _militaryImage;
+    [SerializeField] private TextMeshProUGUI _passwordText;
     [SerializeField] private GameObject _dialogueSystem;
     private DialogueRunner _dialogueRunner;
     private Military _selectedMilitary;
+    private string _selectedPassword;
  
     private void Awake()
     {
@@ -24,10 +28,18 @@ public class MilitaryManager : MonoBehaviour
     private void Start()
     {
         SetMilitaryOrder();
+        SetPassword();
         StartInterrogation();
     }
 
     private string GetName() => _selectedMilitary.Name;
+    private string GetCodeName() => _selectedMilitary.CodeName;
+    private string GetDivision() => _selectedMilitary.Division.ToString();
+    private string GetRank() => _selectedMilitary.Rank;
+    private string GetRegiment() => _selectedMilitary.Regiment;
+    private string GetParking() => _selectedMilitary.ParkingSpot;
+    private string GetLocation() => _selectedMilitary.Location;
+
 
     private void SetMilitaryOrder()
     {
@@ -43,6 +55,14 @@ public class MilitaryManager : MonoBehaviour
     {
         _mole = mole;
     }
+    private void SetPassword()
+    {
+        int passIndx = Random.Range(0, _passwordList.Length);
+
+        _selectedPassword = _passwordList[passIndx];
+
+        _passwordText.text = $" The password is\n{_selectedPassword}";
+    }
 
     public void StartInterrogation()
     {
@@ -51,7 +71,6 @@ public class MilitaryManager : MonoBehaviour
         _card.SetUpCard(_selectedMilitary);
         _dialogueRunner.Stop();
         _dialogueRunner.StartDialogue("Interrogation");
-
     }
     private void SetMilitary()
     {

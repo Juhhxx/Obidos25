@@ -5,7 +5,7 @@ public class SwitchCard : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("COLLISION");
-        CardManager card = other.gameObject.GetComponent<CardManager>();
+        CardItem card = other.gameObject.GetComponent<CardItem>();
 
         if (card != null)
             card.ToggleCardItemSprite();
@@ -13,7 +13,7 @@ public class SwitchCard : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("COLLISION");
-        CardManager card = other.gameObject.GetComponent<CardManager>();
+        CardItem card = other.gameObject.GetComponent<CardItem>();
 
         if (card != null)
             card.ToggleCardItemSprite();

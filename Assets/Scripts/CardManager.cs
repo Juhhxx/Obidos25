@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class CardManager : MonoBehaviour
 {
     [SerializeField] private GameObject _full;
-    private bool _isItem = true;
     private Vector3 _initialPos; 
     private RectTransform _rectTrans;
+    private CardItem _cardItem;
 
     private void Awake()
     {
+        _cardItem = GetComponent<CardItem>();
         _rectTrans = GetComponent<RectTransform>();
         _initialPos = _rectTrans.anchoredPosition;
     }
@@ -57,29 +58,18 @@ public class CardManager : MonoBehaviour
 
         signature.sprite = military.Signature;
 
+        // Rank
+        TextMeshProUGUI rank = _full.transform.GetChild(9).GetComponent<TextMeshProUGUI>();
+
+        rank.text = military.Rank;
+
+        // Regiment
+        TextMeshProUGUI reg = _full.transform.GetChild(10).GetComponent<TextMeshProUGUI>();
+
+        reg.text = military.Regiment;
+
         // Reset Position and State
         _rectTrans.anchoredPosition = _initialPos;
-        ToggleCardItemSprite(true);
-    }
-    public void ToggleCardItemSprite()
-    {
-        Debug.Log("TOGGLE CARD");
-        
-        _isItem = !_isItem;
-
-        // Full Sprite
-        transform.GetChild(0).gameObject.SetActive(!_isItem);
-
-        // Item Sprite
-        transform.GetChild(1).gameObject.SetActive(_isItem);
-        
-    }
-    public void ToggleCardItemSprite(bool state)
-    {
-        // Full Sprite
-        transform.GetChild(0).gameObject.SetActive(!state);
-
-        // Item Sprite
-        transform.GetChild(1).gameObject.SetActive(state);
+        _cardItem.ToggleCardItemSprite(true);
     }
 }
