@@ -13,8 +13,7 @@ My name is GAJO.
 title: Options
 ---
     -> What's the password? <<if $password < 1>>
-        <<declare $P = ("fixe")>>
-        {$P}.
+        {get_password_dialog()}.
         <<set $password = $password + 1>>
         <<set $progresso = $progresso + 1>>
         <<if $progresso >= 5>>
@@ -23,8 +22,7 @@ title: Options
                     <<jump Options>>
         <<endif>> 
     -> Where are you located? <<if $location < 1>>
-        <<declare $L = ("super fixe")>>
-        {$L}.
+        {get_location_dialog()}.
         <<set $location = $location + 1>>
         <<set $progresso = $progresso + 1>>
         <<if $progresso >= 5>>
@@ -33,8 +31,7 @@ title: Options
                     <<jump Options>>
         <<endif>>
     -> Where did you park? <<if $park < 1>>
-        <<declare $PK = ("mega fixe")>>
-        {$PK}.
+        {get_park_dialog()}.
         <<set $park = $park +1>>
         <<set $progresso = $progresso + 1>>
         <<if $progresso >= 5>>
@@ -43,8 +40,7 @@ title: Options
                     <<jump Options>>
         <<endif>>
     -> What's your division? <<if $division < 1>>
-        <<declare $D = ("ultra fixe")>>
-        {$D}.
+        {get_division_dialog()}.
         <<set $division = $division + 1>>
         <<set $progresso = $progresso + 1>>
         <<if $progresso >= 5>>
@@ -54,8 +50,7 @@ title: Options
         <<endif>>
         
     -> What's your rank? <<if $rank < 1>>
-        <<declare $R = ("hiper fixe")>>
-        {$R}
+        {get_rank_dialog()}.
         <<set $rank = $rank + 1>>
         <<set $progresso = $progresso + 1>>
         <<if $progresso >= 5>>
