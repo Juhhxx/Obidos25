@@ -27,6 +27,8 @@ public class PlaySound : MonoBehaviour
 
         _audioSource.clip = _soudsToPlay[soundIdx];
 
+        _audioSource.pitch = 1f;
+
         if (_isVoice)
         {
             _audioSource.pitch = Random.Range(_pitchRange.x,_pitchRange.y);

@@ -464,6 +464,18 @@ MonoBehaviour:
           m_StringArgument: Open File
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &84395163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,8 +650,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tiago dos Santos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -812,6 +824,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Close File
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &204222780
@@ -2003,8 +2027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Salgado Maia
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2895,8 +2919,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Vasto Douren\xE7o\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3667,8 +3691,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Jo\xE3o M. Azevedo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5307,8 +5331,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diogo Endrada
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5538,6 +5562,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open File
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1386561131
@@ -5942,6 +5978,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Close File
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1429577252
@@ -6418,8 +6466,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Lu\xEDs do Machado"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6631,8 +6679,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "H\xE9lio C\xF3digos"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7551,8 +7599,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nilson Almada
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7978,6 +8026,18 @@ MonoBehaviour:
           m_StringArgument: Close File
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1929641064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8075,8 +8135,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Otelu S. do Carvalho
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
-  m_sharedMaterial: {fileID: -5021213487263628167, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
+  m_sharedMaterial: {fileID: -5021213487263628167, guid: 4ac7f9975784e9848b750f5ef8ba64d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8801,6 +8861,7 @@ GameObject:
   - component: {fileID: 2085779706}
   - component: {fileID: 2085779705}
   - component: {fileID: 2085779704}
+  - component: {fileID: 2085779708}
   m_Layer: 5
   m_Name: File Canvas
   m_TagString: Untagged
@@ -8891,6 +8952,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2085779708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085779703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 81f0b621848536640a2acd0bbc48595e, type: 3}
+  - {fileID: 8300000, guid: 504a1a88130c84d4098cb604a0c34bbc, type: 3}
+  - {fileID: 8300000, guid: 4597cccc802382345af25a1b60305286, type: 3}
+  _volume: 0.2
+  _pitchRange: {x: 0.9, y: 1.1}
+  _isVoice: 1
 --- !u!1 &2110493842
 GameObject:
   m_ObjectHideFlags: 0
@@ -9116,6 +9196,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open File
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2085779708}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2123509627

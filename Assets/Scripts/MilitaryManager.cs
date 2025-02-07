@@ -53,7 +53,7 @@ public class MilitaryManager : MonoBehaviour
 
     private string GetPassword() 
     {
-        if (_selectedMilitary == _mole && MoleChance(80))
+        if (_selectedMilitary == _mole && MoleChance(10))
         {
             int passIndx = Random.Range(0, _passwordList.Count);
 
@@ -63,11 +63,41 @@ public class MilitaryManager : MonoBehaviour
             return _selectedPassword;
     }
     private string GetName() => _selectedMilitary.Name;
-    private string GetCodeName() => _selectedMilitary.CodeName;
+    private string GetCodeName()
+    {
+        if (_selectedMilitary == _mole && MoleChance(40))
+        {
+            int milIdx = Random.Range(0, _militaryList.Count);
+
+            return _militaryList[milIdx].CodeName;
+        }
+        else
+            return _selectedMilitary.CodeName;
+    }
     private string GetDivision() => _selectedMilitary.Division.ToString();
     private string GetRank() => _selectedMilitary.Rank;
-    private string GetParking() => _selectedMilitary.ParkingSpot;
-    private string GetLocation() => _selectedMilitary.Location;
+    private string GetParking()
+    {
+        if (_selectedMilitary == _mole && MoleChance(40))
+        {
+            int milIdx = Random.Range(0, _militaryList.Count);
+
+            return _militaryList[milIdx].ParkingSpot;
+        }
+        else
+            return _selectedMilitary.ParkingSpot;
+    }
+    private string GetLocation()
+    {
+        if (_selectedMilitary == _mole && MoleChance(40))
+        {
+            int milIdx = Random.Range(0, _militaryList.Count);
+
+            return _militaryList[milIdx].Location;
+        }
+        else
+            return _selectedMilitary.Location;
+    }
 
 
     private void SetMilitaryOrder()
@@ -83,6 +113,7 @@ public class MilitaryManager : MonoBehaviour
     private void SetMole(Military mole)
     {
         _mole = mole;
+        _militaryList.Remove(mole);
         _winCheck.Mole = mole;
     }
     private void SetPassword()
@@ -123,7 +154,7 @@ public class MilitaryManager : MonoBehaviour
     private void SetMilitary()
     {
         Debug.Log(_militaryImage);
-        if (_selectedMilitary == _mole && MoleChance(10))
+        if (_selectedMilitary == _mole && MoleChance(50))
         {
             _militaryImage.sprite = _selectedMilitary.GetMoleSprite();
         }
@@ -135,7 +166,7 @@ public class MilitaryManager : MonoBehaviour
     }
     private void SetBadges(BadgeManager badge, string militaryBadge)
     {
-        if (_selectedMilitary == _mole && MoleChance(40))
+        if (_selectedMilitary == _mole && MoleChance(80))
         {
             badge.SetBadge(militaryBadge, true);
         }
