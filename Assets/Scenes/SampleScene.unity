@@ -119,6 +119,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11141539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11141540}
+  - component: {fileID: 11141542}
+  - component: {fileID: 11141541}
+  m_Layer: 5
+  m_Name: Military
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &11141540
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11141539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1482887513}
+  m_Father: {fileID: 900696428}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 9, y: -179}
+  m_SizeDelta: {x: 350, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &11141541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11141539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e62d158bbb6d3c4cbf9af511ed6c9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _militaryManager: {fileID: 900696429}
+--- !u!95 &11141542
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11141539}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ba3265ef3138a248b4e1b5ede627b20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &58823088
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +536,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204222777}
   m_CullTransparentMesh: 1
+--- !u!1 &267184760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8078265491490736222, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
+  m_PrefabInstance: {fileID: 5912999621465490732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &334805828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +2008,7 @@ RectTransform:
   m_Children:
   - {fileID: 808769403}
   - {fileID: 1474299894}
-  - {fileID: 1482887513}
+  - {fileID: 11141540}
   - {fileID: 1130946242}
   - {fileID: 1160838707}
   - {fileID: 1628470112}
@@ -1964,12 +2042,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be2ed12063fcde049ab7886521c8846e, type: 2}
   - {fileID: 11400000, guid: 531004e8c02502c43b278b409dfa86ab, type: 2}
   _passwordList:
-  - a
-  - b
-  - c
+  - Grandola
+  - Bananas
+  - Red
+  - Horse
+  - Ginga
+  - Regime
+  - Benfica
+  - Sporting
+  - Porto
   _mole: {fileID: 0}
-  _card: {fileID: 5912999621465490734}
-  _militaryImage: {fileID: 1482887514}
+  _card: {fileID: 267184760}
+  _military: {fileID: 11141539}
   _passwordText: {fileID: 679987181}
   _dialogueSystem: {fileID: 477704066}
   _startDialog: Start
@@ -3333,7 +3417,7 @@ GameObject:
   - component: {fileID: 1482887515}
   - component: {fileID: 1482887514}
   m_Layer: 5
-  m_Name: Military
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3351,11 +3435,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 900696428}
+  m_Father: {fileID: 11141540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 9, y: -640.55}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 350, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482887514
@@ -3481,7 +3565,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 900696429}
         m_TargetAssemblyTypeName: MilitaryManager, Assembly-CSharp
-        m_MethodName: StartInterrogation
+        m_MethodName: WalkingOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4223,17 +4307,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6210533807647969624, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
   m_PrefabInstance: {fileID: 5912999621465490732}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5912999621465490734 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1510725975447573133, guid: c0d5f31bd35f3ae49948790256fa11bb, type: 3}
-  m_PrefabInstance: {fileID: 5912999621465490732}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f794f8fd8e69bf14bb5b12cada16135a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7205468726952149401
 PrefabInstance:
   m_ObjectHideFlags: 0

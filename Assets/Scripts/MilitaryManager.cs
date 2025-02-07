@@ -11,17 +11,23 @@ public class MilitaryManager : MonoBehaviour
     private Queue<Military> _militaryOrder;
     [SerializeField] private string[] _passwordList;
     [SerializeField] private Military _mole;
-    [SerializeField] private CardManager _card;
-    [SerializeField] private Image _militaryImage;
+    [SerializeField] private GameObject _card;
+    [SerializeField] private GameObject _military;
     [SerializeField] private TextMeshProUGUI _passwordText;
     [SerializeField] private GameObject _dialogueSystem;
     [SerializeField] private string _startDialog;
     private DialogueRunner _dialogueRunner;
     private Military _selectedMilitary;
     private string _selectedPassword;
+    private Image _militaryImage;
+    private Animator _militaryAnimator;
+    private CardManager _cardManager;
  
     private void Awake()
     {
+        _militaryImage = _military.GetComponentInChildren<Image>();
+        _militaryAnimator = _military.GetComponent<Animator>();
+        _cardManager = _card.GetComponent<CardManager>();
         _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
 
         _dialogueRunner.AddFunction("get_military_name",GetName);
@@ -75,12 +81,24 @@ public class MilitaryManager : MonoBehaviour
     {
         _selectedMilitary = _militaryOrder?.Dequeue();
         SetMilitary();
-        _card.SetUpCard(_selectedMilitary);
+        _cardManager.SetUpCard(_selectedMilitary);
+        _militaryAnimator.SetTrigger("WalkIn");
+       
+    }
+    public void HasWalkedIn()
+    {
+        _card.SetActive(true);
         _dialogueRunner.Stop();
         _dialogueRunner.StartDialogue(_startDialog);
     }
+    public void WalkingOut()
+    {
+        _card.SetActive(false);
+        _militaryAnimator.SetTrigger("WalkOut");
+    }
     private void SetMilitary()
     {
+        Debug.Log(_militaryImage);
         if (_selectedMilitary == _mole)
         {
             _militaryImage.sprite = _selectedMilitary.GetMoleSprite();
