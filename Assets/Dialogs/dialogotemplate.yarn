@@ -14,42 +14,66 @@ title: Options
 tags: 
 position: -19.475139617919922,150.7206573486328
 ---
--> What's the password? <<if $password < 1>>
+    -> What's the password? <<if $password < 1>>
         {get_password_dialog()}.
         <<set $password = $password + 1>>
         <<set $progresso += 1>>
-        <<jump Options>>
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>
 
     -> Where are you located? <<if $location < 1>>
         I'm in {get_location_dialog()}.
         <<set $location = $location + 1>>
         <<set $progresso += 1>>
-        <<jump Options>>
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>
 
     -> What's your code name? <<if $code < 1>>
         {get_codename_dialog()}.
         <<set $code = $code + 1>>
         <<set $progresso += 1>>
-        <<jump Options>>
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>
 
     -> Where did you park? <<if $park < 1>>
         Over at {get_park_dialog()}.
         <<set $park = $park +1>>
         <<set $progresso += 1>>
-        <<jump Options>>
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>
 
     -> What's your division? <<if $division < 1>>
         I'm {get_division_dialog()}.
         <<set $division = $division + 1>>
         <<set $progresso += 1>>
-        <<jump Options>>
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>        
 
     -> What's your rank? <<if $rank < 1>>
         I'm a {get_rank_dialog()}.
         <<set $rank = $rank + 1>>
         <<set $progresso += 1>>
-        <<jump Options>>
-        
+        <<if $progresso < 6>>
+            <<jump Options>>
+                <<else>>
+                    <<jump Options>>
+        <<endif>>
+
     -> Continue <<if $progresso >= 6>>
         <<jump fim>>
 ===
