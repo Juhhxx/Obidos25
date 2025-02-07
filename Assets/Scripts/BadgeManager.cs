@@ -7,12 +7,12 @@ public class BadgeManager : MonoBehaviour
 {
     [SerializeField] private Sprite[] _badgeList;
     private Image _image;
-    private RectTransform _rectTrans;
+    private AspectRatioFitter _fitter;
 
     private void Start()
     {
         _image = GetComponent<Image>();
-        _rectTrans = GetComponent<RectTransform>();
+        _fitter = _image.GetComponent<AspectRatioFitter>();
     }
     public void SetBadge(string badge, bool isMole)
     {
@@ -35,9 +35,7 @@ public class BadgeManager : MonoBehaviour
     private void ImageBadge(Sprite b)
     {
         _image.sprite = b;
-        _image.SetNativeSize();
-        Vector2 trans = _rectTrans.localScale;
-        trans /= 2;
-        _rectTrans.localScale = trans;
+        float aspectRatio = b.rect.width / b.rect.height;
+        _fitter.aspectRatio = aspectRatio;
     }
 }

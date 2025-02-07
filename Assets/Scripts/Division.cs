@@ -2,7 +2,7 @@ namespace Obidos25
 {
     public enum Division
     {
-        Infantary,
+        Infantry,
         Artillery,
         Cavalry,
         Engeneeiring
