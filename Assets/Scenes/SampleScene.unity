@@ -937,10 +937,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: be2ed12063fcde049ab7886521c8846e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Tiago dos Santos
@@ -1231,10 +1231,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 5335a0318a2dbcc4ebd6041c77020a71, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "H\xE9lio C\xF3digos"
@@ -3051,10 +3051,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 110ca22a1d7f8be40b221983c439ccf4, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Otelu S. do Carvalho
@@ -3290,14 +3290,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _militaryList:
   - {fileID: 11400000, guid: 138d350c7be369d4f8fba43a8c4b2d7b, type: 2}
-  - {fileID: 11400000, guid: 5335a0318a2dbcc4ebd6041c77020a71, type: 2}
-  - {fileID: 11400000, guid: b6b88021bd5b6b94ba5c65446a17c287, type: 2}
-  - {fileID: 11400000, guid: 7436f16a410edf6439ffda07c276b2f6, type: 2}
-  - {fileID: 11400000, guid: 2773f2a05b813d347a6b14a9282307d1, type: 2}
-  - {fileID: 11400000, guid: 110ca22a1d7f8be40b221983c439ccf4, type: 2}
-  - {fileID: 11400000, guid: 01d0b50d70594f34c923b77ec0e405a1, type: 2}
-  - {fileID: 11400000, guid: be2ed12063fcde049ab7886521c8846e, type: 2}
-  - {fileID: 11400000, guid: 531004e8c02502c43b278b409dfa86ab, type: 2}
   _passwordList:
   - Grandola
   - Bananas
@@ -4179,10 +4171,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 531004e8c02502c43b278b409dfa86ab, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "Vasto Douren\xE7o"
@@ -4590,10 +4582,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 2773f2a05b813d347a6b14a9282307d1, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Nilson Almada
@@ -4905,6 +4897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993e770f38d558246a07df09b67a0c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mole: {fileID: 0}
   _gameScreen: {fileID: 1961407412}
   _finalScreen: {fileID: 1121006802}
   _winScreen: {fileID: 143789542}
@@ -5376,10 +5369,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 138d350c7be369d4f8fba43a8c4b2d7b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Diogo Endrada
@@ -5933,10 +5926,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: b6b88021bd5b6b94ba5c65446a17c287, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "Jo\xE3o M\xE1rio Azevedo"
@@ -6584,10 +6577,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 01d0b50d70594f34c923b77ec0e405a1, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Salgado Maia
@@ -7615,10 +7608,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1350457289}
         m_TargetAssemblyTypeName: WinCheck, Assembly-CSharp
         m_MethodName: CheckBufo
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 7436f16a410edf6439ffda07c276b2f6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Obidos25.Military, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "Lu\xEDs do Machado"

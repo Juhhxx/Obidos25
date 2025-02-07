@@ -3,8 +3,13 @@ using Obidos25;
 
 public class WinCheck : MonoBehaviour
 {
-    private Military _mole;
-    public Military Mole { get; set; }
+    [SerializeField] private Military _mole;
+    public Military Mole
+    {
+        get => _mole;
+
+        set => _mole = value;
+    }
     [SerializeField] private GameObject _gameScreen;
     [SerializeField] private GameObject _finalScreen;
     [SerializeField] private GameObject _winScreen;
@@ -12,6 +17,7 @@ public class WinCheck : MonoBehaviour
 
     public void CheckBufo(Military military)
     {
+        Debug.Log($"{military.Name} = {_mole.Name} ? {military == _mole}");
         if (military == _mole)
             _winScreen.SetActive(true);
         else
