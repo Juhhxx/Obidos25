@@ -24,7 +24,7 @@ MonoBehaviour:
   ParkingSpot: B5
   Location: Estremoz
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
-  Picture: {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
+  Picture: {fileID: 21300000, guid: 0936bb221c484ca4caf48e64b6c101b6, type: 3}
   Sprite:
-  - {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
-  - {fileID: 4672038800764192632, guid: 76d8739d0b615824893f0dc3efe3dd2c, type: 3}
+  - {fileID: 21300000, guid: e17de27a4bde7dc40be58ce7a06c8401, type: 3}
+  - {fileID: 21300000, guid: 9874f322682c92841a96e72c0aa4d952, type: 3}

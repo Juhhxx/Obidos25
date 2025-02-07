@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
   m_Name: DiegoEndrada
   m_EditorClassIdentifier: 
-  Name: Diego Endrada
+  Name: Diogo Endrada
   CodeName: EGG
   Division: 0
   Rank: Marshal
@@ -24,7 +24,7 @@ MonoBehaviour:
   ParkingSpot: A4
   Location: Viseu
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
-  Picture: {fileID: -4067477123947712020, guid: 1fc7c0b64d710c342bf5fcd8b42341f8, type: 3}
+  Picture: {fileID: 21300000, guid: 328a8b81a484e784598822123505e6d1, type: 3}
   Sprite:
-  - {fileID: -4067477123947712020, guid: 1fc7c0b64d710c342bf5fcd8b42341f8, type: 3}
-  - {fileID: -253985871927861412, guid: bc2b848ab74e59b44a9829298896ab2d, type: 3}
+  - {fileID: 21300000, guid: 0ae0766f8fd589f4984b4fe69a89abd2, type: 3}
+  - {fileID: 21300000, guid: b45bca02d05450a41b8492bcabaf9c41, type: 3}

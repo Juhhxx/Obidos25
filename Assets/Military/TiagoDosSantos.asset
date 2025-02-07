@@ -24,7 +24,7 @@ MonoBehaviour:
   ParkingSpot: C1
   Location: Espinho
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
-  Picture: {fileID: 4770303393426588635, guid: 0489bafcd71e7e049a2965f2f0e762ec, type: 3}
+  Picture: {fileID: 21300000, guid: 1f31d017fd3b1a949b8ceefc72001301, type: 3}
   Sprite:
-  - {fileID: 4770303393426588635, guid: 0489bafcd71e7e049a2965f2f0e762ec, type: 3}
-  - {fileID: -8538545903186704305, guid: 87f6b8d0ac652234c93a3c3effa67a1c, type: 3}
+  - {fileID: 21300000, guid: 7b2a77461f144fe4081575195bd93d88, type: 3}
+  - {fileID: 21300000, guid: 511056646ebf58b49804d7cc6269ee32, type: 3}

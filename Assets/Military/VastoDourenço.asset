@@ -24,7 +24,7 @@ MonoBehaviour:
   ParkingSpot: B7
   Location: Tancos
   Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
-  Picture: {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
+  Picture: {fileID: 21300000, guid: efd3c32209938594e8f0dcf6d7334eb2, type: 3}
   Sprite:
-  - {fileID: -9180426125723624345, guid: ba7e5caa970524d4f80f5cd81ff4ef6a, type: 3}
-  - {fileID: 4672038800764192632, guid: 76d8739d0b615824893f0dc3efe3dd2c, type: 3}
+  - {fileID: 21300000, guid: f5ef461daf2d17b4d9903bc3104e0e1d, type: 3}
+  - {fileID: 21300000, guid: f6000ba8b7e85854e8c6cbef6b0b9b6a, type: 3}
