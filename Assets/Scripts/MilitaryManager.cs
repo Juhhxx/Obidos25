@@ -109,11 +109,12 @@ public class MilitaryManager : MonoBehaviour
         _militaryList.Shuffle();
 
         _militaryOrder = new Queue<Military>(_militaryList);
+
+        _militaryList.Remove(_mole);
     }
     private void SetMole(Military mole)
     {
         _mole = mole;
-        _militaryList.Remove(mole);
         _winCheck.Mole = mole;
     }
     private void SetPassword()
