@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 87f6b8d0ac652234c93a3c3effa67a1c
+guid: 18a99a99b70fb9941bccc0d39dd73309
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8538545903186704305
-    second: GreenEyesBad_0
+      213: 4537140459691646516
+    second: Luis-do-Machado-SignatureGenerator_0
+  - first:
+      213: 6143724079493084474
+    second: Luis-do-Machado-SignatureGenerator_1
+  - first:
+      213: 2725721470728577629
+    second: Luis-do-Machado-SignatureGenerator_2
+  - first:
+      213: -1807555992649413493
+    second: Luis-do-Machado-SignatureGenerator_3
+  - first:
+      213: 3437282858696110058
+    second: Luis-do-Machado-SignatureGenerator_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenEyesBad_0
+      name: Luis-do-Machado-SignatureGenerator_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 876
-        height: 856
+        y: 5
+        width: 53
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f48803e7dbdf08980800000000000000
-      internalID: -8538545903186704305
+      spriteID: 43e19f3953927fe30800000000000000
+      internalID: 4537140459691646516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luis-do-Machado-SignatureGenerator_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 35
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35f23cdf74e24550800000000000000
+      internalID: 6143724079493084474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luis-do-Machado-SignatureGenerator_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 6
+        width: 69
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52ae637c35b3d520800000000000000
+      internalID: 2725721470728577629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luis-do-Machado-SignatureGenerator_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 241
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cc08ac6654ae6e0800000000000000
+      internalID: -1807555992649413493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luis-do-Machado-SignatureGenerator_4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 7
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefee196c8ea3bf20800000000000000
+      internalID: 3437282858696110058
       vertices: []
       indices: 
       edges: []
@@ -138,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GreenEyesBad_0: -8538545903186704305
+      Luis-do-Machado-SignatureGenerator_0: 4537140459691646516
+      Luis-do-Machado-SignatureGenerator_1: 6143724079493084474
+      Luis-do-Machado-SignatureGenerator_2: 2725721470728577629
+      Luis-do-Machado-SignatureGenerator_3: -1807555992649413493
+      Luis-do-Machado-SignatureGenerator_4: 3437282858696110058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

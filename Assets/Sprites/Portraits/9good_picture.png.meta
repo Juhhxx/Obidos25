@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87f6b8d0ac652234c93a3c3effa67a1c
+guid: b9a33dfe7dff91a47ab00461dfe8fe7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8538545903186704305
-    second: GreenEyesBad_0
+      213: 6241158547312864267
+    second: 9good_picture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenEyesBad_0
+      name: 9good_picture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 876
-        height: 856
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f48803e7dbdf08980800000000000000
-      internalID: -8538545903186704305
+      spriteID: b0ce977b1ac0d9650800000000000000
+      internalID: 6241158547312864267
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GreenEyesBad_0: -8538545903186704305
+      9good_picture_0: 6241158547312864267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

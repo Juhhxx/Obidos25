@@ -23,7 +23,7 @@ MonoBehaviour:
   EyeColor: Blue
   ParkingSpot: A2
   Location: Braga
-  Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
+  Signature: {fileID: 21300000, guid: bc14ae4b4b098a44ab5a5702688927c6, type: 3}
   Picture: {fileID: 21300000, guid: 3f092c1621bd9c8499622879a1cc5d1f, type: 3}
   Sprite:
   - {fileID: 21300000, guid: 63da5a6d9d9878e48b24b3b33e60a1b7, type: 3}

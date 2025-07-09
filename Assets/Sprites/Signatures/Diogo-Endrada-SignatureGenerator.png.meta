@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 03be9d36204653e4887129a9e828edb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4255747637625193085
+    second: Diogo-Endrada-SignatureGenerator_0
+  - first:
+      213: 1242139377805165748
+    second: Diogo-Endrada-SignatureGenerator_1
+  - first:
+      213: -6944854569243678363
+    second: Diogo-Endrada-SignatureGenerator_2
+  - first:
+      213: -7813915538284291893
+    second: Diogo-Endrada-SignatureGenerator_3
+  - first:
+      213: -3995251682163144658
+    second: Diogo-Endrada-SignatureGenerator_4
+  - first:
+      213: 2631864023169657355
+    second: Diogo-Endrada-SignatureGenerator_5
+  - first:
+      213: 7345094312266949103
+    second: Diogo-Endrada-SignatureGenerator_6
+  - first:
+      213: 2397976219752247500
+    second: Diogo-Endrada-SignatureGenerator_7
+  - first:
+      213: -2785466423069497997
+    second: Diogo-Endrada-SignatureGenerator_8
+  - first:
+      213: 1556793213082860435
+    second: Diogo-Endrada-SignatureGenerator_9
+  - first:
+      213: 1225165183508395844
+    second: Diogo-Endrada-SignatureGenerator_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d74ad421c80f4c0800000000000000
+      internalID: -4255747637625193085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 14
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b40a97de27fc3110800000000000000
+      internalID: 1242139377805165748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 16
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5696b7f809bee9f90800000000000000
+      internalID: -6944854569243678363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8d8a3c7356f8390800000000000000
+      internalID: -7813915538284291893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 16
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28426843c30e88c0800000000000000
+      internalID: -3995251682163144658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 11
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a68268262468420800000000000000
+      internalID: 2631864023169657355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_6
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 14
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1e96c6c540fe560800000000000000
+      internalID: 7345094312266949103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_7
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 14
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0ba26baa2574120800000000000000
+      internalID: 2397976219752247500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3752a27db090859d0800000000000000
+      internalID: -2785466423069497997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 14
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bfa86dd27da9510800000000000000
+      internalID: 1556793213082860435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diogo-Endrada-SignatureGenerator_10
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 14
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447b1324e39a00110800000000000000
+      internalID: 1225165183508395844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Diogo-Endrada-SignatureGenerator_0: -4255747637625193085
+      Diogo-Endrada-SignatureGenerator_1: 1242139377805165748
+      Diogo-Endrada-SignatureGenerator_10: 1225165183508395844
+      Diogo-Endrada-SignatureGenerator_2: -6944854569243678363
+      Diogo-Endrada-SignatureGenerator_3: -7813915538284291893
+      Diogo-Endrada-SignatureGenerator_4: -3995251682163144658
+      Diogo-Endrada-SignatureGenerator_5: 2631864023169657355
+      Diogo-Endrada-SignatureGenerator_6: 7345094312266949103
+      Diogo-Endrada-SignatureGenerator_7: 2397976219752247500
+      Diogo-Endrada-SignatureGenerator_8: -2785466423069497997
+      Diogo-Endrada-SignatureGenerator_9: 1556793213082860435
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

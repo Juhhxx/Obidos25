@@ -23,7 +23,7 @@ MonoBehaviour:
   EyeColor: Green
   ParkingSpot: D9
   Location: Tancos
-  Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
+  Signature: {fileID: 21300000, guid: 18a99a99b70fb9941bccc0d39dd73309, type: 3}
   Picture: {fileID: 21300000, guid: 7649a6632a617404f84f21bb2ce47c1d, type: 3}
   Sprite:
   - {fileID: 21300000, guid: 32da79ed6fe77834bb5d334c8aa3fe1a, type: 3}

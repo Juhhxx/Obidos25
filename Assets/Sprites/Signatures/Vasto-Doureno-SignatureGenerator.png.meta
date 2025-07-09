@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 87f6b8d0ac652234c93a3c3effa67a1c
+guid: 160df8a2a302c894782ca8278f0c596e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8538545903186704305
-    second: GreenEyesBad_0
+      213: -3362852556003846466
+    second: Vasto-Doureno-SignatureGenerator_0
+  - first:
+      213: 2549521518364347725
+    second: Vasto-Doureno-SignatureGenerator_1
+  - first:
+      213: -97742145840766799
+    second: Vasto-Doureno-SignatureGenerator_2
+  - first:
+      213: 8894248022468103297
+    second: Vasto-Doureno-SignatureGenerator_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenEyesBad_0
+      name: Vasto-Doureno-SignatureGenerator_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 876
-        height: 856
+        width: 42
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f48803e7dbdf08980800000000000000
-      internalID: -8538545903186704305
+      spriteID: eb6506fda6fb451d0800000000000000
+      internalID: -3362852556003846466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vasto-Doureno-SignatureGenerator_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 4
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d42512058b16320800000000000000
+      internalID: 2549521518364347725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vasto-Doureno-SignatureGenerator_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 3
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0a3954900c4aef0800000000000000
+      internalID: -97742145840766799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vasto-Doureno-SignatureGenerator_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 7
+        width: 68
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c8e63e377be6b70800000000000000
+      internalID: 8894248022468103297
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GreenEyesBad_0: -8538545903186704305
+      Vasto-Doureno-SignatureGenerator_0: -3362852556003846466
+      Vasto-Doureno-SignatureGenerator_1: 2549521518364347725
+      Vasto-Doureno-SignatureGenerator_2: -97742145840766799
+      Vasto-Doureno-SignatureGenerator_3: 8894248022468103297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

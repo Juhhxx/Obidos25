@@ -23,7 +23,7 @@ MonoBehaviour:
   EyeColor: Brown
   ParkingSpot: D6
   Location: Vila Real
-  Signature: {fileID: 21300000, guid: cce28fd7f7a37f549b37796a135c9fd3, type: 3}
+  Signature: {fileID: 21300000, guid: 3e4847161c1f71f47beffc74ae1531f8, type: 3}
   Picture: {fileID: 6241158547312864267, guid: b9a33dfe7dff91a47ab00461dfe8fe7b, type: 3}
   Sprite:
   - {fileID: 21300000, guid: 8ce58a106dd404c439475bd0a0d4aeba, type: 3}
