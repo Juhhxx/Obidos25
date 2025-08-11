@@ -1,5 +1,6 @@
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CardItem : MonoBehaviour
 {
@@ -7,10 +8,28 @@ public class CardItem : MonoBehaviour
     [SerializeField] private bool _isItem;
 
     BoxCollider2D _collider;
+    SpriteRenderer _rendererFull;
+    SpriteRenderer _rendererItem;
+    Draggabble _drag;
 
-    private void Start()
+    [SerializeField][ReadOnly] private static CardItem _lastSelectedItem;
+
+    private void Awake()
     {
         _collider = GetComponent<BoxCollider2D>();
+        _drag = GetComponent<Draggabble>();
+
+        _rendererFull = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _rendererItem = transform.GetChild(1).GetComponent<SpriteRenderer>();
+    }
+
+    private void OnEnable()
+    {
+        _drag.OnSelected.AddListener(UpdateSelected);
+    }
+    private void OnDisable()
+    {
+        _drag.OnSelected.RemoveListener(UpdateSelected);
     }
 
     public void ToggleCardItemSprite()
@@ -25,10 +44,9 @@ public class CardItem : MonoBehaviour
         // Item Sprite
         transform.GetChild(1).gameObject.SetActive(_isItem);
 
-        int activeChild = _isItem ? 1 : 0;
+        SpriteRenderer activeRenderer = _isItem ? _rendererItem : _rendererFull;
 
-        UpdateColliderSize(transform.GetChild(activeChild).GetComponent<SpriteRenderer>().sprite);
-
+        UpdateColliderSize(activeRenderer.sprite);
     }
     public void ToggleCardItemSprite(bool state)
     {
@@ -38,9 +56,9 @@ public class CardItem : MonoBehaviour
         // Item Sprite
         transform.GetChild(1).gameObject.SetActive(state);
 
-        int activeChild = _isItem ? 1 : 0;
+        SpriteRenderer activeRenderer = state ? _rendererItem : _rendererFull;
 
-        UpdateColliderSize(transform.GetChild(activeChild).GetComponent<SpriteRenderer>().sprite);
+        UpdateColliderSize(activeRenderer.sprite);
     }
 
     private void UpdateImage() => ToggleCardItemSprite(_isItem);
@@ -54,6 +72,35 @@ public class CardItem : MonoBehaviour
         Vector2 newS = sprite.bounds.size;
 
         _collider.size = newS;
+    }
+    public void UpdateRendererLayer(string layer)
+    {
+        _rendererFull.sortingLayerName = layer;
+        _rendererItem.sortingLayerName = layer;
+    }
+
+    private void UpdateSelected()
+    {
+        if (_lastSelectedItem == this) return;
+
+        Debug.Log("UPDATE SELECTED");
+        
+        if (_lastSelectedItem != null)
+        {
+            Debug.Log("REMOVE LAST SELECTECTED");
+
+            var pos1 = _lastSelectedItem.transform.position;
+            pos1.z = -1f;
+            _lastSelectedItem.transform.position = pos1;
+            _lastSelectedItem.UpdateRendererLayer("Default");
+        }
+
+        var pos2 = transform.position;
+        pos2.z = -2f;
+        transform.position = pos2;
+
+        UpdateRendererLayer("Selected");
+        _lastSelectedItem = this;
     }
 }
 

@@ -1,12 +1,17 @@
 using UnityEngine;
 
-public class Draggabble : MonoBehaviour
+public class Draggabble : Interactable
 {
-    [SerializeField] private float _followSpeed = 0.05f;
+    private float _followSpeed => PlayerInteraction.Instance.DragFollowSpeed;
+
+    private void Start()
+    {
+        transform.position += -Vector3.forward;
+    }
     public void FollowMouse()
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pos.z = 0f;
+        pos.z = transform.position.z;
 
         transform.position = transform.position + (pos - transform.position) * _followSpeed;
     }

@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class SwitchCard : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("COLLISION");
-        CardItem card = other.gameObject.GetComponent<CardItem>();
+    public enum Side { Office, Desk }
+    [SerializeField] private Side _side;
 
-        if (card != null)
-            card.ToggleCardItemSprite();
-    }
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("COLLISION");
         CardItem card = other.gameObject.GetComponent<CardItem>();
 
         if (card != null)
-            card.ToggleCardItemSprite();
+        {
+            bool item = _side == Side.Office ? false : true;
+
+            card.ToggleCardItemSprite(item);
+        }
     }
 }

@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Selected
+    uniqueID: 1934641401
+    locked: 0
+  - name: Bar
+    uniqueID: 3369189889
     locked: 0
   m_RenderingLayers:
   - Default
