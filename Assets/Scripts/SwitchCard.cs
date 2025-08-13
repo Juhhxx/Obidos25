@@ -5,16 +5,23 @@ public class SwitchCard : MonoBehaviour
     public enum Side { Office, Desk }
     [SerializeField] private Side _side;
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("COLLISION");
-        CardItem card = other.gameObject.GetComponent<CardItem>();
+        CursorScript tmp = other.gameObject.GetComponent<CursorScript>();
 
-        if (card != null)
+        if (tmp != null)
         {
-            bool item = _side == Side.Office ? false : true;
+            CardItem card = PlayerInteraction.Instance.CurrentInteractable?
+                                        .gameObject.GetComponent<CardItem>();
 
-            card.ToggleCardItemSprite(item);
+            if (card != null) Switch(card);
         }
+    }
+    public void Switch(CardItem card)
+    {
+        bool item = _side == Side.Office ? true : false;
+
+        card.ToggleCardItemSprite(item);
     }
 }

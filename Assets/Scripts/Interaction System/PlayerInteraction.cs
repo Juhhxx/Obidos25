@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     [SerializeField] private KeyCode _dragKey;
     [SerializeField][ReadOnly] private Interactable _curentInteractable;
+    public Interactable CurrentInteractable => _curentInteractable;
 
     private Vector3 _cameraPos;
 
@@ -63,7 +64,6 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
             else _isDragging = false;
         }
     }
-
 
     private void OnDrawGizmos()
     {

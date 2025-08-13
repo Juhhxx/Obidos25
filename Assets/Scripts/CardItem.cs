@@ -7,6 +7,13 @@ public class CardItem : MonoBehaviour
     [OnValueChanged("UpdateImage")]
     [SerializeField] private bool _isItem;
 
+    [SerializeField] private GameObject _fullCard;
+    [SerializeField][Layer] private string _fullLayer;
+
+    [SerializeField] private GameObject _itemCard;
+    [SerializeField][Layer] private string _itemLayer;
+
+
     BoxCollider2D _collider;
     SpriteRenderer _rendererFull;
     SpriteRenderer _rendererItem;
@@ -19,8 +26,8 @@ public class CardItem : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
         _drag = GetComponent<Draggabble>();
 
-        _rendererFull = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        _rendererItem = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
+        _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -32,31 +39,26 @@ public class CardItem : MonoBehaviour
         _drag.OnSelected.RemoveListener(UpdateSelected);
     }
 
-    public void ToggleCardItemSprite()
-    {
-        Debug.Log("TOGGLE CARD");
-
-        _isItem = !_isItem;
-
-        // Full Sprite
-        transform.GetChild(0).gameObject.SetActive(!_isItem);
-
-        // Item Sprite
-        transform.GetChild(1).gameObject.SetActive(_isItem);
-
-        SpriteRenderer activeRenderer = _isItem ? _rendererItem : _rendererFull;
-
-        UpdateColliderSize(activeRenderer.sprite);
-    }
     public void ToggleCardItemSprite(bool state)
     {
+        if (_rendererFull == null || _rendererItem == null)
+        {
+            _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
+            _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
+        }
+        
+        _isItem = state;
+
         // Full Sprite
-        transform.GetChild(0).gameObject.SetActive(!state);
+        _fullCard.gameObject.SetActive(!state);
 
         // Item Sprite
-        transform.GetChild(1).gameObject.SetActive(state);
+        _itemCard.gameObject.SetActive(state);
 
         SpriteRenderer activeRenderer = state ? _rendererItem : _rendererFull;
+        string layer = state ? _itemLayer : _fullLayer;
+
+        gameObject.layer = LayerMask.NameToLayer(layer);
 
         UpdateColliderSize(activeRenderer.sprite);
     }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
+  m_Name: DiegoEndrada
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <CodeName>k__BackingField: 
+  <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
+  <Rank>k__BackingField: {fileID: 0}
+  <Regiment>k__BackingField: 
+  <ID>k__BackingField: 
+  <Height>k__BackingField: 0
+  <Features>k__BackingField: 
+  <EyeColor>k__BackingField: 
+  <ParkingSpot>k__BackingField: 
+  <Location>k__BackingField: 
+  <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: 328a8b81a484e784598822123505e6d1, type: 3}
+  <Sprite>k__BackingField:
+  - {fileID: 21300000, guid: 0ae0766f8fd589f4984b4fe69a89abd2, type: 3}
+  - {fileID: 21300000, guid: b45bca02d05450a41b8492bcabaf9c41, type: 3}

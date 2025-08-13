@@ -6,6 +6,9 @@ public class ChangeGravity : MonoBehaviour
     [Header("On Collision Enter")]
     [SerializeField] private GravityChange _changeToEnter;
 
+    [Header("On Collision Stay")]
+    [SerializeField] private GravityChange _changeToStay;
+
     [Header("On Collision Exit")]
     [SerializeField] private GravityChange _changeToExit;
 
@@ -14,6 +17,11 @@ public class ChangeGravity : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         ChangeGravityS(_changeToEnter, other.gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        ChangeGravityS(_changeToStay, other.gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D other)

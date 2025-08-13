@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Background
   - Triggers
-  - Interactables
-  - 
-  - 
+  - ItemInteractables
+  - FullInteractables
+  - Cursor
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Bar
     uniqueID: 3369189889
+    locked: 0
+  - name: Cursor
+    uniqueID: 4205918673
     locked: 0
   m_RenderingLayers:
   - Default

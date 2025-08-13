@@ -46,7 +46,7 @@ public class CardManager : MonoBehaviour
         // Division
         TextMeshProUGUI division = _full.transform.GetChild(6).GetComponent<TextMeshProUGUI>();
 
-        division.text = military.Division.ToString();
+        division.text = military.Division.DivisionName;
 
         // Features
         TextMeshProUGUI features = _full.transform.GetChild(7).GetComponent<TextMeshProUGUI>();
@@ -61,7 +61,7 @@ public class CardManager : MonoBehaviour
         // Rank
         TextMeshProUGUI rank = _full.transform.GetChild(9).GetComponent<TextMeshProUGUI>();
 
-        rank.text = military.Rank;
+        rank.text = military.Rank.RankName;
 
         // Regiment
         TextMeshProUGUI reg = _full.transform.GetChild(10).GetComponent<TextMeshProUGUI>();

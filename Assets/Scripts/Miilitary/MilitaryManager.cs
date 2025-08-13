@@ -74,8 +74,8 @@ public class MilitaryManager : MonoBehaviour
         else
             return _selectedMilitary.CodeName;
     }
-    private string GetDivision() => _selectedMilitary.Division.ToString();
-    private string GetRank() => _selectedMilitary.Rank;
+    private string GetDivision() => _selectedMilitary.Division.DivisionName;
+    private string GetRank() => _selectedMilitary.Rank.RankName;
     private string GetParking()
     {
         if (_selectedMilitary == _mole && MoleChance(40))
@@ -162,8 +162,8 @@ public class MilitaryManager : MonoBehaviour
         else
             _militaryImage.sprite = _selectedMilitary.Sprite[0];
         
-        SetBadges(_rank, _selectedMilitary.Rank);
-        SetBadges(_division, _selectedMilitary.Division.ToString());
+        SetBadges(_rank, _selectedMilitary.Rank.RankName);
+        SetBadges(_division, _selectedMilitary.Division.DivisionName);
     }
     private void SetBadges(BadgeManager badge, string militaryBadge)
     {
