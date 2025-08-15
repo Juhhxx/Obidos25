@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
   m_Name: DiegoEndrada
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Diogo Endrada
   <CodeName>k__BackingField: 
   <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
-  <Rank>k__BackingField: {fileID: 0}
+  <Rank>k__BackingField: {fileID: 11400000, guid: 1fb843b9ac8adc44da07e06493ca0ade, type: 2}
   <Regiment>k__BackingField: 
   <ID>k__BackingField: 
   <Height>k__BackingField: 0
