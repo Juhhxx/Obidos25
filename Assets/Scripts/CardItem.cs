@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Draggabble))]
 public class CardItem : MonoBehaviour
 {
     [OnValueChanged("UpdateImage")]
@@ -12,7 +13,6 @@ public class CardItem : MonoBehaviour
 
     [SerializeField] private GameObject _itemCard;
     [SerializeField][Layer] private string _itemLayer;
-
 
     BoxCollider2D _collider;
     SpriteRenderer _rendererFull;
@@ -30,15 +30,6 @@ public class CardItem : MonoBehaviour
         _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
     }
 
-    private void OnEnable()
-    {
-        _drag.OnSelected.AddListener(UpdateSelected);
-    }
-    private void OnDisable()
-    {
-        _drag.OnSelected.RemoveListener(UpdateSelected);
-    }
-
     public void ToggleCardItemSprite(bool state)
     {
         if (_rendererFull == null || _rendererItem == null)
@@ -46,7 +37,7 @@ public class CardItem : MonoBehaviour
             _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
             _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
         }
-        
+
         _isItem = state;
 
         // Full Sprite
@@ -74,19 +65,22 @@ public class CardItem : MonoBehaviour
         Vector2 newS = sprite.bounds.size;
 
         _collider.size = newS;
+
+        _drag.ResetOffSet();
     }
+
     public void UpdateRendererLayer(string layer)
     {
         _rendererFull.sortingLayerName = layer;
         _rendererItem.sortingLayerName = layer;
     }
 
-    private void UpdateSelected()
+    public void UpdateSelected()
     {
         if (_lastSelectedItem == this) return;
 
         Debug.Log("UPDATE SELECTED");
-        
+
         if (_lastSelectedItem != null)
         {
             Debug.Log("REMOVE LAST SELECTECTED");

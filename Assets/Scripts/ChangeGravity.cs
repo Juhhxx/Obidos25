@@ -14,6 +14,8 @@ public class ChangeGravity : MonoBehaviour
 
     public enum GravityChange { On, Off, None }
 
+    private float _defaultGravity = 2.5f;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         ChangeGravityS(_changeToEnter, other.gameObject);
@@ -36,7 +38,8 @@ public class ChangeGravity : MonoBehaviour
         switch (changeTo)
         {
             case GravityChange.On:
-                rb.gravityScale = 2.0f;
+                if (rb.gravityScale != _defaultGravity)
+                    rb.gravityScale = _defaultGravity;
                 break;
 
             case GravityChange.Off:
