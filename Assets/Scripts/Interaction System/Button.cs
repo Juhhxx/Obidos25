@@ -3,15 +3,20 @@ using UnityEngine.Events;
 
 public class Button : Interactable
 {
-    public UnityEvent OnButtonClick;
+    public UnityEvent OnButtonClickDown;
+    public UnityEvent OnButtonClickUp;
 
     private void OnEnable()
     {
-        InteractBegin += OnButtonClick.Invoke;
-        OnButtonClick.AddListener(() => Debug.Log($"BUTTON {name} PRESSED"));
+        InteractBegin += OnButtonClickDown.Invoke;
+        InteractEnd += OnButtonClickUp.Invoke;
+        
+        OnButtonClickDown.AddListener(() => Debug.Log($"BUTTON {name} PRESSED"));
+        OnButtonClickUp.AddListener(() => Debug.Log($"BUTTON {name} RELEASED"));
     }
     private void OnDisable()
     {
-        InteractBegin -= OnButtonClick.Invoke;
+        InteractBegin -= OnButtonClickDown.Invoke;
+        InteractEnd -= OnButtonClickUp.Invoke;
     }
 }

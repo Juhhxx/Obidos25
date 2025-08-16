@@ -24,13 +24,24 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     private void Start()
     {
+        Cursor.visible = false;
         _cameraPos = Camera.main.transform.position;
     }
     private void Update()
     {
+        MoveCursor();
+
         if (!_isInteracting) CheckForInteractable();
 
         if (_curentInteractable != null) Interact();
+    }
+
+    private void MoveCursor()
+    {
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        pos.z = _cursor.transform.position.z;
+
+        _cursor.transform.position = pos;
     }
 
     private void CheckForInteractable()

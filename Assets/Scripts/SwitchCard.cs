@@ -8,7 +8,7 @@ public class SwitchCard : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("COLLISION");
-        CursorScript tmp = other.gameObject.GetComponent<CursorScript>();
+        TAG_Cursor tmp = other.gameObject.GetComponent<TAG_Cursor>();
 
         if (tmp != null)
         {
