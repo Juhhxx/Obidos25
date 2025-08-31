@@ -20,6 +20,8 @@ public class SwitchCard : MonoBehaviour
     }
     public void Switch(CardItem card)
     {
+        if (!PlayerInteraction.Instance.IsInteracting) return;
+        
         bool item = _side == Side.Office ? true : false;
 
         card.ToggleCardItemSprite(item);
