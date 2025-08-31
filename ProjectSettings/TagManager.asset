@@ -44,11 +44,20 @@ TagManager:
   - name: Desk
     uniqueID: 1413776487
     locked: 0
+  - name: Military
+    uniqueID: 3120151721
+    locked: 0
+  - name: OfficeDesk
+    uniqueID: 1573942715
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Selected
     uniqueID: 1934641401
+    locked: 0
+  - name: Imovable
+    uniqueID: 3582338147
     locked: 0
   - name: Bar
     uniqueID: 3369189889
