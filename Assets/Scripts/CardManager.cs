@@ -5,71 +5,59 @@ using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _full;
+    [SerializeField] private SpriteRenderer _portrait;
+    [SerializeField] private SpriteRenderer _signature;
+    [SerializeField] private TextMeshProUGUI _ID;
+    [SerializeField] private TextMeshProUGUI _name;
+    [SerializeField] private TextMeshProUGUI _height;
+    [SerializeField] private TextMeshProUGUI _eyeColor;
+    [SerializeField] private TextMeshProUGUI _rank;
+    [SerializeField] private TextMeshProUGUI _division;
+    [SerializeField] private TextMeshProUGUI _regiment;
+    [SerializeField] private TextMeshProUGUI _facialFeatures;
+
     private Vector3 _initialPos; 
-    private RectTransform _rectTrans;
     private CardItem _cardItem;
 
     private void Awake()
     {
         _cardItem = GetComponent<CardItem>();
-        _rectTrans = GetComponent<RectTransform>();
-        _initialPos = _rectTrans.anchoredPosition;
+        _initialPos = transform.position;
     }
     public void SetUpCard(Military military)
     {
         // Photo
-        Image photo = _full.transform.GetChild(0).GetComponent<Image>();
-
-        photo.sprite = military.Picture;
-
-        // ID
-        TextMeshProUGUI ID = _full.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
-
-        ID.text = military.ID;
-
-        // Name
-        TextMeshProUGUI name = _full.transform.GetChild(3).GetComponent<TextMeshProUGUI>();
-
-        name.text = "\t" + military.Name;
-
-        // Height
-        TextMeshProUGUI height = _full.transform.GetChild(4).GetComponent<TextMeshProUGUI>();
-
-        height.text = military.Height + "cm";
-
-        // Eye Color
-        TextMeshProUGUI eye = _full.transform.GetChild(5).GetComponent<TextMeshProUGUI>();
-
-        eye.text = military.EyeColor;
-
-        // Division
-        TextMeshProUGUI division = _full.transform.GetChild(6).GetComponent<TextMeshProUGUI>();
-
-        division.text = military.Division.DivisionName;
-
-        // Features
-        TextMeshProUGUI features = _full.transform.GetChild(7).GetComponent<TextMeshProUGUI>();
-
-        features.text = military.Features;
+        _portrait.sprite = military.Picture;
 
         // Siganture
-        Image signature = _full.transform.GetChild(8).GetComponent<Image>();
+        _signature.sprite = military.Signature;
 
-        signature.sprite = military.Signature;
+        // ID
+        _ID.text = military.ID;
+
+        // Name
+        _name.text = military.Name;
+
+        // Height
+        _height.text = military.Height + "cm";
+
+        // Eye Color
+        _eyeColor.text = military.EyeColor;
+
+        // Division
+        _division.text = military.Division.DivisionName;
+
+        // Features
+        _facialFeatures.text = military.Features;
 
         // Rank
-        TextMeshProUGUI rank = _full.transform.GetChild(9).GetComponent<TextMeshProUGUI>();
-
-        rank.text = military.Rank.RankName;
+        _rank.text = military.Rank.RankName;
 
         // Regiment
-        TextMeshProUGUI reg = _full.transform.GetChild(10).GetComponent<TextMeshProUGUI>();
-
-        reg.text = military.Regiment;
+        _regiment.text = military.Regiment;
 
         // Reset Position and State
-        _rectTrans.anchoredPosition = _initialPos;
+        transform.position = _initialPos;
         _cardItem.ToggleCardItemSprite(true);
     }
 }

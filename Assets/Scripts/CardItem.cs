@@ -29,6 +29,14 @@ public class CardItem : MonoBehaviour
         _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
         _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
     }
+    private void OnEnable()
+    {
+        _drag.InteractBegin += UpdateSelected;
+    }
+    private void OnDisable()
+    {
+        _drag.InteractBegin -= UpdateSelected;
+    }
 
     public void ToggleCardItemSprite(bool state)
     {
@@ -52,6 +60,7 @@ public class CardItem : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer(layer);
 
         UpdateColliderSize(activeRenderer.sprite);
+        UpdateRendererLayer("Selected");
     }
 
     private void UpdateImage() => ToggleCardItemSprite(_isItem);
@@ -66,13 +75,30 @@ public class CardItem : MonoBehaviour
 
         _collider.size = newS;
 
-        _drag.ResetOffSet();
+        _drag?.ResetOffSet();
     }
 
     public void UpdateRendererLayer(string layer)
     {
         _rendererFull.sortingLayerName = layer;
         _rendererItem.sortingLayerName = layer;
+
+        SpriteRenderer[] aditionalRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        if (aditionalRenderers != null || aditionalRenderers.Length != 0)
+        {
+            foreach (SpriteRenderer r in aditionalRenderers)
+            {
+                r.sortingLayerName = layer;
+            }
+        }
+
+        Canvas canvas = GetComponentInChildren<Canvas>();
+
+        if (canvas != null)
+        {
+            canvas.sortingLayerName = layer;
+        }
     }
 
     public void UpdateSelected()

@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     [SerializeField] private float _dragFollowSpeed = 0.35f;
     public float DragFollowSpeed => _dragFollowSpeed;
     private bool _isInteracting = false;
+    public bool IsInteracting => _isInteracting;
 
     [SerializeField][ReadOnly] private Interactable _curentInteractable;
     public Interactable CurrentInteractable => _curentInteractable;
@@ -54,7 +55,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
         Interactable temp = hit.collider?.gameObject.GetComponent<Interactable>();
 
-        Debug.Log($"COLLIDED WITH : {hit.collider?.gameObject.name}");
+        // Debug.Log($"COLLIDED WITH : {hit.collider?.gameObject.name}");
 
         if (temp != null)
         {
@@ -69,19 +70,16 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
         {
             _curentInteractable?.OnInteractBegin();
             _isInteracting = true;
-            Debug.Log("INTERACTION BEGIN");
         }
         else if (Input.GetButton(_interactButton))
         {
             _curentInteractable?.OnInteract();
             _isInteracting = true;
-            Debug.Log("INTERACTION");
         }
         else if (Input.GetButtonUp(_interactButton))
         {
             _curentInteractable?.OnInteractEnd();
             _isInteracting = true;
-            Debug.Log("INTERACTION END");
         }
         else _isInteracting = false;
     }
@@ -92,6 +90,6 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
         Gizmos.color = _curentInteractable == null ? Color.red : Color.blue;
         Gizmos.DrawWireSphere(pos, 0.5f);
-        Gizmos.DrawLine(_cameraPos, pos);
+        Gizmos.DrawLine(pos, pos + (Vector3.forward * -10));
     }
 }

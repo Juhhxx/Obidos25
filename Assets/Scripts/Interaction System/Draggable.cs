@@ -20,14 +20,12 @@ public class Draggabble : Interactable
 
     private void OnEnable()
     {
-        InteractBegin += _cardItem.UpdateSelected;
         InteractBegin += SetUp;
         Interact += FollowMouse;
         InteractEnd += TurnOnCollider;
     }
     private void OnDisable()
     {
-        InteractBegin -= _cardItem.UpdateSelected;
         InteractBegin -= SetUp;
         Interact -= FollowMouse;
         InteractEnd -= TurnOnCollider;
