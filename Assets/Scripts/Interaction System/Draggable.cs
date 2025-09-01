@@ -6,7 +6,6 @@ public class Draggabble : Interactable
     private float _followSpeed => PlayerInteraction.Instance.DragFollowSpeed;
     private Rigidbody2D _rb;
     private Collider2D _collider;
-    private CardItem _cardItem;
 
     private Vector3 _mousePos;
     private Vector3 _offSet;
@@ -15,7 +14,6 @@ public class Draggabble : Interactable
     {
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
-        _cardItem = GetComponent<CardItem>();
     }
 
     private void OnEnable()
@@ -33,7 +31,7 @@ public class Draggabble : Interactable
 
     private void Update()
     {
-        _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _mousePos = PlayerInteraction.Instance.MousePosition;
         _mousePos.z = transform.position.z;
     }
 

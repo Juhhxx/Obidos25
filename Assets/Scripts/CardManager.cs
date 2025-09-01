@@ -17,11 +17,9 @@ public class CardManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _facialFeatures;
 
     private Vector3 _initialPos; 
-    private CardItem _cardItem;
 
     private void Awake()
     {
-        _cardItem = GetComponent<CardItem>();
         _initialPos = transform.position;
     }
     public void SetUpCard(Military military)
@@ -58,6 +56,5 @@ public class CardManager : MonoBehaviour
 
         // Reset Position and State
         transform.position = _initialPos;
-        _cardItem.ToggleCardItemSprite(true);
     }
 }

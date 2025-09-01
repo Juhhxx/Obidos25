@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 {
+    [SerializeField] private Camera _mainCamera;
     [SerializeField] private GameObject _cursor;
     [SerializeField][InputAxis] private string _interactButton;
 
@@ -39,7 +40,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     private void MoveCursor()
     {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 pos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         pos.z = _cursor.transform.position.z;
 
         _cursor.transform.position = pos;
@@ -89,7 +90,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
         Vector3 pos = MousePosition;
 
         Gizmos.color = _curentInteractable == null ? Color.red : Color.blue;
-        Gizmos.DrawWireSphere(pos, 0.5f);
+        Gizmos.DrawWireSphere(pos, 1f);
         Gizmos.DrawLine(pos, pos + (Vector3.forward * -10));
     }
 }

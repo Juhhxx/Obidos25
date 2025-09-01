@@ -14,7 +14,7 @@ public class ChangeGravity : MonoBehaviour
 
     public enum GravityChange { On, Off, None }
 
-    private float _defaultGravity = 2.5f;
+    private float _defaultGravity = 5f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

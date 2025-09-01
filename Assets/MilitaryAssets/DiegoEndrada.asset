@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: DiegoEndrada
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Diogo Endrada
-  <CodeName>k__BackingField: 
+  <CodeName>k__BackingField: BAT
   <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: 1fb843b9ac8adc44da07e06493ca0ade, type: 2}
-  <Regiment>k__BackingField: 
-  <ID>k__BackingField: 
-  <Height>k__BackingField: 0
-  <Features>k__BackingField: 
-  <EyeColor>k__BackingField: 
-  <ParkingSpot>k__BackingField: 
-  <Location>k__BackingField: 
+  <Regiment>k__BackingField: RE2
+  <ID>k__BackingField: 1122334455
+  <Height>k__BackingField: 124
+  <Features>k__BackingField: Bald
+  <EyeColor>k__BackingField: Brown
+  <ParkingSpot>k__BackingField: A4
+  <Location>k__BackingField: Viseu
   <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
   <Picture>k__BackingField: {fileID: 21300000, guid: 328a8b81a484e784598822123505e6d1, type: 3}
   <Sprite>k__BackingField:

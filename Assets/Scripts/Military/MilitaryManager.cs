@@ -2,48 +2,79 @@ using System.Collections.Generic;
 using Obidos25;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Yarn.Unity;
 
 public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 {
+    [Header("Military Characters")]
+    [Space(5f)]
     [SerializeField] private List<Military> _militaryList;
     private Queue<Military> _militaryOrder;
-    [SerializeField] private List<string> _passwordList;
     [SerializeField] private List<Military> _moles;
+
+    [Space(10f)]
+    [Header("Passwords")]
+    [Space(5f)]
+    [SerializeField] private List<string> _passwordList;
+
+    [Space(10f)]
+    [Header("Game Objects")]
+    [Space(5f)]
     [SerializeField] private GameObject _idCard;
+    [SerializeField] private DynamicFileBuilder _idCardBuilder;
     [SerializeField] private TextMeshProUGUI _passwordText;
+    [SerializeField] private DynamicFileBuilder _passwordNoteBuilder;
+
+    [Space(10f)]
+    [Header("Military Object")]
+    [Space(5f)]
     [SerializeField] private GameObject _military;
     [SerializeField] private SpriteRenderer _rank;
     [SerializeField] private SpriteRenderer _division;
+
+    [Space(10f)]
+    [Header("Dialogue")]
+    [Space(5f)]
     [SerializeField] private GameObject _dialogueSystem;
     [SerializeField] private string _startDialog;
+
+    [Space(10f)]
+    [Header("Win Check")]
+    [Space(5f)]
     [SerializeField] private WinCheck _winCheck;
+
     private DialogueRunner _dialogueRunner;
     private InMemoryVariableStorage _dialogueVariables;
     private Military _selectedMilitary;
     private string _selectedPassword;
-    private Image _militaryImage;
+    private SpriteRenderer _militarySR;
     private Animator _militaryAnimator;
     private CardManager _idCardManager;
+
+    [Space(10f)]
+    [Header("Events")]
+    [Space(5f)]
+    public UnityEvent OnUpdateAssets;
  
     private void Awake()
     {
         SingletonCheck(this);
 
-        _militaryImage      = _military.GetComponentInChildren<Image>();
-        _militaryAnimator   = _military.GetComponent<Animator>();
-        _idCardManager        = _idCard.GetComponent<CardManager>();
-        _dialogueRunner     = _dialogueSystem.GetComponent<DialogueRunner>();
-        _dialogueVariables  = _dialogueSystem.GetComponent<InMemoryVariableStorage>();
+        _militarySR = _military.GetComponentInChildren<SpriteRenderer>();
+        _militaryAnimator = _military.GetComponent<Animator>();
+        _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
+        _dialogueVariables = _dialogueSystem.GetComponent<InMemoryVariableStorage>();
+        _idCardManager = _idCardBuilder.GetComponent<CardManager>();
 
-        _dialogueRunner.AddFunction("get_military_name",GetName);
-        _dialogueRunner.AddFunction("get_password_dialog",GetPassword);
-        _dialogueRunner.AddFunction("get_location_dialog",GetLocation);
-        _dialogueRunner.AddFunction("get_park_dialog",GetParking);
-        _dialogueRunner.AddFunction("get_division_dialog",GetDivision);
-        _dialogueRunner.AddFunction("get_rank_dialog",GetRank);
-        _dialogueRunner.AddFunction("get_codename_dialog",GetCodeName);
+        _dialogueRunner.AddFunction("get_military_name", GetName);
+        _dialogueRunner.AddFunction("get_password_dialog", GetPassword);
+        _dialogueRunner.AddFunction("get_location_dialog", GetLocation);
+        _dialogueRunner.AddFunction("get_park_dialog", GetParking);
+        _dialogueRunner.AddFunction("get_division_dialog", GetDivision);
+        _dialogueRunner.AddFunction("get_rank_dialog", GetRank);
+        _dialogueRunner.AddFunction("get_codename_dialog", GetCodeName);
     }
     private void Start()
     {
@@ -54,7 +85,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         StartInterrogation();
     }
 
-    private string GetPassword() 
+    // Questions
+    private string GetPassword()
     {
         if (_moles.Contains(_selectedMilitary) && MoleChance(10))
         {
@@ -102,7 +134,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             return _selectedMilitary.Location;
     }
 
-
+    // Military and Moles
     private void SetMilitaryOrder()
     {
         SetMoles();
@@ -156,10 +188,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _dialogueRunner.Stop();
         _idCardManager.SetUpCard(_selectedMilitary);
         _militaryAnimator.SetTrigger("WalkIn");
-       
+
+        _passwordNoteBuilder?.BuildFileSprite();
     }
     public void HasWalkedIn()
     {
+        _idCardBuilder?.BuildFileSprite();
         _idCard.SetActive(true);
         _dialogueRunner.StartDialogue(_startDialog);
     }
@@ -170,14 +204,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private void SetMilitary()
     {
-        Debug.Log(_militaryImage);
+        Debug.Log(_militarySR);
 
         if (_moles.Contains(_selectedMilitary) && MoleChance(50))
         {
-            _militaryImage.sprite = _selectedMilitary.GetMoleSprite();
+            _militarySR.sprite = _selectedMilitary.GetMoleSprite();
         }
         else
-            _militaryImage.sprite = _selectedMilitary.Sprite[0];
+            _militarySR.sprite = _selectedMilitary.Sprite[0];
 
         _rank.sprite = _selectedMilitary.Rank.RankBadge;
         _division.sprite = _selectedMilitary.Division.DivisionBadge;

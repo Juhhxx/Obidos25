@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
   m_Name: "Jo\xE3oAzevedo"
   m_EditorClassIdentifier: 
-  Name: "Jo\xE3o M\xE1rio Azevedo"
-  CodeName: RAT
-  Division: 2
-  Rank: General
-  Regiment: RC3
-  ID: 011453911
-  Height: 181
-  Features: Scar on Upper Lip
-  EyeColor: Blue
-  ParkingSpot: A2
-  Location: Braga
-  Signature: {fileID: 21300000, guid: bc14ae4b4b098a44ab5a5702688927c6, type: 3}
-  Picture: {fileID: 21300000, guid: 3f092c1621bd9c8499622879a1cc5d1f, type: 3}
-  Sprite:
-  - {fileID: 21300000, guid: 63da5a6d9d9878e48b24b3b33e60a1b7, type: 3}
-  - {fileID: 21300000, guid: 2178e2fd3ba703a448d4e1b347f32647, type: 3}
+  <Name>k__BackingField: "Jo\xE3o Azevedo"
+  <CodeName>k__BackingField: SAD
+  <Division>k__BackingField: {fileID: 11400000, guid: 31fb3960ef417a94d9b55aa2e1cc2d3c, type: 2}
+  <Rank>k__BackingField: {fileID: 11400000, guid: 8b97876767e6d864dbaed39106d4d12a, type: 2}
+  <Regiment>k__BackingField: RC6
+  <ID>k__BackingField: 222777888
+  <Height>k__BackingField: 145
+  <Features>k__BackingField: hair
+  <EyeColor>k__BackingField: green
+  <ParkingSpot>k__BackingField: C6
+  <Location>k__BackingField: Braga
+  <Signature>k__BackingField: {fileID: 21300000, guid: bc14ae4b4b098a44ab5a5702688927c6, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: 0936bb221c484ca4caf48e64b6c101b6, type: 3}
+  <Sprite>k__BackingField:
+  - {fileID: 21300000, guid: e17de27a4bde7dc40be58ce7a06c8401, type: 3}
+  - {fileID: 21300000, guid: 9874f322682c92841a96e72c0aa4d952, type: 3}

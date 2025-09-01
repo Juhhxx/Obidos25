@@ -16,7 +16,7 @@ TagManager:
   - ItemInteractables
   - FullInteractables
   - Cursor
-  - 
+  - Screenshot
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Screenshot
+    uniqueID: 710892977
+    locked: 0
   - name: Office
     uniqueID: 190375967
     locked: 0
