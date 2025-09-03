@@ -14,6 +14,12 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     [SerializeField][ReadOnly] private Interactable _curentInteractable;
     public Interactable CurrentInteractable => _curentInteractable;
+    public void SetInteractable(Interactable interactable)
+    {
+        Vector3 pos = MousePosition;
+
+        _isInteracting = false;
+    }
 
     private Vector3 _cameraPos;
 

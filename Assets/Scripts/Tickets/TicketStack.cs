@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class TicketStack : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _ticketType;
 
-    // Update is called once per frame
-    void Update()
+    public void GiveTicket()
     {
-        
+        GameObject ticket = Instantiate(_ticketType, PlayerInteraction.Instance.MousePosition, Quaternion.identity);
+
+        Interactable intr = ticket.GetComponent<Draggabble>();
+
+        PlayerInteraction.Instance.SetInteractable(intr);
     }
 }
