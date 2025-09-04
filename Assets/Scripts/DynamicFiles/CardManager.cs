@@ -16,12 +16,6 @@ public class CardManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _regiment;
     [SerializeField] private TextMeshProUGUI _facialFeatures;
 
-    private Vector3 _initialPos; 
-
-    private void Awake()
-    {
-        _initialPos = transform.position;
-    }
     public void SetUpCard(Military military)
     {
         // Photo
@@ -53,8 +47,5 @@ public class CardManager : MonoBehaviour
 
         // Regiment
         _regiment.text = military.Regiment;
-
-        // Reset Position and State
-        transform.position = _initialPos;
     }
 }

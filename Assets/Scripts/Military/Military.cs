@@ -34,6 +34,10 @@ namespace Obidos25
         [field:ShowAssetPreview]
         [field:SerializeField] public Sprite[] Sprite { get; private set; }
 
+        private bool _marked = false;
+
+        public void Mark() => _marked = true;
+
         public Sprite GetMoleSprite()
         {
             int spriteId = Random.Range(1, Sprite.Length);

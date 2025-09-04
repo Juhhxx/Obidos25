@@ -37,9 +37,6 @@ public class DynamicFileBuilder : MonoBehaviour
     [ShowAssetPreview]
     [SerializeField] private Texture2D _generatedTexture;
 
-    private bool _hasChangedLayers = false;
-    private bool _hasGeneratedSprite = false;
-
 
     [Button(enabledMode: EButtonEnableMode.Always)]
     public void BuildFileSprite()
@@ -58,9 +55,6 @@ public class DynamicFileBuilder : MonoBehaviour
     private IEnumerator BuildFileSpriteCR()
     {
         Debug.Log("BEGIN SCREENSHOT");
-
-        _hasChangedLayers = false;
-        _hasGeneratedSprite = false;
 
         ChangeGOLayer(_captureFrom, _captureLayer);
 
@@ -90,7 +84,6 @@ public class DynamicFileBuilder : MonoBehaviour
                 cgo.gameObject.layer = layer;
             }
         }
-        _hasChangedLayers = true;
     }
 
     private Sprite ToSprite(RenderTexture renderTex)
@@ -128,8 +121,6 @@ public class DynamicFileBuilder : MonoBehaviour
         // Create Sprite Based on Texture
         Vector2 spriteCenter = new Vector2(0.5f, 0.5f);
         Rect spriteRect = new Rect(0f, 0f, _spriteW, _spriteH);
-
-        _hasGeneratedSprite = true;
 
         return Sprite.Create(finalTex, spriteRect, spriteCenter, 30);
     }

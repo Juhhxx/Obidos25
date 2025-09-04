@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c7daca14dba45934f8e8f26011dc37eb, type: 3}
+    - target: {fileID: 3940376192954431135, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
+      propertyPath: _ticketType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5051969154792128055, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
       propertyPath: _isItem
       value: 1

@@ -6,4 +6,17 @@ public class MilitaryControl : MonoBehaviour
 
     public void CallStartInterrogation() => _militaryManager.StartInterrogation();
     public void CallHasWalkedIn() => _militaryManager.HasWalkedIn();
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("aaaaaaaa");
+        Ticket ticket = other.GetComponent<Ticket>();
+
+        if (ticket != null)
+        {
+            _militaryManager.GiveTicket(ticket.TicketType);
+            Destroy(ticket.gameObject);
+            Debug.Log("GIVE TICKET");
+        }
+    }
 }

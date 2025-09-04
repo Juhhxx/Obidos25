@@ -3,7 +3,6 @@ using Obidos25;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using Yarn.Unity;
 
 public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
@@ -145,9 +144,34 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         foreach (Military m in _moles) _militaryList.Remove(m);
     }
+    public void GiveTicket(TicketTypes type)
+    {
+        if (type == TicketTypes.Red) _selectedMilitary?.Mark();
+
+        WalkingOut();
+    }
+    private void SetMilitary()
+    {
+        Debug.Log(_militarySR);
+
+        if (_moles.Contains(_selectedMilitary) && MoleChance(50))
+        {
+            _militarySR.sprite = _selectedMilitary.GetMoleSprite();
+        }
+        else
+            _militarySR.sprite = _selectedMilitary.Sprite[0];
+
+        _rank.sprite = _selectedMilitary.Rank.RankBadge;
+        _division.sprite = _selectedMilitary.Division.DivisionBadge;
+        
+        // SetBadges(_rank, _selectedMilitary.Rank.RankName);
+        // SetBadges(_division, _selectedMilitary.Division.DivisionName);
+    }
     private void SetMoles()
     {
-        int moleNumber = Random.Range(1,3);
+        int moleNumber = Random.Range(1,4);
+
+        Debug.LogWarning($"{moleNumber} MOLES");
 
         for (int i = 0; i < moleNumber; i++)
         {
@@ -163,6 +187,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             return ChooseMole();
         }
         else return _militaryList[moleChooser];
+    }
+    private bool MoleChance(int chance)
+    {
+        int moleChance = Random.Range(0, 100);
+
+        return moleChance <= chance;
     }
     
     private void SetPassword()
@@ -183,10 +213,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             _winCheck.StartFinal();
             return;
         }
+
         _selectedMilitary = _militaryOrder?.Dequeue();
+
         SetMilitary();
-        _dialogueRunner.Stop();
         _idCardManager.SetUpCard(_selectedMilitary);
+        _idCard.GetComponent<Draggabble>().ResetPosition();
+
+        _dialogueRunner.Stop();
         _militaryAnimator.SetTrigger("WalkIn");
 
         _passwordNoteBuilder?.BuildFileSprite();
@@ -202,23 +236,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _idCard.SetActive(false);
         _militaryAnimator.SetTrigger("WalkOut");
     }
-    private void SetMilitary()
-    {
-        Debug.Log(_militarySR);
-
-        if (_moles.Contains(_selectedMilitary) && MoleChance(50))
-        {
-            _militarySR.sprite = _selectedMilitary.GetMoleSprite();
-        }
-        else
-            _militarySR.sprite = _selectedMilitary.Sprite[0];
-
-        _rank.sprite = _selectedMilitary.Rank.RankBadge;
-        _division.sprite = _selectedMilitary.Division.DivisionBadge;
-        
-        // SetBadges(_rank, _selectedMilitary.Rank.RankName);
-        // SetBadges(_division, _selectedMilitary.Division.DivisionName);
-    }
+    
     // private void SetBadges(GameObject badge, string militaryBadge)
     // {
     //     if (_moles.Contains(_selectedMilitary) && MoleChance(80))
@@ -230,11 +248,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     //         badge.SetBadge(militaryBadge, false);
     //     }
     // }
-    private bool MoleChance(int chance)
-    {
-        int moleChance = Random.Range(0,100);
-
-        return moleChance <= chance;
-    }
+    
     
 }

@@ -9,16 +9,20 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     [SerializeField] private float _dragFollowSpeed = 0.35f;
     public float DragFollowSpeed => _dragFollowSpeed;
-    private bool _isInteracting = false;
+
+    [SerializeField][ReadOnly] private bool _isInteracting = false;
     public bool IsInteracting => _isInteracting;
 
     [SerializeField][ReadOnly] private Interactable _curentInteractable;
     public Interactable CurrentInteractable => _curentInteractable;
+
     public void SetInteractable(Interactable interactable)
     {
-        Vector3 pos = MousePosition;
+        _curentInteractable = interactable;
 
-        _isInteracting = false;
+        _curentInteractable.OnInteractBegin();
+        
+        ((Draggabble)_curentInteractable).ResetOffSet();
     }
 
     private Vector3 _cameraPos;

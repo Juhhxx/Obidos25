@@ -8,11 +8,13 @@ public class Draggabble : Interactable
 
     private Vector3 _mousePos;
     private Vector3 _offSet;
+    private Vector3 _initialPos;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
+        _initialPos = transform.position;
     }
 
     private void OnEnable()
@@ -33,6 +35,14 @@ public class Draggabble : Interactable
         _mousePos = PlayerInteraction.Instance.MousePosition;
         _mousePos.z = transform.position.z;
     }
+
+    public void ResetPosition()
+    {
+        transform.position = new Vector3(_initialPos.x, _initialPos.y, -1f);
+
+        GetComponent<CardItem>()?.ToggleCardItemSprite(true);
+    }
+
 
     private void SetUp()
     {
