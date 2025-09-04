@@ -25,6 +25,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [SerializeField] private DynamicFileBuilder _idCardBuilder;
     [SerializeField] private TextMeshProUGUI _passwordText;
     [SerializeField] private DynamicFileBuilder _passwordNoteBuilder;
+    [SerializeField] private GameObject _ticketStacks;
 
     [Space(10f)]
     [Header("Military Object")]
@@ -219,6 +220,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         SetMilitary();
         _idCardManager.SetUpCard(_selectedMilitary);
         _idCard.GetComponent<Draggabble>().ResetPosition();
+
+        TicketStack[] ts = _ticketStacks.GetComponentsInChildren<TicketStack>();
+
+        foreach (TicketStack t in ts) t.Reset();
 
         _dialogueRunner.Stop();
         _militaryAnimator.SetTrigger("WalkIn");

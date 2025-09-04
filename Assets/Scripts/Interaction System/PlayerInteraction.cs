@@ -21,8 +21,13 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
         _curentInteractable = interactable;
 
         _curentInteractable.OnInteractBegin();
-        
+
         ((Draggabble)_curentInteractable).ResetOffSet();
+    }
+    public void ResetInteractable()
+    {
+        _isInteracting = false;
+        _curentInteractable = null;
     }
 
     private Vector3 _cameraPos;

@@ -15,6 +15,8 @@ public class MilitaryControl : MonoBehaviour
         if (ticket != null)
         {
             _militaryManager.GiveTicket(ticket.TicketType);
+
+            PlayerInteraction.Instance.ResetInteractable();
             Destroy(ticket.gameObject);
             Debug.Log("GIVE TICKET");
         }
