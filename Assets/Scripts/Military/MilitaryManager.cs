@@ -79,6 +79,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private void Start()
     {
         _idCard.SetActive(false);
+        _passwordNoteBuilder?.BuildFileSprite();
 
         SetMilitaryOrder();
         SetPassword();
@@ -227,8 +228,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         _dialogueRunner.Stop();
         _militaryAnimator.SetTrigger("WalkIn");
-
-        _passwordNoteBuilder?.BuildFileSprite();
     }
     public void HasWalkedIn()
     {
