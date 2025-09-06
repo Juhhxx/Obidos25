@@ -71,9 +71,11 @@ public class CardItem : MonoBehaviour
 
         if (_collider == null) _collider = GetComponent<BoxCollider2D>();
 
-        Vector2 newS = sprite.bounds.size;
+        Vector2 newSize = sprite.bounds.size;
+        Vector2 newOffset = sprite.bounds.center;
 
-        _collider.size = newS;
+        _collider.size = newSize;
+        _collider.offset = newOffset;
 
         _drag?.ResetOffSet();
     }
