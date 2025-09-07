@@ -7,7 +7,7 @@ Yes.
     -> What's your name ? 
 
 My name is {get_military_name()}. 
-<<set $progresso = 7>>
+<<set $progresso = 5>>
 <<jump Options>>
 ===
 
@@ -20,7 +20,7 @@ title: Options
         <<set $code = 0>>
         <<set $park = 0>>
     <<endif>>
-    -> What's the password? <<if $password < 1>>
+    -> {get_password_question()} ? (password) <<if $password < 1>>
         {get_password_dialog()}.
         <<set $password = $password + 1>>
         <<set $progresso += 1>>

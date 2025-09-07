@@ -13,10 +13,25 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private Queue<Military> _militaryOrder;
     [SerializeField] private List<Military> _moles;
 
+    private Military _selectedMilitary;
+    private SpriteRenderer _militarySR;
+    private Animator _militaryAnimator;
+
     [Space(10f)]
     [Header("Passwords")]
     [Space(5f)]
-    [SerializeField] private List<string> _passwordList;
+    [SerializeField] private List<Password> _passwordList;
+    
+    private Password _selectedPassword;
+
+    [System.Serializable]
+    public struct Password
+    {
+        [field:SerializeField] public string PasswordKey { get; private set; }
+
+        [field:SerializeField] public string PasswordCorrectAnswer { get; private set; }
+        [field:SerializeField] public string PasswordWrongAnswer { get; private set; }
+    }
 
     [Space(10f)]
     [Header("Game Objects")]
@@ -47,10 +62,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private DialogueRunner _dialogueRunner;
     private InMemoryVariableStorage _dialogueVariables;
-    private Military _selectedMilitary;
-    private string _selectedPassword;
-    private SpriteRenderer _militarySR;
-    private Animator _militaryAnimator;
+    
     private CardManager _idCardManager;
 
     [Space(10f)]
@@ -69,7 +81,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _idCardManager = _idCardBuilder.GetComponent<CardManager>();
 
         _dialogueRunner.AddFunction("get_military_name", GetName);
-        _dialogueRunner.AddFunction("get_password_dialog", GetPassword);
+        _dialogueRunner.AddFunction("get_password_question", GetPassword);
+        _dialogueRunner.AddFunction("get_password_dialog", GetPasswordAnswer);
         _dialogueRunner.AddFunction("get_location_dialog", GetLocation);
         _dialogueRunner.AddFunction("get_park_dialog", GetParking);
         _dialogueRunner.AddFunction("get_division_dialog", GetDivision);
@@ -79,24 +92,30 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private void Start()
     {
         _idCard.SetActive(false);
-        _passwordNoteBuilder?.BuildFileSprite();
 
         SetMilitaryOrder();
         SetPassword();
         StartInterrogation();
+        _passwordNoteBuilder?.BuildFileSprite();
     }
 
     // Questions
     private string GetPassword()
     {
+        int rnd = Random.Range(0, _passwordList.Count);
+
+        _selectedPassword = _passwordList[rnd];
+
+        return _selectedPassword.PasswordKey;
+    }
+    private string GetPasswordAnswer()
+    {
         if (_moles.Contains(_selectedMilitary) && MoleChance(10))
         {
-            int passIndx = Random.Range(0, _passwordList.Count);
-
-            return _passwordList[passIndx];
+            return _selectedPassword.PasswordWrongAnswer;
         }
         else
-            return _selectedPassword;
+            return _selectedPassword.PasswordCorrectAnswer;
     }
     private string GetName() => _selectedMilitary.Name;
     private string GetCodeName()
@@ -199,13 +218,18 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     
     private void SetPassword()
     {
-        int passIndx = Random.Range(0, _passwordList.Count);
+        string passwords = "";
 
-        _selectedPassword = _passwordList[passIndx];
+        foreach (Password p in _passwordList)
+        {
+            passwords += p.PasswordKey;
 
-        _passwordList.Remove(_selectedPassword);
+            passwords += " > ";
 
-        _passwordText.text = $"The password is\n{_selectedPassword}";
+            passwords += p.PasswordCorrectAnswer + "\n";
+        }
+
+        _passwordText.text = passwords;
     }
 
     public void StartInterrogation()

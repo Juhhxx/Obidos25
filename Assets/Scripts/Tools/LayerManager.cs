@@ -17,6 +17,17 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
         _draggabbles.Insert(0, drag);
 
         drag.InteractBegin += () => UpdateSelected(drag);
+
+        UpdateLayering();
+    }
+
+    public void UnregisterDragable(Draggabble drag)
+    {
+        _draggabbles.Remove(drag);
+
+        drag.InteractBegin -= () => UpdateSelected(drag);
+
+        UpdateLayering();
     }
 
     private void OnDisable()

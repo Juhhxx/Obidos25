@@ -30,6 +30,10 @@ public class Draggabble : Interactable
         Interact -= FollowMouse;
         InteractEnd -= TurnOnCollider;
     }
+    private void OnDestroy()
+    {
+        LayerManager.Instance.UnregisterDragable(this);
+    }
 
     private void Update()
     {
