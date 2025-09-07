@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using Obidos25;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,7 +20,6 @@ public class CardItem : MonoBehaviour
     SpriteRenderer _rendererItem;
     Draggabble _drag;
 
-    [SerializeField][ReadOnly] private static CardItem _lastSelectedItem;
 
     private void Awake()
     {
@@ -28,14 +28,6 @@ public class CardItem : MonoBehaviour
 
         _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
         _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
-    }
-    private void OnEnable()
-    {
-        _drag.InteractBegin += UpdateSelected;
-    }
-    private void OnDisable()
-    {
-        _drag.InteractBegin -= UpdateSelected;
     }
 
     public void ToggleCardItemSprite(bool state)
@@ -46,6 +38,8 @@ public class CardItem : MonoBehaviour
             _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
         }
 
+        if (_collider == null) _collider = GetComponent<BoxCollider2D>();
+
         _isItem = state;
 
         // Full Sprite
@@ -55,76 +49,17 @@ public class CardItem : MonoBehaviour
         _itemCard.gameObject.SetActive(state);
 
         SpriteRenderer activeRenderer = state ? _rendererItem : _rendererFull;
+
         string layer = state ? _itemLayer : _fullLayer;
 
         gameObject.layer = LayerMask.NameToLayer(layer);
 
-        UpdateColliderSize(activeRenderer.sprite);
-        UpdateRendererLayer("Selected");
-    }
-
-    private void UpdateImage() => ToggleCardItemSprite(_isItem);
-
-    private void UpdateColliderSize(Sprite sprite)
-    {
-        if (sprite == null) return;
-
-        if (_collider == null) _collider = GetComponent<BoxCollider2D>();
-
-        Vector2 newSize = sprite.bounds.size;
-        Vector2 newOffset = sprite.bounds.center;
-
-        _collider.size = newSize;
-        _collider.offset = newOffset;
+        _collider.UpdateColliderBasedOnSprite(activeRenderer.sprite);
 
         _drag?.ResetOffSet();
     }
 
-    public void UpdateRendererLayer(string layer)
-    {
-        _rendererFull.sortingLayerName = layer;
-        _rendererItem.sortingLayerName = layer;
-
-        SpriteRenderer[] aditionalRenderers = GetComponentsInChildren<SpriteRenderer>();
-
-        if (aditionalRenderers != null || aditionalRenderers.Length != 0)
-        {
-            foreach (SpriteRenderer r in aditionalRenderers)
-            {
-                r.sortingLayerName = layer;
-            }
-        }
-
-        Canvas canvas = GetComponentInChildren<Canvas>();
-
-        if (canvas != null)
-        {
-            canvas.sortingLayerName = layer;
-        }
-    }
-
-    public void UpdateSelected()
-    {
-        if (_lastSelectedItem == this) return;
-
-        Debug.Log("UPDATE SELECTED");
-
-        if (_lastSelectedItem != null)
-        {
-            Debug.Log("REMOVE LAST SELECTECTED");
-
-            var pos1 = _lastSelectedItem.transform.position;
-            pos1.z = -1f;
-            _lastSelectedItem.transform.position = pos1;
-            _lastSelectedItem.UpdateRendererLayer("Default");
-        }
-
-        var pos2 = transform.position;
-        pos2.z = -2f;
-        transform.position = pos2;
-
-        UpdateRendererLayer("Selected");
-        _lastSelectedItem = this;
-    }
+    private void UpdateImage() => ToggleCardItemSprite(_isItem);
+    
 }
 

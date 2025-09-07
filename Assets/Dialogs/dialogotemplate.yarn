@@ -13,20 +13,18 @@ My name is {get_military_name()}.
 
 title: Options
 ---
-    <<if $progresso == 7>>
+    <<if $progresso == 5>>
         <<set $progresso = 0>>
         <<set $password = 0>>
         <<set $location = 0>>
         <<set $code = 0>>
         <<set $park = 0>>
-        <<set $division = 0>>
-        <<set $rank = 0>>
     <<endif>>
     -> What's the password? <<if $password < 1>>
         {get_password_dialog()}.
         <<set $password = $password + 1>>
         <<set $progresso += 1>>
-        <<if $progresso >= 7>>
+        <<if $progresso >= 5>>
             <<jump fim>>
                 <<else>>
                     <<jump Options>>
@@ -35,7 +33,7 @@ title: Options
         I'm in {get_location_dialog()}.
         <<set $location = $location + 1>>
         <<set $progresso += 1>>
-        <<if $progresso >= 7>>
+        <<if $progresso >= 5>>
             <<jump fim>>
                 <<else>>
                     <<jump Options>>
@@ -44,7 +42,7 @@ title: Options
         {get_codename_dialog()}.
         <<set $code = $code + 1>>
         <<set $progresso += 1>>
-        <<if $progresso >= 7>>
+        <<if $progresso >= 5>>
             <<jump fim>>
                 <<else>>
                     <<jump Options>>
@@ -53,29 +51,11 @@ title: Options
         Over at {get_park_dialog()}.
         <<set $park = $park +1>>
         <<set $progresso += 1>>
-        <<if $progresso >= 7>>
+        <<if $progresso >= 5>>
             <<jump fim>>
                 <<else>>
                     <<jump Options>>
         <<endif>>
-    -> What's your division? <<if $division < 1>>
-        I'm {get_division_dialog()}.
-        <<set $division = $division + 1>>
-        <<set $progresso += 1>>
-        <<if $progresso >= 7>>
-            <<jump fim>>
-                <<else>>
-                    <<jump Options>>
-        <<endif>>
-    -> What's your rank? <<if $rank < 1>>
-        I'm a {get_rank_dialog()}.
-        <<set $rank = $rank + 1>>
-        <<set $progresso += 1>>
-        <<if $progresso >= 7>>
-            <<jump fim>>
-                <<else>>
-                    <<jump Options>>
-        <<endif>>
-    -> Continue <<if $progresso == 6>>
+    -> Continue <<if $progresso == 4>>
         <<set $progresso += 1>>
 ===

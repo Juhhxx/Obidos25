@@ -15,6 +15,7 @@ public class Draggabble : Interactable
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
         _initialPos = transform.position;
+        LayerManager.Instance.RegisterDragable(this);
     }
 
     private void OnEnable()

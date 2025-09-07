@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: 1934641401
   m_SortingLayer: 1
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 6e9075f3ef6cbdf4c9e000511be57f05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55caa3da391050c41a8ded202f51b1b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f309f3a5d8a7b44b7ccace69b0af6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ticketType: 0
 --- !u!4 &8304143366924785182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}

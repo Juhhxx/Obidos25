@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Obidos25;
 
 public class BookPageManager : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class BookPageManager : MonoBehaviour
     private int _currentPageIndex = 0;
 
     private SpriteRenderer _bookSR;
+    private BoxCollider2D _collider;
 
     private void Start()
     {
         _bookSR = GetComponent<SpriteRenderer>();
+        _collider = GetComponentInParent<BoxCollider2D>();
+
         _pageBackwardButton.enabled = false;
     }
 
@@ -30,7 +34,7 @@ public class BookPageManager : MonoBehaviour
 
         _bookSR.sprite = _bookPages[newPageIndex];
 
-        UpdateColliderSize(_bookSR.sprite);
+        _collider.UpdateColliderBasedOnSprite(_bookSR.sprite);
 
         if (newPageIndex == 0)
         {
@@ -42,18 +46,5 @@ public class BookPageManager : MonoBehaviour
         }
 
         _currentPageIndex = newPageIndex;
-    }
-
-    private void UpdateColliderSize(Sprite sprite)
-    {
-        if (sprite == null) return;
-
-        BoxCollider2D collider = GetComponentInParent<BoxCollider2D>();
-
-        Vector2 newSize = sprite.bounds.size;
-        Vector2 newOffset = sprite.bounds.center;
-
-        collider.size = newSize;
-        collider.offset = newOffset;
     }
 }
