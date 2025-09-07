@@ -17,8 +17,6 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
         _draggabbles.Insert(0, drag);
 
         drag.InteractBegin += () => UpdateSelected(drag);
-
-        UpdateLayering();
     }
 
     public void UnregisterDragable(Draggabble drag)
@@ -49,7 +47,7 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
             UpdateRendererOrderInLayer(drag.gameObject, i);
 
             Vector3 pos = drag.transform.position;
-            pos.z = -1f + (-0.1f * i);
+            pos.z = (-1f - (0.1f * i));
 
             drag.transform.position = pos;
         }
