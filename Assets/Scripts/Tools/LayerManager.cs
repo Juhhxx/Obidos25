@@ -28,6 +28,8 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
         drag.InteractBegin -= () => UpdateSelected(drag);
 
         UpdateLayering();
+
+        if (drag == _lastSelectedItem) _lastSelectedItem = null;
     }
 
     private void OnDisable()
