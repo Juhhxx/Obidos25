@@ -7,32 +7,32 @@ namespace Obidos25
     [CreateAssetMenu(fileName = "Military", menuName = "Scriptable Objects/Military")]
     public class Military : ScriptableObject
     {
-        [field:SerializeField] public string Name { get; private set; }
-        [field:SerializeField] public string CodeName { get; private set; }
+        [field: SerializeField] public string Name { get; private set; }
+        [field: SerializeField] public string CodeName { get; private set; }
 
-        [field:Expandable]
-        [field:SerializeField] public Division Division { get; private set; }
+        [field: Expandable]
+        [field: SerializeField] public Division Division { get; private set; }
 
-        [field:Expandable]
-        [field:SerializeField] public Rank Rank { get; private set; }
+        [field: Expandable]
+        [field: SerializeField] public Rank Rank { get; private set; }
 
-        [field:SerializeField] public string Regiment { get; private set; }
-        
-        [field:SerializeField] public string ID { get; private set; }
-        [field:SerializeField] public float Height { get; private set; }
-        [field:SerializeField] public string Features { get; private set; }
-        [field:SerializeField] public string EyeColor { get; private set; }
-        [field:SerializeField] public string ParkingSpot { get; private set; }
-        [field:SerializeField] public string Location { get; private set; }
-        
-        [field:ShowAssetPreview]
-        [field:SerializeField] public Sprite Signature { get; private set; }
+        public string Regiment => "R" + Division?.DivisionName[0] + Location?.IdRegion;
 
-        [field:ShowAssetPreview]
-        [field:SerializeField] public Sprite Picture { get; private set; }
+        [field: SerializeField] public string ID { get; private set; }
+        [field: SerializeField] public float Height { get; private set; }
+        [field: SerializeField] public string Features { get; private set; }
+        [field: SerializeField] public string EyeColor { get; private set; }
+        [field: SerializeField] public string ParkingSpot { get; private set; }
+        [field: SerializeField] public Location Location { get; private set; }
 
-        [field:ShowAssetPreview]
-        [field:SerializeField] public Sprite[] Sprite { get; private set; }
+        [field: ShowAssetPreview]
+        [field: SerializeField] public Sprite Signature { get; private set; }
+
+        [field: ShowAssetPreview]
+        [field: SerializeField] public Sprite Picture { get; private set; }
+
+        [field: ShowAssetPreview]
+        [field: SerializeField] public Sprite[] Sprite { get; private set; }
 
         private bool _marked = false;
 
@@ -42,6 +42,11 @@ namespace Obidos25
         {
             int spriteId = Random.Range(1, Sprite.Length);
             return Sprite[spriteId];
+        }
+
+        public Military Instantiate()
+        {
+            return Instantiate(this);
         }
     }
 }

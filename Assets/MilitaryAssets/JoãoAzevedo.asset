@@ -16,15 +16,14 @@ MonoBehaviour:
   <CodeName>k__BackingField: SAD
   <Division>k__BackingField: {fileID: 11400000, guid: 31fb3960ef417a94d9b55aa2e1cc2d3c, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: 8b97876767e6d864dbaed39106d4d12a, type: 2}
-  <Regiment>k__BackingField: RC6
   <ID>k__BackingField: 222777888
   <Height>k__BackingField: 145
   <Features>k__BackingField: hair
   <EyeColor>k__BackingField: green
   <ParkingSpot>k__BackingField: C6
-  <Location>k__BackingField: Braga
+  <Location>k__BackingField: {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
   <Signature>k__BackingField: {fileID: 21300000, guid: bc14ae4b4b098a44ab5a5702688927c6, type: 3}
-  <Picture>k__BackingField: {fileID: 21300000, guid: 0936bb221c484ca4caf48e64b6c101b6, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: efd3c32209938594e8f0dcf6d7334eb2, type: 3}
   <Sprite>k__BackingField:
-  - {fileID: 21300000, guid: e17de27a4bde7dc40be58ce7a06c8401, type: 3}
-  - {fileID: 21300000, guid: 9874f322682c92841a96e72c0aa4d952, type: 3}
+  - {fileID: 21300000, guid: f5ef461daf2d17b4d9903bc3104e0e1d, type: 3}
+  - {fileID: 21300000, guid: f6000ba8b7e85854e8c6cbef6b0b9b6a, type: 3}

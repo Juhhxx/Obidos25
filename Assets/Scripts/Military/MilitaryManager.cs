@@ -10,7 +10,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Header("Military Characters")]
     [Space(5f)]
     [SerializeField] private List<Military> _militaryList;
-    private Queue<Military> _militaryOrder;
+    private Queue<Military> _militaryOrder = new Queue<Military>();
     [SerializeField] private List<Military> _moles;
 
     private Military _selectedMilitary;
@@ -85,8 +85,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _dialogueRunner.AddFunction("get_password_dialog", GetPasswordAnswer);
         _dialogueRunner.AddFunction("get_location_dialog", GetLocation);
         _dialogueRunner.AddFunction("get_park_dialog", GetParking);
-        _dialogueRunner.AddFunction("get_division_dialog", GetDivision);
-        _dialogueRunner.AddFunction("get_rank_dialog", GetRank);
         _dialogueRunner.AddFunction("get_codename_dialog", GetCodeName);
     }
     private void Start()
@@ -110,7 +108,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private string GetPasswordAnswer()
     {
-        if (_moles.Contains(_selectedMilitary) && MoleChance(10))
+        if (_moles.Contains(_selectedMilitary) && MoleChance(50))
         {
             return _selectedPassword.PasswordWrongAnswer;
         }
@@ -129,8 +127,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         else
             return _selectedMilitary.CodeName;
     }
-    private string GetDivision() => _selectedMilitary.Division.DivisionName;
-    private string GetRank() => _selectedMilitary.Rank.RankName;
     private string GetParking()
     {
         if (_moles.Contains(_selectedMilitary) && MoleChance(40))
@@ -148,10 +144,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
-            return _militaryList[milIdx].Location;
+            return _militaryList[milIdx].Location.Name;
         }
         else
-            return _selectedMilitary.Location;
+            return _selectedMilitary.Location.Name;
     }
 
     // Military and Moles
@@ -161,7 +157,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         
         _militaryList.Shuffle();
 
-        _militaryOrder = new Queue<Military>(_militaryList);
+        foreach (Military m in _militaryList) _militaryOrder.Enqueue(m);
 
         foreach (Military m in _moles) _militaryList.Remove(m);
     }
@@ -211,7 +207,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private bool MoleChance(int chance)
     {
-        int moleChance = Random.Range(0, 100);
+        int moleChance = Random.Range(1, 101);
 
         return moleChance <= chance;
     }

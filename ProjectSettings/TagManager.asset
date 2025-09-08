@@ -62,6 +62,9 @@ TagManager:
   - name: Bar
     uniqueID: 3369189889
     locked: 0
+  - name: Canvas
+    uniqueID: 1012114149
+    locked: 0
   - name: Cursor
     uniqueID: 4205918673
     locked: 0

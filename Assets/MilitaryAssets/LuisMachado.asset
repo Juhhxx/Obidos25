@@ -16,13 +16,12 @@ MonoBehaviour:
   <CodeName>k__BackingField: DSA
   <Division>k__BackingField: {fileID: 11400000, guid: 124ae0ff9cb13af468c5938574dfa6f3, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: fe4a01029658959409bf4a78f43c2537, type: 2}
-  <Regiment>k__BackingField: RA11
   <ID>k__BackingField: 555333777
   <Height>k__BackingField: 154
   <Features>k__BackingField: blah
   <EyeColor>k__BackingField: Black
   <ParkingSpot>k__BackingField: D1
-  <Location>k__BackingField: Tancos
+  <Location>k__BackingField: {fileID: 11400000, guid: 9f416bee0088416438984d8f964d64c9, type: 2}
   <Signature>k__BackingField: {fileID: 21300000, guid: 18a99a99b70fb9941bccc0d39dd73309, type: 3}
   <Picture>k__BackingField: {fileID: 21300000, guid: 1f31d017fd3b1a949b8ceefc72001301, type: 3}
   <Sprite>k__BackingField:
