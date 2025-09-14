@@ -11,7 +11,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(5f)]
     [SerializeField] private List<Military> _militaryList;
     private Queue<Military> _militaryOrder = new Queue<Military>();
+    public List<Military> MilitaryList => _militaryList;
+
     [SerializeField] private List<Military> _moles;
+    public List<Military> Moles => _moles;
 
     private Military _selectedMilitary;
     private SpriteRenderer _militarySR;
@@ -153,11 +156,17 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     // Military and Moles
     private void SetMilitaryOrder()
     {
+        for (int i = 0; i < _militaryList.Count; i++) _militaryList[i] = _militaryList[i].Instantiate();
+
+        _winCheck.SetMilitary(_militaryList);
+
         SetMoles();
-        
+
+        _winCheck.SetMoles(_moles);
+
         _militaryList.Shuffle();
 
-        foreach (Military m in _militaryList) _militaryOrder.Enqueue(m);
+        _militaryOrder = new Queue<Military>(_militaryList);
 
         foreach (Military m in _moles) _militaryList.Remove(m);
     }
@@ -232,6 +241,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         if (_militaryOrder.Count == 0)
         {
+            _winCheck.SetPortaits();
             _winCheck.StartFinal();
             return;
         }

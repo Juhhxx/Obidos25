@@ -35,6 +35,7 @@ namespace Obidos25
         [field: SerializeField] public Sprite[] Sprite { get; private set; }
 
         private bool _marked = false;
+        public bool IsMarked => _marked;
 
         public void Mark() => _marked = true;
 
