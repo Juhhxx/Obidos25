@@ -37,6 +37,11 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
 
     [Space(10f)]
+    [Header("Passwords")]
+    [Space(5f)]
+    [SerializeField] private List<ParkingSpot> _parkingSpotList;
+
+    [Space(10f)]
     [Header("Game Objects")]
     [Space(5f)]
     [SerializeField] private GameObject _idCard;
@@ -94,10 +99,25 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         _idCard.SetActive(false);
 
+        AssignParkingSpaces();
         SetMilitaryOrder();
         SetPassword();
         StartInterrogation();
         _passwordNoteBuilder?.BuildFileSprite();
+    }
+
+    private void AssignParkingSpaces()
+    {
+        foreach (Military m in _militaryList)
+        {
+            int rnd = Random.Range(0, _parkingSpotList.Count);
+
+            ParkingSpot ps = _parkingSpotList[rnd];
+
+            m.SetParking(ps);
+
+            _parkingSpotList.Remove(ps);
+        }
     }
 
     // Questions
@@ -136,10 +156,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
-            return _militaryList[milIdx].ParkingSpot;
+            return _militaryList[milIdx].ParkingSpot.CarPlate;
         }
         else
-            return _selectedMilitary.ParkingSpot;
+            return _selectedMilitary.ParkingSpot.CarPlate;
     }
     private string GetLocation()
     {
