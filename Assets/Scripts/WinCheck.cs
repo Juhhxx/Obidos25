@@ -15,6 +15,7 @@ public class WinCheck : MonoBehaviour
 
     [SerializeField] private GameObject _portaits;
     [SerializeField] private TMP_InputField _accusationInputField;
+    [SerializeField] private TextMeshProUGUI _bufoNumber;
 
     [SerializeField] private GameObject _gameScreen;
     [SerializeField] private GameObject _finalScreen;
@@ -23,6 +24,8 @@ public class WinCheck : MonoBehaviour
 
     public void SetPortaits()
     {
+        _bufoNumber.text = $"There are {_moles.Count} bufo(s)";
+        
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
             GameObject child = _portaits.transform.GetChild(i).gameObject;
@@ -37,13 +40,13 @@ public class WinCheck : MonoBehaviour
         }
     }
 
-    public void CheckBufo(string suspects)
+    public void CheckBufo()
     {
         List<string> molesNames = new List<string>();
 
         foreach (Military m in _moles) molesNames.Add(m.Name);
 
-        string[] suspectsNames = suspects.Split(", ");
+        string[] suspectsNames = _accusationInputField.text.Split(", ");
 
         int numberRight = 0;
 

@@ -31,11 +31,18 @@ public class DynamicFileBuilder : MonoBehaviour
     private int _spriteH => (int)_spriteSize.y;
 
     [SerializeField] private GameObject _captureFrom;
-    [SerializeField] private SpriteRenderer _applyTo;
+
+    [SerializeField] private bool _captureToRenderer;
+    [SerializeField][ShowIf("_captureToRenderer")] private SpriteRenderer _applyToRenderer;
+
+    [SerializeField][HideIf("_captureToRenderer")] private BookPageManager _applyToBook;
+    [SerializeField][HideIf("_captureToRenderer")] private int _bookPage;
 
     [SerializeField] private TextureFormat _textureFormat;
     [ShowAssetPreview]
     [SerializeField] private Texture2D _generatedTexture;
+
+    private static bool _isTakingPhoto = false;
 
 
     [Button(enabledMode: EButtonEnableMode.Always)]
@@ -48,27 +55,38 @@ public class DynamicFileBuilder : MonoBehaviour
         Debug.Log($"Width : {width} Height : {height}");
         Debug.Log($"Width : {Screen.width} Height : {Screen.height}");
 
-        StopAllCoroutines();
+        // StopAllCoroutines();
         StartCoroutine(BuildFileSpriteCR());
     }
 
     private IEnumerator BuildFileSpriteCR()
     {
+        if (_isTakingPhoto) yield return new WaitForSeconds(0.1f);
+        
+        _isTakingPhoto = true;
         Debug.Log("BEGIN SCREENSHOT");
 
         ChangeGOLayer(_captureFrom, _captureLayer);
 
+        yield return null;
         yield return new WaitForEndOfFrame();
+
+        _captureCamera.Render();
 
         Sprite fileSprite = ToSprite(_captureTexture);
 
-        _applyTo.sprite = fileSprite;
+        if (_captureToRenderer) _applyToRenderer.sprite = fileSprite;
+        else _applyToBook.SetPageSprite(_bookPage, fileSprite);
 
         yield return new WaitForEndOfFrame();
 
         ChangeGOLayer(_captureFrom, 0);
 
+        yield return null;
+        yield return new WaitForEndOfFrame();
+
         Debug.Log("END SCREENSHOT");
+        _isTakingPhoto = false;
     }
 
     private void ChangeGOLayer(GameObject go, int layer)
@@ -77,7 +95,7 @@ public class DynamicFileBuilder : MonoBehaviour
 
         if (go.transform.childCount > 0)
         {
-            Transform[] children = GetComponentsInChildren<Transform>();
+            Transform[] children = go.GetComponentsInChildren<Transform>();
 
             foreach (Transform cgo in children)
             {

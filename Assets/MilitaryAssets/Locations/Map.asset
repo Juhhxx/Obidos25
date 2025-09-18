@@ -15,22 +15,16 @@ MonoBehaviour:
   _regions:
   - _regionID: 1
     _locations:
-    - {fileID: 11400000, guid: c3853aff68029a547829801c4fb71f58, type: 2}
-    - {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
-    - {fileID: 11400000, guid: 35ddc6ed1d8b3764f93003c484eae6f3, type: 2}
+    - {fileID: 11400000, guid: acccf2ab5506a7e4fb047230f2c5d926, type: 2}
+    - {fileID: 11400000, guid: 9f416bee0088416438984d8f964d64c9, type: 2}
   - _regionID: 2
-    _locations: []
+    _locations:
+    - {fileID: 11400000, guid: c3853aff68029a547829801c4fb71f58, type: 2}
+    - {fileID: 11400000, guid: 35ddc6ed1d8b3764f93003c484eae6f3, type: 2}
   - _regionID: 3
     _locations:
-    - {fileID: 11400000, guid: acccf2ab5506a7e4fb047230f2c5d926, type: 2}
+    - {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
+    - {fileID: 11400000, guid: ab27bfe9a91bd8340949e56de19682e4, type: 2}
   - _regionID: 4
     _locations:
     - {fileID: 11400000, guid: ce7e5462b713b104092b2e2309fa563a, type: 2}
-  - _regionID: 5
-    _locations:
-    - {fileID: 11400000, guid: 9f416bee0088416438984d8f964d64c9, type: 2}
-  - _regionID: 6
-    _locations: []
-  - _regionID: 7
-    _locations:
-    - {fileID: 11400000, guid: ab27bfe9a91bd8340949e56de19682e4, type: 2}

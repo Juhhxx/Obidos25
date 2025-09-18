@@ -23,6 +23,8 @@ public class BookPageManager : MonoBehaviour
         _pageBackwardButton.enabled = false;
     }
 
+    public void SetPageSprite(int page, Sprite spr) => _bookPages[page] = spr;
+
     public void ChangePage(bool backwards)
     {
         int newPageIndex = backwards ? _currentPageIndex - 1 : _currentPageIndex + 1;

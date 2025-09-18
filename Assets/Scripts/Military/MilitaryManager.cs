@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using Obidos25;
 using TMPro;
 using UnityEngine;
@@ -48,6 +49,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [SerializeField] private DynamicFileBuilder _idCardBuilder;
     [SerializeField] private TextMeshProUGUI _passwordText;
     [SerializeField] private DynamicFileBuilder _passwordNoteBuilder;
+    [SerializeField] private TextMeshProUGUI _parkingText;
+    [SerializeField] private DynamicFileBuilder _parkingMapBuilder;
     [SerializeField] private GameObject _ticketStacks;
 
     [Space(10f)]
@@ -99,15 +102,36 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         _idCard.SetActive(false);
 
-        AssignParkingSpaces();
-        SetMilitaryOrder();
+
         SetPassword();
+
+        AssignParkingSpaces();
+
+        SetMilitaryOrder();
         StartInterrogation();
-        _passwordNoteBuilder?.BuildFileSprite();
     }
 
+    private void SetPassword()
+    {
+        string passwords = "";
+
+        foreach (Password p in _passwordList)
+        {
+            passwords += p.PasswordKey;
+
+            passwords += " > ";
+
+            passwords += p.PasswordCorrectAnswer + "\n";
+        }
+
+        _passwordText.text = passwords;
+
+        _passwordNoteBuilder?.BuildFileSprite();
+    }
     private void AssignParkingSpaces()
     {
+        _parkingText.text = "";
+
         foreach (Military m in _militaryList)
         {
             int rnd = Random.Range(0, _parkingSpotList.Count);
@@ -117,7 +141,11 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             m.SetParking(ps);
 
             _parkingSpotList.Remove(ps);
+
+            _parkingText.text += $"{ps.CarPlate} -> {m.Name}\n";
         }
+
+        _parkingMapBuilder?.BuildFileSprite();
     }
 
     // Questions
@@ -239,22 +267,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         int moleChance = Random.Range(1, 101);
 
         return moleChance <= chance;
-    }
-    
-    private void SetPassword()
-    {
-        string passwords = "";
-
-        foreach (Password p in _passwordList)
-        {
-            passwords += p.PasswordKey;
-
-            passwords += " > ";
-
-            passwords += p.PasswordCorrectAnswer + "\n";
-        }
-
-        _passwordText.text = passwords;
     }
 
     public void StartInterrogation()
