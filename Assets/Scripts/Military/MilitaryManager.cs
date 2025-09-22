@@ -184,10 +184,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
-            return _militaryList[milIdx].ParkingSpot.CarPlate;
+            return _militaryList[milIdx].ParkingSpot.Spot;
         }
         else
-            return _selectedMilitary.ParkingSpot.CarPlate;
+            return _selectedMilitary.ParkingSpot.Spot;
     }
     private string GetLocation()
     {
