@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NaughtyAttributes;
 
 public class ButtonMenu : MonoBehaviour
 {
+    [Scene]
     [SerializeField] private string _buttonOne;
+    
+    [Scene]
     [SerializeField] private string _buttonTwo;
 
     public void ButtonOne()
