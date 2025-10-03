@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,7 +10,22 @@ public abstract class Interactable : MonoBehaviour
 
     private void Start()
     {
-        transform.position += -Vector3.forward;
+        Interactable[] ints = GetComponents<Interactable>();
+
+        if (ints.Length > 1)
+        {
+            foreach (Interactable i in ints)
+            {
+                if (i == this) continue;
+
+                if (!i.didStart) transform.position += -Vector3.forward;
+            }
+        }
+        else
+        {
+            transform.position += -Vector3.forward;
+        }
+        
         Debug.Log($"{name} : {transform.position}");
     }
 

@@ -12,23 +12,48 @@ public class Draggabble : Interactable
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<Collider2D>();
-        _initialPos = transform.position;
-        LayerManager.Instance.RegisterDragable(this);
+        if (transform.parent?.GetComponentInParent<Draggabble>() == null)
+        {
+            _rb = GetComponent<Rigidbody2D>();
+            _collider = GetComponent<Collider2D>();
+            _initialPos = transform.position;
+            LayerManager.Instance.RegisterDragable(this);
+        }
     }
 
     private void OnEnable()
     {
-        InteractBegin += SetUp;
-        Interact += FollowMouse;
-        InteractEnd += TurnOnCollider;
+        Draggabble parent = transform.parent?.GetComponentInParent<Draggabble>();
+
+        if (parent != null)
+        {
+            InteractBegin   += () => parent.OnInteractBegin();
+            Interact        += () => parent.OnInteract();
+            InteractEnd     += () => parent.OnInteractEnd();
+        }
+        else
+        {
+            InteractBegin   += SetUp;
+            Interact        += FollowMouse;
+            InteractEnd     += TurnOnCollider;
+        }
     }
     private void OnDisable()
     {
-        InteractBegin -= SetUp;
-        Interact -= FollowMouse;
-        InteractEnd -= TurnOnCollider;
+        Draggabble parent = transform.parent?.GetComponentInParent<Draggabble>();
+
+        if (parent != null)
+        {
+            InteractBegin   -= () => parent.OnInteractBegin();
+            Interact        -= () => parent.OnInteract();
+            InteractEnd     -= () => parent.OnInteractEnd();
+        }
+        else
+        {
+            InteractBegin   -= SetUp;
+            Interact        -= FollowMouse;
+            InteractEnd     -= TurnOnCollider;
+        }
     }
     private void OnDestroy()
     {
