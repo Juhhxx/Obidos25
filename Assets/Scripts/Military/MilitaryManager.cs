@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Threading;
+using NaughtyAttributes;
 using Obidos25;
 using TMPro;
 using UnityEngine;
@@ -24,21 +24,13 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Passwords")]
     [Space(5f)]
-    [SerializeField] private List<Password> _passwordList;
-    
+    [SerializeField] private PasswordCalendar _passwordsInfo;
+
+    [SerializeField][ReadOnly] private WeekDay _weekDay;
     private Password _selectedPassword;
 
-    [System.Serializable]
-    public struct Password
-    {
-        [field:SerializeField] public string PasswordKey { get; private set; }
-
-        [field:SerializeField] public string PasswordCorrectAnswer { get; private set; }
-        [field:SerializeField] public string PasswordWrongAnswer { get; private set; }
-    }
-
     [Space(10f)]
-    [Header("Passwords")]
+    [Header("Parking Spots")]
     [Space(5f)]
     [SerializeField] private List<ParkingSpot> _parkingSpotList;
 
@@ -47,8 +39,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(5f)]
     [SerializeField] private GameObject _idCard;
     [SerializeField] private DynamicFileBuilder _idCardBuilder;
-    [SerializeField] private TextMeshProUGUI _passwordText;
-    [SerializeField] private DynamicFileBuilder _passwordNoteBuilder;
+    [SerializeField] private SpriteRenderer _calendar;
     [SerializeField] private TextMeshProUGUI _parkingText;
     [SerializeField] private DynamicFileBuilder _parkingMapBuilder;
     [SerializeField] private GameObject _ticketStacks;
@@ -113,20 +104,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void SetPassword()
     {
-        string passwords = "";
+        CalendarDay day = _passwordsInfo.ChooseWeekDay();
 
-        foreach (Password p in _passwordList)
-        {
-            passwords += p.PasswordKey;
-
-            passwords += " > ";
-
-            passwords += p.PasswordCorrectAnswer + "\n";
-        }
-
-        _passwordText.text = passwords;
-
-        _passwordNoteBuilder?.BuildFileSprite();
+        _calendar.sprite = day.CalendarSprite;
+        _weekDay = day.WeekDay;
     }
     private void AssignParkingSpaces()
     {
@@ -142,7 +123,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
             _parkingSpotList.Remove(ps);
 
-            _parkingText.text += $"{ps.CarPlate} -> {m.Name}\n";
+            _parkingText.text += $"{ps.CarPlate} -> {m.ID}\n";
         }
 
         _parkingMapBuilder?.BuildFileSprite();
@@ -151,20 +132,18 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     // Questions
     private string GetPassword()
     {
-        int rnd = Random.Range(0, _passwordList.Count);
+        _selectedPassword = _passwordsInfo.GetPassword();
 
-        _selectedPassword = _passwordList[rnd];
-
-        return _selectedPassword.PasswordKey;
+        return _selectedPassword.PasswordQuestion;
     }
     private string GetPasswordAnswer()
     {
         if (_moles.Contains(_selectedMilitary) && MoleChance(50))
         {
-            return _selectedPassword.PasswordWrongAnswer;
+            return _selectedPassword.GetPasswordAnswerWrong(_weekDay);
         }
         else
-            return _selectedPassword.PasswordCorrectAnswer;
+            return _selectedPassword.GetPasswordAnswer(_weekDay);
     }
     private string GetName() => _selectedMilitary.Name;
     private string GetCodeName()
