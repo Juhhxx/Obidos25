@@ -30,8 +30,6 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
         _curentInteractable = null;
     }
 
-    private Vector3 _cameraPos;
-
     public Vector3 MousePosition => _cursor.transform.position;
 
     private void Awake()
@@ -42,7 +40,6 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     private void Start()
     {
         Cursor.visible = false;
-        _cameraPos = Camera.main.transform.position;
     }
     private void Update()
     {
