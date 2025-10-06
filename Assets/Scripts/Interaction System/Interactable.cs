@@ -25,11 +25,23 @@ public abstract class Interactable : MonoBehaviour
         {
             transform.position += -Vector3.forward;
         }
-        
+
         Debug.Log($"{name} : {transform.position}");
     }
 
-    public virtual void OnInteractBegin() => InteractBegin?.Invoke();
-    public virtual void OnInteract() => Interact?.Invoke();
-    public virtual void OnInteractEnd() => InteractEnd?.Invoke();
+    public virtual void OnInteractBegin()
+    {
+        Debug.Log($"{name} did Interact Begin");
+        InteractBegin?.Invoke();
+    }
+    public virtual void OnInteract()
+    {
+        Debug.Log($"{name} did Interact");
+        Interact?.Invoke();
+    }
+    public virtual void OnInteractEnd()
+    {
+        Debug.Log($"{name} did Interact End");
+        InteractEnd?.Invoke();
+    }
 }

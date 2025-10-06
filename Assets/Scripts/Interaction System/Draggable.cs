@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Draggabble : Interactable
@@ -23,37 +24,16 @@ public class Draggabble : Interactable
 
     private void OnEnable()
     {
-        Draggabble parent = transform.parent?.GetComponentInParent<Draggabble>();
-
-        if (parent != null)
-        {
-            InteractBegin   += () => parent.OnInteractBegin();
-            Interact        += () => parent.OnInteract();
-            InteractEnd     += () => parent.OnInteractEnd();
-        }
-        else
-        {
-            InteractBegin   += SetUp;
-            Interact        += FollowMouse;
-            InteractEnd     += TurnOnCollider;
-        }
+        InteractBegin += SetUp;
+        Interact += FollowMouse;
+        InteractEnd += TurnOnCollider;
     }
     private void OnDisable()
     {
-        Draggabble parent = transform.parent?.GetComponentInParent<Draggabble>();
-
-        if (parent != null)
-        {
-            InteractBegin   -= () => parent.OnInteractBegin();
-            Interact        -= () => parent.OnInteract();
-            InteractEnd     -= () => parent.OnInteractEnd();
-        }
-        else
-        {
-            InteractBegin   -= SetUp;
-            Interact        -= FollowMouse;
-            InteractEnd     -= TurnOnCollider;
-        }
+        
+        InteractBegin   -= SetUp;
+        Interact        -= FollowMouse;
+        InteractEnd     -= TurnOnCollider;
     }
     private void OnDestroy()
     {
@@ -76,6 +56,7 @@ public class Draggabble : Interactable
 
     private void SetUp()
     {
+        Debug.Log($"{name} : START DRAGGING");
         // Stop Gravity form Affecting Draggable while dragging it.
         _rb.linearVelocityY = 0f;
         // Deactivate Collider to Stop from being triggered by Gravity Trigger
