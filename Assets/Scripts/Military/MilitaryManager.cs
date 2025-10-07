@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using Obidos25;
@@ -33,6 +34,18 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Header("Parking Spots")]
     [Space(5f)]
     [SerializeField] private List<ParkingSpot> _parkingSpotList;
+
+    [Space(10f)]
+    [Header("Tickets")]
+    [Space(5f)]
+    [SerializeField] private Transform _greenTicketSpawn;
+    [SerializeField] private Transform _redTicketSpawn;
+
+    [SerializeField] private GameObject _greenTicketPrefab;
+    [SerializeField] private GameObject _redTicketPrefab;
+
+    private GameObject _greenTicket;
+    private GameObject _redTicket;
 
     [Space(10f)]
     [Header("Game Objects")]
@@ -93,6 +106,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         _idCard.SetActive(false);
 
+        CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
+        CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
 
         SetPassword();
 
@@ -109,6 +124,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _calendar.sprite = day.CalendarSprite;
         _weekDay = day.WeekDay;
     }
+
     private void AssignParkingSpaces()
     {
         _parkingText.text = "";
@@ -127,6 +143,48 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         }
 
         _parkingMapBuilder?.BuildFileSprite();
+    }
+
+    private void CreateTickets(GameObject prefab, Transform spawn, GameObject ticket)
+    {
+        ticket = Instantiate(prefab, spawn.position + new Vector3(10, 0, 0), Quaternion.identity);
+
+        StartCoroutine(MoveTicket(ticket, spawn.position));
+    }
+
+    private IEnumerator MoveTicket(GameObject ticket, Vector3 pos)
+    {
+        float  initialPos = ticket.transform.position.x;
+        float newPos = initialPos;
+        float i = 0;
+
+        while (newPos != pos.x)
+        {
+            newPos = Mathf.Lerp(initialPos, pos.x, i);
+
+            Vector3 p = ticket.transform.localPosition;
+
+            p.x = newPos;
+
+            ticket.transform.position = p;
+
+            i += 2 * Time.deltaTime;
+
+            yield return null;
+        }
+    }
+
+    public void GiveTicket(TicketTypes type)
+    {
+        if (type == TicketTypes.Red)
+        {
+            _selectedMilitary?.Mark();
+            CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
+
+        }
+        else if (type == TicketTypes.Green) CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
+
+        WalkingOut();
     }
 
     // Questions
@@ -197,12 +255,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         foreach (Military m in _moles) _militaryList.Remove(m);
     }
-    public void GiveTicket(TicketTypes type)
-    {
-        if (type == TicketTypes.Red) _selectedMilitary?.Mark();
 
-        WalkingOut();
-    }
     private void SetMilitary()
     {
         Debug.Log(_militarySR);
@@ -220,6 +273,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         // SetBadges(_rank, _selectedMilitary.Rank.RankName);
         // SetBadges(_division, _selectedMilitary.Division.DivisionName);
     }
+
     private void SetMoles()
     {
         int moleNumber = Random.Range(1,4);
@@ -231,6 +285,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             _moles.Add(ChooseMole());
         }
     }
+
     private Military ChooseMole()
     {
         int moleChooser = Random.Range(0, _militaryList.Count);
@@ -241,6 +296,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         }
         else return _militaryList[moleChooser];
     }
+
     private bool MoleChance(int chance)
     {
         int moleChance = Random.Range(1, 101);
