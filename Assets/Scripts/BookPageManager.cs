@@ -7,6 +7,7 @@ public class BookPageManager : MonoBehaviour
 {
     [SerializeField] private List<Sprite> _bookPages;
 
+    [SerializeField] private Collider2D _backToStartButton;
     [SerializeField] private Collider2D _pageForwardButton;
     [SerializeField] private Collider2D _pageBackwardButton;
 
@@ -21,32 +22,48 @@ public class BookPageManager : MonoBehaviour
         _collider = GetComponentInParent<BoxCollider2D>();
 
         _pageBackwardButton.enabled = false;
+        if (_backToStartButton != null) _backToStartButton.enabled = false;
     }
 
     public void SetPageSprite(int page, Sprite spr) => _bookPages[page] = spr;
 
-    public void ChangePage(bool backwards)
+    private void ChangePage(int page)
     {
-        int newPageIndex = backwards ? _currentPageIndex - 1 : _currentPageIndex + 1;
-
-        if (newPageIndex < 0 || newPageIndex >= _bookPages.Count) return;
+        if (page < 0 || page >= _bookPages.Count) return;
 
         _pageForwardButton.enabled = true;
         _pageBackwardButton.enabled = true;
+        
+        if (_backToStartButton != null) _backToStartButton.enabled = true;
 
-        _bookSR.sprite = _bookPages[newPageIndex];
+        _bookSR.sprite = _bookPages[page];
 
         _collider.UpdateColliderBasedOnSprite(_bookSR.sprite);
 
-        if (newPageIndex == 0)
+        if (page == 0)
         {
             _pageBackwardButton.enabled = false;
+            
+            if (_backToStartButton != null) _backToStartButton.enabled = false;
         }
-        else if (newPageIndex == _bookPages.Count - 1)
+        else if (page == 1)
+        {
+            if (_backToStartButton != null)  _backToStartButton.enabled = false;
+        }
+        else if (page == _bookPages.Count - 1)
         {
             _pageForwardButton.enabled = false;
         }
 
-        _currentPageIndex = newPageIndex;
+        _currentPageIndex = page;
     }
+
+    public void FlipPage(bool backwards)
+    {
+        int newPageIndex = backwards ? _currentPageIndex - 1 : _currentPageIndex + 1;
+
+        ChangePage(newPageIndex);
+    }
+
+    public void GoToFirstPage() => ChangePage(1);
 }

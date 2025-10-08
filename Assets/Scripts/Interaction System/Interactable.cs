@@ -10,21 +10,13 @@ public abstract class Interactable : MonoBehaviour
 
     private void Start()
     {
-        Interactable[] ints = GetComponents<Interactable>();
+        Interactable[] ints = transform.parent?.GetComponentsInParent<Interactable>();
 
-        if (ints.Length > 1)
-        {
-            foreach (Interactable i in ints)
-            {
-                if (i == this) continue;
-
-                if (!i.didStart) transform.position += -Vector3.forward;
-            }
-        }
-        else
+        if (ints == null || ints.Length == 0)
         {
             transform.position += -Vector3.forward;
         }
+        else Debug.Log($"{name} IS CHILD");
 
         Debug.Log($"{name} : {transform.position}");
     }
