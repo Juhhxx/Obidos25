@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
+  m_Name: Vitorino
+  m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
+  <Name>k__BackingField: Vitorino Silva do Carmo
+  <CodeName>k__BackingField: BUG
+  <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
+  <Rank>k__BackingField: {fileID: 11400000, guid: 1fb843b9ac8adc44da07e06493ca0ade, type: 2}
+  <ID>k__BackingField: 2398745
+  <Height>k__BackingField: 172
+  <Features>k__BackingField: Unibrow
+  <EyeColor>k__BackingField: Green
+  <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 43e68066d7238b549b6bcb889b0f1753, type: 2}
+  <Location>k__BackingField: {fileID: 11400000, guid: 56c1581cad7962c45983ec3b9fdb7e7a, type: 2}
+  <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: efd3c32209938594e8f0dcf6d7334eb2, type: 3}
+  <Sprite>k__BackingField:
+  - {fileID: 21300000, guid: f5ef461daf2d17b4d9903bc3104e0e1d, type: 3}
+  - {fileID: 21300000, guid: f6000ba8b7e85854e8c6cbef6b0b9b6a, type: 3}

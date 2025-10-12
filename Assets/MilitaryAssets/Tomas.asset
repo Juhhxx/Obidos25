@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
+  m_Name: Tomas
+  m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
+  <Name>k__BackingField: "Tom\xE1s Henrique Pereira Lopes"
+  <CodeName>k__BackingField: DOG
+  <Division>k__BackingField: {fileID: 11400000, guid: 124ae0ff9cb13af468c5938574dfa6f3, type: 2}
+  <Rank>k__BackingField: {fileID: 11400000, guid: 8b97876767e6d864dbaed39106d4d12a, type: 2}
+  <ID>k__BackingField: 3981206
+  <Height>k__BackingField: 178
+  <Features>k__BackingField: Ueven Eyes
+  <EyeColor>k__BackingField: Blue
+  <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 511ad1dacfb4f1a4784e0f20c117ce84, type: 2}
+  <Location>k__BackingField: {fileID: 11400000, guid: 8680748a2ac6c3444932a8b8604888c2, type: 2}
+  <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: 1f31d017fd3b1a949b8ceefc72001301, type: 3}
+  <Sprite>k__BackingField:
+  - {fileID: 21300000, guid: 7b2a77461f144fe4081575195bd93d88, type: 3}
+  - {fileID: 21300000, guid: 511056646ebf58b49804d7cc6269ee32, type: 3}
