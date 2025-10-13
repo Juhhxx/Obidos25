@@ -1,16 +1,27 @@
-﻿title: Interrogation
-tags:
+﻿title: Start
 ---
-Hello.
--> Are you here for the play?
+Hello, I'm here for the play that is going to happen, could you give me a ticket ?
+    -> Yes, I'll just need to check your documents.
 
-Yes.
--> What's your name ? 
+Ok. Here you go.{give_documents()}
+    -> What's your name ? 
 
-My name is {get_military_name()}.
--> Ok.
--> Are
--> as
--> as
--> dsds
+My name is {get_military_name()}. 
+<<jump Options>>
+===
+
+title: Options
+---
+    -> {get_password_question()} (password)
+        {get_password_dialog()}.
+        <<jump Options>>
+    -> Where are you located?
+        I'm located at {get_location_dialog()}.
+        <<jump Options>>
+    -> What's your code name?
+        I'm {get_codename_dialog()}.
+        <<jump Options>>
+    -> Where did you park?
+        Over at {get_park_dialog()}.
+        <<jump Options>>
 ===
