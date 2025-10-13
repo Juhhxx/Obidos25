@@ -95,6 +95,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _dialogueVariables = _dialogueSystem.GetComponent<InMemoryVariableStorage>();
         _idCardManager = _idCardBuilder.GetComponent<CardManager>();
 
+        _dialogueRunner.AddFunction("give_documents",  GiveDocuments);
         _dialogueRunner.AddFunction("get_military_name", GetName);
         _dialogueRunner.AddFunction("get_password_question", GetPassword);
         _dialogueRunner.AddFunction("get_password_dialog", GetPasswordAnswer);
@@ -188,10 +189,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
 
     // Questions
+    private string GiveDocuments()
+    {
+        _idCardBuilder?.BuildFileSprite();
+        _idCard.SetActive(true);
+        return "";
+    }
     private string GetPassword()
     {
-        _selectedPassword = _passwordsInfo.GetPassword();
-
         return _selectedPassword.PasswordQuestion;
     }
     private string GetPasswordAnswer()
@@ -313,6 +318,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             return;
         }
 
+        _selectedPassword = _passwordsInfo.GetPassword();
         _selectedMilitary = _militaryOrder?.Dequeue();
 
         SetMilitary();
@@ -328,8 +334,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     public void HasWalkedIn()
     {
-        _idCardBuilder?.BuildFileSprite();
-        _idCard.SetActive(true);
         _dialogueRunner.StartDialogue(_startDialog);
     }
     public void WalkingOut()

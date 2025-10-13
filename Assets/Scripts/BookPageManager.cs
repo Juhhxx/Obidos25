@@ -43,16 +43,19 @@ public class BookPageManager : MonoBehaviour
         if (page == 0)
         {
             _pageBackwardButton.enabled = false;
+            Debug.Log("FIRST PAGE, HIDING BACKWORDS BUTTON");
             
             if (_backToStartButton != null) _backToStartButton.enabled = false;
-        }
-        else if (page == 1)
-        {
-            if (_backToStartButton != null)  _backToStartButton.enabled = false;
         }
         else if (page == _bookPages.Count - 1)
         {
             _pageForwardButton.enabled = false;
+            Debug.Log("LAST PAGE, HIDING FORWARDS BUTTON");
+        }
+
+        if (page == 1)
+        {
+            if (_backToStartButton != null)  _backToStartButton.enabled = false;
         }
 
         _currentPageIndex = page;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Vacation
   m_EditorClassIdentifier: 
-  PasswordQuestion: What's your favourite vacation spot?
+  PasswordQuestion: What's your favourite vacation spot ?
   MondayAnswer: Porto
   TuesdayAnswer: Madeira
   WednesdayAnswer: Lisbon

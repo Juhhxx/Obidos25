@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Hobby
   m_EditorClassIdentifier: 
-  PasswordQuestion: What's a hobby of yours?
+  PasswordQuestion: What's a hobby of yours ?
   MondayAnswer: Reading
   TuesdayAnswer: Cooking
   WednesdayAnswer: Gardening

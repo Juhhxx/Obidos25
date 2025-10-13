@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: SportsClub
   m_EditorClassIdentifier: 
-  PasswordQuestion: What's your favourite soccer team?
+  PasswordQuestion: What's your favourite soccer team ?
   MondayAnswer: Benfica
   TuesdayAnswer: Sporting
   WednesdayAnswer: Porto
