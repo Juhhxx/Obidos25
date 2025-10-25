@@ -3,13 +3,23 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 {
+    [Header("Configuration Values")]
+    [Space(5f)]
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private GameObject _cursor;
+    [SerializeField] private BoundingBox _cursorBoundingBox;
+
+    [Space(10f)]
+    [Header("Input Values")]
+    [Space(5f)]
     [SerializeField][InputAxis] private string _interactButton;
 
     [SerializeField] private float _dragFollowSpeed = 0.35f;
     public float DragFollowSpeed => _dragFollowSpeed;
 
+    [Space(10f)]
+    [Header("Debug Values")]
+    [Space(5f)]
     [SerializeField][ReadOnly] private bool _isInteracting = false;
     public bool IsInteracting => _isInteracting;
 
@@ -32,6 +42,8 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     public Vector3 MousePosition => _cursor.transform.position;
 
+    public bool IsInsideBoundings => _cursorBoundingBox.CheckIfInside(MousePosition);
+
     private void Awake()
     {
         base.SingletonCheck(this);
@@ -45,9 +57,18 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     {
         MoveCursor();
 
-        if (!_isInteracting) CheckForInteractable();
+        if (IsInsideBoundings)
+        {
+            if (!_isInteracting) CheckForInteractable();
 
-        if (_curentInteractable != null) Interact();
+            if (_curentInteractable != null) Interact();
+        }
+        else
+        {
+            _curentInteractable?.OnInteractEnd();
+            _curentInteractable = null;
+            _isInteracting = false;
+        }
     }
 
     private void MoveCursor()
