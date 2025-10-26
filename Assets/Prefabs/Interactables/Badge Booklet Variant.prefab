@@ -1,5 +1,114 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2205181512191635892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4685020125146364740}
+  - component: {fileID: 700167281565942717}
+  - component: {fileID: 3472498190525430381}
+  m_Layer: 9
+  m_Name: Back To Start Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4685020125146364740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205181512191635892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 659180800877887228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &700167281565942717
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205181512191635892}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -7.1234694, y: 4.520234}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.97247696, y: 1.8831544}
+  m_EdgeRadius: 0
+--- !u!114 &3472498190525430381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205181512191635892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbc80965461b444885d96a4e1a77df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnButtonClickDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7378882452725006032}
+        m_TargetAssemblyTypeName: BookPageManager, Assembly-CSharp
+        m_MethodName: GoToFirstPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnButtonClickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5886717405553910552
 GameObject:
   m_ObjectHideFlags: 0
@@ -17,7 +126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &659180800877887228
 Transform:
   m_ObjectHideFlags: 0
@@ -31,6 +140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4685020125146364740}
   - {fileID: 4061313750450481523}
   - {fileID: 8466985570361869465}
   m_Father: {fileID: 1392829630986010634}
@@ -55,6 +165,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,10 +188,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1934641401
-  m_SortingLayer: 1
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2172347e66aba94880948422056621b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 538859255d863b6419f91bc85ef10bd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,12 +217,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bookPages:
   - {fileID: 21300000, guid: 538859255d863b6419f91bc85ef10bd9, type: 3}
+  - {fileID: 21300000, guid: 433e2e926bcbaaa4bb698618d9eaa1dc, type: 3}
   - {fileID: 21300000, guid: f2172347e66aba94880948422056621b, type: 3}
   - {fileID: 21300000, guid: 8678cf92fa026b1408eaa51b6afe86eb, type: 3}
+  - {fileID: 21300000, guid: d12f1f8998eeed64586888763f830271, type: 3}
   - {fileID: 21300000, guid: e8efd93a3333cef4ca3f63da5c7ba6a1, type: 3}
   - {fileID: 21300000, guid: 142f4c9c8c1154b418065dc6718606e1, type: 3}
   - {fileID: 21300000, guid: c05ed1d64f006104daa43567ba7b9c38, type: 3}
   - {fileID: 21300000, guid: 68ff5ee21bc43a74db0ec7b465161000, type: 3}
+  - {fileID: 21300000, guid: f20daa966e7f0cb4aa655394c2c7d843, type: 3}
+  _backToStartButton: {fileID: 700167281565942717}
   _pageForwardButton: {fileID: 319355490106880848}
   _pageBackwardButton: {fileID: 9180900514690868600}
 --- !u!1 &6667648708245866772
@@ -139,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 6667648708245866772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,7 +296,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 8.3, y: -4.5}
+  m_Offset: {x: 8.404207, y: -5.1995354}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -189,7 +306,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8, y: 2}
+  m_Size: {x: 1.7235107, y: 1.2727299}
   m_EdgeRadius: 0
 --- !u!114 &945474468277021156
 MonoBehaviour:
@@ -208,7 +325,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7378882452725006032}
         m_TargetAssemblyTypeName: BookPageManager, Assembly-CSharp
-        m_MethodName: ChangePage
+        m_MethodName: FlipPage
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -248,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 8207021333258363316}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,7 +405,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -8.3, y: -4.5}
+  m_Offset: {x: -8.374963, y: -5.1702433}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -298,7 +415,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8, y: 2}
+  m_Size: {x: 1.7559032, y: 1.3121185}
   m_EdgeRadius: 0
 --- !u!114 &6565951464884323879
 MonoBehaviour:
@@ -317,7 +434,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7378882452725006032}
         m_TargetAssemblyTypeName: BookPageManager, Assembly-CSharp
-        m_MethodName: ChangePage
+        m_MethodName: FlipPage
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -348,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455397275439657462, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Sprite
@@ -356,19 +473,23 @@ PrefabInstance:
       objectReference: {fileID: 1151032837370605561, guid: 03c91753d6c94de4fab28e11b44553fa, type: 3}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1934641401
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.6
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3
+      value: -9.3
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.z
@@ -380,15 +501,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -404,11 +525,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7032081804151452076, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Size.x
-      value: 7.5666666
+      value: 9.233334
       objectReference: {fileID: 0}
     - target: {fileID: 7032081804151452076, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Size.y
-      value: 4.4333334
+      value: 11.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032081804151452076, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_Offset.x
+      value: 4.616667
       objectReference: {fileID: 0}
     - target: {fileID: 8513172970986085126, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Name
@@ -416,7 +541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513172970986085126, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8903049705769938059, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_IsActive
@@ -424,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944514565945807776, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: _isItem
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8944514565945807776, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: _fullCard
