@@ -22,8 +22,8 @@ public class GameAssetLibrary : ScriptableObject
     [Space(10)]
     [Header("Passwords")]
     [Space(5)]
-    [SerializeField] private List<PasswordCalendar> _passwordsInfo;
-    public List<PasswordCalendar> PasswordsInfo => _passwordsInfo;
+    [SerializeField] private PasswordCalendar _passwordsInfo;
+    public PasswordCalendar PasswordsInfo => _passwordsInfo;
 
     [Space(10)]
     [Header("Locations")]
