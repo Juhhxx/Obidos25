@@ -80,11 +80,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     
     private CardManager _idCardManager;
 
-    [Space(10f)]
-    [Header("Events")]
-    [Space(5f)]
-    public UnityEvent OnUpdateAssets;
- 
     private void Awake()
     {
         SingletonCheck(this);
