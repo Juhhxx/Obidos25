@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
-  m_Name: LieutenantGeneral
+  m_Name: 11Marshal
   m_EditorClassIdentifier: 
-  _rankName: Lieutenant General
-  _rankBadge: {fileID: 21300000, guid: da72c4b20f94fd94b9912898b19c0890, type: 3}
+  _rankName: Marshal
+  _rankBadge: {fileID: 21300000, guid: 61d7ac566c992bf4e928ba11f36c570d, type: 3}
