@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
   <Name>k__BackingField: "David Louren\xE7o de Almeida"
   <CodeName>k__BackingField: EGG
-  <Division>k__BackingField: {fileID: 11400000, guid: d94a61be665820743aaf85dec4d4fe0c, type: 2}
+  <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: 8416d814c4a7f5f43b0a00343b342632, type: 2}
   <ID>k__BackingField: 4578921
   <Height>k__BackingField: 180

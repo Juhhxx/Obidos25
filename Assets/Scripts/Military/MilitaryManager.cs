@@ -124,6 +124,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private void AssignParkingSpaces()
     {
         _parkingText.text = "";
+        List<string> parkingSpaceTexts = new List<string>();
 
         foreach (Military m in _militaryList)
         {
@@ -135,8 +136,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
             _parkingSpotList.Remove(ps);
 
-            _parkingText.text += $"{ps.CarPlate} -> {m.ID}\n";
+            parkingSpaceTexts.Add($"{ps.CarPlate} -> {m.ID}\n");
         }
+
+        parkingSpaceTexts.Sort();
+
+        foreach (string s in parkingSpaceTexts) _parkingText.text += s;
 
         _parkingMapBuilder?.BuildFileSprite();
     }

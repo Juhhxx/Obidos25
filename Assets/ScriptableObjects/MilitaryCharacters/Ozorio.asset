@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
   <Name>k__BackingField: "Oz\xF3rio Maria do Vale e Olivares"
   <CodeName>k__BackingField: CAT
-  <Division>k__BackingField: {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
-  <Rank>k__BackingField: {fileID: 11400000, guid: fe4a01029658959409bf4a78f43c2537, type: 2}
+  <Division>k__BackingField: {fileID: 11400000, guid: d94a61be665820743aaf85dec4d4fe0c, type: 2}
+  <Rank>k__BackingField: {fileID: 11400000, guid: a550280284af7af49baae7e97f737614, type: 2}
   <ID>k__BackingField: 5827634
   <Height>k__BackingField: 166
   <Features>k__BackingField: Crooked Nose
