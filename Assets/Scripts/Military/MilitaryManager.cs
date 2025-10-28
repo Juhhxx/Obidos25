@@ -4,17 +4,27 @@ using NaughtyAttributes;
 using Obidos25;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using Yarn.Unity;
 
 public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 {
-    [Header("Military Characters")]
+    [Header("Game Asset Library")]
     [Space(5f)]
-    [SerializeField] private List<Military> _militaryList;
-    private Queue<Military> _militaryOrder = new Queue<Military>();
-    public List<Military> MilitaryList => _militaryList;
+    [SerializeField, Expandable] private GameAssetLibrary _assetLibrary;
 
+
+    // Military
+    private List<Military> MilitaryCharList => _assetLibrary.MilitaryCharacters;
+
+    [Space(10f)]
+    [Header("Military")]
+    [Space(5f)]
+    [SerializeField] private List<Military> _militaryList = new List<Military>();
+    private Queue<Military> _militaryOrder = new Queue<Military>();
+
+    [Space(10f)]
+    [Header("Moles")]
+    [Space(5f)]
     [SerializeField] private List<Military> _moles;
     public List<Military> Moles => _moles;
 
@@ -22,18 +32,17 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private SpriteRenderer _militarySR;
     private Animator _militaryAnimator;
 
+    // Passwords
+    private PasswordCalendar PasswordsInfo => _assetLibrary.PasswordsInfo;
+
     [Space(10f)]
     [Header("Passwords")]
     [Space(5f)]
-    [SerializeField] private PasswordCalendar _passwordsInfo;
-
     [SerializeField][ReadOnly] private WeekDay _weekDay;
     private Password _selectedPassword;
 
-    [Space(10f)]
-    [Header("Parking Spots")]
-    [Space(5f)]
-    [SerializeField] private List<ParkingSpot> _parkingSpotList;
+    // Parking Spots
+    private List<ParkingSpot> ParkingSpots => _assetLibrary.ParkingSpots;
 
     [Space(10f)]
     [Header("Tickets")]
@@ -115,7 +124,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void SetPassword()
     {
-        CalendarDay day = _passwordsInfo.ChooseWeekDay();
+        CalendarDay day = PasswordsInfo.ChooseWeekDay();
 
         _calendar.sprite = day.CalendarSprite;
         _weekDay = day.WeekDay;
@@ -128,13 +137,13 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         foreach (Military m in _militaryList)
         {
-            int rnd = Random.Range(0, _parkingSpotList.Count);
+            int rnd = Random.Range(0, ParkingSpots.Count);
 
-            ParkingSpot ps = _parkingSpotList[rnd];
+            ParkingSpot ps = ParkingSpots[rnd];
 
             m.SetParking(ps);
 
-            _parkingSpotList.Remove(ps);
+            ParkingSpots.Remove(ps);
 
             parkingSpaceTexts.Add($"{ps.CarPlate} -> {m.ID}\n");
         }
@@ -246,7 +255,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     // Military and Moles
     private void SetMilitaryOrder()
     {
-        for (int i = 0; i < _militaryList.Count; i++) _militaryList[i] = _militaryList[i].Instantiate();
+        for (int i = 0; i < MilitaryCharList.Count; i++) _militaryList.Add(MilitaryCharList[i].Instantiate());
 
         _winCheck.SetMilitary(_militaryList);
 
@@ -257,8 +266,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _militaryList.Shuffle();
 
         _militaryOrder = new Queue<Military>(_militaryList);
-
-        foreach (Military m in _moles) _militaryList.Remove(m);
     }
 
     private void SetMilitary()
@@ -318,7 +325,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             return;
         }
 
-        _selectedPassword = _passwordsInfo.GetPassword();
+        _selectedPassword = PasswordsInfo.GetPassword();
         _selectedMilitary = _militaryOrder?.Dequeue();
 
         SetMilitary();

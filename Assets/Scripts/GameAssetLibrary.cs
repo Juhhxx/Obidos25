@@ -30,4 +30,10 @@ public class GameAssetLibrary : ScriptableObject
     [Space(5)]
     [SerializeField] private List<Location> _locations;
     public List<Location> Locatiaons => _locations;
+
+    [Space(10)]
+    [Header("Parking Spots")]
+    [Space(5)]
+    [SerializeField] private List<ParkingSpot> _parkingSpots;
+    public List<ParkingSpot> ParkingSpots => _parkingSpots;
 }
