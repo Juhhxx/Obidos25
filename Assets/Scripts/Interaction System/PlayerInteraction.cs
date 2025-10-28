@@ -57,6 +57,8 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     {
         MoveCursor();
 
+        _isInteracting = Input.GetButton(_interactButton);
+
         if (IsInsideBoundings)
         {
             if (!_isInteracting) CheckForInteractable();
@@ -103,19 +105,15 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
         if (Input.GetButtonDown(_interactButton))
         {
             _curentInteractable?.OnInteractBegin();
-            _isInteracting = true;
         }
         else if (Input.GetButton(_interactButton))
         {
             _curentInteractable?.OnInteract();
-            _isInteracting = true;
         }
         else if (Input.GetButtonUp(_interactButton))
         {
             _curentInteractable?.OnInteractEnd();
-            _isInteracting = true;
         }
-        else _isInteracting = false;
     }
 
     private void OnDrawGizmos()
