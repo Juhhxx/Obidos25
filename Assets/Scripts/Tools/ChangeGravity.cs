@@ -35,20 +35,23 @@ public class ChangeGravity : MonoBehaviour
     {
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
 
-        switch (changeTo)
+        if (rb != null)
         {
-            case GravityChange.On:
-                if (rb.gravityScale != _defaultGravity)
-                    rb.gravityScale = _defaultGravity;
-                break;
+            switch (changeTo)
+            {
+                case GravityChange.On:
+                    if (rb.gravityScale != _defaultGravity)
+                        rb.gravityScale = _defaultGravity;
+                    break;
 
-            case GravityChange.Off:
-                rb.gravityScale = 0.0f;
-                rb.linearVelocityY = 0.0f;
-                break;
+                case GravityChange.Off:
+                    rb.gravityScale = 0.0f;
+                    rb.linearVelocityY = 0.0f;
+                    break;
 
-            default:
-                return;
+                default:
+                    return;
+            }   
         }
     }
 }
