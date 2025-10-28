@@ -41,8 +41,10 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     }
 
     public Vector3 MousePosition => _cursor.transform.position;
+    [SerializeField][ReadOnly] private Vector3 _mousePosition;
 
     public bool IsInsideBoundings => _cursorBoundingBox.CheckIfInside(MousePosition);
+    [SerializeField][ReadOnly] private bool _isInsideBounds;
 
     private void Awake()
     {
@@ -71,6 +73,9 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
             _curentInteractable = null;
             _isInteracting = false;
         }
+
+        _mousePosition = MousePosition;
+        _isInsideBounds = IsInsideBoundings;
     }
 
     private void MoveCursor()
