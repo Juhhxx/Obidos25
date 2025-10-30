@@ -16,24 +16,24 @@ public abstract class Interactable : MonoBehaviour
         {
             transform.position += -Vector3.forward;
         }
-        else Debug.Log($"{name} IS CHILD");
+        else Debug.Log($"{name} IS CHILD", this);
 
         Debug.Log($"{name} : {transform.position}");
     }
 
     public virtual void OnInteractBegin()
     {
-        Debug.Log($"{name} did Interact Begin");
+        Debug.LogWarning($"{name} did Interact Begin", this);
         InteractBegin?.Invoke();
     }
     public virtual void OnInteract()
     {
-        Debug.Log($"{name} did Interact");
+        Debug.LogWarning($"{name} did Interact", this);
         Interact?.Invoke();
     }
     public virtual void OnInteractEnd()
     {
-        Debug.Log($"{name} did Interact End");
+        Debug.LogWarning($"{name} did Interact End", this);
         InteractEnd?.Invoke();
     }
 }

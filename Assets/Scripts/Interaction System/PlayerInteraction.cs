@@ -36,6 +36,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     }
     public void ResetInteractable()
     {
+        _curentInteractable?.OnInteractEnd();
         _isInteracting = false;
         _curentInteractable = null;
     }
@@ -63,15 +64,13 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
         if (IsInsideBoundings)
         {
-            if (!_isInteracting) CheckForInteractable();
-
             if (_curentInteractable != null) Interact();
+
+            if (!_isInteracting) CheckForInteractable();
         }
         else
         {
-            _curentInteractable?.OnInteractEnd();
-            _curentInteractable = null;
-            _isInteracting = false;
+            ResetInteractable();
         }
 
         _mousePosition = MousePosition;
