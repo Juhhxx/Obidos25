@@ -19,13 +19,13 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Military")]
     [Space(5f)]
-    [SerializeField] private List<Military> _militaryList = new List<Military>();
+    [SerializeField, ReadOnly] private List<Military> _militaryList = new List<Military>();
     private Queue<Military> _militaryOrder = new Queue<Military>();
 
     [Space(10f)]
     [Header("Moles")]
     [Space(5f)]
-    [SerializeField] private List<Military> _moles;
+    [SerializeField, ReadOnly] private List<Military> _moles;
     public List<Military> Moles => _moles;
 
     private Military _selectedMilitary;
