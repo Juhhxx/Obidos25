@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b97fe308792ae2408811826c1259544, type: 3}
   m_Name: Cavalry
   m_EditorClassIdentifier: 
-  _divisionName: Cavalry
-  _divisionBadge: {fileID: 21300000, guid: 68cf32d90666f20419362d97592173dd, type: 3}
+  _name: Cavalry
+  _badge: {fileID: 21300000, guid: 68cf32d90666f20419362d97592173dd, type: 3}

@@ -37,13 +37,13 @@ public class CardManager : MonoBehaviour
         _eyeColor.text = military.EyeColor;
 
         // Division
-        _division.text = military.Division.DivisionName;
+        _division.text = military.Division.Name;
 
         // Features
         _facialFeatures.text = military.Features;
 
         // Rank
-        _rank.text = military.Rank.RankName;
+        _rank.text = military.Rank.Name;
 
         // Regiment
         _regiment.text = military.Regiment;

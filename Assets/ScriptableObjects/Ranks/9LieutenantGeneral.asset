@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
   m_Name: 9LieutenantGeneral
   m_EditorClassIdentifier: 
-  _rankName: Lieutenant General
-  _rankBadge: {fileID: 21300000, guid: da72c4b20f94fd94b9912898b19c0890, type: 3}
+  _name: Lieutenant General
+  _badge: {fileID: 21300000, guid: da72c4b20f94fd94b9912898b19c0890, type: 3}

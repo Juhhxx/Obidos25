@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
   m_Name: 7BrigadierGeneral
   m_EditorClassIdentifier: Assembly-CSharp::Rank
-  _rankName: Brigadier General
-  _rankBadge: {fileID: 21300000, guid: c1733f078071fb24ab325ca46c0c7da3, type: 3}
+  _name: Brigadier General
+  _badge: {fileID: 21300000, guid: c1733f078071fb24ab325ca46c0c7da3, type: 3}
