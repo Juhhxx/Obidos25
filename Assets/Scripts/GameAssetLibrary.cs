@@ -13,11 +13,22 @@ public class GameAssetLibrary : ScriptableObject
     [Space(10)]
     [Header("Badges")]
     [Space(5)]
-    [SerializeField] private List<Rank> _rankBadges;
-    public List<Rank> RankBadges => _rankBadges;
+    [SerializeField] private List<Badges> _rankBadges;
+    public List<Badges> RankBadges => _rankBadges;
 
-    [SerializeField] private List<Division> _divisionBadges;
-    public List<Division> DivisionBadges => _divisionBadges;
+    [SerializeField] private List<Badges> _divisionBadges;
+    public List<Badges> DivisionBadges => _divisionBadges;
+
+    public Badges GetWrongBadge(Badges correctBadge, bool rank)
+    {
+        List<Badges> badgeList = rank ? _rankBadges : _divisionBadges;
+
+        badgeList.Remove(correctBadge);
+
+        int rnd = Random.Range(0, badgeList.Count);
+
+        return badgeList[rnd]; 
+    }
 
     [Space(10)]
     [Header("Passwords")]

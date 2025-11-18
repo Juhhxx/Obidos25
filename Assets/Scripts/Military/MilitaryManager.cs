@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using Obidos25;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -91,7 +92,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void Awake()
     {
-        SingletonCheck(this);
+        base.SingletonCheck(this);
 
         _militarySR = _military.GetComponentInChildren<SpriteRenderer>();
         _militaryAnimator = _military.GetComponent<Animator>();
@@ -215,7 +216,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private string GetPasswordAnswer()
     {
-        if (_moles.Contains(_selectedMilitary) && MoleChance(50))
+        if (_selectedMilitary.WrongAnswers["password"])
         {
             return _selectedPassword.GetPasswordAnswerWrong(_weekDay);
         }
@@ -225,7 +226,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private string GetName() => _selectedMilitary.Name;
     private string GetCodeName()
     {
-        if (_moles.Contains(_selectedMilitary) && MoleChance(40))
+        if (_selectedMilitary.WrongAnswers["codename"])
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
@@ -236,7 +237,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private string GetParking()
     {
-        if (_moles.Contains(_selectedMilitary) && MoleChance(40))
+        if (_selectedMilitary.WrongAnswers["parking"])
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
@@ -247,7 +248,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     private string GetLocation()
     {
-        if (_moles.Contains(_selectedMilitary) && MoleChance(40))
+        if (_selectedMilitary.WrongAnswers["location"])
         {
             int milIdx = Random.Range(0, _militaryList.Count);
 
@@ -277,18 +278,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         Debug.Log(_militarySR);
 
-        if (_moles.Contains(_selectedMilitary) && MoleChance(50))
+        if (_selectedMilitary.WrongAnswers["sprite"])
         {
             _militarySR.sprite = _selectedMilitary.GetMoleSprite();
         }
         else
             _militarySR.sprite = _selectedMilitary.Sprite[0];
 
-        _rank.sprite = _selectedMilitary.Rank.RankBadge;
-        _division.sprite = _selectedMilitary.Division.DivisionBadge;
-        
-        // SetBadges(_rank, _selectedMilitary.Rank.RankName);
-        // SetBadges(_division, _selectedMilitary.Division.DivisionName);
+        SetBadges();
     }
 
     private void SetMoles()
@@ -312,13 +309,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             return ChooseMole();
         }
         else return _militaryList[moleChooser];
-    }
-
-    private bool MoleChance(int chance)
-    {
-        int moleChance = Random.Range(1, 101);
-
-        return moleChance <= chance;
     }
 
     public void StartInterrogation()
@@ -354,17 +344,30 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _militaryAnimator.SetTrigger("WalkOut");
     }
     
-    // private void SetBadges(GameObject badge, string militaryBadge)
-    // {
-    //     if (_moles.Contains(_selectedMilitary) && MoleChance(80))
-    //     {
-    //         badge.SetBadge(militaryBadge, true);
-    //     }
-    //     else
-    //     {
-    //         badge.SetBadge(militaryBadge, false);
-    //     }
-    // }
-    
-    
+    private void SetBadges()
+    {
+        if (_selectedMilitary.WrongAnswers["rank_badge"])
+        {
+            _rank.sprite = _assetLibrary.GetWrongBadge(_selectedMilitary.Rank, true).Badge;
+        }
+        else
+        {
+            _rank.sprite = _selectedMilitary.Rank.Badge;
+        }
+
+        if (Random.Range(0f, 1f) <= 0.2f) _rank.gameObject.SetActive(false);
+        else _rank.gameObject.SetActive(true);
+
+        if (_selectedMilitary.WrongAnswers["division_badge"])
+        {
+            _division.sprite = _assetLibrary.GetWrongBadge(_selectedMilitary.Division, false).Badge;
+        }
+        else
+        {
+            _division.sprite = _selectedMilitary.Division.Badge;
+        }
+
+        if (Random.Range(0f, 1f) <= 0.2f) _division.gameObject.SetActive(false);
+        else _division.gameObject.SetActive(true);
+    }
 }

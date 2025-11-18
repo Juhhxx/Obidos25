@@ -11,6 +11,12 @@ public abstract class MonoBehaviourSingleton<T> : MonoBehaviour
             Instance = obj;
         }
         else
+        {
             DestroyImmediate(gameObject);
+        }
+    }
+    private void OnDestroy()
+    {
+        Instance = default;
     }
 }

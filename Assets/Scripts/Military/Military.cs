@@ -1,4 +1,4 @@
-using System.Linq;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace Obidos25
         [field: Expandable]
         [field: SerializeField] public Rank Rank { get; private set; }
 
-        public string Regiment => "R" + Division?.DivisionName[0] + Location?.IdRegion;
+        public string Regiment => "R" + Division?.Name[0] + Location?.IdRegion;
 
         [field: SerializeField] public string ID { get; private set; }
         [field: SerializeField] public float Height { get; private set; }
@@ -35,10 +35,32 @@ namespace Obidos25
         [field: ShowAssetPreview]
         [field: SerializeField] public Sprite[] Sprite { get; private set; }
 
+
+        private bool _isBufo = false;
+        public bool IsBufo => _isBufo;
+
         private bool _marked = false;
         public bool IsMarked => _marked;
 
+        private Dictionary<string, bool> _wrongAnswers = new Dictionary<string, bool>() {
+            {"password", false},
+            {"codename", false},
+            {"location", false},
+            {"parking", false},
+            {"division_badge", false},
+            {"rank_badge", false},
+            {"sprite", false},
+        };
+
+        public Dictionary<string,bool> WrongAnswers => _wrongAnswers;
+
         public void Mark() => _marked = true;
+
+        public void SetBufo()
+        {
+            _isBufo = true;
+
+        }
 
         public Sprite GetMoleSprite()
         {
@@ -49,6 +71,13 @@ namespace Obidos25
         public Military Instantiate()
         {
             return Instantiate(this);
+        }
+
+        private bool MoleChance(float chance)
+        {
+            float moleChance = Random.Range(0f,1f);
+
+            return moleChance <= chance;
         }
     }
 }
