@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
   m_Name: Samuel
   m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
-  <Name>k__BackingField: Samuel Manuel Pacheco Maia
+  <Name>k__BackingField: Samuel Manuel Pacheco Carvalho
   <CodeName>k__BackingField: COW
   <Division>k__BackingField: {fileID: 11400000, guid: 31fb3960ef417a94d9b55aa2e1cc2d3c, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: 02354f94f47869e45922aede9502f5c6, type: 2}

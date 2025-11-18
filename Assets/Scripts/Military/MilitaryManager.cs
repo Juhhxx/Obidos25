@@ -116,9 +116,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         SetPassword();
 
-        AssignParkingSpaces();
-
         SetMilitaryOrder();
+        AssignParkingSpaces();
         StartInterrogation();
     }
 
@@ -134,23 +133,29 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         _parkingText.text = "";
         List<string> parkingSpaceTexts = new List<string>();
+        List<ParkingSpot> parkingSpots = new List<ParkingSpot>(ParkingSpots);
 
+        Debug.LogWarning("ASSIGNING PARKING SPACES", this);
         foreach (Military m in _militaryList)
         {
-            int rnd = Random.Range(0, ParkingSpots.Count);
+            int rnd = Random.Range(0, parkingSpots.Count);
 
-            ParkingSpot ps = ParkingSpots[rnd];
+            ParkingSpot ps = parkingSpots[rnd];
 
             m.SetParking(ps);
 
-            ParkingSpots.Remove(ps);
+            parkingSpots.Remove(ps);
 
             parkingSpaceTexts.Add($"{ps.CarPlate} -> {m.ID}\n");
         }
 
         parkingSpaceTexts.Sort();
 
-        foreach (string s in parkingSpaceTexts) _parkingText.text += s;
+        foreach (string s in parkingSpaceTexts)
+        {
+            _parkingText.text += s;
+            Debug.LogWarning(s, this);
+        }
 
         _parkingMapBuilder?.BuildFileSprite();
     }
