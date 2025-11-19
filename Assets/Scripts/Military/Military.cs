@@ -24,7 +24,7 @@ namespace Obidos25
         [field: SerializeField] public string EyeColor { get; private set; }
         [field: SerializeField] public ParkingSpot ParkingSpot { get; private set; }
         public void SetParking(ParkingSpot ps) => ParkingSpot = ps;
-        [field: SerializeField] public Location Location { get; private set; }
+        [field: SerializeField, Expandable] public Location Location { get; private set; }
 
         [field: ShowAssetPreview]
         [field: SerializeField] public Sprite Signature { get; private set; }

@@ -4,14 +4,13 @@ using NaughtyAttributes;
 using Obidos25;
 using TMPro;
 using UnityEngine;
-using Yarn.Unity;
 
 public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 {
     [Header("Game Asset Library")]
     [Space(5f)]
     [SerializeField, Expandable] private GameAssetLibrary _assetLibrary;
-
+    public GameAssetLibrary AssetLibrary => _assetLibrary;
 
     // Military
     private List<Military> MilitaryCharList => _assetLibrary.MilitaryCharacters;
@@ -29,6 +28,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     public List<Military> Moles => _moles;
 
     private Military _selectedMilitary;
+    public Military SelectedMilitary => _selectedMilitary;
+
     private SpriteRenderer _militarySR;
     private Animator _militaryAnimator;
 
@@ -39,7 +40,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Header("Passwords")]
     [Space(5f)]
     [SerializeField][ReadOnly] private WeekDay _weekDay;
+    public WeekDay WeekDay => _weekDay;
+
     private Password _selectedPassword;
+    public Password SelectedPassword => _selectedPassword;
 
     // Parking Spots
     private List<ParkingSpot> ParkingSpots => _assetLibrary.ParkingSpots;
@@ -76,16 +80,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Dialogue")]
     [Space(5f)]
-    [SerializeField] private GameObject _dialogueSystem;
-    [SerializeField] private string _startDialog;
+    [SerializeField] private AnswerManager _answerManager;
 
     [Space(10f)]
     [Header("Win Check")]
     [Space(5f)]
     [SerializeField] private WinCheck _winCheck;
-
-    private DialogueRunner _dialogueRunner;
-    private InMemoryVariableStorage _dialogueVariables;
     
     private CardManager _idCardManager;
 
@@ -95,17 +95,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         _militarySR = _military.GetComponentInChildren<SpriteRenderer>();
         _militaryAnimator = _military.GetComponent<Animator>();
-        _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
-        _dialogueVariables = _dialogueSystem.GetComponent<InMemoryVariableStorage>();
         _idCardManager = _idCardBuilder.GetComponent<CardManager>();
-
-        _dialogueRunner.AddFunction("give_documents",  GiveDocuments);
-        _dialogueRunner.AddFunction("get_military_name", GetName);
-        _dialogueRunner.AddFunction("get_password_question", GetPassword);
-        _dialogueRunner.AddFunction("get_password_dialog", GetPasswordAnswer);
-        _dialogueRunner.AddFunction("get_location_dialog", GetLocation);
-        _dialogueRunner.AddFunction("get_park_dialog", GetParking);
-        _dialogueRunner.AddFunction("get_codename_dialog", GetCodeName);
     }
 
     private void Start()
@@ -211,53 +201,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         WalkingOut();
     }
 
-    // Questions
-    private string GiveDocuments()
+    public void ShowIDCard()
     {
         _idCardBuilder?.BuildFileSprite();
         _idCard.SetActive(true);
-        return "";
-    }
-    private string GetPassword()
-    {
-        return _selectedPassword.PasswordQuestion;
-    }
-    private string GetPasswordAnswer()
-    {
-        if (_selectedMilitary.WrongAnswers["password"])
-        {
-            return _selectedPassword.GetPasswordAnswerWrong(_weekDay);
-        }
-        else
-            return _selectedPassword.GetPasswordAnswer(_weekDay);
-    }
-    private string GetName() => _selectedMilitary.Name;
-    private string GetCodeName()
-    {
-        if (_selectedMilitary.WrongAnswers["codename"])
-        {
-            return _assetLibrary.GetWrongCodeName(_selectedMilitary);
-        }
-        else
-            return _selectedMilitary.CodeName;
-    }
-    private string GetParking()
-    {
-        if (_selectedMilitary.WrongAnswers["parking"])
-        {
-            return _assetLibrary.GetWrongParkingSpot(_selectedMilitary.ParkingSpot).Spot;
-        }
-        else
-            return _selectedMilitary.ParkingSpot.Spot;
-    }
-    private string GetLocation()
-    {
-        if (_selectedMilitary.WrongAnswers["location"])
-        {
-            return _assetLibrary.GetWrongLocation(_selectedMilitary.Location).Name;
-        }
-        else
-            return _selectedMilitary.Location.Name;
     }
 
     // Military and Moles
@@ -338,12 +285,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         foreach (TicketStack t in ts) t.Reset();
 
-        _dialogueRunner.Stop();
+        _answerManager.StopDialogue();
         _militaryAnimator.SetTrigger("WalkIn");
     }
     public void HasWalkedIn()
     {
-        _dialogueRunner.StartDialogue(_startDialog);
+        _answerManager.StartDialogue();
     }
     public void WalkingOut()
     {

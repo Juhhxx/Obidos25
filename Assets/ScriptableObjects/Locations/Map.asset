@@ -30,13 +30,11 @@ MonoBehaviour:
     _locations:
     - {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
     - {fileID: 11400000, guid: ab27bfe9a91bd8340949e56de19682e4, type: 2}
-    - {fileID: 11400000, guid: 56c1581cad7962c45983ec3b9fdb7e7a, type: 2}
     - {fileID: 11400000, guid: 979b760f0c161d94b8b434f0459184e6, type: 2}
     - {fileID: 11400000, guid: 5b130d43b16738645999db21f49a2521, type: 2}
   - _regionID: 4
     _locations:
     - {fileID: 11400000, guid: ce7e5462b713b104092b2e2309fa563a, type: 2}
-    - {fileID: 11400000, guid: 90586b78d21ca3647b127099f007faa7, type: 2}
   - _regionID: 5
     _locations:
     - {fileID: 11400000, guid: 5696d0317275dda4b8afdb0a906fbab8, type: 2}

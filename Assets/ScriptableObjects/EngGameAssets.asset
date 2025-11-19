@@ -39,6 +39,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31fb3960ef417a94d9b55aa2e1cc2d3c, type: 2}
   - {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
   _passwordsInfo: {fileID: 11400000, guid: 378ccff4315f4be45b66af0eb73d1bd1, type: 2}
+  _map: {fileID: 11400000, guid: d4a98d6886a64144ea6a03a3e2981941, type: 2}
   _locations:
   - {fileID: 11400000, guid: 8680748a2ac6c3444932a8b8604888c2, type: 2}
   - {fileID: 11400000, guid: 5b130d43b16738645999db21f49a2521, type: 2}
