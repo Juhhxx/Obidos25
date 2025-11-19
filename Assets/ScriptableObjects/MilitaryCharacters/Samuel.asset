@@ -29,7 +29,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9874f322682c92841a96e72c0aa4d952, type: 3}
   _detailInfo:
   - <Detail>k__BackingField: password
-    <OnlyMoleWrong>k__BackingField: 0
+    <OnlyMoleWrong>k__BackingField: 1
     <WrongProbabilityNotMole>k__BackingField: 0.25
     <WrongProbability>k__BackingField: 0.5
   - <Detail>k__BackingField: codename
