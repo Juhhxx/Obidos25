@@ -21,7 +21,7 @@ namespace Obidos25
         [field: SerializeField] public string ID { get; private set; }
         [field: SerializeField] public float Height { get; private set; }
         [field: SerializeField] public string Features { get; private set; }
-        [field: SerializeField] public string EyeColor { get; private set; }
+        [field: SerializeField] public EyeColor EyeColor { get; private set; }
         [field: SerializeField] public ParkingSpot ParkingSpot { get; private set; }
         public void SetParking(ParkingSpot ps) => ParkingSpot = ps;
         [field: SerializeField, Expandable] public Location Location { get; private set; }
@@ -52,6 +52,7 @@ namespace Obidos25
 
         private Dictionary<string, bool> _wrongAnswers = new Dictionary<string, bool>() {
             {"password", false},
+            {"eye_color", false},
             {"codename", false},
             {"location", false},
             {"parking", false},

@@ -22,6 +22,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd532abdc5c96c24fb5dc77c74f3cce7, type: 2}
   - {fileID: 11400000, guid: 99f2938d9405d2b499b004f5c8555d35, type: 2}
   - {fileID: 11400000, guid: dc659c1252711344f845a70b6b87ce57, type: 2}
+  _eyeColors:
+  - {fileID: 11400000, guid: 59a79892d37f8ff44aa3eddbe3bdca86, type: 2}
+  - {fileID: 11400000, guid: 0b0a1cad12f0fe54c825cb41b10e9a8e, type: 2}
+  - {fileID: 11400000, guid: 6571bed7aabebe44388767305409eb2f, type: 2}
+  - {fileID: 11400000, guid: 1c3741203208ab84c8358389f4b66b04, type: 2}
   _rankBadges:
   - {fileID: 11400000, guid: 70f662529296aa24e88699d1921b9572, type: 2}
   - {fileID: 11400000, guid: 02354f94f47869e45922aede9502f5c6, type: 2}

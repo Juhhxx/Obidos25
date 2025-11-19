@@ -30,6 +30,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private Military _selectedMilitary;
     public Military SelectedMilitary => _selectedMilitary;
 
+    private MilitaryControl _militaryControl;
     private SpriteRenderer _militarySR;
     private Animator _militaryAnimator;
 
@@ -89,10 +90,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     
     private CardManager _idCardManager;
 
+    private bool _givenIdCard;
+    private bool _givenTicket;
+
     private void Awake()
     {
         base.SingletonCheck(this);
 
+        _militaryControl = _military.GetComponent<MilitaryControl>();
         _militarySR = _military.GetComponentInChildren<SpriteRenderer>();
         _militaryAnimator = _military.GetComponent<Animator>();
         _idCardManager = _idCardBuilder.GetComponent<CardManager>();
@@ -216,8 +221,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         SetMoles();
 
-        _winCheck.SetMoles(_moles);
-
         _militaryList.Shuffle();
 
         _militaryOrder = new Queue<Military>(_militaryList);
@@ -234,12 +237,21 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         else
             _militarySR.sprite = _selectedMilitary.Sprite[0];
 
+        if (_selectedMilitary.WrongAnswers["eye_color"])
+        {
+            _militaryControl.ChangeEyeColor(_assetLibrary.GetWrongEyeColor(_selectedMilitary.EyeColor).Color);
+        }
+        else
+            _militaryControl.ChangeEyeColor(_selectedMilitary.EyeColor.Color);
+
         SetBadges();
     }
 
     private void SetMoles()
     {
         int moleNumber = Random.Range(1,4);
+
+        _winCheck.SetMoles(moleNumber);
 
         Debug.LogWarning($"{moleNumber} MOLES");
 

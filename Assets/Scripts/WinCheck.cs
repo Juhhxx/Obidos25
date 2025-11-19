@@ -10,11 +10,12 @@ public class WinCheck : MonoBehaviour
     [SerializeField] private List<Military> _militaryList;
     public void SetMilitary(List<Military> militaryList) => _militaryList = new List<Military>(militaryList);
 
-    [SerializeField] private List<Military> _moles;
-    public void SetMoles(List<Military> molesList) => _moles = new List<Military>(molesList);
+    private List<Military> _suspects = new List<Military>();
+
+    private int _numberOfMoles;
+    public void SetMoles(int num) => _numberOfMoles = num;
 
     [SerializeField] private GameObject _portaits;
-    [SerializeField] private TMP_InputField _accusationInputField;
     [SerializeField] private TextMeshProUGUI _bufoNumber;
 
     [SerializeField] private GameObject _gameScreen;
@@ -24,35 +25,52 @@ public class WinCheck : MonoBehaviour
 
     public void SetPortaits()
     {
-        _bufoNumber.text = $"There are {_moles.Count} bufo(s)";
+        _bufoNumber.text = $"There are {_numberOfMoles} bufo(s)";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
             GameObject child = _portaits.transform.GetChild(i).gameObject;
 
-            Image img = child.GetComponent<Image>();
+            Image[] imgs = child.GetComponentsInChildren<Image>();
 
-            img.sprite = _militaryList[i].Picture;
+            imgs[0].enabled = false;
 
-            if (_militaryList[i].IsMarked) img.color = Color.red;
+            imgs[1].sprite = _militaryList[i].Picture;
+
+            if (_militaryList[i].IsMarked) imgs[1].color = Color.red;
 
             child.GetComponentInChildren<TextMeshProUGUI>().text = _militaryList[i].Name;
         }
     }
 
+    public void SelectSuspect(int index)
+    {
+        Military m = _militaryList[index];
+
+        GameObject child = _portaits.transform.GetChild(index).gameObject;
+
+        Image[] imgs = child.GetComponentsInChildren<Image>();
+
+
+        if (_suspects.Contains(m))
+        {
+            _suspects.Remove(m);
+            imgs[0].enabled = false;
+        }
+        else 
+        {
+            _suspects.Add(m);
+            imgs[0].enabled = true;
+        }
+    }
+
     public void CheckBufo()
     {
-        List<string> molesNames = new List<string>();
-
-        foreach (Military m in _moles) molesNames.Add(m.Name);
-
-        string[] suspectsNames = _accusationInputField.text.Split(", ");
-
         int numberRight = 0;
 
-        foreach (string suspect in suspectsNames) if (molesNames.Contains(suspect)) numberRight++;
+        foreach (Military suspect in _suspects) if (suspect.IsMole) numberRight++;
         
-        if (numberRight == _moles.Count)
+        if (numberRight == _numberOfMoles)
             _winScreen.SetActive(true);
         else
             _loseScreen.SetActive(true);

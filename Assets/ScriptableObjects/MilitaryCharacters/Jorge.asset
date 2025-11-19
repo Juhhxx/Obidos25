@@ -19,7 +19,7 @@ MonoBehaviour:
   <ID>k__BackingField: 010203045618
   <Height>k__BackingField: 181
   <Features>k__BackingField: Scar on Lip
-  <EyeColor>k__BackingField: Blue
+  <EyeColor>k__BackingField: {fileID: 11400000, guid: 6571bed7aabebe44388767305409eb2f, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: dbf2c062091116d45bf8bc5be33ec909, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: e4e96770d8b47a94ea07629046f7a54b, type: 2}
   <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
@@ -53,6 +53,10 @@ MonoBehaviour:
     <WrongProbabilityNotMole>k__BackingField: 0
     <WrongProbability>k__BackingField: 0.2
   - <Detail>k__BackingField: sprite
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.35
+  - <Detail>k__BackingField: eye color
     <OnlyMoleWrong>k__BackingField: 1
     <WrongProbabilityNotMole>k__BackingField: 0
     <WrongProbability>k__BackingField: 0.35

@@ -22,6 +22,23 @@ public class GameAssetLibrary : ScriptableObject
     }
 
     [Space(10)]
+    [Header("Eye Color")]
+    [Space(5)]
+    [SerializeField] private List<EyeColor> _eyeColors;
+    public List<EyeColor> EyeColors => _eyeColors;
+
+    public EyeColor GetWrongEyeColor(EyeColor correctBadge)
+    {
+        var tmp = new List<EyeColor>(_eyeColors);
+
+        tmp.Remove(correctBadge);
+
+        int rnd = Random.Range(0, tmp.Count);
+
+        return tmp[rnd]; 
+    }
+
+    [Space(10)]
     [Header("Badges")]
     [Space(5)]
     [SerializeField] private List<Badges> _rankBadges;
@@ -34,11 +51,13 @@ public class GameAssetLibrary : ScriptableObject
     {
         List<Badges> badgeList = rank ? _rankBadges : _divisionBadges;
 
-        badgeList.Remove(correctBadge);
+        var tmp = new List<Badges>(badgeList);
 
-        int rnd = Random.Range(0, badgeList.Count);
+        tmp.Remove(correctBadge);
 
-        return badgeList[rnd]; 
+        int rnd = Random.Range(0, tmp.Count);
+
+        return tmp[rnd]; 
     }
 
     [Space(10)]

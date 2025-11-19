@@ -20,7 +20,6 @@ public class CardItem : MonoBehaviour
     SpriteRenderer _rendererItem;
     Draggabble _drag;
 
-
     private void Awake()
     {
         _collider = GetComponent<BoxCollider2D>();

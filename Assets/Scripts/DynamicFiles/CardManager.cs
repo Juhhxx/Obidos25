@@ -34,7 +34,7 @@ public class CardManager : MonoBehaviour
         _height.text = military.Height + "cm";
 
         // Eye Color
-        _eyeColor.text = military.EyeColor;
+        _eyeColor.text = military.EyeColor.Name;
 
         // Division
         _division.text = military.Division.Name;
