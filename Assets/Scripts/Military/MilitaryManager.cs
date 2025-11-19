@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using Obidos25;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -20,8 +19,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Military")]
     [Space(5f)]
-    [SerializeField, ReadOnly] private List<Military> _militaryList = new List<Military>();
-    private Queue<Military> _militaryOrder = new Queue<Military>();
+    [SerializeField, ReadOnly] private List<Military> _militaryList;
+    private Queue<Military> _militaryOrder;
 
     [Space(10f)]
     [Header("Moles")]
@@ -108,8 +107,17 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _dialogueRunner.AddFunction("get_park_dialog", GetParking);
         _dialogueRunner.AddFunction("get_codename_dialog", GetCodeName);
     }
+
     private void Start()
     {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        _militaryList = new List<Military>();
+        _militaryOrder = new Queue<Military>();
+
         _idCard.SetActive(false);
 
         CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
@@ -304,11 +312,16 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         int moleChooser = Random.Range(0, _militaryList.Count);
 
-        if (_moles.Contains(_militaryList[moleChooser]))
+        if (_militaryList[moleChooser].IsMole)
         {
             return ChooseMole();
         }
-        else return _militaryList[moleChooser];
+        
+        Military m = _militaryList[moleChooser];
+
+        m.SetMole();
+
+        return m;
     }
 
     public void StartInterrogation()

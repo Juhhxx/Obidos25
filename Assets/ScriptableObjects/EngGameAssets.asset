@@ -38,10 +38,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 124ae0ff9cb13af468c5938574dfa6f3, type: 2}
   - {fileID: 11400000, guid: 31fb3960ef417a94d9b55aa2e1cc2d3c, type: 2}
   - {fileID: 11400000, guid: 0380da14fc9b23e45a2e8cbb867c6e78, type: 2}
-  - {fileID: 11400000, guid: d94a61be665820743aaf85dec4d4fe0c, type: 2}
   _passwordsInfo: {fileID: 11400000, guid: 378ccff4315f4be45b66af0eb73d1bd1, type: 2}
   _locations:
-  - {fileID: 11400000, guid: 90586b78d21ca3647b127099f007faa7, type: 2}
   - {fileID: 11400000, guid: 8680748a2ac6c3444932a8b8604888c2, type: 2}
   - {fileID: 11400000, guid: 5b130d43b16738645999db21f49a2521, type: 2}
   - {fileID: 11400000, guid: acccf2ab5506a7e4fb047230f2c5d926, type: 2}
@@ -52,7 +50,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5696d0317275dda4b8afdb0a906fbab8, type: 2}
   - {fileID: 11400000, guid: a03901c961b3e5b4198393d37f68c3e4, type: 2}
   - {fileID: 11400000, guid: b76ee57412f62644ab297c7a1f60854f, type: 2}
-  - {fileID: 11400000, guid: 56c1581cad7962c45983ec3b9fdb7e7a, type: 2}
   - {fileID: 11400000, guid: ce7e5462b713b104092b2e2309fa563a, type: 2}
   - {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
   - {fileID: 11400000, guid: 33cf9297a3fa51c44bcba440ffab0a61, type: 2}

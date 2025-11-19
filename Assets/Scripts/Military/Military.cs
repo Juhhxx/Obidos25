@@ -36,11 +36,19 @@ namespace Obidos25
         [field: SerializeField] public Sprite[] Sprite { get; private set; }
 
 
-        private bool _isBufo = false;
-        public bool IsBufo => _isBufo;
+        private bool _isMole = false;
+        public bool IsMole => _isMole;
+        public void SetMole()
+        {
+            _isMole = true;
+            SetWrongAnswers(true);
+        }
 
         private bool _marked = false;
         public bool IsMarked => _marked;
+        public void Mark() => _marked = true;
+
+        [SerializeField] private List<DetailInfo> _detailInfo;
 
         private Dictionary<string, bool> _wrongAnswers = new Dictionary<string, bool>() {
             {"password", false},
@@ -54,14 +62,6 @@ namespace Obidos25
 
         public Dictionary<string,bool> WrongAnswers => _wrongAnswers;
 
-        public void Mark() => _marked = true;
-
-        public void SetBufo()
-        {
-            _isBufo = true;
-
-        }
-
         public Sprite GetMoleSprite()
         {
             int spriteId = Random.Range(1, Sprite.Length);
@@ -70,10 +70,61 @@ namespace Obidos25
 
         public Military Instantiate()
         {
-            return Instantiate(this);
+            Military m = Instantiate(this);
+
+            m.SetWrongAnswers(false);
+
+            return m;
         }
 
-        private bool MoleChance(float chance)
+        int minimumWrongAnswers = 3;
+
+        public void SetWrongAnswers(bool isMole)
+        {
+            int wrongAnswers = 0;
+
+            foreach (DetailInfo detail in _detailInfo)
+            {
+                string detailName = detail.Detail.ToLower().Replace(" ","_");
+
+                Debug.Log($"DECIDING {detailName}");
+
+                if (_wrongAnswers[detailName]) continue;
+
+                bool answer = false;
+
+                if (isMole)
+                {
+                    answer = WrongChance(detail.WrongProbability);
+                }
+                else
+                {
+                    if (!detail.OnlyMoleWrong) answer = WrongChance(detail.WrongProbabilityNotMole);
+                }
+
+                Debug.Log($"SET {detailName} AS WRONG ? {answer}");
+
+                _wrongAnswers[detailName] = answer;
+
+                if (answer) wrongAnswers++;
+            }
+
+            if (isMole && wrongAnswers < minimumWrongAnswers)
+            {
+                var tmp = new List<string>(_wrongAnswers.Keys);
+
+                for (int i = 0; i < minimumWrongAnswers; i++)
+                {
+                    int rnd = Random.Range(0, tmp.Count);
+
+                    _wrongAnswers[tmp[rnd]] = true;
+
+                    tmp.RemoveAt(rnd);
+                }
+            }
+        }
+
+        private bool WrongChance(float chance)
         {
             float moleChance = Random.Range(0f,1f);
 

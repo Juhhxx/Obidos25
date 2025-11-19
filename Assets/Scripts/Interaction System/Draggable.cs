@@ -37,7 +37,7 @@ public class Draggabble : Interactable
     }
     private void OnDestroy()
     {
-        LayerManager.Instance.UnregisterDragable(this);
+        LayerManager.Instance?.UnregisterDragable(this);
     }
 
     private void Update()

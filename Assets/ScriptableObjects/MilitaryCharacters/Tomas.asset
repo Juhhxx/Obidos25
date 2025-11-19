@@ -27,3 +27,32 @@ MonoBehaviour:
   <Sprite>k__BackingField:
   - {fileID: 21300000, guid: 7b2a77461f144fe4081575195bd93d88, type: 3}
   - {fileID: 21300000, guid: 511056646ebf58b49804d7cc6269ee32, type: 3}
+  _detailInfo:
+  - <Detail>k__BackingField: password
+    <OnlyMoleWrong>k__BackingField: 0
+    <WrongProbabilityNotMole>k__BackingField: 0.25
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: codename
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.1
+  - <Detail>k__BackingField: location
+    <OnlyMoleWrong>k__BackingField: 0
+    <WrongProbabilityNotMole>k__BackingField: 0.3
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: parking
+    <OnlyMoleWrong>k__BackingField: 0
+    <WrongProbabilityNotMole>k__BackingField: 0.25
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: division badge
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.2
+  - <Detail>k__BackingField: rank badge
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.2
+  - <Detail>k__BackingField: sprite
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.35
