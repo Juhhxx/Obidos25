@@ -288,6 +288,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         _selectedPassword = PasswordsInfo.GetPassword();
         _selectedMilitary = _militaryOrder?.Dequeue();
+        _answerManager.ResetAnswers();
 
         SetMilitary();
         _idCardManager.SetUpCard(_selectedMilitary);

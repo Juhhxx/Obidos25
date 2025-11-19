@@ -6,22 +6,22 @@ Hello, I'm here for the play that is going to happen, could you give me a ticket
 Ok. Here you go.{give_documents()}
     -> What's your name ? 
 
-My name is {get_military_name()}. 
+{get_military_name()}. 
 <<jump Options>>
 ===
 
 title: Options
 ---
     -> {get_password_question()} (password)
-        {get_password_dialog()}.
+        {get_password_dialog()}
         <<jump Options>>
     -> Where are you located?
-        I'm located at {get_location_dialog()}.
+        {get_location_dialog()}
         <<jump Options>>
     -> What's your code name?
-        I'm {get_codename_dialog()}.
+        {get_codename_dialog()}
         <<jump Options>>
     -> Where did you park?
-        Over at {get_park_dialog()}.
+        {get_park_dialog()}
         <<jump Options>>
 ===

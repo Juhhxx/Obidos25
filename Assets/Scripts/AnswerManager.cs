@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Obidos25;
 using UnityEngine;
 using Yarn.Unity;
@@ -16,6 +18,24 @@ public class AnswerManager : MonoBehaviour
     private Military SelectedMilitary => MilitaryManager.Instance.SelectedMilitary;
     private Password Password => MilitaryManager.Instance.SelectedPassword;
     private WeekDay WeekDay => MilitaryManager.Instance.WeekDay;
+
+    [SerializeField] private List<string> _nameVariations;
+    [SerializeField] private List<string> _codeNameVariations;
+    [SerializeField] private List<string> _parkingVariations;
+    [SerializeField] private List<string> _locationVariations;
+
+    private string _passwordAnswer;
+    private string _codeNameAnswer;
+    private string _parkingAnswer;
+    private string _locationAnswer;
+
+    public void ResetAnswers()
+    {
+        _passwordAnswer = "";
+        _codeNameAnswer = "";
+        _parkingAnswer = "";
+        _locationAnswer = "";
+    }
 
     public void Awake()
     {
@@ -55,38 +75,83 @@ public class AnswerManager : MonoBehaviour
     {
         if (SelectedMilitary.WrongAnswers["password"])
         {
-            return Password.GetPasswordAnswerWrong(WeekDay);
+            string answer = _passwordAnswer == "" ? Password.GetPasswordAnswerWrong(WeekDay) : _passwordAnswer;
+
+            _passwordAnswer = answer;
+
+            return _passwordAnswer;
         }
         else
             return Password.GetPasswordAnswer(WeekDay);
     }
-    private string GetName() => SelectedMilitary.Name;
+    private string GetName() => NameVariations(SelectedMilitary.Name);
     private string GetCodeName()
     {
         if (SelectedMilitary.WrongAnswers["codename"])
         {
-            return AssetLibrary.GetWrongCodeName(SelectedMilitary);
+            string answer = _codeNameAnswer == "" ? AssetLibrary.GetWrongCodeName(SelectedMilitary) : _codeNameAnswer;
+
+            _codeNameAnswer = answer;
+
+            return CodeNameVariations(_codeNameAnswer);
         }
         else
-            return SelectedMilitary.CodeName;
+            return CodeNameVariations(SelectedMilitary.CodeName);
     }
     private string GetParking()
     {
         if (SelectedMilitary.WrongAnswers["parking"])
         {
-            return AssetLibrary.GetWrongParkingSpot(SelectedMilitary.ParkingSpot).Spot;
+            string answer = _parkingAnswer == "" ? 
+            AssetLibrary.GetWrongParkingSpot(SelectedMilitary.ParkingSpot).Spot : _parkingAnswer;
+            
+            _parkingAnswer = answer;
+
+            return ParkingVariations(_parkingAnswer);
         }
         else
-            return SelectedMilitary.ParkingSpot.Spot;
+            return ParkingVariations(SelectedMilitary.ParkingSpot.Spot);
     }
     private string GetLocation()
     {
         if (SelectedMilitary.WrongAnswers["location"])
         {
-            return AssetLibrary.GetWrongLocation(SelectedMilitary.Location).Name;
+            string answer = _locationAnswer == "" ? 
+            AssetLibrary.GetWrongLocation(SelectedMilitary.Location).Name : _locationAnswer;
+
+            _locationAnswer = answer;
+
+            return LocationVariations(_locationAnswer);
         }
         else
-            return SelectedMilitary.Location.Name;
+            return LocationVariations(SelectedMilitary.Location.Name);
     }
 
+    private string NameVariations(string name)
+    {
+        int rnd = UnityEngine.Random.Range(0, _nameVariations.Count);
+
+        return string.Format(_nameVariations[rnd], name);
+    }
+
+    private string CodeNameVariations(string codename)
+    {
+        int rnd = UnityEngine.Random.Range(0, _codeNameVariations.Count);
+
+        return string.Format(_codeNameVariations[rnd], codename);
+    }
+
+    private string  ParkingVariations(string parking)
+    {
+        int rnd = UnityEngine.Random.Range(0, _parkingVariations.Count);
+
+        return string.Format(_parkingVariations[rnd], parking);
+    }
+
+    private string LocationVariations(string location)
+    {
+        int rnd = UnityEngine.Random.Range(0, _locationVariations.Count);
+
+        return string.Format(_locationVariations[rnd], location);
+    }
 }

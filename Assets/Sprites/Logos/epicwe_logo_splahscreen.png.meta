@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: e557c900e0dc79048bf1edbdf7b5cc25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8392907701802282017
+    second: 2. EPIC-WE logo_0
+  - first:
+      213: 4131177720545220444
+    second: 2. EPIC-WE logo_1
+  - first:
+      213: 6729097677158814065
+    second: 2. EPIC-WE logo_2
+  - first:
+      213: 8341023427456945621
+    second: 2. EPIC-WE logo_3
+  - first:
+      213: 6579194313486220182
+    second: 2. EPIC-WE logo_4
+  - first:
+      213: 3729661350781144118
+    second: 2. EPIC-WE logo_5
+  - first:
+      213: -1277886099468591013
+    second: 2. EPIC-WE logo_6
+  - first:
+      213: 4779287484679319964
+    second: 2. EPIC-WE logo_7
+  - first:
+      213: 3607351740775580547
+    second: 2. EPIC-WE logo_8
+  - first:
+      213: -7247485330464000839
+    second: 2. EPIC-WE logo_9
+  - first:
+      213: 6689647182207354572
+    second: 2. EPIC-WE logo_10
+  - first:
+      213: -229001791040352557
+    second: 2. EPIC-WE logo_11
+  - first:
+      213: 1575623240935400570
+    second: 2. EPIC-WE logo_12
+  - first:
+      213: 873175138893342400
+    second: 2. EPIC-WE logo_13
+  - first:
+      213: -7772183849617761908
+    second: 2. EPIC-WE logo_14
+  - first:
+      213: 8047767784897307206
+    second: 2. EPIC-WE logo_15
+  - first:
+      213: 5806741957682408894
+    second: 2. EPIC-WE logo_16
+  - first:
+      213: -7205434301271571548
+    second: 2. EPIC-WE logo_17
+  - first:
+      213: 4760676739397137399
+    second: 2. EPIC-WE logo_18
+  - first:
+      213: 703087996087355653
+    second: 2. EPIC-WE logo_19
+  - first:
+      213: 1699165593735683654
+    second: 2. EPIC-WE logo_20
+  - first:
+      213: 8297201933915960197
+    second: 2. EPIC-WE logo_21
+  - first:
+      213: -3860438498854269618
+    second: 2. EPIC-WE logo_22
+  - first:
+      213: 7911530772596534067
+    second: 2. EPIC-WE logo_23
+  - first:
+      213: 9079919853687790845
+    second: 2. EPIC-WE logo_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 504
+        width: 112
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ca0965619997470800000000000000
+      internalID: 8392907701802282017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 395
+        width: 167
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c571b19bf34e45930800000000000000
+      internalID: 4131177720545220444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_2
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 395
+        width: 112
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17115f16fae826d50800000000000000
+      internalID: 6729097677158814065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 436
+        width: 99
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd48c85d9441c370800000000000000
+      internalID: 8341023427456945621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 326
+        width: 206
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bbd9bbe5efd4b50800000000000000
+      internalID: 6579194313486220182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 436
+        width: 140
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c40d9ec3b62c330800000000000000
+      internalID: 3729661350781144118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 285
+        width: 57
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50e3c1fc59044ee0800000000000000
+      internalID: -1277886099468591013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 326
+        width: 139
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91f7c345a0735240800000000000000
+      internalID: 4779287484679319964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 285
+        width: 58
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383c0d0bb43ef0230800000000000000
+      internalID: 3607351740775580547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_9
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 217
+        width: 208
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4b6d2ad72cb6b90800000000000000
+      internalID: -7247485330464000839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_10
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 201
+        width: 146
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc689204ba666dc50800000000000000
+      internalID: 6689647182207354572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_11
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 199
+        width: 168
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de8c18951c62dcf0800000000000000
+      internalID: -229001791040352557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_12
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 199
+        width: 58
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74edc75dfcbdd510800000000000000
+      internalID: 1575623240935400570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_13
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 198
+        width: 172
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6a07c99242e1c00800000000000000
+      internalID: 873175138893342400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_14
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 279
+        width: 145
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c895182b7f7a32490800000000000000
+      internalID: -7772183849617761908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_15
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 199
+        width: 277
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642e2a5592a6faf60800000000000000
+      internalID: 8047767784897307206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_16
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 201
+        width: 144
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd240a8b01b59050800000000000000
+      internalID: 5806741957682408894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 206
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a30b44dda7210c90800000000000000
+      internalID: -7205434301271571548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_18
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 176
+        width: 57
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f33b367542511240800000000000000
+      internalID: 4760676739397137399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_19
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 217
+        width: 140
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509c0acaeced1c900800000000000000
+      internalID: 703087996087355653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_20
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 176
+        width: 58
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e5e2dda16a49710800000000000000
+      internalID: 1699165593735683654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_21
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 166
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583bebcc235952370800000000000000
+      internalID: 8297201933915960197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_22
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 108
+        width: 139
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d8c8683a7fc6ac0800000000000000
+      internalID: -3860438498854269618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 167
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b203212576bcd60800000000000000
+      internalID: 7911530772596534067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2. EPIC-WE logo_24
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 53
+        width: 208
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfcd31cdffa520e70800000000000000
+      internalID: 9079919853687790845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      2. EPIC-WE logo_0: 8392907701802282017
+      2. EPIC-WE logo_1: 4131177720545220444
+      2. EPIC-WE logo_10: 6689647182207354572
+      2. EPIC-WE logo_11: -229001791040352557
+      2. EPIC-WE logo_12: 1575623240935400570
+      2. EPIC-WE logo_13: 873175138893342400
+      2. EPIC-WE logo_14: -7772183849617761908
+      2. EPIC-WE logo_15: 8047767784897307206
+      2. EPIC-WE logo_16: 5806741957682408894
+      2. EPIC-WE logo_17: -7205434301271571548
+      2. EPIC-WE logo_18: 4760676739397137399
+      2. EPIC-WE logo_19: 703087996087355653
+      2. EPIC-WE logo_2: 6729097677158814065
+      2. EPIC-WE logo_20: 1699165593735683654
+      2. EPIC-WE logo_21: 8297201933915960197
+      2. EPIC-WE logo_22: -3860438498854269618
+      2. EPIC-WE logo_23: 7911530772596534067
+      2. EPIC-WE logo_24: 9079919853687790845
+      2. EPIC-WE logo_3: 8341023427456945621
+      2. EPIC-WE logo_4: 6579194313486220182
+      2. EPIC-WE logo_5: 3729661350781144118
+      2. EPIC-WE logo_6: -1277886099468591013
+      2. EPIC-WE logo_7: 4779287484679319964
+      2. EPIC-WE logo_8: 3607351740775580547
+      2. EPIC-WE logo_9: -7247485330464000839
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

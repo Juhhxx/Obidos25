@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 01120a99322df7540aa24afcf3b2e2e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9124667605294596055
+    second: 4. BATTLESHEEP logo_0
+  - first:
+      213: 4457126755448626328
+    second: 4. BATTLESHEEP logo_1
+  - first:
+      213: -919287577488261490
+    second: 4. BATTLESHEEP logo_2
+  - first:
+      213: 5487867530184116369
+    second: 4. BATTLESHEEP logo_3
+  - first:
+      213: 4441121338057427409
+    second: 4. BATTLESHEEP logo_4
+  - first:
+      213: -6124659828248680747
+    second: 4. BATTLESHEEP logo_5
+  - first:
+      213: 5888365448952908753
+    second: 4. BATTLESHEEP logo_6
+  - first:
+      213: 4904274929827247133
+    second: 4. BATTLESHEEP logo_7
+  - first:
+      213: 501593201242021
+    second: 4. BATTLESHEEP logo_8
+  - first:
+      213: 4707213599146481655
+    second: 4. BATTLESHEEP logo_9
+  - first:
+      213: -5061444603520990411
+    second: 4. BATTLESHEEP logo_10
+  - first:
+      213: -2123833815872779534
+    second: 4. BATTLESHEEP logo_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 766
+        width: 2568
+        height: 2079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920c6e4582bae5180800000000000000
+      internalID: -9124667605294596055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 161
+        width: 257
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c97615b25eadd30800000000000000
+      internalID: 4457126755448626328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 161
+        width: 287
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ef161a1d80e33f0800000000000000
+      internalID: -919287577488261490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_3
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 161
+        width: 234
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19846075172d82c40800000000000000
+      internalID: 5487867530184116369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_4
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 161
+        width: 235
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9025fa35802ad30800000000000000
+      internalID: 4441121338057427409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_5
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 161
+        width: 187
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6e1270656d00ba0800000000000000
+      internalID: -6124659828248680747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_6
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 161
+        width: 191
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db858c8d2da7b150800000000000000
+      internalID: 5888365448952908753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_7
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 154
+        width: 219
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14f431901c7f0440800000000000000
+      internalID: 4904274929827247133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_8
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 161
+        width: 259
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5afe4944238c10000800000000000000
+      internalID: 501593201242021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_9
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 161
+        width: 190
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7930b14d1635140800000000000000
+      internalID: 4707213599146481655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_10
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 161
+        width: 190
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53340d423f222c9b0800000000000000
+      internalID: -5061444603520990411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. BATTLESHEEP logo_11
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 161
+        width: 257
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fac0f2a560a682e0800000000000000
+      internalID: -2123833815872779534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      4. BATTLESHEEP logo_0: -9124667605294596055
+      4. BATTLESHEEP logo_1: 4457126755448626328
+      4. BATTLESHEEP logo_10: -5061444603520990411
+      4. BATTLESHEEP logo_11: -2123833815872779534
+      4. BATTLESHEEP logo_2: -919287577488261490
+      4. BATTLESHEEP logo_3: 5487867530184116369
+      4. BATTLESHEEP logo_4: 4441121338057427409
+      4. BATTLESHEEP logo_5: -6124659828248680747
+      4. BATTLESHEEP logo_6: 5888365448952908753
+      4. BATTLESHEEP logo_7: 4904274929827247133
+      4. BATTLESHEEP logo_8: 501593201242021
+      4. BATTLESHEEP logo_9: 4707213599146481655
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
