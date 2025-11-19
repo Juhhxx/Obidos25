@@ -25,4 +25,11 @@ public class Region
         for (int i = 0; i < _locations.Count; i++) _locations[i].UpdateRegion(_regionID);
     }
 
+    public Location GetRandomLocation()
+    {
+        int rnd = UnityEngine.Random.Range(0, _locations.Count);
+
+        return _locations[rnd];
+    }
+
 }

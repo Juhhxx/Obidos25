@@ -236,9 +236,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         if (_selectedMilitary.WrongAnswers["codename"])
         {
-            int milIdx = Random.Range(0, _militaryList.Count);
-
-            return _militaryList[milIdx].CodeName;
+            return _assetLibrary.GetWrongCodeName(_selectedMilitary);
         }
         else
             return _selectedMilitary.CodeName;
@@ -247,9 +245,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         if (_selectedMilitary.WrongAnswers["parking"])
         {
-            int milIdx = Random.Range(0, _militaryList.Count);
-
-            return _militaryList[milIdx].ParkingSpot.Spot;
+            return _assetLibrary.GetWrongParkingSpot(_selectedMilitary.ParkingSpot).Spot;
         }
         else
             return _selectedMilitary.ParkingSpot.Spot;
@@ -258,9 +254,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         if (_selectedMilitary.WrongAnswers["location"])
         {
-            int milIdx = Random.Range(0, _militaryList.Count);
-
-            return _militaryList[milIdx].Location.Name;
+            return _assetLibrary.GetWrongLocation(_selectedMilitary.Location).Name;
         }
         else
             return _selectedMilitary.Location.Name;

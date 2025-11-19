@@ -18,4 +18,15 @@ public class Map : ScriptableObject
             _regions[i].UpdateLocations();
         }
     }
+
+    public Location GetRandomLocationInOtherRegion(int index)
+    {
+        var tmp = new List<Region>(_regions);
+
+        tmp.RemoveAt(index - 1);
+
+        int rnd = Random.Range(0, tmp.Count);
+
+        return tmp[rnd].GetRandomLocation();
+    }
 }

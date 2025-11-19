@@ -10,6 +10,17 @@ public class GameAssetLibrary : ScriptableObject
     [SerializeField] private List<Military> _militaryCharacters;
     public List<Military> MilitaryCharacters => _militaryCharacters;
 
+    public string GetWrongCodeName(Military military)
+    {
+        var tmp = new List<Military>(_militaryCharacters);
+
+        tmp.Remove(military);
+
+        int rnd = Random.Range(0, tmp.Count);
+
+        return tmp[rnd].CodeName;
+    }
+
     [Space(10)]
     [Header("Badges")]
     [Space(5)]
@@ -39,12 +50,29 @@ public class GameAssetLibrary : ScriptableObject
     [Space(10)]
     [Header("Locations")]
     [Space(5)]
+    [SerializeField] private Map _map;
     [SerializeField] private List<Location> _locations;
-    public List<Location> Locatiaons => _locations;
+    public List<Location> Locations => _locations;
+
+    public Location GetWrongLocation(Location location)
+    {
+        return _map.GetRandomLocationInOtherRegion(location.IdRegion);
+    }
 
     [Space(10)]
     [Header("Parking Spots")]
     [Space(5)]
     [SerializeField] private List<ParkingSpot> _parkingSpots;
     public List<ParkingSpot> ParkingSpots => _parkingSpots;
+
+    public ParkingSpot GetWrongParkingSpot(ParkingSpot parking)
+    {
+        var tmp = new List<ParkingSpot>(_parkingSpots);
+
+        tmp.Remove(parking);
+
+        int rnd = Random.Range(0, tmp.Count);
+
+        return tmp[rnd];
+    }
 }
