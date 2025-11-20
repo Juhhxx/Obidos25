@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f20daa966e7f0cb4aa655394c2c7d843
+guid: 526b9c30a72e36a41b9d2ffda58224fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -750456875935637308
-    second: badge_booklet_page_7_0
+      213: -8069015172067443439
+    second: badge_booklet_page_9_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: badge_booklet_page_7_0
+      name: badge_booklet_page_9_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c06b9a8277d595f0800000000000000
-      internalID: -750456875935637308
+      spriteID: 11dbea5d379150090800000000000000
+      internalID: -8069015172067443439
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      badge_booklet_page_7_0: -750456875935637308
+      badge_booklet_page_9_0: -8069015172067443439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

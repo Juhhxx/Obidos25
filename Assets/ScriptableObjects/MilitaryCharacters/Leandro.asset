@@ -22,7 +22,7 @@ MonoBehaviour:
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 59a79892d37f8ff44aa3eddbe3bdca86, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 900f2c9a654aefa419b82f32fd0a254b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: ab27bfe9a91bd8340949e56de19682e4, type: 2}
-  <Signature>k__BackingField: {fileID: 21300000, guid: 03be9d36204653e4887129a9e828edb9, type: 3}
+  <Signature>k__BackingField: {fileID: 21300000, guid: 62ea336cfef03044390f60500931710b, type: 3}
   <Picture>k__BackingField: {fileID: 21300000, guid: 7649a6632a617404f84f21bb2ce47c1d, type: 3}
   <Sprite>k__BackingField:
   - {fileID: 21300000, guid: 32da79ed6fe77834bb5d334c8aa3fe1a, type: 3}
@@ -55,8 +55,8 @@ MonoBehaviour:
   - <Detail>k__BackingField: sprite
     <OnlyMoleWrong>k__BackingField: 1
     <WrongProbabilityNotMole>k__BackingField: 0
-    <WrongProbability>k__BackingField: 0.35
+    <WrongProbability>k__BackingField: 0.3
   - <Detail>k__BackingField: eye color
     <OnlyMoleWrong>k__BackingField: 1
     <WrongProbabilityNotMole>k__BackingField: 0
-    <WrongProbability>k__BackingField: 0.35
+    <WrongProbability>k__BackingField: 0.15
