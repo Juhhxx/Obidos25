@@ -13,7 +13,7 @@ public class SwitchCard : MonoBehaviour
         if (tmp != null)
         {
             CardItem card = PlayerInteraction.Instance.CurrentInteractable?
-                                        .gameObject.GetComponent<CardItem>();
+                                        .gameObject.GetComponentInParent<CardItem>();
 
             if (card != null) Switch(card);
         }

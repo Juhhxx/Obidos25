@@ -53,7 +53,7 @@ public class BoundingBox : MonoBehaviour
     public bool CheckIfInside(Vector2 point)
     {
         bool result = BoundingBoxBounds.Contains(point);
-        Debug.Log($"Checking if {point} in inside {name} : {result}");
+        // Debug.Log($"Checking if {point} in inside {name} : {result}");
 
         return result;
     }

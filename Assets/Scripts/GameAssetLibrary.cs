@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using Obidos25;
 using UnityEngine;
+using NaughtyAttributes;
 
 [CreateAssetMenu(fileName = "GameAssetLibrary", menuName = "Scriptable Objects/GameAssetLibrary")]
 public class GameAssetLibrary : ScriptableObject
 {
     [Header("Characters")]
     [Space(5)]
-    [SerializeField] private List<Military> _militaryCharacters;
+    [SerializeField, Expandable] private List<Military> _militaryCharacters;
     public List<Military> MilitaryCharacters => _militaryCharacters;
 
     public string GetWrongCodeName(Military military)
@@ -69,8 +70,8 @@ public class GameAssetLibrary : ScriptableObject
     [Space(10)]
     [Header("Locations")]
     [Space(5)]
-    [SerializeField] private Map _map;
-    [SerializeField] private List<Location> _locations;
+    [SerializeField, Expandable] private Map _map;
+    [SerializeField, Expandable] private List<Location> _locations;
     public List<Location> Locations => _locations;
 
     public Location GetWrongLocation(Location location)
