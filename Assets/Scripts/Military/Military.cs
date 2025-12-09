@@ -46,7 +46,15 @@ namespace Obidos25
 
         private bool _marked = false;
         public bool IsMarked => _marked;
-        public void Mark() => _marked = true;
+
+        private int _suspicionLevel = 0;
+        public int SuspicionLevel => _suspicionLevel;
+
+        public void Mark(int suspicion)
+        {
+            _suspicionLevel = suspicion;
+            _marked = true;
+        }
 
         [SerializeField] private List<DetailInfo> _detailInfo;
 

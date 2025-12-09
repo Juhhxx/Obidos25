@@ -37,9 +37,14 @@ public class WinCheck : MonoBehaviour
 
             imgs[1].sprite = _militaryList[i].Picture;
 
-            if (_militaryList[i].IsMarked) imgs[1].color = Color.red;
+            TextMeshProUGUI[] tmps = child.GetComponentsInChildren<TextMeshProUGUI>();
 
-            child.GetComponentInChildren<TextMeshProUGUI>().text = _militaryList[i].Name;
+            tmps[0].text = _militaryList[i].Name;
+
+            tmps[1].text = _militaryList[i].SuspicionLevel.ToString();
+
+            if (_militaryList[i].IsMarked) imgs[1].color = Color.red;
+            else tmps[1].text = "";
         }
     }
 

@@ -58,6 +58,9 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [SerializeField] private GameObject _greenTicketPrefab;
     [SerializeField] private GameObject _redTicketPrefab;
 
+    [SerializeField] private GameObject _suspicionIndicator;
+
+
     private GameObject _greenTicket;
     private GameObject _redTicket;
 
@@ -193,18 +196,33 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         }
     }
 
+    private int _suspicionLevel;
+    public void SetSuspicion(int level) => _suspicionLevel = level;
+
     public void GiveTicket(TicketTypes type)
     {
         if (type == TicketTypes.Red)
         {
-            _selectedMilitary?.Mark();
-            CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
-
+            _suspicionIndicator.SetActive(true);
         }
-        else if (type == TicketTypes.Green) CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
-
-        WalkingOut();
+        else if (type == TicketTypes.Green)
+        {
+            CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
+            WalkingOut();
+        }
     }
+
+    public void GiveRedTicket()
+    {
+        if (_suspicionLevel == 0) return;
+
+        _selectedMilitary?.Mark(_suspicionLevel);
+        CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
+
+        _suspicionLevel = 0;
+        _suspicionIndicator.SetActive(false);
+        WalkingOut();
+    }    
 
     public void ShowIDCard()
     {
@@ -293,10 +311,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         SetMilitary();
         _idCardManager.SetUpCard(_selectedMilitary);
         _idCard.GetComponent<Draggabble>().ResetPosition();
-
-        TicketStack[] ts = _ticketStacks.GetComponentsInChildren<TicketStack>();
-
-        foreach (TicketStack t in ts) t.Reset();
 
         _answerManager.StopDialogue();
         _militaryAnimator.SetTrigger("WalkIn");
