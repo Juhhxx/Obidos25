@@ -29,6 +29,8 @@ public class WinCheck : MonoBehaviour
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
+            if (i >= _militaryList.Count) continue;
+
             GameObject child = _portaits.transform.GetChild(i).gameObject;
 
             Image[] imgs = child.GetComponentsInChildren<Image>();
