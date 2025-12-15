@@ -4,6 +4,7 @@ using Obidos25;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using System.Linq;
 
 public class WinCheck : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class WinCheck : MonoBehaviour
     public void SetMoles(int num) => _numberOfMoles = num;
 
     [SerializeField] private GameObject _portaits;
+    [SerializeField] private Sprite _markedSprite;
     [SerializeField] private TextMeshProUGUI _bufoNumber;
 
     [SerializeField] private GameObject _gameScreen;
@@ -25,7 +27,7 @@ public class WinCheck : MonoBehaviour
 
     public void SetPortaits()
     {
-        _bufoNumber.text = $"There are {_numberOfMoles} bufo(s)";
+        _bufoNumber.text = $"Can you identify the {_numberOfMoles} mole(s) attending the event?";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
@@ -41,12 +43,23 @@ public class WinCheck : MonoBehaviour
 
             TextMeshProUGUI[] tmps = child.GetComponentsInChildren<TextMeshProUGUI>();
 
-            tmps[0].text = _militaryList[i].Name;
+            string[] names = _militaryList[i].Name.Split(" ");
+
+            tmps[0].text = names[0] + " " + names[names.Count() - 1];
 
             tmps[1].text = _militaryList[i].SuspicionLevel.ToString();
 
-            if (_militaryList[i].IsMarked) imgs[1].color = Color.red;
-            else tmps[1].text = "";
+            if (_militaryList[i].IsMarked) imgs[2].sprite = _markedSprite;
+            else
+            {
+                tmps[1].text = "";
+                imgs[3].enabled = false;
+            }
+            
+            UnityEngine.UI.Button btt = child.GetComponent<UnityEngine.UI.Button>();
+
+            int idx = i;
+            btt.onClick.AddListener(() => SelectSuspect(idx));
         }
     }
 
@@ -73,11 +86,18 @@ public class WinCheck : MonoBehaviour
 
     public void CheckBufo()
     {
-        int numberRight = 0;
+        bool right = true;
 
-        foreach (Military suspect in _suspects) if (suspect.IsMole) numberRight++;
+        foreach (Military suspect in _suspects)
+        {
+            if (!suspect.IsMole)
+            {
+                right = false;
+                break;
+            }
+        }
         
-        if (numberRight == _numberOfMoles)
+        if (right)
             _winScreen.SetActive(true);
         else
             _loseScreen.SetActive(true);
