@@ -33,28 +33,17 @@ public class WinCheck : MonoBehaviour
         {
             if (i >= _militaryList.Count) continue;
 
+            Military m = _militaryList[i];
+
             GameObject child = _portaits.transform.GetChild(i).gameObject;
 
-            Image[] imgs = child.GetComponentsInChildren<Image>();
-
-            imgs[0].enabled = false;
-
-            imgs[1].sprite = _militaryList[i].Picture;
-
-            TextMeshProUGUI[] tmps = child.GetComponentsInChildren<TextMeshProUGUI>();
+            SetUpAccusationCard setUp = child.GetComponent<SetUpAccusationCard>();
 
             string[] names = _militaryList[i].Name.Split(" ");
 
-            tmps[0].text = names[0] + " " + names[names.Count() - 1];
+            string shortName = names[0] + " " + names[names.Count() - 1];
 
-            tmps[1].text = _militaryList[i].SuspicionLevel.ToString();
-
-            if (_militaryList[i].IsMarked) imgs[2].sprite = _markedSprite;
-            else
-            {
-                tmps[1].text = "";
-                imgs[3].enabled = false;
-            }
+            setUp.SetCard(m.Picture, shortName, m.IsMarked, m.SuspicionLevel, _markedSprite);
             
             UnityEngine.UI.Button btt = child.GetComponent<UnityEngine.UI.Button>();
 
@@ -69,18 +58,18 @@ public class WinCheck : MonoBehaviour
 
         GameObject child = _portaits.transform.GetChild(index).gameObject;
 
-        Image[] imgs = child.GetComponentsInChildren<Image>();
+        SetUpAccusationCard setUp = child.GetComponent<SetUpAccusationCard>();
 
 
         if (_suspects.Contains(m))
         {
             _suspects.Remove(m);
-            imgs[0].enabled = false;
+            setUp.ToogleSelection(false);
         }
         else 
         {
             _suspects.Add(m);
-            imgs[0].enabled = true;
+            setUp.ToogleSelection(true);
         }
     }
 
