@@ -27,7 +27,7 @@ public abstract class LocalizedAssets
 
     public static T GetLocalization<T>(List<T> localizations, GameObject go) where T : LocalizedAssets
     {
-        return GetLocalization<T>(LocalizationManager.Instance.Language, localizations, go);
+        return GetLocalization<T>(LocalizationManager.Language, localizations, go);
     }
 }
 

@@ -49,7 +49,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
     private void Awake()
     {
-        base.SingletonCheck(this);
+        base.SingletonCheck(this, false);
     }
 
     private void Start()

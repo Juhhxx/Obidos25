@@ -219,12 +219,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 538859255d863b6419f91bc85ef10bd9, type: 3}
   - {fileID: 21300000, guid: 433e2e926bcbaaa4bb698618d9eaa1dc, type: 3}
   - {fileID: 21300000, guid: f2172347e66aba94880948422056621b, type: 3}
-  - {fileID: 21300000, guid: 8678cf92fa026b1408eaa51b6afe86eb, type: 3}
+  - {fileID: 21300000, guid: 30c0b9388f760834ea06f869483e3a79, type: 3}
   - {fileID: 21300000, guid: d12f1f8998eeed64586888763f830271, type: 3}
   - {fileID: 21300000, guid: e8efd93a3333cef4ca3f63da5c7ba6a1, type: 3}
   - {fileID: 21300000, guid: 142f4c9c8c1154b418065dc6718606e1, type: 3}
   - {fileID: 21300000, guid: c05ed1d64f006104daa43567ba7b9c38, type: 3}
   - {fileID: 21300000, guid: 68ff5ee21bc43a74db0ec7b465161000, type: 3}
+  - {fileID: 21300000, guid: 526b9c30a72e36a41b9d2ffda58224fa, type: 3}
   - {fileID: 21300000, guid: f20daa966e7f0cb4aa655394c2c7d843, type: 3}
   _backToStartButton: {fileID: 700167281565942717}
   _pageForwardButton: {fileID: 319355490106880848}
@@ -296,7 +297,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 8.404207, y: -5.1995354}
+  m_Offset: {x: 8.233567, y: -5.071555}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -306,7 +307,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7235107, y: 1.2727299}
+  m_Size: {x: 2.0647907, y: 1.5286903}
   m_EdgeRadius: 0
 --- !u!114 &945474468277021156
 MonoBehaviour:
@@ -405,7 +406,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -8.374963, y: -5.1702433}
+  m_Offset: {x: -8.204323, y: -5.042263}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -415,7 +416,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7559032, y: 1.3121185}
+  m_Size: {x: 2.0971832, y: 1.568079}
   m_EdgeRadius: 0
 --- !u!114 &6565951464884323879
 MonoBehaviour:
@@ -491,13 +492,17 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.9
+      value: 18.5
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.3
+      value: -9.4
       objectReference: {fileID: 0}
     - target: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_LocalPosition.z

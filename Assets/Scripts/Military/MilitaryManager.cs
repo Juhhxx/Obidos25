@@ -98,7 +98,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void Awake()
     {
-        base.SingletonCheck(this);
+        base.SingletonCheck(this, false);
 
         _militaryControl = _military.GetComponent<MilitaryControl>();
         _militarySR = _military.GetComponentInChildren<SpriteRenderer>();

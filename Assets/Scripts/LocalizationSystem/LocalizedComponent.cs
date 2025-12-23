@@ -11,7 +11,6 @@ public class LocalizedComponent : MonoBehaviour
     [Header("Asset Definitions")]
     [SerializeField] private LocalizationType _assetType;
 
-    
 
     [Header("Localization Variations")]
     [SerializeField, ShowIf("_assetType", LocalizationType.TMP)]
@@ -23,15 +22,13 @@ public class LocalizedComponent : MonoBehaviour
 
     private void OnEnable()
     {
-        UpdateLocalizedComponent(LocalizationManager.Instance?.Language);
-        LocalizationManager.Instance.OnLanguageChanged += UpdateLocalizedComponent;
+        UpdateLocalizedComponent(LocalizationManager.Language);
+        LocalizationManager.OnLanguageChanged += UpdateLocalizedComponent;
     }
 
     private void OnDisable()
     {
-        if (LocalizationManager.Instance == null) return;
-        
-        LocalizationManager.Instance.OnLanguageChanged -= UpdateLocalizedComponent;
+        LocalizationManager.OnLanguageChanged -= UpdateLocalizedComponent;
     }
 
     public void UpdateLocalizedComponent(Language lang)

@@ -2,14 +2,11 @@ using System;
 using NaughtyAttributes;
 using UnityEngine;
 
-public class LocalizationManager : MonoBehaviourSingleton<LocalizationManager>
+public static class LocalizationManager
 {
-    [OnValueChanged("Bruh")]
-    [SerializeField] private Language _language;
+    [SerializeField] private static Language _language;
 
-    private void Bruh() => Language = _language;
-
-    public Language Language
+    public static Language Language
     {
         get
         {
@@ -31,10 +28,5 @@ public class LocalizationManager : MonoBehaviourSingleton<LocalizationManager>
         }
     }
 
-    public event Action<Language> OnLanguageChanged;
-
-    private void Awake()
-    {
-        base.SingletonCheck(this);
-    }
+    public static event Action<Language> OnLanguageChanged;
 }

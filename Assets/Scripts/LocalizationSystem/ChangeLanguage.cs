@@ -11,6 +11,6 @@ public class ChangeLanguage : MonoBehaviour
 
     public void SetLanguage()
     {
-        LocalizationManager.Instance.Language = _language;
+        LocalizationManager.Language = _language;
     }
 }

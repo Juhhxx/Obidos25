@@ -9,7 +9,7 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
 
     private void Awake()
     {
-        base.SingletonCheck(this);
+        base.SingletonCheck(this, false);
     }
 
     public void RegisterDragable(Draggabble drag)

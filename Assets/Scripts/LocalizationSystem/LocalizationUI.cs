@@ -35,6 +35,6 @@ public class LocalizationUI : MonoBehaviour
 
     private void UpdateIcon()
     {
-        _currentLanguageUIImage.sprite = LocalizationManager.Instance.Language.Flag;
+        _currentLanguageUIImage.sprite = LocalizationManager.Language.Flag;
     }
 }
