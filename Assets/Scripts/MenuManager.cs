@@ -1,11 +1,13 @@
+using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviourSingleton<MenuManager>
 {
+    [SerializeField, Scene] private List<string> _noPauseScenes;
     [SerializeField] private KeyCode _pauseKey;
     [SerializeField] private GameObject _pauseMenu;
-    [SerializeField] private GameObject _mainMenuButton;
 
     private void Awake()
     {
@@ -18,15 +20,13 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     private void CheckPause()
     {
+        if (_noPauseScenes.Contains(SceneManager.GetActiveScene().name)) return;
+
         if (_pauseMenu.activeInHierarchy) return;
 
         if (Input.GetKeyDown(_pauseKey))
         {
             _pauseMenu.SetActive(true);
-
-            bool inMainMenu = SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0);
-
-            _mainMenuButton.SetActive(!inMainMenu);
         }
     }
 
