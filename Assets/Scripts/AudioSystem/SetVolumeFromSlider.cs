@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,11 +51,25 @@ public class SetVolumeFromSlider : MonoBehaviour
     {
         _slider = GetComponent<Slider>();
 
-        _slider.value = Value;
+        UpdateSlider();
+
+        AudioManager.Instance.OnResetValues += UpdateSlider;
+    }
+
+    private void OnDestroy()
+    {
+        if (AudioManager.Instance == null) return;
+        
+        AudioManager.Instance.OnResetValues -= UpdateSlider;
     }
 
     public void SetVolume()
     {
         Value = _slider.value;
+    }
+
+    public void UpdateSlider()
+    {
+        _slider.value = Value;
     }
 }

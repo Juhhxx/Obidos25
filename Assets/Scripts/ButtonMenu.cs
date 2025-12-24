@@ -18,8 +18,16 @@ public class ButtonMenu : MonoBehaviour
     {
         SceneManager.LoadScene(_buttonTwo);
     }
-    public void Quit()
+    public void OpenOptions()
     {
-        Application.Quit();
+        MenuManager.Instance.ToogleOptionsMenu(true);
+    }
+    public void OpenInstructions()
+    {
+        MenuManager.Instance.ToogleInstructionsMenu(true);
+    }
+    public void OpenConfirmQuit()
+    {
+        MenuManager.Instance.ToogleConfirmQuitMenu(true);
     }
 }

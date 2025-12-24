@@ -1,34 +1,46 @@
 fileFormatVersion: 2
-guid: 472f5d89a3ec2104d9ebb1674a38ec02
+guid: d21c03fd579c8884fa3e6b7819dbbfd6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1130775077352882132
-    second: how_play_button_highlighted_0
+      213: -7302161093236910183
+    second: instructions_button_0
   - first:
-      213: 4850604952681335200
-    second: how_play_button_highlighted_1
+      213: -5058839947787231411
+    second: instructions_button_1
   - first:
-      213: 2806571252334453105
-    second: how_play_button_highlighted_2
+      213: 2200251457612701513
+    second: instructions_button_2
   - first:
-      213: -3670426667197558702
-    second: how_play_button_highlighted_3
+      213: 2106994520647844396
+    second: instructions_button_3
   - first:
-      213: -2108822567750790277
-    second: how_play_button_highlighted_4
+      213: -4205443130359650453
+    second: instructions_button_4
   - first:
-      213: -4018684964124499202
-    second: how_play_button_highlighted_5
+      213: 3486091962501719752
+    second: instructions_button_5
   - first:
-      213: 1739154231750183306
-    second: how_play_button_highlighted_6
+      213: -6748657099193261029
+    second: instructions_button_6
   - first:
-      213: -8010558987627615985
-    second: how_play_button_highlighted_7
+      213: 5088377656649651038
+    second: instructions_button_7
   - first:
-      213: 1326593539250862633
-    second: how_play_button_highlighted_8
+      213: -3871855955793798229
+    second: instructions_button_8
+  - first:
+      213: -5936013747760175867
+    second: instructions_button_9
+  - first:
+      213: 4168893116888940655
+    second: instructions_button_10
+  - first:
+      213: -8806704425477775374
+    second: instructions_button_11
+  - first:
+      213: -708562985870994879
+    second: instructions_button_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,34 +149,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: how_play_button_highlighted_0
+      name: instructions_button_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 13
-        width: 312
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4dfbb7611f151bf00800000000000000
-      internalID: 1130775077352882132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: how_play_button_highlighted_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 24
-        width: 33
+        x: 12
+        y: 29
+        width: 27
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a9425e318fc05340800000000000000
-      internalID: 4850604952681335200
+      spriteID: 9979fe89c2389aa90800000000000000
+      internalID: -7302161093236910183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: how_play_button_highlighted_2
+      name: instructions_button_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 24
-        width: 29
+        x: 37
+        y: 28
+        width: 34
         height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 171e7342fa1f2f620800000000000000
-      internalID: 2806571252334453105
+      spriteID: d4f1690ded36bc9b0800000000000000
+      internalID: -5058839947787231411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: how_play_button_highlighted_3
+      name: instructions_button_2
       rect:
         serializedVersion: 2
-        x: 79
-        y: 25
-        width: 38
-        height: 28
+        x: 70
+        y: 28
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,18 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25091979466001dc0800000000000000
-      internalID: -3670426667197558702
+      spriteID: 94f5a831b0dd88e10800000000000000
+      internalID: 2200251457612701513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: how_play_button_highlighted_4
+      name: instructions_button_3
       rect:
         serializedVersion: 2
-        x: 137
-        y: 24
+        x: 95
+        y: 28
         width: 27
         height: 34
       alignment: 0
@@ -240,84 +230,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7313e23c05fbb2e0800000000000000
-      internalID: -2108822567750790277
+      spriteID: c22c8ea6a5c8d3d10800000000000000
+      internalID: 2106994520647844396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: how_play_button_highlighted_5
+      name: instructions_button_4
       rect:
         serializedVersion: 2
-        x: 163
-        y: 24
-        width: 29
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef2e7292153ca38c0800000000000000
-      internalID: -4018684964124499202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: how_play_button_highlighted_6
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 24
-        width: 31
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8946113f87b22810800000000000000
-      internalID: 1739154231750183306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: how_play_button_highlighted_7
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 24
-        width: 27
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f09a422ea07c4d090800000000000000
-      internalID: -8010558987627615985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: how_play_button_highlighted_8
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 25
+        x: 121
+        y: 29
         width: 30
         height: 28
       alignment: 0
@@ -328,8 +252,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92a306c9bc1096210800000000000000
-      internalID: 1326593539250862633
+      spriteID: b676ecb11c343a5c0800000000000000
+      internalID: -4205443130359650453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 28
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c662477b26116030800000000000000
+      internalID: 3486091962501719752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_6
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 28
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14eaabcf14f752a0800000000000000
+      internalID: -6748657099193261029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 28
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5313a3f48c8d9640800000000000000
+      internalID: 5088377656649651038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_8
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 28
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab1e6da587644ac0800000000000000
+      internalID: -3871855955793798229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 56
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5056bee52fa0f9da0800000000000000
+      internalID: -5936013747760175867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_10
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 28
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f608cbab332ead930800000000000000
+      internalID: 4168893116888940655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 28
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff59852cfc48c580800000000000000
+      internalID: -8806704425477775374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: instructions_button_12
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 28
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1425b2ee7bdaa26f0800000000000000
+      internalID: -708562985870994879
       vertices: []
       indices: 
       edges: []
@@ -348,15 +448,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      how_play_button_highlighted_0: 1130775077352882132
-      how_play_button_highlighted_1: 4850604952681335200
-      how_play_button_highlighted_2: 2806571252334453105
-      how_play_button_highlighted_3: -3670426667197558702
-      how_play_button_highlighted_4: -2108822567750790277
-      how_play_button_highlighted_5: -4018684964124499202
-      how_play_button_highlighted_6: 1739154231750183306
-      how_play_button_highlighted_7: -8010558987627615985
-      how_play_button_highlighted_8: 1326593539250862633
+      instructions_button_0: -7302161093236910183
+      instructions_button_1: -5058839947787231411
+      instructions_button_10: 4168893116888940655
+      instructions_button_11: -8806704425477775374
+      instructions_button_12: -708562985870994879
+      instructions_button_2: 2200251457612701513
+      instructions_button_3: 2106994520647844396
+      instructions_button_4: -4205443130359650453
+      instructions_button_5: 3486091962501719752
+      instructions_button_6: -6748657099193261029
+      instructions_button_7: 5088377656649651038
+      instructions_button_8: -3871855955793798229
+      instructions_button_9: -5936013747760175867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

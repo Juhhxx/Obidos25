@@ -1,3 +1,4 @@
+using System;
 using NaughtyAttributes;
 using Unity.Mathematics;
 using UnityEngine;
@@ -65,6 +66,8 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         }
     }
 
+    public event Action OnResetValues;
+
     private float ValueToDb(float value)
     {
         if (value <= 0f)
@@ -76,7 +79,10 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
     private void Awake()
     {
         base.SingletonCheck(this, true);
+    }
 
+    private void Start()
+    {
         LoadVolumeValues();
     }
 
@@ -86,6 +92,8 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         MasterVolume    = 1.0f;
         AmbienceVolume  = 1.0f;
         SFXVolume       = 1.0f;
+
+        OnResetValues?.Invoke();
     }
 
     private void LoadVolumeValues()
@@ -96,6 +104,7 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
 
         if (MasterVolume == 0)
         {
+            Debug.Log("[Audio Manager] No Audio Preferences Found, Setting Values to Default.", this);
             MasterVolume = 1;
             AmbienceVolume = 1;
             SFXVolume = 1;
