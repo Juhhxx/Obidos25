@@ -16,8 +16,4 @@ public abstract class MonoBehaviourSingleton<T> : MonoBehaviour where T : Compon
             DestroyImmediate(gameObject);
         }
     }
-    private void OnDestroy()
-    {
-        Instance = default;
-    }
 }
