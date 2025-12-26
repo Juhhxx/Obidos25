@@ -54,3 +54,24 @@ public class LocalizedSprite : LocalizedAssets
         Language = language;
     }
 }
+
+[Serializable]
+public class LocalizedButtonSprites : LocalizedAssets
+{
+    [field: SerializeField, ShowAssetPreview] public Sprite SpriteNormal { get; private set; }
+    [field: SerializeField, ShowAssetPreview] public Sprite SpriteHighlighted { get; private set; }
+    [field: SerializeField, ShowAssetPreview] public Sprite SpritePressed { get; private set; }
+    [field: SerializeField, ShowAssetPreview] public Sprite SpriteSelected { get; private set; }
+    [field: SerializeField, ShowAssetPreview] public Sprite SpriteDeactivated { get; private set; }
+
+    public LocalizedButtonSprites(Sprite spriteNor, Sprite spriteHigh, Sprite spritePress, Sprite spriteSel, Sprite spriteDect, Language language)
+    {
+        SpriteNormal = spriteNor;
+        SpriteHighlighted = spriteHigh;
+        SpritePressed = spritePress;
+        SpriteSelected = spriteSel;
+        SpriteDeactivated = spriteDect;
+
+        Language = language;
+    }
+}

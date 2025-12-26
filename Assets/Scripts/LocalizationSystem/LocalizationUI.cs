@@ -19,8 +19,8 @@ public class LocalizationUI : MonoBehaviour
         {
             if (value != _selectedLanguage)
             {
-                LocalizationManager.Language = _availableLanguages[_languageDropdown.value];
-                PlayerPrefs.SetInt(SELECTEDLANG, _languageDropdown.value);
+                LocalizationManager.Language = _availableLanguages[value];
+                PlayerPrefs.SetInt(SELECTEDLANG, value);
                 PlayerPrefs.Save();
             }
 
@@ -45,7 +45,9 @@ public class LocalizationUI : MonoBehaviour
         }
 
         _languageDropdown.AddOptions(optionDatas);
+
         SelectedLanguage = PlayerPrefs.GetInt(SELECTEDLANG);
+        _languageDropdown.value = SelectedLanguage;
     }
 
     public void ChangeLanguage()

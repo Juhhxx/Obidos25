@@ -17,8 +17,15 @@ public class LocalizedComponent : MonoBehaviour
     private List<LocalizedText> _localizationsTexts;
 
     [Header("Localization Variations")]
-    [SerializeField, HideIf("_assetType", LocalizationType.TMP)]
+    [SerializeField, ShowIf("IsSprite")]
     private List<LocalizedSprite> _localizationsSprites;
+
+    private bool IsSprite =>    _assetType == LocalizationType.SpriteRenderer || 
+                                _assetType == LocalizationType.Image;
+
+    [Header("Localization Variations")]
+    [SerializeField, ShowIf("_assetType", LocalizationType.ButtonSprites)]
+    private List<LocalizedButtonSprites> _localizationsButtonSprites;
 
     private void OnEnable()
     {
@@ -55,6 +62,11 @@ public class LocalizedComponent : MonoBehaviour
                 SpriteRenderer sr = GetComponent<SpriteRenderer>();
                 UpdateAsset(sr, lang);
                 break;
+            
+            case LocalizationType.ButtonSprites:
+                UnityEngine.UI.Button btt = GetComponent<UnityEngine.UI.Button>();
+                UpdateAsset(btt, lang);
+                break;
         }
     }
 
@@ -64,6 +76,20 @@ public class LocalizedComponent : MonoBehaviour
     private void UpdateAsset(Image image, Language lang) =>
     image.sprite = LocalizedAssets.GetLocalization<LocalizedSprite>(lang, _localizationsSprites, gameObject).Sprite;
 
-    private void UpdateAsset(SpriteRenderer sr, Language lang) =>
-    sr.sprite = LocalizedAssets.GetLocalization<LocalizedSprite>(lang, _localizationsSprites, gameObject).Sprite;
+    private void UpdateAsset(SpriteRenderer spr, Language lang) =>
+    spr.sprite = LocalizedAssets.GetLocalization<LocalizedSprite>(lang, _localizationsSprites, gameObject).Sprite;
+
+    private void UpdateAsset(UnityEngine.UI.Button button, Language lang)
+    {
+        button.image.sprite = LocalizedAssets.GetLocalization<LocalizedButtonSprites>(lang, _localizationsButtonSprites, gameObject).SpriteNormal;
+
+        SpriteState spriteState = new SpriteState();
+
+        spriteState.highlightedSprite = 
+        LocalizedAssets.GetLocalization(lang, _localizationsButtonSprites, gameObject).SpriteHighlighted;
+        spriteState.pressedSprite = 
+        LocalizedAssets.GetLocalization(lang, _localizationsButtonSprites, gameObject).SpritePressed;
+
+        button.spriteState = spriteState;
+    }
 }

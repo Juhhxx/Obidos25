@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 161437561}
   - component: {fileID: 161437563}
   - component: {fileID: 161437562}
+  - component: {fileID: 161437564}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -520,6 +521,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161437560}
   m_CullTransparentMesh: 1
+--- !u!114 &161437564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161437560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Voltar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Back
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &332402749
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,9 +682,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 977905019565108524, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 977905019565108524, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 977905019565108524, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 977905019565108524, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1305010150774495011, guid: c66d68bf9e5886140933925d5465058e, type: 3}
       propertyPath: m_Name
       value: Menus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542781988709425203, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_fontSize
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542781988709425203, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716782409984996255, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716782409984996255, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716782409984996255, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716782409984996255, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106714876769623848, guid: c66d68bf9e5886140933925d5465058e, type: 3}
       propertyPath: m_Pivot.x
@@ -745,10 +806,91 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3096528325061760822, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096528325061760822, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096528325061760822, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096528325061760822, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007782105268148102, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007782105268148102, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007782105268148102, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007782105268148102, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162613943675269298, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162613943675269298, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7329854490069264331, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659595487034196432, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: _localizationsTexts.Array.data[0].<Text>k__BackingField
+      value: "Tens a certeza que queres sair?\n(Todo o progresso ser\xE1 perdido)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_text
+      value: 'Are you sure you want to quit?
+
+        (All progress will be lost)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_fontSize
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990851960927141707, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204059947685810353, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1191097818568432252, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080415911}
   m_SourcePrefab: {fileID: 100100000, guid: c66d68bf9e5886140933925d5465058e, type: 3}
 --- !u!1 &387080693
 GameObject:
@@ -1023,6 +1165,7 @@ GameObject:
   - component: {fileID: 625777399}
   - component: {fileID: 625777401}
   - component: {fileID: 625777400}
+  - component: {fileID: 625777402}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1148,6 +1291,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625777398}
   m_CullTransparentMesh: 1
+--- !u!114 &625777402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625777398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Instru\xE7\xF5es"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Instructions
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &690425088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1322,7 @@ GameObject:
   - component: {fileID: 690425089}
   - component: {fileID: 690425091}
   - component: {fileID: 690425090}
+  - component: {fileID: 690425092}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1286,54 +1450,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690425088}
   m_CullTransparentMesh: 1
---- !u!1 &796454461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 796454463}
-  - component: {fileID: 796454462}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &796454462
+--- !u!114 &690425092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796454461}
+  m_GameObject: {fileID: 690425088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf0384c692a1114abe29a941a6a7b33, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  _audioMixer: {fileID: 24100000, guid: 77d33078ebe203e4c8919ddd79a849b0, type: 2}
-  _masterVolume: 1
-  _ambienceVolume: 1
-  _sfxVolume: 1
---- !u!4 &796454463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796454461}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1125, y: -1.38358, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Sair
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Quit
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &859806059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1481,7 @@ GameObject:
   - component: {fileID: 859806060}
   - component: {fileID: 859806062}
   - component: {fileID: 859806061}
+  - component: {fileID: 859806063}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1470,6 +1607,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859806059}
   m_CullTransparentMesh: 1
+--- !u!114 &859806063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859806059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Sobre
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: About
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &879617699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1979,7 @@ GameObject:
   - component: {fileID: 1081131380}
   - component: {fileID: 1081131382}
   - component: {fileID: 1081131381}
+  - component: {fileID: 1081131383}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1947,6 +2105,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081131379}
   m_CullTransparentMesh: 1
+--- !u!114 &1081131383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081131379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Jogar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Play
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &1360184839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,6 +2948,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008058824}
   m_CullTransparentMesh: 1
+--- !u!1 &2080415907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1191097818568432252, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+  m_PrefabInstance: {fileID: 333031184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080415911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080415907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Tens a certeza que queres ir para o Menu Principal?\n(Todo
+      o progresso ser\xE1 perdido)"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Are you sure you want to go to Main Menu?
+
+      (All
+      progress will be lost)'
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &2108989435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,6 +2988,7 @@ GameObject:
   - component: {fileID: 2108989436}
   - component: {fileID: 2108989438}
   - component: {fileID: 2108989437}
+  - component: {fileID: 2108989439}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2920,6 +3128,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108989435}
   m_CullTransparentMesh: 1
+--- !u!114 &2108989439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108989435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: 'ptpt This game was developed in collaboration with young
+      game jammers as part of the EPIC-WE program.
+
+
+      EPIC-WE is an EU-funded
+      initiative that brings together young creatives, cultural institutions, and
+      game industry professionals to explore and express cultural values through
+      game-making. Through a series of game jams, participants designed and developed
+      unique experiences reflecting their perspectives on heritage, society, and
+      the future.
+
+
+      https://epic-we.eu/
+
+
+'
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'This game was developed in collaboration with young game
+      jammers as part of the EPIC-WE program.
+
+
+      EPIC-WE is an EU-funded initiative
+      that brings together young creatives, cultural institutions, and game industry
+      professionals to explore and express cultural values through game-making. Through
+      a series of game jams, participants designed and developed unique experiences
+      reflecting their perspectives on heritage, society, and the future.
+
+
+      https://epic-we.eu/
+
+
+'
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+--- !u!1001 &6924649722858917859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2811644619248288360, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.38358
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060950205375391766, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b2903de1d6535c47b969b534f3f3eef, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2929,4 +3243,4 @@ SceneRoots:
   - {fileID: 1412042122}
   - {fileID: 1360184842}
   - {fileID: 333031184}
-  - {fileID: 796454463}
+  - {fileID: 6924649722858917859}

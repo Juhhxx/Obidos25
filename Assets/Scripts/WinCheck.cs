@@ -75,6 +75,8 @@ public class WinCheck : MonoBehaviour
 
     public void CheckBufo()
     {
+        if (_suspects.Count == 0) return;
+        
         bool right = true;
 
         foreach (Military suspect in _suspects)

@@ -2,5 +2,6 @@ public enum LocalizationType
 {
     TMP,
     Image,
-    SpriteRenderer
+    SpriteRenderer,
+    ButtonSprites
 }

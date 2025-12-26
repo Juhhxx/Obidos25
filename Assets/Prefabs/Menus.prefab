@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 3631553276940256302}
   - component: {fileID: 5617076741138272485}
   m_Layer: 5
-  m_Name: Cancel
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,9 +871,9 @@ RectTransform:
   - {fileID: 5057551752874281054}
   m_Father: {fileID: 5301781524886616490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 45, y: -5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8424821481625410120
@@ -981,6 +981,7 @@ GameObject:
   - component: {fileID: 5057551752874281054}
   - component: {fileID: 947667779139012192}
   - component: {fileID: 4222209659265751397}
+  - component: {fileID: 1193487561209976862}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1035,7 +1036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cancel
+  m_text: 'Back
 
 '
   m_isRightToLeft: 0
@@ -1108,6 +1109,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1193487561209976862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805346129020227638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Voltar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Back
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &816419908011953727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1401,7 @@ GameObject:
   - component: {fileID: 1279323370176293363}
   - component: {fileID: 5524353522025061063}
   - component: {fileID: 6065668250045892453}
+  - component: {fileID: 4577154916490891197}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1505,6 +1527,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4577154916490891197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228564139968784881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Voltar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Back
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &1248757033449453818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1635,7 @@ GameObject:
   - component: {fileID: 2505732661655320315}
   - component: {fileID: 4674374856514632110}
   - component: {fileID: 1653697434666289605}
+  - component: {fileID: 6083478218399966510}
   m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
@@ -1708,6 +1751,23 @@ MonoBehaviour:
   _instructionsMenu: {fileID: 6328020508792540478}
   _confirmQuitMenu: {fileID: 8204059947685810353}
   _confirmMainMenu: {fileID: 7329854490069264331}
+--- !u!114 &6083478218399966510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305010150774495011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436d9e1487957c945b32be68c3a1f237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationUI
+  _availableLanguages:
+  - {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+  - {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+  _languageDropdown: {fileID: 1804660455960601913}
+  _selectedLanguage: 0
 --- !u!1 &1339689672378795347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +2005,7 @@ GameObject:
   - component: {fileID: 7399455291068495877}
   - component: {fileID: 3392836416274402340}
   - component: {fileID: 8860605573318900505}
+  - component: {fileID: 5997603306857642705}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1966,9 +2027,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2434907532605577253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -8.066667}
   m_SizeDelta: {x: 7.6666665, y: 2.6666667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7399455291068495877
@@ -2065,6 +2126,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &5997603306857642705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015885964966595064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 3
+  _localizationsTexts: []
+  _localizationsSprites: []
+  _localizationsButtonSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 5757cc7b9b9938e42a32074b7d01345c, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: f61f85f29c417d34890161d04f4a3657, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 081c41fc32c760f4383539a8f30692cc, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 9bca2b4cb5e5f3f4b84cb502a7f752f1, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: d3f33db659793d6429800bff106cd02a, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 999dc5e24b57fee44914d2a2fe60151c, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
 --- !u!1 &2193887336052159359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,7 +3022,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106851794174286361}
-  - component: {fileID: 6604654363351962143}
   m_Layer: 5
   m_Name: Language
   m_TagString: Untagged
@@ -2962,23 +3050,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 70, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6604654363351962143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3493362690152928247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436d9e1487957c945b32be68c3a1f237, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizationUI
-  _availableLanguages:
-  - {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
-  - {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
-  _languageDropdown: {fileID: 1804660455960601913}
-  _selectedLanguage: 0
 --- !u!1 &3507811443399270673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3097,7 @@ GameObject:
   - component: {fileID: 7721283654410217540}
   - component: {fileID: 5082964293996909431}
   - component: {fileID: 7659001511985073358}
+  - component: {fileID: 672052322615385052}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3151,6 +3223,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &672052322615385052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660430607033720123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Proceder
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Proceed
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &3853491909059665491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,7 +3413,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6604654363351962143}
+      - m_Target: {fileID: 6083478218399966510}
         m_TargetAssemblyTypeName: LocalizationUI, Assembly-CSharp
         m_MethodName: ChangeLanguage
         m_Mode: 1
@@ -3695,6 +3787,7 @@ GameObject:
   - component: {fileID: 6162613943675269298}
   - component: {fileID: 2457693714903170966}
   - component: {fileID: 7990851960927141707}
+  - component: {fileID: 7659595487034196432}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3749,7 +3842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure you want to go to quit?
+  m_text: 'Are you sure you want to quit?
 
     (All progress will be lost)'
   m_isRightToLeft: 0
@@ -3822,6 +3915,30 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7659595487034196432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710601953757448477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Tens a certeza que queres sair?\n(Todo o teu progresso
+      ser\xE1 perdido)"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Are you sure you want to quit?
+
+      (All progress will
+      be lost)'
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &4717938435615993981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,9 +4234,9 @@ RectTransform:
   - {fileID: 7721283654410217540}
   m_Father: {fileID: 1316581488098570592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 15, y: -5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7370681597607596723
@@ -4602,6 +4719,7 @@ GameObject:
   - component: {fileID: 7131456463517272764}
   - component: {fileID: 8410201670597775778}
   - component: {fileID: 1987413057707988417}
+  - component: {fileID: 6473080623402452552}
   m_Layer: 5
   m_Name: Paused Text
   m_TagString: Untagged
@@ -4727,6 +4845,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6473080623402452552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973321554554072292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Pausado
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Paused
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &5048150664081283338
 GameObject:
   m_ObjectHideFlags: 0
@@ -4813,6 +4951,7 @@ GameObject:
   - component: {fileID: 5995691523913749659}
   - component: {fileID: 80285168083112815}
   - component: {fileID: 2945064779019462300}
+  - component: {fileID: 8166164675152394277}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4940,6 +5079,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8166164675152394277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056915107041473049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Voltar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Back
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &5102118583541208285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +5111,7 @@ GameObject:
   - component: {fileID: 4940140024636494109}
   - component: {fileID: 4975834470131603649}
   - component: {fileID: 6256252815249519159}
+  - component: {fileID: 6759153614448663058}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -4973,10 +5133,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2434907532605577253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 7.3333335, y: 2.3333333}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -1.1666666}
+  m_SizeDelta: {x: 10.666667, y: 2.3333333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4940140024636494109
 CanvasRenderer:
@@ -5072,6 +5232,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6759153614448663058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102118583541208285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 3
+  _localizationsTexts: []
+  _localizationsSprites: []
+  _localizationsButtonSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 4e63fd63e51f4d34f9ff8eb5edffbafc, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: f9f7d8ef0e64c204b9b335dfc9054eb7, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 53288dd8995a6b34ba2a9f8c8deab5f4, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: b0e4c8ce410f1fe42a8bedbc13948103, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: 955b20df1fe9e6949bb54ae6f46427af, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: d4bea5bf98f0dd54892173bacfae3cea, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
 --- !u!1 &5103732551958244813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,9 +5369,9 @@ RectTransform:
   - {fileID: 6119362678668817867}
   m_Father: {fileID: 5301781524886616490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 15, y: -5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7547712464493683340
@@ -5517,6 +5705,7 @@ GameObject:
   - component: {fileID: 5108482131329217996}
   - component: {fileID: 5981988534932696975}
   - component: {fileID: 743608558385213464}
+  - component: {fileID: 1932863588799678007}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -5538,9 +5727,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2434907532605577253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -29.266668}
   m_SizeDelta: {x: 5, y: 2.6666667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5108482131329217996
@@ -5637,6 +5826,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1932863588799678007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559117602549021485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 3
+  _localizationsTexts: []
+  _localizationsSprites: []
+  _localizationsButtonSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 7172d82b06bd86546b5d18b34b305919, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: 5c1de6ad044cf50429f1baa5e964b50b, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 79a76ae17bc0d264dbc15855b3decf67, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 558d092663520cf47ae01cb4f96949a7, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: 5cc0400ce66feb7479cd97fb4f63be2a, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: d716af30135de4b46b5820200ccc49c8, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
 --- !u!1 &5719968275481369141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,6 +5991,7 @@ GameObject:
   - component: {fileID: 6119362678668817867}
   - component: {fileID: 3342620521491788379}
   - component: {fileID: 3753643453157072305}
+  - component: {fileID: 1045610995509681228}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5899,6 +6117,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1045610995509681228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843639704486948277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Proceder
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Proceed
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &6163964549051691384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,6 +6385,7 @@ GameObject:
   - component: {fileID: 4588605341898761613}
   - component: {fileID: 2557093231728493550}
   - component: {fileID: 5286052778739182037}
+  - component: {fileID: 7310694552055988283}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -6168,10 +6407,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2434907532605577253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 2.6666667}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -22.2}
+  m_SizeDelta: {x: 14, y: 2.6666667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4588605341898761613
 CanvasRenderer:
@@ -6267,6 +6506,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &7310694552055988283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6270529591716922459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 3
+  _localizationsTexts: []
+  _localizationsSprites: []
+  _localizationsButtonSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 509fcf4d4c6667140added2ff82a76fb, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: a983e8e6a27034942bdeb5cb269b4e92, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: a2c14738c73f05d4ba635f1a0af4fe99, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 3d6c35983db4592458bb4e5f685c2b17, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: cd5bbaf0bddb5824c8115991d7f846e8, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 64d64627fe523e240b0c816473af0a69, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
 --- !u!1 &6328020508792540478
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,7 +6585,7 @@ GameObject:
   - component: {fileID: 8024707734768419729}
   - component: {fileID: 6284445315976137336}
   m_Layer: 5
-  m_Name: Cancel
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6339,9 +6606,9 @@ RectTransform:
   - {fileID: 1250953568295513149}
   m_Father: {fileID: 1316581488098570592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 45, y: -5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &728186216778234192
@@ -6560,6 +6827,7 @@ GameObject:
   - component: {fileID: 2695986537006500008}
   - component: {fileID: 1941079323103246783}
   - component: {fileID: 6627201728106072132}
+  - component: {fileID: 8605195547089829666}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -6687,6 +6955,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8605195547089829666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181286588225534902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Ambiente
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Ambience
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &7211075108001291382
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,6 +7061,7 @@ GameObject:
   - component: {fileID: 5412528604106555070}
   - component: {fileID: 8402877927690296733}
   - component: {fileID: 5772634297948933244}
+  - component: {fileID: 1924303882742307508}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -6900,6 +7189,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1924303882742307508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247422764495275861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Idioma
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Language
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &7329854490069264331
 GameObject:
   m_ObjectHideFlags: 0
@@ -7023,6 +7332,7 @@ GameObject:
   - component: {fileID: 1250953568295513149}
   - component: {fileID: 1227604050930950997}
   - component: {fileID: 2847382191167196365}
+  - component: {fileID: 5153194713199847375}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7077,9 +7387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cancel
-
-'
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
   m_sharedMaterial: {fileID: -4103482558663496831, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -7150,6 +7458,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5153194713199847375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606728009011609466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Voltar
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Back
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &7644282572976460989
 GameObject:
   m_ObjectHideFlags: 0
@@ -7161,6 +7489,7 @@ GameObject:
   - component: {fileID: 5313359208518596875}
   - component: {fileID: 4507744819605113879}
   - component: {fileID: 7635941640169793827}
+  - component: {fileID: 7829852583365206088}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -7286,6 +7615,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7829852583365206088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644282572976460989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Efeitos Sonoros
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Sound Effects
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &7668809573437198453
 GameObject:
   m_ObjectHideFlags: 0
@@ -7483,6 +7832,7 @@ GameObject:
   - component: {fileID: 8284461170284931653}
   - component: {fileID: 2765438748667895226}
   - component: {fileID: 7401440584242280430}
+  - component: {fileID: 3141001665630122663}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -7608,6 +7958,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3141001665630122663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077632122154149232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Op\xE7\xF5es"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Options
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &8204059947685810353
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,6 +8102,7 @@ GameObject:
   - component: {fileID: 3047483599556804024}
   - component: {fileID: 6046386518889184925}
   - component: {fileID: 404775141790393710}
+  - component: {fileID: 7474894354950224928}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
@@ -7753,9 +8124,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2434907532605577253}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -15.133333}
   m_SizeDelta: {x: 11.333333, y: 2.6666667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3047483599556804024
@@ -7852,6 +8223,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &7474894354950224928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9034672310142928228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 3
+  _localizationsTexts: []
+  _localizationsSprites: []
+  _localizationsButtonSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: 59bb84b4887af8f489a4fe46d59e78c5, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: fa688b9a7f69e8341bb3783084620a80, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: 53288dd8995a6b34ba2a9f8c8deab5f4, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 21300000, guid: 4ef4e70c70cb7944bb0096a629c14655, type: 3}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <SpriteNormal>k__BackingField: {fileID: 21300000, guid: d21c03fd579c8884fa3e6b7819dbbfd6, type: 3}
+    <SpriteHighlighted>k__BackingField: {fileID: 21300000, guid: b6779be5e9e7c314ab55a6f00e6b63a0, type: 3}
+    <SpritePressed>k__BackingField: {fileID: 21300000, guid: d7728ec03ac7ba24c8821797094942a8, type: 3}
+    <SpriteSelected>k__BackingField: {fileID: 0}
+    <SpriteDeactivated>k__BackingField: {fileID: 0}
 --- !u!1 &9207172670491767612
 GameObject:
   m_ObjectHideFlags: 0
