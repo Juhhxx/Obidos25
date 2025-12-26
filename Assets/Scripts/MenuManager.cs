@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviourSingleton<MenuManager>
@@ -22,6 +24,8 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void LoadScene(string scene) => SceneManager.LoadScene(scene);
 
+    public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
+
     private void CheckPause()
     {
         if (_noPauseScenes.Contains(SceneManager.GetActiveScene().name)) return;
@@ -34,7 +38,11 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
         }
     }
 
-    public void TooglePauseMenu(bool onOff) => _pauseMenu.SetActive(onOff);
+    public void TooglePauseMenu(bool onOff)
+    {
+        _pauseMenu.SetActive(onOff);
+        ResetSelection();
+    }
     public void ToogleOptionsMenu(bool onOff) => _optionsMenu.SetActive(onOff);
     public void ToogleInstructionsMenu(bool onOff) => _instructionsMenu.SetActive(onOff);
     public void ToogleConfirmQuitMenu(bool onOff) => _confirmQuitMenu.SetActive(onOff);
