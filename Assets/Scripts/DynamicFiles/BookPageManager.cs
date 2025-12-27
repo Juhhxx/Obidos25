@@ -25,7 +25,12 @@ public class BookPageManager : MonoBehaviour
         if (_backToStartButton != null) _backToStartButton.enabled = false;
     }
 
-    public void SetPageSprite(int page, Sprite spr) => _bookPages[page] = spr;
+    public void SetPageSprite(int page, Sprite spr) 
+    {
+        _bookPages[page] = spr;
+
+        if (page == _currentPageIndex) ChangePage(page);
+    }
 
     private void ChangePage(int page)
     {

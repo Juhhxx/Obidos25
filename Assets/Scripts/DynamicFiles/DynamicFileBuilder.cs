@@ -61,10 +61,13 @@ public class DynamicFileBuilder : MonoBehaviour
 
     private IEnumerator BuildFileSpriteCR()
     {
-        if (_isTakingPhoto) yield return new WaitForSeconds(0.1f);
+        if (_isTakingPhoto)
+            Debug.Log($"{name} : WAITING FOR ANOTHER SCREENSHOT", this);
+
+        yield return new WaitUntil(() => !_isTakingPhoto);
         
         _isTakingPhoto = true;
-        Debug.Log("BEGIN SCREENSHOT");
+        Debug.Log($"{name} : BEGIN SCREENSHOT", this);
 
         ChangeGOLayer(_captureFrom, _captureLayer);
 
@@ -85,7 +88,7 @@ public class DynamicFileBuilder : MonoBehaviour
         yield return null;
         yield return new WaitForEndOfFrame();
 
-        Debug.Log("END SCREENSHOT");
+        Debug.Log($"{name} : END SCREENSHOT", this);
         _isTakingPhoto = false;
     }
 

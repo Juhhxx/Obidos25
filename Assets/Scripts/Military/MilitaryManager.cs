@@ -126,6 +126,23 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         SetMilitaryOrder();
         AssignParkingSpaces();
         StartInterrogation();
+
+        // Sprites need to be rebuilt if the language is changed
+        LocalizationManager.OnLanguageChanged += RebuildDynamicSprites;
+    }
+
+    private void RebuildDynamicSprites(Language lang)
+    {
+        Debug.Log($"Updating Dynamic Sprites to {lang.DisplayName}");
+
+        _parkingMapBuilder.BuildFileSprite();
+
+        Invoke("ShowIDCard", 0.5f);
+    }
+
+    private void OnDisable()
+    {
+        LocalizationManager.OnLanguageChanged -= RebuildDynamicSprites;
     }
 
     private void SetPassword()

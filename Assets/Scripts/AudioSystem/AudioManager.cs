@@ -113,8 +113,6 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
 
     private void Update()
     {
-        _audioMixer.GetFloat(MASTERVOLUME, out float vol);
-        Debug.Log($"MASTER VOLUME : {vol}");
     }
 
     
