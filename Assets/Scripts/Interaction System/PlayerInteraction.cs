@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     [Header("Input Values")]
     [Space(5f)]
     [SerializeField][InputAxis] private string _interactButton;
+    public string InteractButton => _interactButton;
 
     [SerializeField] private float _dragFollowSpeed = 0.35f;
     public float DragFollowSpeed => _dragFollowSpeed;
