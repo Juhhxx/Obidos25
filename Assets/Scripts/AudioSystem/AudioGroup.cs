@@ -1,0 +1,1 @@
+public enum AudioGroup { Master, Music, Ambience, SFX }

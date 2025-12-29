@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class SetVolumeFromSlider : MonoBehaviour
 {
-    public enum VolumeType { Master, Ambience, SFX }
-
-    [SerializeField] private VolumeType _type;
+    [SerializeField] private AudioGroup _type;
     private Slider _slider;
     private float Value
     {
@@ -14,13 +12,16 @@ public class SetVolumeFromSlider : MonoBehaviour
         {
             switch (_type)
             {
-                case VolumeType.Master:
+                case AudioGroup.Master:
                     return AudioManager.Instance.MasterVolume;
+                
+                case AudioGroup.Music:
+                    return AudioManager.Instance.MusicVolume;
 
-                case VolumeType.Ambience:
+                case AudioGroup.Ambience:
                     return AudioManager.Instance.AmbienceVolume;
                 
-                case VolumeType.SFX:
+                case AudioGroup.SFX:
                     return AudioManager.Instance.SFXVolume;
 
                 default:
@@ -32,15 +33,19 @@ public class SetVolumeFromSlider : MonoBehaviour
         {
             switch (_type)
             {
-                case VolumeType.Master:
+                case AudioGroup.Master:
                     AudioManager.Instance.MasterVolume = value;
                     break;
+                
+                case AudioGroup.Music:
+                    AudioManager.Instance.MusicVolume = value;
+                    break;
 
-                case VolumeType.Ambience:
+                case AudioGroup.Ambience:
                     AudioManager.Instance.AmbienceVolume = value;
                     break;
                 
-                case VolumeType.SFX:
+                case AudioGroup.SFX:
                     AudioManager.Instance.SFXVolume = value;
                     break;
             }

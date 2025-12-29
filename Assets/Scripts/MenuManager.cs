@@ -34,14 +34,21 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
         if (Input.GetKeyDown(_pauseKey))
         {
-            _pauseMenu.SetActive(true);
+            TooglePauseMenu(true);
         }
     }
 
     public void TooglePauseMenu(bool onOff)
     {
         _pauseMenu.SetActive(onOff);
+        AudioManager.Instance.TogglePauseAllGroups(onOff);
         ResetSelection();
+
+        if (onOff)
+        {
+            Time.timeScale = 0f;
+        }
+        else Time.timeScale = 1f;
     }
     public void ToogleOptionsMenu(bool onOff) => _optionsMenu.SetActive(onOff);
     public void ToogleInstructionsMenu(bool onOff) => _instructionsMenu.SetActive(onOff);

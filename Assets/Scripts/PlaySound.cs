@@ -1,19 +1,29 @@
-using System.Runtime.CompilerServices;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlaySound : MonoBehaviour
 {
     [SerializeField] private AudioClip[] _soudsToPlay;
+    [SerializeField] private AudioGroup _group;
     [SerializeField] [Range (0, 1)] private float _volume;
-    [SerializeField] private Vector2 _pitchRange;
-    [SerializeField] private bool _isVoice;
-    private AudioSource _audioSource;
+    [SerializeField, MinMaxSlider(0,1)] private Vector2 _pitchRange;
+
+    [SerializeField] private bool _changePitch;
+    [SerializeField] private bool _playOnStart;
+    [SerializeField] private bool _loop;
+
+    AudioSource _audioSource;
 
     private void Start()
     {
         _audioSource = gameObject.AddComponent<AudioSource>();
-        _audioSource.volume = _volume;
+
+        _audioSource.loop = _loop;
+
+        if (_playOnStart) SoundPlay();
     }
+
     public void SoundPlay()
     {
         Debug.Log("SOUND");
@@ -25,20 +35,18 @@ public class PlaySound : MonoBehaviour
             soundIdx = Random.Range(0,_soudsToPlay.Length);
         }
 
-        _audioSource.clip = _soudsToPlay[soundIdx];
+        AudioClip clip = _soudsToPlay[soundIdx];
 
-        _audioSource.pitch = 1f;
+        float pitch = 1f;
 
-        if (_isVoice)
+        if (_changePitch)
         {
-            _audioSource.pitch = Random.Range(_pitchRange.x,_pitchRange.y);
+            pitch = Random.Range(_pitchRange.x,_pitchRange.y);
         }
 
-        Debug.Log($"Playing {_audioSource.clip.name} at pitch {_audioSource.pitch}");
+        Debug.Log($"Playing {clip.name} at pitch {pitch} in group {_group}");
 
-        if (!_audioSource.isPlaying && !_isVoice)    
-            _audioSource.Play();
-        else
-            _audioSource.Play();
+        if (!_audioSource.isPlaying)    
+            AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
     }
 }
