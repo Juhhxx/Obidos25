@@ -7,7 +7,7 @@ public class PlaySound : MonoBehaviour
     [SerializeField] private AudioClip[] _soudsToPlay;
     [SerializeField] private AudioGroup _group;
     [SerializeField] [Range (0, 1)] private float _volume;
-    [SerializeField, MinMaxSlider(0,1)] private Vector2 _pitchRange;
+    [SerializeField, MinMaxSlider(0,3)] private Vector2 _pitchRange;
 
     [SerializeField] private bool _changePitch;
     [SerializeField] private bool _playOnStart;
