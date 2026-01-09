@@ -26,8 +26,8 @@ public class ButtonMenu : MonoBehaviour
     {
         MenuManager.Instance.ToogleInstructionsMenu(true);
     }
-    public void OpenConfirmQuit()
+    public void Quit()
     {
-        MenuManager.Instance.ToogleConfirmQuitMenu(true);
+        MenuManager.Instance.Quit();
     }
 }

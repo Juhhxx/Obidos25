@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviourSingleton<AudioManager>
 {
@@ -158,6 +159,11 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         }
     }
 
+    private void ClearAllAudioSources()
+    {
+       _activeAudioSources.Clear();
+    }
+
     [field: SerializeField] public AudioSoundPlayer SoundPlayer { get; private set; }
     [field: SerializeField] public AudioMusicPlayer MusicPlayer { get; private set; }
 
@@ -166,6 +172,7 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         base.SingletonCheck(this, true);
 
         LocateAudioGroups();
+        SceneManager.sceneLoaded += (scene, mode) => ClearAllAudioSources();
     }
 
     private void Start()
