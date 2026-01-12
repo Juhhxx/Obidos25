@@ -28,19 +28,18 @@ MonoBehaviour:
     - 'Over the years the discontent among the army
 
       started to grow...'
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 140edc217f8e4cd4fa092c24a11578e5, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - You are a young recruit who has joined a secret group of soldiers dissatisfied
+      with the regime.
+    - "They are called Movimento dos Capit\xE3es."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: d0e78ae1acd58fc47bd48211202a2611, type: 3}
     <CutsceneTexts>k__BackingField:
     - "1973\n\xD3bidos, Portugal"
-  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 140edc217f8e4cd4fa092c24a11578e5, type: 3}
-    <CutsceneTexts>k__BackingField:
-    - "You are a young soldier from \xD3bidos that has joined a secret group of soldiers
-      discontent with the regime."
-    - "This group was called Movimento dos Capit\xE3es."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: ea80c2eb016ed9b4e99025889a32c64c, type: 3}
     <CutsceneTexts>k__BackingField:
-    - 'A secret group meeting is being held at Casa do Povo, with the excuse of putting
-      on a celebratory play. '
-    - This meeting will play a crucial part on the planning of the overthrow of the
-      regime.
-    - You were assigned to guard it's entrance to make sure everything goes right,
-      and no PIDE agents get in.
+    - A secret group meeting is being held at Casa do Povo, under the guise of a
+      theater play.
+    - 'The meeting''s true purpose: discuss a plan to overthrow the regime!'
+    - You are assigned to guard the entrance, questioning all attendants and making
+      sure no PIDE agents are trying to get in.
