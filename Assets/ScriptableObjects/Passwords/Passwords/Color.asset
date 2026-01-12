@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Color
   m_EditorClassIdentifier: 
-  PasswordQuestion: My socks are...
-  MondayAnswer: White
-  TuesdayAnswer: Yellow
-  WednesdayAnswer: Orange
-  ThursdayAnswer: Pink
-  FridayAnswer: Blue
-  SaturdayAnswer: Purple
-  SundayAnswer: Red
+  PasswordQuestion: What color are your socks?
+  MondayAnswer: They're White.
+  TuesdayAnswer: Thay're Yellow.
+  WednesdayAnswer: They're Orange.
+  ThursdayAnswer: They're Pink.
+  FridayAnswer: They're Blue.
+  SaturdayAnswer: They're Purple.
+  SundayAnswer: They're Red.

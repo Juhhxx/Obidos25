@@ -116,16 +116,16 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _militaryList = new List<Military>();
         _militaryOrder = new Queue<Military>();
 
-        _idCard.SetActive(false);
-
         CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
         CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
+
+        _military.SetActive(false);
+        _idCard.SetActive(false);
 
         SetPassword();
 
         SetMilitaryOrder();
         AssignParkingSpaces();
-        StartInterrogation();
 
         // Sprites need to be rebuilt if the language is changed
         LocalizationManager.OnLanguageChanged += RebuildDynamicSprites;
@@ -264,6 +264,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private void SetMilitary()
     {
         Debug.Log(_militarySR);
+
+        _military.SetActive(true);
 
         if (_selectedMilitary.WrongAnswers["sprite"])
         {

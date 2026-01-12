@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Animal
   m_EditorClassIdentifier: 
-  PasswordQuestion: I went to the park and saw a...
-  MondayAnswer: Fox
-  TuesdayAnswer: Dog
-  WednesdayAnswer: Mole
-  ThursdayAnswer: Rat
-  FridayAnswer: Cat
-  SaturdayAnswer: Pig
-  SundayAnswer: Bird
+  PasswordQuestion: At the park you can find?
+  MondayAnswer: A Fox.
+  TuesdayAnswer: A Dog.
+  WednesdayAnswer: A Mole.
+  ThursdayAnswer: A Rat.
+  FridayAnswer: A Cat.
+  SaturdayAnswer: A Pig.
+  SundayAnswer: A Bird.

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Flower
   m_EditorClassIdentifier: 
-  PasswordQuestion: My favourite flower is...
-  MondayAnswer: Rose
-  TuesdayAnswer: Sunflower
-  WednesdayAnswer: Lavender
-  ThursdayAnswer: Lilies
-  FridayAnswer: Poppy
-  SaturdayAnswer: Orchid
-  SundayAnswer: Carnation
+  PasswordQuestion: What's you favourite flower?
+  MondayAnswer: Rose.
+  TuesdayAnswer: Sunflower.
+  WednesdayAnswer: Lavender.
+  ThursdayAnswer: Lilies.
+  FridayAnswer: Poppy.
+  SaturdayAnswer: Orchid.
+  SundayAnswer: Carnation.

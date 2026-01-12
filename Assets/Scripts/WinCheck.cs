@@ -27,7 +27,9 @@ public class WinCheck : MonoBehaviour
 
     public void SetPortaits()
     {
-        _bufoNumber.text = $"Can you identify the {_numberOfMoles} mole(s) attending the event?";
+        string mole = _numberOfMoles > 1 ? "moles" : "mole";
+
+        _bufoNumber.text = $"Can you identify the {_numberOfMoles} {mole} attending the event?";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {

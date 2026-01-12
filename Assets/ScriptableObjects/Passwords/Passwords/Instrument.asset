@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Instrument
   m_EditorClassIdentifier: 
-  PasswordQuestion: I play the...
-  MondayAnswer: Piano
-  TuesdayAnswer: Violin
-  WednesdayAnswer: Flute
-  ThursdayAnswer: Drums
-  FridayAnswer: Saxophone
-  SaturdayAnswer: Trumpet
-  SundayAnswer: Guitar
+  PasswordQuestion: Do you play any instrument?
+  MondayAnswer: The Piano.
+  TuesdayAnswer: A Violin.
+  WednesdayAnswer: The Flute.
+  ThursdayAnswer: The Drums!
+  FridayAnswer: A Saxophone
+  SaturdayAnswer: The Trumpet.
+  SundayAnswer: The Guitar.

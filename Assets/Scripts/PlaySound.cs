@@ -6,10 +6,16 @@ public class PlaySound : MonoBehaviour
 {
     [SerializeField] private AudioClip[] _soudsToPlay;
     [SerializeField] private AudioGroup _group;
-    [SerializeField] [Range (0, 1)] private float _volume;
-    [SerializeField, MinMaxSlider(0,3)] private Vector2 _pitchRange;
+    [SerializeField, Range (0, 1)] private float _volume;
 
     [SerializeField] private bool _changePitch;
+
+    [HideIf("_changePitch")]
+    [SerializeField, Range (0, 3)] private float _pitch;
+
+    [ShowIf("_changePitch")]
+    [SerializeField, MinMaxSlider(0,3)] private Vector2 _pitchRange;
+
     [SerializeField] private bool _playOnStart;
     [SerializeField] private bool _loop;
 
@@ -37,7 +43,7 @@ public class PlaySound : MonoBehaviour
 
         AudioClip clip = _soudsToPlay[soundIdx];
 
-        float pitch = 1f;
+        float pitch = _pitch;
 
         if (_changePitch)
         {

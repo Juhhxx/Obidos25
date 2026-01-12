@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: SportsClub
   m_EditorClassIdentifier: 
-  PasswordQuestion: I root for...
-  MondayAnswer: Sporting
-  TuesdayAnswer: Porto
-  WednesdayAnswer: Braga
-  ThursdayAnswer: "Vit\xF3ria"
-  FridayAnswer: Boavista
-  SaturdayAnswer: "Mar\xEDtimo"
-  SundayAnswer: Benfica
+  PasswordQuestion: What team do you root for?
+  MondayAnswer: Sporting!
+  TuesdayAnswer: Porto!
+  WednesdayAnswer: Braga!
+  ThursdayAnswer: "Vit\xF3ria!"
+  FridayAnswer: Boavista!
+  SaturdayAnswer: "Mar\xEDtimo!"
+  SundayAnswer: Benfica!

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade0d608349ab464baf6ae98cbd00f63, type: 3}
+  m_Name: ContextCutscene
+  m_EditorClassIdentifier: Assembly-CSharp::Cutscene
+  _cutsceneBlocks:
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e1412be053c924d479e3c3413bde28ee, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - Since 1933, Portugal has been living under the authoritarian regime of the
+      Estado Novo.
+    - This regime has taken away many liberties from the Portuguese people that live
+      in fear of being arrested by the secret State Police (PIDE).
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 18218554725a81a4a9c804d915bc30fe, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - 'In 1961 the regime started a long war for
+
+      it''s colonial possessions.'
+    - 'This war dragged many young men into Africa to fight for a crumbling empire. '
+    - 'Over the years the discontent among the army
+
+      started to grow...'
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: d0e78ae1acd58fc47bd48211202a2611, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "1973\n\xD3bidos, Portugal"
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 140edc217f8e4cd4fa092c24a11578e5, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "You are a young soldier from \xD3bidos that has joined a secret group of soldiers
+      discontent with the regime."
+    - "This group was called Movimento dos Capit\xE3es."
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: ea80c2eb016ed9b4e99025889a32c64c, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - 'A secret group meeting is being held at Casa do Povo, with the excuse of putting
+      on a celebratory play. '
+    - This meeting will play a crucial part on the planning of the overthrow of the
+      regime.
+    - You were assigned to guard it's entrance to make sure everything goes right,
+      and no PIDE agents get in.

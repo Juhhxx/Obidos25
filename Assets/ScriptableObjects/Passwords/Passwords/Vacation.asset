@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Vacation
   m_EditorClassIdentifier: 
-  PasswordQuestion: Last summer I went to...
-  MondayAnswer: Madeira
-  TuesdayAnswer: Lisbon
-  WednesdayAnswer: Algarve
-  ThursdayAnswer: Douro
-  FridayAnswer: "\xC9vora"
-  SaturdayAnswer: Sintra
-  SundayAnswer: Porto
+  PasswordQuestion: Where do you like to go during summer?
+  MondayAnswer: To Madeira.
+  TuesdayAnswer: I just stay in Lisbon.
+  WednesdayAnswer: Algarve is the way!
+  ThursdayAnswer: Near the Douro.
+  FridayAnswer: "I go to \xC9vora."
+  SaturdayAnswer: I visit Sintra
+  SundayAnswer: I love Porto

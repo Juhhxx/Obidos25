@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Hobby
   m_EditorClassIdentifier: 
-  PasswordQuestion: On my free time I enjoy...
-  MondayAnswer: Cooking
-  TuesdayAnswer: Gardening
-  WednesdayAnswer: Photography
-  ThursdayAnswer: Hiking
-  FridayAnswer: Painting
-  SaturdayAnswer: Playing an Instrument
-  SundayAnswer: Reading
+  PasswordQuestion: What do you do on your free time?
+  MondayAnswer: I love Cooking.
+  TuesdayAnswer: I like to Garden.
+  WednesdayAnswer: I enjoy taking Photos.
+  ThursdayAnswer: I love a good Hike.
+  FridayAnswer: Painting is my favourite thing to do.
+  SaturdayAnswer: I try to Play an Instrument.
+  SundayAnswer: I like to Read a good book.
