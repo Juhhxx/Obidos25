@@ -48,6 +48,7 @@ public class LocalizationUI : MonoBehaviour
 
         SelectedLanguage = PlayerPrefs.GetInt(SELECTEDLANG);
         _languageDropdown.value = SelectedLanguage;
+        _languageDropdown.RefreshShownValue();
     }
 
     public void ChangeLanguage()

@@ -14,10 +14,11 @@ public class CutsceneManager : MonoBehaviour
 
     public UnityEvent OnCutsceneFinished;
 
-    private void Awake()
+    private void Start()
     {
         if (_startOnAwake)
         {
+            Debug.LogWarning("START PLAYING CUTSCENE", this);
             PlayCutscene(_cutscene);
         }
     }
@@ -39,12 +40,15 @@ public class CutsceneManager : MonoBehaviour
 
         foreach (CutsceneBlock block in cutsceneBlocks)
         {
+            Debug.LogWarning("PLAYING CUTSCENE BLOCK", this);
+
             _cutsceneShower.ShowCutsceneBlock(block, block == cutsceneBlocks.Last());
 
             yield return new WaitUntil(() => !_cutsceneShower.IsShowing);
 
             if (_cutsceneShower.Skipped)
             {
+                Debug.LogWarning("SKIPPING CUTSCENE", this);
                 _cutsceneShower.ResetSkip();
                 break;
             }

@@ -38,6 +38,8 @@ public class CutsceneShower : MonoBehaviour
         _nextButton.gameObject.SetActive(false);
         _skipButton.onClick.AddListener(SkipCutscene);
         _cutsceneTmp.text = "";
+
+        Debug.LogWarning("SET CUTSCENE SHOWER", this);
     }
 
     public void NextText() => _nextPressed = true;
@@ -104,6 +106,8 @@ public class CutsceneShower : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
 
             i++;
+
+            Debug.LogWarning("DONE SHOWING SENTENCE", this);
         }
 
         _nextButton.gameObject.SetActive(false);
@@ -112,6 +116,7 @@ public class CutsceneShower : MonoBehaviour
         else yield return StartCoroutine(FadeImageCR(0f));
 
         _isShowing = false;
+        Debug.LogWarning("DONE SHOWING BLOCK", this);
     }
 
     private IEnumerator FadeImageCR(float targetAlpha)

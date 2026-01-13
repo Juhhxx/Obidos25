@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -15,15 +14,22 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     [SerializeField] private GameObject _confirmQuitMenu;
     [SerializeField] private GameObject _confirmMainMenu;
 
+    private Animator _anim;
+
     private void Awake()
     {
         base.SingletonCheck(this, true);
+
+        _anim = GetComponent<Animator>();
     }
 
     public void Quit() => Application.Quit();
 
-    public void LoadScene(string scene) => SceneManager.LoadScene(scene);
-
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+        Time.timeScale = 1f;
+    }
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 
     private void CheckPause()
@@ -50,7 +56,11 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
         }
         else Time.timeScale = 1f;
     }
-    public void ToogleOptionsMenu(bool onOff) => _optionsMenu.SetActive(onOff);
+    public void ToogleOptionsMenu(bool onOff)
+    {
+        if (onOff) _anim.SetTrigger("OpenOptions");
+        else _anim.SetTrigger("CloseOptions");
+    }
     public void ToogleInstructionsMenu(bool onOff) => _instructionsMenu.SetActive(onOff);
     public void ToogleConfirmQuitMenu(bool onOff) => _confirmQuitMenu.SetActive(onOff);
     public void ToogleConfirmMainMenu(bool onOff) => _confirmMainMenu.SetActive(onOff);
