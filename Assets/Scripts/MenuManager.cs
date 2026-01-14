@@ -40,19 +40,21 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void LoadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
-
-        _canPause = _noPauseScenes.Contains(scene);
+        _anim.enabled = false;
 
         _pauseMenu.SetActive(false);
 
         Time.timeScale = 1f;
+
+        SceneManager.LoadScene(scene);
     }
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 
     private void CheckPause()
     {
         if (!_canPause) return;
+
+        if (_noPauseScenes.Contains(SceneManager.GetActiveScene().name)) return;
 
         if (_pauseMenu.activeInHierarchy) return;
 
