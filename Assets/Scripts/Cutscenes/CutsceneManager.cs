@@ -38,6 +38,8 @@ public class CutsceneManager : MonoBehaviour
 
         _cutsceneCanvas.SetActive(true);
 
+        MenuManager.Instance.CanPause = false;
+
         foreach (CutsceneBlock block in cutsceneBlocks)
         {
             Debug.LogWarning("PLAYING CUTSCENE BLOCK", this);
@@ -56,6 +58,8 @@ public class CutsceneManager : MonoBehaviour
 
         OnCutsceneFinished?.Invoke();
         
+        MenuManager.Instance.CanPause = true;
+
         _cutsceneCanvas.SetActive(false);
     }
 }

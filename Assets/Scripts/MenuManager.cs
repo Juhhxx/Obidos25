@@ -16,11 +16,24 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     private Animator _anim;
 
+    private bool _canPause = true;
+    public bool CanPause { get => _canPause; set => _canPause = value; }
+
     private void Awake()
     {
         base.SingletonCheck(this, true);
+    }
 
+    private void Start()
+    {
         _anim = GetComponent<Animator>();
+
+        _anim.enabled = false;
+        _pauseMenu.SetActive(false);
+        _optionsMenu.SetActive(false);
+        _instructionsMenu.SetActive(false);
+        _confirmQuitMenu.SetActive(false);
+        _confirmMainMenu.SetActive(false);
     }
 
     public void Quit() => Application.Quit();
@@ -28,13 +41,18 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
+
+        _canPause = _noPauseScenes.Contains(scene);
+
+        _pauseMenu.SetActive(false);
+
         Time.timeScale = 1f;
     }
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 
     private void CheckPause()
     {
-        if (_noPauseScenes.Contains(SceneManager.GetActiveScene().name)) return;
+        if (!_canPause) return;
 
         if (_pauseMenu.activeInHierarchy) return;
 
@@ -46,18 +64,26 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void TooglePauseMenu(bool onOff)
     {
-        _pauseMenu.SetActive(onOff);
         AudioManager.Instance.TogglePauseAllGroups(onOff);
         ResetSelection();
+
+        _anim.enabled = true;
 
         if (onOff)
         {
             Time.timeScale = 0f;
+            _anim.SetTrigger("OpenPause");
         }
-        else Time.timeScale = 1f;
+        else
+        {
+            Time.timeScale = 1f;
+            _anim.SetTrigger("ClosePause");
+        }
     }
     public void ToogleOptionsMenu(bool onOff)
     {
+        _anim.enabled = true;
+
         if (onOff) _anim.SetTrigger("OpenOptions");
         else _anim.SetTrigger("CloseOptions");
     }

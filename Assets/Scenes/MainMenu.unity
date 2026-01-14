@@ -686,6 +686,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menus
       objectReference: {fileID: 0}
+    - target: {fileID: 1608326253310170053, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608326253310170053, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608326253310170053, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608326253310170053, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2106714876769623848, guid: c66d68bf9e5886140933925d5465058e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -765,6 +781,58 @@ PrefabInstance:
     - target: {fileID: 2106714876769623848, guid: c66d68bf9e5886140933925d5465058e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031145613654333701, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051280131295939626, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051280131295939626, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051280131295939626, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051280131295939626, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.1666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263461524286749595, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263461524286749595, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263461524286749595, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263461524286749595, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.583333
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023110843745839770, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023110843745839770, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023110843745839770, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023110843745839770, guid: c66d68bf9e5886140933925d5465058e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.166666
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2341,6 +2409,7 @@ GameObject:
   - component: {fileID: 1846065163}
   - component: {fileID: 1846065162}
   - component: {fileID: 1846065165}
+  - component: {fileID: 1846065166}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2466,6 +2535,19 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1846065166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846065161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77bb6f325ed31243912d93cadb29419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AspectRatioManager
+  _targetAspectRatio: 1.7777778
 --- !u!1 &1914531054
 GameObject:
   m_ObjectHideFlags: 0

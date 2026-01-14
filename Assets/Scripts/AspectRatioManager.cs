@@ -4,20 +4,20 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Camera))]
 public class AspectRatioManager : MonoBehaviour
 {
-    public float targetAspectRatio = 16f / 9f; // The desired aspect ratio, e.g., 16:9
+    [SerializeField] private float _targetAspectRatio = 16f / 9f; // The desired aspect ratio, e.g., 16:9
     private Camera _camera;
    
 
-    void Start()
+    private void Start()
     {
         _camera = GetComponent<Camera>();
-  
+        SetCameraAspect();
     }
 
-    void SetCameraAspect()
+    private void SetCameraAspect()
     {
         float windowAspect = (float)Screen.width / Screen.height;
-        float scaleHeight = windowAspect / targetAspectRatio;
+        float scaleHeight = windowAspect / _targetAspectRatio;
 
         if (scaleHeight < 1.0f)
         {
@@ -45,11 +45,5 @@ public class AspectRatioManager : MonoBehaviour
 
             _camera.rect = rect;
         }
-    }
-
-    private void Update()
-    {
-        SetCameraAspect();
-  
     }
 }
