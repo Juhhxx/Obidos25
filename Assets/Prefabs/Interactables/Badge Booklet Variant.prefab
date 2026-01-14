@@ -201,7 +201,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!114 &7378882452725006032
 MonoBehaviour:
@@ -218,7 +218,7 @@ MonoBehaviour:
   _bookPages:
   - {fileID: 21300000, guid: 538859255d863b6419f91bc85ef10bd9, type: 3}
   - {fileID: 21300000, guid: 433e2e926bcbaaa4bb698618d9eaa1dc, type: 3}
-  - {fileID: 21300000, guid: 8678cf92fa026b1408eaa51b6afe86eb, type: 3}
+  - {fileID: 21300000, guid: f2172347e66aba94880948422056621b, type: 3}
   - {fileID: 21300000, guid: 30c0b9388f760834ea06f869483e3a79, type: 3}
   - {fileID: 21300000, guid: d12f1f8998eeed64586888763f830271, type: 3}
   - {fileID: 21300000, guid: e8efd93a3333cef4ca3f63da5c7ba6a1, type: 3}
@@ -491,6 +491,10 @@ PrefabInstance:
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_SortingLayerID
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_WasSpriteAssigned
