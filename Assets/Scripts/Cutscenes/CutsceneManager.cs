@@ -4,6 +4,7 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Linq;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class CutsceneManager : MonoBehaviour
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void Play() => PlayCutscene(_cutscene);
+
+    public void ResetButtonSelection() => MenuManager.Instance.ResetSelection();
 
     public void PlayCutscene(Cutscene cutscene)
     {

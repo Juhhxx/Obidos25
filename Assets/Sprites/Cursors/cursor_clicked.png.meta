@@ -11,9 +11,6 @@ TextureImporter:
   - first:
       213: 6291464420488555915
     second: cursor_clicked_2
-  - first:
-      213: 9140673797291139681
-    second: cursor_clicked_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,12 +122,12 @@ TextureImporter:
       name: cursor_clicked_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 81
-        width: 14
+        x: 1
+        y: 94
+        width: 28
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +144,12 @@ TextureImporter:
       name: cursor_clicked_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 86
-        width: 7
-        height: 14
+        x: 8
+        y: 3
+        width: 84
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +166,12 @@ TextureImporter:
       name: cursor_clicked_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 83
-        width: 12
-        height: 11
+        x: 45
+        y: 93
+        width: 22
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,34 +184,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: cursor_clicked_3
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 2
-        width: 78
-        height: 83
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1626247a3623ade70800000000000000
-      internalID: 9140673797291139681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -226,7 +201,6 @@ TextureImporter:
       cursor_clicked_0: 169443769087890591
       cursor_clicked_1: -374985870618260961
       cursor_clicked_2: 6291464420488555915
-      cursor_clicked_3: 9140673797291139681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
