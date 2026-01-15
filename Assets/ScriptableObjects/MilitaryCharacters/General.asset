@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: General
   m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
   <Name>k__BackingField: "Jos\xE9 In\xE1cio Silva Costa"
-  <CodeName>k__BackingField: 
+  <CodeName>k__BackingField: BOS
   <Division>k__BackingField: {fileID: 11400000, guid: d94a61be665820743aaf85dec4d4fe0c, type: 2}
   <Rank>k__BackingField: {fileID: 11400000, guid: 8416d814c4a7f5f43b0a00343b342632, type: 2}
   <ID>k__BackingField: 020505432134
   <Height>k__BackingField: 180
-  <Features>k__BackingField: Cheeckbones
+  <Features>k__BackingField: Cheekbones
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 0b0a1cad12f0fe54c825cb41b10e9a8e, type: 2}
-  <ParkingSpot>k__BackingField: {fileID: 0}
+  <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 900f2c9a654aefa419b82f32fd0a254b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 6b7317fa05a06284fa22a82990424393, type: 2}
   <Signature>k__BackingField: {fileID: 21300000, guid: ef373fbd373d4c147912845991a3c9f1, type: 3}
   <Picture>k__BackingField: {fileID: 21300000, guid: 516cdb157717d224bafdc2c6d832dd78, type: 3}

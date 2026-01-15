@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc7e382b3075fc4aba4a0213c50ef2c, type: 3}
   m_Name: EngGameAssets
   m_EditorClassIdentifier: Assembly-CSharp::GameAssetLibrary
+  _general: {fileID: 11400000, guid: 43a9db902b6e7674e8392a12683eb810, type: 2}
   _militaryCharacters:
   - {fileID: 11400000, guid: 552fe588d9c6c6b40a2b703caedf98ff, type: 2}
   - {fileID: 11400000, guid: 28b213519da95ce40985bc8262abe657, type: 2}

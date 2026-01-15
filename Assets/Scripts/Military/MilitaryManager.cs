@@ -122,6 +122,11 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         _military.SetActive(false);
         _idCard.SetActive(false);
+        _badgeBooklet.SetActive(false);
+        _map.SetActive(false);
+        _parkingMap.SetActive(false);
+        _passwordNotepad.SetActive(false);
+        _codenamesPaper.SetActive(false);
 
         SetPassword();
 
