@@ -67,7 +67,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Game Objects")]
     [Space(5f)]
+    [SerializeField] private Transform _giveItem;
     [SerializeField] private GameObject _idCard;
+    [SerializeField] private GameObject _badgeBooklet;
+    [SerializeField] private GameObject _map;
+    [SerializeField] private GameObject _parkingMap;
+    [SerializeField] private GameObject _passwordNotepad;
+    [SerializeField] private GameObject _codenamesPaper;
+
     [SerializeField] private DynamicFileBuilder _idCardBuilder;
     [SerializeField] private SpriteRenderer _calendar;
     [SerializeField] private TextMeshProUGUI _parkingText;
@@ -116,9 +123,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _militaryList = new List<Military>();
         _militaryOrder = new Queue<Military>();
 
-        CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
-        CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
-
         _military.SetActive(false);
         _idCard.SetActive(false);
 
@@ -144,7 +148,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         LocalizationManager.OnLanguageChanged -= RebuildDynamicSprites;
     }
-
+    
+    // Password
     private void SetPassword()
     {
         CalendarDay day = PasswordsInfo.ChooseWeekDay();
@@ -153,6 +158,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _weekDay = day.WeekDay;
     }
 
+    // Parking Spots
     private void AssignParkingSpaces()
     {
         _parkingText.text = "";
@@ -184,13 +190,18 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _parkingMapBuilder?.BuildFileSprite();
     }
 
+    // Tickets
+    public void GenerateTickets()
+    {
+        CreateTickets(_greenTicketPrefab, _greenTicketSpawn, _greenTicket);
+        CreateTickets(_redTicketPrefab, _redTicketSpawn, _redTicket);
+    }
     private void CreateTickets(GameObject prefab, Transform spawn, GameObject ticket)
     {
         ticket = Instantiate(prefab, spawn.position + new Vector3(10, 0, 0), Quaternion.identity);
 
         StartCoroutine(MoveTicket(ticket, spawn.position));
     }
-
     private IEnumerator MoveTicket(GameObject ticket, Vector3 pos)
     {
         float  initialPos = ticket.transform.position.x;
@@ -212,10 +223,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             yield return null;
         }
     }
-
-    private int _suspicionLevel;
-    public void SetSuspicion(int level) => _suspicionLevel = level;
-
     public void GiveTicket(TicketTypes type)
     {
         if (type == TicketTypes.Red)
@@ -228,7 +235,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             WalkingOut();
         }
     }
-
     public void GiveRedTicket()
     {
         if (_suspicionLevel == 0) return;
@@ -241,10 +247,33 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         WalkingOut();
     }    
 
+    private int _suspicionLevel;
+    public void SetSuspicion(int level) => _suspicionLevel = level;
+
     public void ShowIDCard()
     {
         _idCardBuilder?.BuildFileSprite();
         _idCard.SetActive(true);
+    }
+
+    public void GiveBadgeBooklet() => GiveItem(_badgeBooklet);
+    public void GiveMap() => GiveItem(_map);
+    public void GiveParkingMap() => GiveItem(_parkingMap);
+    public void GivePasswordNotepad() => GiveItem(_passwordNotepad);
+    public void GiveCodenames() => GiveItem(_codenamesPaper);
+
+    private void GiveItem(GameObject item)
+    {
+        item.SetActive(true);
+
+        Vector3 pos = _giveItem.position;
+        pos.z = item.transform.position.z;
+
+        item.transform.position = pos;
+
+        item.GetComponent<CardItem>().ToggleCardItemSprite(true);
+        item.GetComponent<Draggabble>().OnInteractBegin();
+        item.GetComponent<Draggabble>().OnInteractEnd();
     }
 
     // Military and Moles

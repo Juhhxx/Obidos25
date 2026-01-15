@@ -1,6 +1,6 @@
 ﻿title: Start
 ---
-Hello comrade! I'm here for the play, can I have a ticket?
+Hello! I'm here for the play, can I have a ticket?
     -> Yes, I'll just need to check your documents.
 
 Ok. Here you go.{give_documents()}

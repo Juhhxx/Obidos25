@@ -44,6 +44,8 @@ public class LocalizationUI : MonoBehaviour
             optionDatas.Add(new TMP_Dropdown.OptionData(lang.DisplayName, lang.Flag, Color.white));
         }
 
+        _selectedLanguage = optionDatas.Count;
+
         _languageDropdown.AddOptions(optionDatas);
 
         SelectedLanguage = PlayerPrefs.GetInt(SELECTEDLANG);

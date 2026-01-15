@@ -8,6 +8,9 @@ public class GameAssetLibrary : ScriptableObject
 {
     [Header("Characters")]
     [Space(5)]
+    [SerializeField, Expandable] private Military _general;
+    public Military General => _general;
+    
     [SerializeField, Expandable] private List<Military> _militaryCharacters;
     public List<Military> MilitaryCharacters => _militaryCharacters;
 

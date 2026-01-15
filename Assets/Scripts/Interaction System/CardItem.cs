@@ -29,6 +29,10 @@ public class CardItem : MonoBehaviour
         _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// Changes the object between full form and item form.
+    /// </summary>
+    /// <param name="state">Which form to take, true for item, false for full.</param>
     public void ToggleCardItemSprite(bool state)
     {
         if (_rendererFull == null || _rendererItem == null)

@@ -59,6 +59,7 @@ public class AnswerManager : MonoBehaviour
     public void StopDialogue()
     {
         _dialogueRunner.Stop();
+        _dialogueRunner.Clear();
     }
 
     // Questions
