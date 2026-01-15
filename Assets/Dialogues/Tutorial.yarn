@@ -2,6 +2,7 @@
 position: -1108,-967
 ---
 <<declare $seenTutorial = false>>
+<<declare $page = 0>>
 ===
 
 
@@ -232,22 +233,34 @@ title: AskTutorial
 position: -105,-755
 ---
 Soldier, did you understand everything I explained to you? Or do you need me to repeat something?
-    -> ID Card.
-        <<jump IDCard>>
-    -> Badges.
-        <<jump Badges>>
-    -> Map.
-        <<jump Map>>
-    -> Parking Spots.
-        <<jump ParkingSpots>>
-    -> Passwords.
-        <<jump Passwords>>
-    -> Codenames.
-        <<jump CodeNames>>
-    -> Tickets.
-        <<jump Tickets>>
-    -> I'm fine.
+    -> I'm fine. <<if $page is 0>>
         <<jump EndTutorial>>
+    -> ID Card. <<if $page is 0>>
+        <<jump IDCard>>
+    -> More... <<if $page is 0>>
+        <<set $page = 1>>
+        <<jump AskTutorial>>
+    -> Badges. <<if $page is 1>>
+        <<jump Badges>>
+    -> Map. <<if $page is 1>>
+        <<jump Map>>
+    -> More... <<if $page is 1>>
+        <<set $page = 2>>
+        <<jump AskTutorial>>
+    -> Parking Spots. <<if $page is 2>>
+        <<jump ParkingSpots>>
+    -> Passwords. <<if $page is 2>>
+        <<jump Passwords>>
+    -> More... <<if $page is 2>>
+        <<set $page = 3>>
+        <<jump AskTutorial>>
+    -> Codenames. <<if $page is 3>>
+        <<jump CodeNames>>
+    -> Tickets. <<if $page is 3>>
+        <<jump Tickets>>
+    -> More... <<if $page is 3>>
+        <<set $page = 0>>
+        <<jump AskTutorial>>
 ===
 
 title: EndTutorial
