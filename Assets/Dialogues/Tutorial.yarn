@@ -309,6 +309,10 @@ Soldier, did you understand everything I explained to you? Or do you need me to 
 title: EndTutorial
 position: -122,-350
 ---
+<<if $seenTutorial is false>>
+    Here is everything you'll need. {give_everything()}
+<<endif>>
+
 Great. I trust you will do a great job, make sure no moles get in.
     -> Yes, Officer. Will do.
 

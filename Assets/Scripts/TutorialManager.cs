@@ -34,6 +34,7 @@ public class TutorialManager : MonoBehaviour
         _dialogueRunner.AddFunction("give_password_notepad", GivePasswordNotepad);
         _dialogueRunner.AddFunction("give_codenames", GiveCodenames);
         _dialogueRunner.AddFunction("give_tickets", GiveTickets);
+        _dialogueRunner.AddFunction("give_everything", GiveEverything);
         _dialogueRunner.AddFunction("tutorial_end", EndTutorial);
     }
 
@@ -111,6 +112,16 @@ public class TutorialManager : MonoBehaviour
     }
     private string GiveTickets()
     {
+        MilitaryManager.Instance.GenerateTickets();
+        return "";
+    }
+    private string GiveEverything()
+    {
+        MilitaryManager.Instance.GiveBadgeBooklet();
+        MilitaryManager.Instance.GiveMap();
+        MilitaryManager.Instance.GiveParkingMap();
+        MilitaryManager.Instance.GivePasswordNotepad();
+        MilitaryManager.Instance.GiveCodenames();
         MilitaryManager.Instance.GenerateTickets();
         return "";
     }
