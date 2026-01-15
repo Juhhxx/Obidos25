@@ -100,9 +100,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     
     private CardManager _idCardManager;
 
-    private bool _givenIdCard;
-    private bool _givenTicket;
-
     private void Awake()
     {
         base.SingletonCheck(this, false);
@@ -130,9 +127,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         SetMilitaryOrder();
         AssignParkingSpaces();
-
-        // Sprites need to be rebuilt if the language is changed
-        LocalizationManager.OnLanguageChanged += RebuildDynamicSprites;
     }
 
     private void RebuildDynamicSprites(Language lang)
@@ -262,6 +256,13 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     public void GivePasswordNotepad() => GiveItem(_passwordNotepad);
     public void GiveCodenames() => GiveItem(_codenamesPaper);
 
+    public void ToggleIDCard(bool onOff) => _idCard.SetActive(onOff);
+    public void ToggleBadgeBooklet(bool onOff) => _badgeBooklet.SetActive(onOff);
+    public void ToggleMap(bool onOff) => _map.SetActive(onOff);
+    public void ToggleParkingMap(bool onOff) => _parkingMap.SetActive(onOff);
+    public void TogglePasswordNotepad(bool onOff) => _passwordNotepad.SetActive(onOff);
+    public void ToggleCodenames(bool onOff) => _codenamesPaper.SetActive(onOff);
+
     private void GiveItem(GameObject item)
     {
         item.SetActive(true);
@@ -289,30 +290,74 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         _militaryOrder = new Queue<Military>(_militaryList);
     }
-
-    private void SetMilitary()
+    public void SetMilitary(Military selectedMilitary)
     {
         Debug.Log(_militarySR);
 
         _military.SetActive(true);
 
-        if (_selectedMilitary.WrongAnswers["sprite"])
+        if (selectedMilitary.WrongAnswers["sprite"])
         {
-            _militarySR.sprite = _selectedMilitary.GetMoleSprite();
+            _militarySR.sprite = selectedMilitary.GetMoleSprite();
         }
         else
-            _militarySR.sprite = _selectedMilitary.Sprite[0];
+            _militarySR.sprite = selectedMilitary.Sprite[0];
 
-        if (_selectedMilitary.WrongAnswers["eye_color"])
+        if (selectedMilitary.WrongAnswers["eye_color"])
         {
-            _militaryControl.ChangeEyeColor(_assetLibrary.GetWrongEyeColor(_selectedMilitary.EyeColor).Color);
+            _militaryControl.ChangeEyeColor(_assetLibrary.GetWrongEyeColor(selectedMilitary.EyeColor).Color);
         }
         else
-            _militaryControl.ChangeEyeColor(_selectedMilitary.EyeColor.Color);
+            _militaryControl.ChangeEyeColor(selectedMilitary.EyeColor.Color);
 
-        SetBadges();
+        SetBadges(selectedMilitary);
+        SetIdCard(selectedMilitary);
+    }
+    private void SetBadges(Military selectedMilitary)
+    {
+        if (selectedMilitary.WrongAnswers["rank_badge"])
+        {
+            _rank.sprite = _assetLibrary.GetWrongBadge(selectedMilitary.Rank, true).Badge;
+        }
+        else
+        {
+            _rank.sprite = selectedMilitary.Rank.Badge;
+        }
+
+        if (selectedMilitary.WrongAnswers["division_badge"])
+        {
+            _division.sprite = _assetLibrary.GetWrongBadge(selectedMilitary.Division, false).Badge;
+        }
+        else
+        {
+            _division.sprite = selectedMilitary.Division.Badge;
+        }
+
+        _rank.gameObject.SetActive(true);
+        _division.gameObject.SetActive(true);
+
+        if (_selectedMilitary == null) return;
+
+        if (Random.Range(0f, 1f) <= 0.2f)
+        {
+            if (Random.Range(0,2) == 0) _rank.gameObject.SetActive(false);
+            else _rank.gameObject.SetActive(false);
+
+            if (Random.Range(0f, 1f) <= 0.05f)
+            {
+                _rank.gameObject.SetActive(false);
+                _division.gameObject.SetActive(false);
+            }
+        }
+        
+    }
+    private void SetIdCard(Military selectedMilitary)
+    {
+        _idCardManager.SetUpCard(selectedMilitary);
+        _idCard.GetComponent<Draggabble>().ResetPosition();
     }
 
+    // Moles
     private void SetMoles()
     {
         int moleNumber = Random.Range(1,4);
@@ -326,7 +371,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
             _moles.Add(ChooseMole());
         }
     }
-
     private Military ChooseMole()
     {
         int moleChooser = Random.Range(0, _militaryList.Count);
@@ -343,6 +387,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         return m;
     }
 
+    // Gameplay
     public void StartInterrogation()
     {
         if (_militaryOrder.Count == 0)
@@ -356,47 +401,20 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _selectedMilitary = _militaryOrder?.Dequeue();
         _answerManager.ResetAnswers();
 
-        SetMilitary();
-        _idCardManager.SetUpCard(_selectedMilitary);
-        _idCard.GetComponent<Draggabble>().ResetPosition();
+        SetMilitary(_selectedMilitary);
 
         _answerManager.StopDialogue();
         _militaryAnimator.SetTrigger("WalkIn");
     }
     public void HasWalkedIn()
     {
+        if (_selectedMilitary == null) return;
+
         _answerManager.StartDialogue();
     }
     public void WalkingOut()
     {
         _idCard.SetActive(false);
         _militaryAnimator.SetTrigger("WalkOut");
-    }
-    
-    private void SetBadges()
-    {
-        if (_selectedMilitary.WrongAnswers["rank_badge"])
-        {
-            _rank.sprite = _assetLibrary.GetWrongBadge(_selectedMilitary.Rank, true).Badge;
-        }
-        else
-        {
-            _rank.sprite = _selectedMilitary.Rank.Badge;
-        }
-
-        if (Random.Range(0f, 1f) <= 0.2f) _rank.gameObject.SetActive(false);
-        else _rank.gameObject.SetActive(true);
-
-        if (_selectedMilitary.WrongAnswers["division_badge"])
-        {
-            _division.sprite = _assetLibrary.GetWrongBadge(_selectedMilitary.Division, false).Badge;
-        }
-        else
-        {
-            _division.sprite = _selectedMilitary.Division.Badge;
-        }
-
-        if (Random.Range(0f, 1f) <= 0.2f) _division.gameObject.SetActive(false);
-        else _division.gameObject.SetActive(true);
     }
 }

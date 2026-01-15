@@ -1,16 +1,24 @@
 using System;
+using System.Collections;
+using Obidos25;
 using UnityEngine;
 using Yarn.Unity;
 
 public class TutorialManager : MonoBehaviour
 {
-    [Space(10f)]
     [Header("Dialogue")]
     [Space(5f)]
     [SerializeField] private GameObject _dialogueSystem;
     [SerializeField] private string _tutorialDialog;
     private DialogueRunner _dialogueRunner;
     private InMemoryVariableStorage _dialogueVariables;
+
+    [Space(10f)]
+    [Header("Dialogue")]
+    [Space(5f)]
+    [SerializeField] private Animator _anim;
+
+    private Military General => MilitaryManager.Instance.AssetLibrary.General;
 
     public event Action OnTutorialEnd;
 
@@ -31,12 +39,18 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        OnTutorialEnd += MilitaryManager.Instance.StartInterrogation;
+        OnTutorialEnd += () => {
+            MilitaryManager.Instance.ToggleIDCard(false);
+            _anim.SetTrigger("WalkOut");
+        };
     }
 
     public void StartDialogue()
     {
-        _dialogueRunner.StartDialogue(_tutorialDialog);
+        MilitaryManager.Instance.SetMilitary(General);
+        _anim.SetTrigger("WalkIn");
+
+        StartCoroutine(WaitForAnimation(_anim, () => _dialogueRunner.StartDialogue(_tutorialDialog)));
     }
 
     public void StopDialogue()
@@ -51,8 +65,22 @@ public class TutorialManager : MonoBehaviour
         return "";
     }
 
+    private IEnumerator WaitForAnimation(Animator anim, Action onEnd)
+    {
+        yield return new WaitUntil(() => !AnimatorIsPlaying(anim));
+
+        onEnd.Invoke();
+    }
+
+    private bool AnimatorIsPlaying(Animator animator)
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).length >
+                animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+
     private string GiveID()
     {
+        MilitaryManager.Instance.ShowIDCard();
         return "";
     }
 
