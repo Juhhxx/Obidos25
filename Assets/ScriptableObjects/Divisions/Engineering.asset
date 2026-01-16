@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b97fe308792ae2408811826c1259544, type: 3}
-  m_Name: Engeneeiring
+  m_Name: Engineering
   m_EditorClassIdentifier: 
-  _name: Engeneeiring
+  _name: Engineering
   _badge: {fileID: 21300000, guid: b544a8abb76a7a9449a3604b0eb73324, type: 3}
