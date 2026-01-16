@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure you want to go to Main Menu?
+  m_text: 'Are you sure you want to leave?
 
     (All progress will be lost.)'
   m_isRightToLeft: 0
@@ -1776,8 +1776,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3.2
-  m_fontSizeBase: 3.2
+  m_fontSize: 2.9
+  m_fontSizeBase: 2.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
