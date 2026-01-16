@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 02354f94f47869e45922aede9502f5c6, type: 2}
   <ID>k__BackingField: 030102010023
   <Height>k__BackingField: 175
-  <Features>k__BackingField: Big Nose
+  <Features>k__BackingField: Big nose
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 0b0a1cad12f0fe54c825cb41b10e9a8e, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 4eed1d2f590216f49b4fb3da781aa16b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 979b760f0c161d94b8b434f0459184e6, type: 2}

@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 8b97876767e6d864dbaed39106d4d12a, type: 2}
   <ID>k__BackingField: 020101000111
   <Height>k__BackingField: 180
-  <Features>k__BackingField: Distinct Eyebrows
+  <Features>k__BackingField: Distinct eyebrows
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 0b0a1cad12f0fe54c825cb41b10e9a8e, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 54e244b56d0224746832f26ca0bfb614, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: a03901c961b3e5b4198393d37f68c3e4, type: 2}

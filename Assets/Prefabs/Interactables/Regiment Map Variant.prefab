@@ -74,19 +74,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992784106017628680, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: m_Size.x
-      value: 5.050517
+      value: 2.6317806
       objectReference: {fileID: 0}
     - target: {fileID: 2992784106017628680, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: m_Size.y
-      value: 2.371317
+      value: 2.4006844
       objectReference: {fileID: 0}
     - target: {fileID: 2992784106017628680, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: m_Offset.x
-      value: 4.0882363
+      value: 5.3458567
       objectReference: {fileID: 0}
     - target: {fileID: 2992784106017628680, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: m_Offset.y
-      value: -2.0389624
+      value: -2.01365
       objectReference: {fileID: 0}
     - target: {fileID: 3888136958515948429, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: m_Size.x
@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5148582090738073880, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5444063588388873764, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
       propertyPath: '_bookPages.Array.data[0]'
       value: 
@@ -136,6 +140,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a76030ea322b3754fb04436d7cd21991, type: 3}
+    - target: {fileID: 7223428620233008916, guid: 39030e47cc7638443950f6cd505bb790, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
