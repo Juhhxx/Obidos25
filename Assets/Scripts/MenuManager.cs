@@ -19,6 +19,9 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     private bool _canPause = true;
     public bool CanPause { get => _canPause; set => _canPause = value; }
 
+    private bool _optionsOpen = false;
+    public bool OptionsOpen => _optionsOpen;
+
     private void Awake()
     {
         base.SingletonCheck(this, true);
@@ -85,6 +88,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     public void ToogleOptionsMenu(bool onOff)
     {
         _anim.enabled = true;
+        _optionsOpen = onOff;
 
         if (onOff) _anim.SetTrigger("OpenOptions");
         else _anim.SetTrigger("CloseOptions");

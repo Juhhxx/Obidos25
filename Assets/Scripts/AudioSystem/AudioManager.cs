@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviourSingleton<AudioManager>
 {
     [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private PlaySound _soundTestMaster;
+    [SerializeField] private PlaySound _soundTestMusic;
+    [SerializeField] private PlaySound _soundTestAmbience;
+    [SerializeField] private PlaySound _soundTestSFX;
 
     private const string MASTERVOLUME = "masterVolume";
     private const string MUSICVOLUME = "musicVolume";
@@ -52,6 +56,11 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 _audioMixer.SetFloat(MASTERVOLUME, ValueToDb(value));
                 PlayerPrefs.SetFloat(MASTERVOLUME, value);
                 PlayerPrefs.Save();
+
+                if (MenuManager.Instance.OptionsOpen)
+                    _soundTestMaster.SoundPlay();
+
+                _masterVolume = value;
             }
 
             _masterVolume = value;
@@ -70,6 +79,11 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 _audioMixer.SetFloat(MUSICVOLUME, ValueToDb(value));
                 PlayerPrefs.SetFloat(MUSICVOLUME, value);
                 PlayerPrefs.Save();
+
+                if (MenuManager.Instance.OptionsOpen)
+                    _soundTestMusic.SoundPlay();
+
+                _musicVolume = value;
             }
 
             _musicVolume = value;
@@ -88,6 +102,11 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 _audioMixer.SetFloat(AMBIENCEVOLUME, ValueToDb(value));
                 PlayerPrefs.SetFloat(AMBIENCEVOLUME, value);
                 PlayerPrefs.Save();
+
+                if (MenuManager.Instance.OptionsOpen)
+                    _soundTestAmbience.SoundPlay();
+
+                _ambienceVolume = value;
             }
 
             _ambienceVolume = value;
@@ -106,6 +125,11 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 _audioMixer.SetFloat(SFXVOLUME, ValueToDb(value));
                 PlayerPrefs.SetFloat(SFXVOLUME, value);
                 PlayerPrefs.Save();
+
+                if (MenuManager.Instance.OptionsOpen)
+                    _sfxVolume = value;
+
+                _soundTestSFX.SoundPlay();
             }
 
             _sfxVolume = value;
@@ -258,10 +282,5 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
             SFXVolume = 1;
         }
     }
-
-    private void Update()
-    {
-    }
-
     
 }

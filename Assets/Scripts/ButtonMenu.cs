@@ -30,4 +30,14 @@ public class ButtonMenu : MonoBehaviour
     {
         MenuManager.Instance.Quit();
     }
+
+    public void ResetSelection()
+    {
+        MenuManager.Instance.ResetSelection();
+    }
+
+    public void OpenEPICWELink()
+    {
+        Application.OpenURL("https://epic-we.eu/");
+    }
 }

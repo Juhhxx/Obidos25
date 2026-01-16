@@ -1,5 +1,61 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1388785374357130388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8759477369995490555}
+  - component: {fileID: 2087953251702041932}
+  m_Layer: 0
+  m_Name: SFX Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8759477369995490555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388785374357130388}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 919707327252443612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087953251702041932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388785374357130388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 152ff3c533709a54885dfd68dd031ac5, type: 3}
+  - {fileID: 8300000, guid: c25f49bcd82531e409ece0cd0cc9b53e, type: 3}
+  - {fileID: 8300000, guid: af78c13eb64b5a645a6c78cca035e12b, type: 3}
+  - {fileID: 8300000, guid: a7511d39687854e4aa47e5b4e98fd45e, type: 3}
+  _group: 3
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.7, y: 1.2}
+  _playOnStart: 0
+  _loop: 0
 --- !u!1 &2811644619248288360
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +87,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8870229793148489874}
+  - {fileID: 919707327252443612}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5867185606916512766
@@ -46,6 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   _audioMixer: {fileID: 24100000, guid: 77d33078ebe203e4c8919ddd79a849b0, type: 2}
+  _soundTestMaster: {fileID: 7897380446682614299}
+  _soundTestMusic: {fileID: 2020753193330091313}
+  _soundTestAmbience: {fileID: 3565277385298718968}
+  _soundTestSFX: {fileID: 2087953251702041932}
   _masterVolume: 1
   _musicVolume: 1
   _ambienceVolume: 1
@@ -53,6 +114,118 @@ MonoBehaviour:
   _activeAudioSources: []
   <SoundPlayer>k__BackingField: {fileID: 2113872315562764744}
   <MusicPlayer>k__BackingField: {fileID: 0}
+--- !u!1 &3056587709723567328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4690057249269452183}
+  - component: {fileID: 7897380446682614299}
+  m_Layer: 0
+  m_Name: Master Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4690057249269452183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056587709723567328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 919707327252443612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7897380446682614299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3056587709723567328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 152ff3c533709a54885dfd68dd031ac5, type: 3}
+  - {fileID: 8300000, guid: c25f49bcd82531e409ece0cd0cc9b53e, type: 3}
+  - {fileID: 8300000, guid: af78c13eb64b5a645a6c78cca035e12b, type: 3}
+  - {fileID: 8300000, guid: a7511d39687854e4aa47e5b4e98fd45e, type: 3}
+  _group: 0
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.7, y: 1.2}
+  _playOnStart: 0
+  _loop: 0
+--- !u!1 &4490876455129481004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6567546793257742331}
+  - component: {fileID: 3565277385298718968}
+  m_Layer: 0
+  m_Name: Ambience Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6567546793257742331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490876455129481004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 919707327252443612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3565277385298718968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490876455129481004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 152ff3c533709a54885dfd68dd031ac5, type: 3}
+  - {fileID: 8300000, guid: c25f49bcd82531e409ece0cd0cc9b53e, type: 3}
+  - {fileID: 8300000, guid: af78c13eb64b5a645a6c78cca035e12b, type: 3}
+  - {fileID: 8300000, guid: a7511d39687854e4aa47e5b4e98fd45e, type: 3}
+  _group: 2
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.7, y: 1.2}
+  _playOnStart: 0
+  _loop: 0
 --- !u!1 &5059912259055804979
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,3 +271,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSoundPlayer
   _audioSourcePrefab: {fileID: 5810664762102581307, guid: 20e505917dabefb4f99f5e263add149b, type: 3}
+--- !u!1 &6445002662342075715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919707327252443612}
+  m_Layer: 0
+  m_Name: Sound Testers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &919707327252443612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445002662342075715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4690057249269452183}
+  - {fileID: 4619213368520906463}
+  - {fileID: 6567546793257742331}
+  - {fileID: 8759477369995490555}
+  m_Father: {fileID: 5060950205375391766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7365585624720111485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4619213368520906463}
+  - component: {fileID: 2020753193330091313}
+  m_Layer: 0
+  m_Name: Music Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4619213368520906463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365585624720111485}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 919707327252443612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020753193330091313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365585624720111485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 152ff3c533709a54885dfd68dd031ac5, type: 3}
+  - {fileID: 8300000, guid: c25f49bcd82531e409ece0cd0cc9b53e, type: 3}
+  - {fileID: 8300000, guid: af78c13eb64b5a645a6c78cca035e12b, type: 3}
+  - {fileID: 8300000, guid: a7511d39687854e4aa47e5b4e98fd45e, type: 3}
+  _group: 1
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.7, y: 1.2}
+  _playOnStart: 0
+  _loop: 0
