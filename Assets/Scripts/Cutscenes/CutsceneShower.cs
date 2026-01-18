@@ -72,6 +72,8 @@ public class CutsceneShower : MonoBehaviour
         _cutsceneImage.color = new Color(1f, 1f, 1f, 0f);
         _cutsceneTmp.text = "";
 
+        yield return StartCoroutine(FadeGroupCR(1f));
+
         _cutsceneImage.sprite = cutsceneBlock.CutsceneImage;
         yield return StartCoroutine(FadeImageCR(1f));
 

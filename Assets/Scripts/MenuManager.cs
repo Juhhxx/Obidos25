@@ -49,7 +49,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
         Time.timeScale = 1f;
 
-        SceneManager.LoadScene(scene);
+        SceneChanger.Instance.ChangeScene(scene);
     }
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 

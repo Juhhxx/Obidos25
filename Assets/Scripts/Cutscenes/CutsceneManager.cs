@@ -3,39 +3,31 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using System.Collections;
 using System.Linq;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using System;
 
-public class CutsceneManager : MonoBehaviour
+public class CutsceneManager : MonoBehaviourSingleton<CutsceneManager>
 {
     [SerializeField] private Cutscene _cutscene;
     [SerializeField] private CutsceneShower _cutsceneShower;
     [SerializeField] private GameObject _cutsceneCanvas;
-    [SerializeField] private bool _startOnAwake;
-
-    public UnityEvent OnCutsceneFinished;
-
-    private void Start()
-    {
-        if (_startOnAwake)
-        {
-            Debug.LogWarning("START PLAYING CUTSCENE", this);
-            PlayCutscene(_cutscene);
-        }
-    }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void Play() => PlayCutscene(_cutscene);
 
     public void ResetButtonSelection() => MenuManager.Instance.ResetSelection();
 
-    public void PlayCutscene(Cutscene cutscene)
+    private void Awake()
     {
-        StopAllCoroutines();
-        StartCoroutine(PlayCutsceneCR(cutscene));
+        base.SingletonCheck(this, false);
     }
 
-    private IEnumerator PlayCutsceneCR(Cutscene cutscene)
+    public void PlayCutscene(Cutscene cutscene, Action onFinished = null)
+    {
+        StopAllCoroutines();
+        StartCoroutine(PlayCutsceneCR(cutscene, onFinished));
+    }
+
+    private IEnumerator PlayCutsceneCR(Cutscene cutscene, Action onFinished)
     {
         List<CutsceneBlock> cutsceneBlocks = cutscene.GetCutsceneBlocks();
 
@@ -59,7 +51,7 @@ public class CutsceneManager : MonoBehaviour
             }
         }
 
-        OnCutsceneFinished?.Invoke();
+        onFinished?.Invoke();
         
         MenuManager.Instance.CanPause = true;
 

@@ -231,6 +231,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: dd2a7eb53a15a1e439f7c5f168ab6bd0, type: 3}
     - target: {fileID: 718354327516154548, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 718354327516154548, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -252,6 +256,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: m_MaskInteraction
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3077556519960997048, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}

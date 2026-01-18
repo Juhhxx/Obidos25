@@ -97,7 +97,22 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Header("Win Check")]
     [Space(5f)]
     [SerializeField] private WinCheck _winCheck;
-    
+
+    [Space(10f)]
+    [Header("Tutorial")]
+    [Space(5f)]
+    [SerializeField] private TutorialManager _tutorialManager;
+
+    [Space(10f)]
+    [Header("Music")]
+    [Space(5f)]
+    [SerializeField] private PlaySound _backgorundSoundPlayer;
+
+    [Space(10f)]
+    [Header("Cutscene")]
+    [Space(5f)]
+    [SerializeField] private Cutscene _contextCutscene;
+
     private CardManager _idCardManager;
 
     private void Awake()
@@ -112,6 +127,12 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void Start()
     {
+        CutsceneManager.Instance.PlayCutscene(_contextCutscene, () =>
+        {
+           _tutorialManager.StartDialogue();
+           _backgorundSoundPlayer.SoundPlay(); 
+        });
+
         StartGame();
     }
 
