@@ -214,7 +214,7 @@ title: CodeNames
 position: 1450,-1154
 ---
 <<if $seenTutorial is false>>
-    Finally, remeber the <b>codenames</b> we were given.
+    Finally, remember the <b>codenames</b> we were given.
         -> (Continue)
 <<else>>
     Remeber the <b>codenames</b> we were given.
