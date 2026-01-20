@@ -19,6 +19,7 @@ public class WinCheck : MonoBehaviour
     [SerializeField] private GameObject _portaits;
     [SerializeField] private Sprite _markedSprite;
     [SerializeField] private TextMeshProUGUI _bufoNumber;
+    [SerializeField] private Animator _bufoNumberAnim;
 
     [SerializeField] private GameObject _gameScreen;
     [SerializeField] private GameObject _accusationScreen;
@@ -30,7 +31,7 @@ public class WinCheck : MonoBehaviour
     {
         string mole = _numberOfMoles > 1 ? "moles" : "mole";
 
-        _bufoNumber.text = $"Can you identify the {_numberOfMoles} {mole} attending the event?";
+        _bufoNumber.text = $"Can you identify the <i><b>{_numberOfMoles} {mole}</b></i> attending the event?";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
@@ -78,7 +79,11 @@ public class WinCheck : MonoBehaviour
 
     public void CheckBufo()
     {
-        if (_suspects.Count == 0) return;
+        if (_suspects.Count != _numberOfMoles)
+        {
+            _bufoNumberAnim.SetTrigger("Warn");
+            return;
+        }
         
         bool right = true;
 
@@ -90,8 +95,6 @@ public class WinCheck : MonoBehaviour
                 break;
             }
         }
-
-        if (_suspects.Count != _numberOfMoles) right = false;
         
         _blackScreen.SetActive(true);
 
