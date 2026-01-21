@@ -12,19 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade0d608349ab464baf6ae98cbd00f63, type: 3}
   m_Name: FinalCutsceneGood
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
+  _endButtonText: Done
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}
     <CutsceneTexts>k__BackingField:
-    - After selecting the individuals you thought were the most suspicious, they
-      were sent away and later locked in an undisclosed location...
-    - Your intuition was correct and you selected those who were trying to stop the
-      revolution.
+    - After identifying the most suspicious attendants, they were sent away and later
+      locked in an undisclosed location.
+    - Your intuition was correct and you identified those who were trying to infiltrate
+      the meeting.
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: c95ed15ef0962e34b82f680811031b00, type: 3}
     <CutsceneTexts>k__BackingField:
-    - After that, everything went just smoothly just as planned.
-    - Thanks to your efforts, you stopped PIDE from interfering with the revolution's
-      plans.
+    - The meeting was secretly held and a plan was set in motion to start the revolution.
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: b095aa583dc318b4798d483f520cb629, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Thanks to your efforts, PIDE was stopped from interfering with the revolution\u2019s
+      plans."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 04e156e2598e8f04eb38356170ca822f, type: 3}
     <CutsceneTexts>k__BackingField:
-    - And it didn't take long until the revolution proved to be a success, freeing
-      the Portuguese people from the regime's grasp.
+    - "And the revolution was a success, freeing the Portuguese people from the regime\u2019s
+      grasp\u2026"

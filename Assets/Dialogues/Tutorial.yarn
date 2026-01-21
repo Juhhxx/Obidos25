@@ -10,12 +10,12 @@ title: StartTutorial
 position: -844,-966
 ---
 Hello soldier, how are the preparations for the meeting going?
-    -> Hello, Officer. Everything has been set up, we are now awating our attendees.
+    -> Hello, Officer. Everything is prepared, we are now awaiting the attendees.
 
 Good. Unfortunately we've received information that PIDE agents will try to infiltrate our meeting.
     -> (Continue)
 
-They will try to impersonate our fellow attendees, so you'll have to double-check their identities.
+They will try to impersonate the attendees, so you'll have to double-check their identities.
     -> Yes, Officer. But how should I do that?
         <<jump BeginTutorial>>
     -> Yes, Officer. You can count on me!
@@ -120,7 +120,7 @@ The first letter, <b>R</b>, stands for regiment, so it's not important.
 Then, the second letter, is the first letter of whichever division they're from. For example <b>A</b> is for <b>A</b>rtillery.
     -> (Continue)
 
-And, at last, there's a number that identifies which <b>regiment</b> they're currently stationed at. This is the most important piece of information in here.
+And, at last, there's a number that identifies which <b>regiment</b> they're currently stationed at. This is the most important piece of information in the code.
     -> (Continue)
     <<if $seenTutorial is false>>
             {give_map()}
@@ -164,16 +164,16 @@ Now, everyone coming has an assigned <b>parking spot</b> for security reasons. T
 At the front of the paper you have a simple map of <b>parking spaces</b>, with <b>car plates</b> associated to them.
     -> (Continue)
 
-Then, if you flip the paper you'll see those same <b>plates</b>, pointing to <b>ID numbers</b>.
+Then, if you flip the paper, you'll see those same <b>plates</b> pointing to <b>ID numbers</b>.
     -> (Continue)
 
 The <b>ID number</b> should match the <b>ID card</b> of the person who the plate belongs to.
     -> (Continue)
 
-If someone tells you they parked on a spot that has the wrong <b>ID number</b> then they're probably a mole.
+If someone tells you they parked on a spot that has the wrong <b>ID number</b> then they may be a mole.
     -> (Continue)
 
-But cut them some slack, if they only get this worng, they might have just forgotten.
+But cut them some slack. If they only get this wrong, they may have just forgotten.
     -> Yes, Officer.
     <<if $seenTutorial is false>>
         <<jump Passwords>>
@@ -275,29 +275,40 @@ position: -105,-755
 ---
 Soldier, did you understand everything I explained to you? Or do you need me to repeat?
     -> All clear, Officer. <<if $page is 0>>
+        {speed_normal()}
         <<jump EndTutorial>>
     -> ID Card. <<if $page is 0>>
+        {speed_normal()}
         <<jump IDCard>>
     -> Badges. <<if $page is 0>>
+        {speed_normal()}
         <<jump Badges>>
     -> More... <<if $page is 0>>
         <<set $page = 1>>
+        {speed_quick()}
         <<jump AskTutorial>>
     -> Map.<<if $page is 1>>
+        {speed_normal()}
         <<jump Map>>
     -> Parking Spots. <<if $page is 1>>
+        {speed_normal()}
         <<jump ParkingSpots>>
     -> Passwords. <<if $page is 1>>
+        {speed_normal()}
         <<jump Passwords>>
     -> More... <<if $page is 1>>
         <<set $page = 2>>
+        {speed_quick()}
         <<jump AskTutorial>>
     -> Codenames. <<if $page is 2>>
+        {speed_normal()}
         <<jump CodeNames>>
     -> Tickets. <<if $page is 2>>
+        {speed_normal()}
         <<jump Tickets>>
     -> More... <<if $page is 2>>
         <<set $page = 0>>
+        {speed_quick()}
         <<jump AskTutorial>>
 ===
 

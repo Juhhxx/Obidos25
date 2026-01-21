@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade0d608349ab464baf6ae98cbd00f63, type: 3}
   m_Name: FinalCutsceneBad
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
+  _endButtonText: Done
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}
     <CutsceneTexts>k__BackingField:
-    - After selecting the individuals you thought were the most suspicious, they
-      were sent away and later locked in an undisclosed location...
+    - After identifying the most suspicious attendants, they were sent away and later
+      locked in an undisclosed location.
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1ad11b721a70cf34b8dbf9aa9a9ff683, type: 3}
     <CutsceneTexts>k__BackingField:
-    - Your intuition was incorrect and you let who was trying to stop the revolution
-      escape and inform the regime about your plans.
+    - Your intuition was incorrect and you let PIDE agents infiltrate the meeting
+      and inform the regime about your plans.
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: a6fbd1399ce2ac74aa9d1354e1f7ea18, type: 3}
     <CutsceneTexts>k__BackingField:
-    - A few days later, you got news that most of your comrades in the meeting were
+    - A few days later, you got news that most of those attending the meeting were
       caught by PIDE.
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: b095aa583dc318b4798d483f520cb629, type: 3}
     <CutsceneTexts>k__BackingField:
-    - Although you weren't caught, most of your comrades were and the plan for the
-      revolution went down the drain.
+    - "Although you weren\u2019t caught, the plan for the revolution was ruined."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 07e96549a3852db46b3d3f409f3068ec, type: 3}
     <CutsceneTexts>k__BackingField:
-    - The regime went on for as long as you lived. After your death, who knows how
-      many more years the Portuguese people were under the regime's grasp.
+    - The regime went on for as long as you lived. And, after your death, who knows
+      how many more years the Portuguese people lived under the regime's grasp...

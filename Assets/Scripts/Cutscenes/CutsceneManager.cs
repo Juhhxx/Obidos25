@@ -39,7 +39,7 @@ public class CutsceneManager : MonoBehaviourSingleton<CutsceneManager>
         {
             Debug.LogWarning("PLAYING CUTSCENE BLOCK", this);
 
-            _cutsceneShower.ShowCutsceneBlock(block, block == cutsceneBlocks.Last());
+            _cutsceneShower.ShowCutsceneBlock(block, block == cutsceneBlocks.Last(), cutscene.EndButtonText);
 
             yield return new WaitUntil(() => !_cutsceneShower.IsShowing);
 

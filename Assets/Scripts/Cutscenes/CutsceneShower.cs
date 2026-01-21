@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using NUnit.Framework;
 
 public class CutsceneShower : MonoBehaviour
 {
@@ -58,13 +59,13 @@ public class CutsceneShower : MonoBehaviour
         _skipped = true;
     }
 
-    public void ShowCutsceneBlock(CutsceneBlock cutsceneBlock, bool lastBlock = false)
+    public void ShowCutsceneBlock(CutsceneBlock cutsceneBlock, bool lastBlock = false, string endBttText = "")
     {
         StopAllCoroutines();
-        StartCoroutine(ShowCutsceneBlockCR(cutsceneBlock, lastBlock));
+        StartCoroutine(ShowCutsceneBlockCR(cutsceneBlock, lastBlock, endBttText));
     }
 
-    private IEnumerator ShowCutsceneBlockCR(CutsceneBlock cutsceneBlock, bool lastBlock = false)
+    private IEnumerator ShowCutsceneBlockCR(CutsceneBlock cutsceneBlock, bool lastBlock = false, string endBttText = "")
     {
         _isShowing = true;
 
@@ -85,16 +86,35 @@ public class CutsceneShower : MonoBehaviour
         {
             string text = textQueue.Dequeue();
 
+            bool isCode = false;
+            string tmp = "";
+
             foreach (char c in text)
             {
                 yield return _wfs;
 
-                _cutsceneTmp.text += c;
+                if (c == '<') isCode = true;
+
+                if (isCode) tmp += c;
+                else _cutsceneTmp.text += c;
+
+                if (c == '>')
+                {
+                    isCode = false;
+                    _cutsceneTmp.text += tmp;
+                    tmp = "";
+                }
 
                 _soundPlayer?.SoundPlay();
             }
 
             _nextButton.gameObject.SetActive(true);
+
+            if (lastBlock && i == size - 1)
+            {
+                Debug.Log($"LAST BLOCK SPECIAL TEXT {endBttText}", this);
+                _nextButton.GetComponentInChildren<TextMeshProUGUI>().text = endBttText;
+            }
 
             yield return _wff;
             yield return new WaitUntil(() => _nextPressed);

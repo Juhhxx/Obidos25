@@ -11,6 +11,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject _dialogueSystem;
     [SerializeField] private string _tutorialDialog;
     private DialogueRunner _dialogueRunner;
+    private LineView _dialogueView;
     private InMemoryVariableStorage _dialogueVariables;
 
     [Space(10f)]
@@ -25,6 +26,7 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         _dialogueRunner = _dialogueSystem.GetComponent<DialogueRunner>();
+        _dialogueView = _dialogueSystem.GetComponentInChildren<LineView>();
         _dialogueVariables = _dialogueSystem.GetComponent<InMemoryVariableStorage>();
 
         _dialogueRunner.AddFunction("give_id",  GiveID);
@@ -36,6 +38,8 @@ public class TutorialManager : MonoBehaviour
         _dialogueRunner.AddFunction("give_tickets", GiveTickets);
         _dialogueRunner.AddFunction("give_everything", GiveEverything);
         _dialogueRunner.AddFunction("tutorial_end", EndTutorial);
+        _dialogueRunner.AddFunction("speed_normal", SpeedNormal);
+        _dialogueRunner.AddFunction("speed_quick", SpeedQuick);
     }
 
     private void Start()
@@ -82,6 +86,18 @@ public class TutorialManager : MonoBehaviour
     {
         return animator.GetCurrentAnimatorStateInfo(0).length >
                 animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+
+    private string SpeedNormal()
+    {
+        _dialogueView.useTypewriterEffect = true;
+        return "";
+    }
+
+    private string SpeedQuick()
+    {
+        _dialogueView.useTypewriterEffect = false;
+        return "";
     }
 
     private string GiveID()
