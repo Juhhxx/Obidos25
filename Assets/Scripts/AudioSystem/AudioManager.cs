@@ -127,9 +127,9 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 PlayerPrefs.Save();
 
                 if (MenuManager.Instance.OptionsOpen)
-                    _sfxVolume = value;
+                    _soundTestSFX.SoundPlay();
 
-                _soundTestSFX.SoundPlay();
+                _sfxVolume = value;
             }
 
             _sfxVolume = value;
