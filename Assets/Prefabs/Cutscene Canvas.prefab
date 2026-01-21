@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3113760825654351956}
   - component: {fileID: 7116768372114149562}
   - component: {fileID: 5319208371234069378}
+  - component: {fileID: 7581709760917234930}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -138,6 +139,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7581709760917234930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615381912263949105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Pr\xF3ximo"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Next
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &677604857957998986
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +986,7 @@ GameObject:
   - component: {fileID: 5890182542786923644}
   - component: {fileID: 7301881571747825979}
   - component: {fileID: 2058179984793998920}
+  - component: {fileID: 5224673166778674657}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1090,6 +1112,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5224673166778674657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036091261714139116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Saltar >>>
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Skip >>>
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
 --- !u!1 &7090061946864905951
 GameObject:
   m_ObjectHideFlags: 0

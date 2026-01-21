@@ -14,7 +14,7 @@ public class TutorialManager : MonoBehaviour
     private InMemoryVariableStorage _dialogueVariables;
 
     [Space(10f)]
-    [Header("Dialogue")]
+    [Header("Animator")]
     [Space(5f)]
     [SerializeField] private Animator _anim;
 
@@ -49,9 +49,12 @@ public class TutorialManager : MonoBehaviour
     public void StartDialogue()
     {
         MilitaryManager.Instance.SetMilitary(General);
-        _anim.SetTrigger("WalkIn");
+        _anim.SetTrigger("WalkInTut");
 
-        StartCoroutine(WaitForAnimation(_anim, () => _dialogueRunner.StartDialogue(_tutorialDialog)));
+        StartCoroutine(WaitForAnimation(_anim, () => {
+            _dialogueRunner.StartDialogue(_tutorialDialog);
+        }));
+
     }
 
     public void StopDialogue()
@@ -66,9 +69,11 @@ public class TutorialManager : MonoBehaviour
         return "";
     }
 
-    private IEnumerator WaitForAnimation(Animator anim, Action onEnd)
+    private IEnumerator WaitForAnimation(Animator anim, Action onEnd, float wait = 0)
     {
         yield return new WaitUntil(() => !AnimatorIsPlaying(anim));
+
+        yield return new WaitForSeconds(wait);
 
         onEnd.Invoke();
     }

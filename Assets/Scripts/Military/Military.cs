@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using System.Linq;
 
 namespace Obidos25
 {
@@ -87,6 +88,7 @@ namespace Obidos25
         }
 
         int minimumWrongAnswers = 3;
+        int maximunWrongAnswers = 6;
 
         public void SetWrongAnswers(bool isMole)
         {
@@ -120,7 +122,12 @@ namespace Obidos25
 
             if (isMole && wrongAnswers < minimumWrongAnswers)
             {
-                var tmp = new List<string>(_wrongAnswers.Keys);
+                Debug.Log($"ADDING MORE WORNG ANSWERS {minimumWrongAnswers - wrongAnswers}");
+
+                var tmp = _wrongAnswers
+                            .Where(kvp => !kvp.Value)
+                            .Select(kvp => kvp.Key)
+                            .ToList();
 
                 for (int i = 0; i < minimumWrongAnswers; i++)
                 {

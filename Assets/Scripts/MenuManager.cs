@@ -93,7 +93,13 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
         if (onOff) _anim.SetTrigger("OpenOptions");
         else _anim.SetTrigger("CloseOptions");
     }
-    public void ToogleInstructionsMenu(bool onOff) => _instructionsMenu.SetActive(onOff);
+    public void ToogleInstructionsMenu(bool onOff)
+    {
+        _anim.enabled = true;
+
+        if (onOff) _anim.SetTrigger("OpenInstructions");
+        else _anim.SetTrigger("CloseInstructions");
+    }
     public void ToogleConfirmQuitMenu(bool onOff) => _confirmQuitMenu.SetActive(onOff);
     public void ToogleConfirmMainMenu(bool onOff) => _confirmMainMenu.SetActive(onOff);
 

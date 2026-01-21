@@ -19,12 +19,16 @@ MonoBehaviour:
       <i>Estado Novo</i>.
     - This regime has taken away many liberties from the Portuguese people that live
       in fear of being arrested by the secret State Police (<i>PIDE</i>).
-  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 18218554725a81a4a9c804d915bc30fe, type: 3}
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 710a1cb7e5d55274bb2dcaa8de3b6448, type: 3}
     <CutsceneTexts>k__BackingField:
     - 'In 1961 the regime started a long war for
 
-      it''s colonial possessions.'
+      its colonial possessions.'
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 18218554725a81a4a9c804d915bc30fe, type: 3}
+    <CutsceneTexts>k__BackingField:
     - 'This war dragged many young men into Africa to fight for a crumbling empire. '
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e2d146c46f2306340a87573d143765b3, type: 3}
+    <CutsceneTexts>k__BackingField:
     - 'Over the years the discontent among the army
 
       started to grow...'
