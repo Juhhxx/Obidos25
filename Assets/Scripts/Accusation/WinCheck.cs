@@ -31,7 +31,7 @@ public class WinCheck : MonoBehaviour
     {
         string mole = _numberOfMoles > 1 ? "moles" : "mole";
 
-        _bufoNumber.text = $"Can you identify the <i><b>{_numberOfMoles} {mole}</b></i> attending the event?";
+        _bufoNumber.text = $"Can you identify the <b>{_numberOfMoles} {mole}</b> attending the event?";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
@@ -58,6 +58,8 @@ public class WinCheck : MonoBehaviour
 
     public void SelectSuspect(int index)
     {
+        MenuManager.Instance.ResetSelection();
+        
         Military m = _militaryList[index];
 
         GameObject child = _portaits.transform.GetChild(index).gameObject;

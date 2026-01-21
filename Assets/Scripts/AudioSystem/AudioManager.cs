@@ -57,9 +57,6 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 PlayerPrefs.SetFloat(MASTERVOLUME, value);
                 PlayerPrefs.Save();
 
-                if (MenuManager.Instance.OptionsOpen)
-                    _soundTestMaster.SoundPlay();
-
                 _masterVolume = value;
             }
 
@@ -79,9 +76,6 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 _audioMixer.SetFloat(MUSICVOLUME, ValueToDb(value));
                 PlayerPrefs.SetFloat(MUSICVOLUME, value);
                 PlayerPrefs.Save();
-
-                if (MenuManager.Instance.OptionsOpen)
-                    _soundTestMusic.SoundPlay();
 
                 _musicVolume = value;
             }
@@ -103,8 +97,8 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
                 PlayerPrefs.SetFloat(AMBIENCEVOLUME, value);
                 PlayerPrefs.Save();
 
-                if (MenuManager.Instance.OptionsOpen)
-                    _soundTestAmbience.SoundPlay();
+                // if (MenuManager.Instance.OptionsOpen)
+                //     _soundTestAmbience.SoundPlay();
 
                 _ambienceVolume = value;
             }
