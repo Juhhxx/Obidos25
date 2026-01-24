@@ -292,7 +292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneShower
   _cutsceneTmp: {fileID: 7893851910790260528}
-  _cutsceneImage: {fileID: 5910336048669737594}
+  _cutsceneImageFade: {fileID: 5910336048669737594}
+  _cutsceneImageStatic: {fileID: 5884311831385486655}
+  _imageMode: 0
   _cutsceneCanvasGroup: {fileID: 969491781532522372}
   _nextButton: {fileID: 578970867627632272}
   _skipButton: {fileID: 3631273204514826475}
@@ -641,7 +643,7 @@ GameObject:
   - component: {fileID: 4991696694306852607}
   - component: {fileID: 5910336048669737594}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,6 +788,81 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 200, y: 200}
   m_EdgeRadius: 0
+--- !u!1 &2671518567802776449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3739840690795412625}
+  - component: {fileID: 1142100097583209765}
+  - component: {fileID: 5884311831385486655}
+  m_Layer: 5
+  m_Name: Image Static
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3739840690795412625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671518567802776449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5483739959002879423}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 48, y: 27}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1142100097583209765
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671518567802776449}
+  m_CullTransparentMesh: 1
+--- !u!114 &5884311831385486655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671518567802776449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3546144640634779103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1241,7 @@ RectTransform:
   m_Children:
   - {fileID: 1755318352517957246}
   - {fileID: 2977989958113410699}
+  - {fileID: 3739840690795412625}
   - {fileID: 216865713484383621}
   - {fileID: 1305508334554492482}
   - {fileID: 3516709405632521500}

@@ -8,7 +8,11 @@ using NUnit.Framework;
 public class CutsceneShower : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _cutsceneTmp;
-    [SerializeField] private Image _cutsceneImage;
+    [SerializeField] private Image _cutsceneImageFade;
+    [SerializeField] private Image _cutsceneImageStatic;
+    [SerializeField] private ImageMode _imageMode = ImageMode.FadeInOut;
+    public enum ImageMode { FadeInOut, FadeToImage }
+
     [SerializeField] private CanvasGroup _cutsceneCanvasGroup;
     [SerializeField] private UnityEngine.UI.Button _nextButton;
     [SerializeField] private UnityEngine.UI.Button _skipButton;
@@ -30,6 +34,8 @@ public class CutsceneShower : MonoBehaviour
     public bool Skipped => _skipped;
     public void ResetSkip() => _skipped = false;
 
+    private const string HTML_ALPHA = "<color=#00000000>";
+
     private void Start()
     {
         _wfs = new WaitForSeconds(_textSpeed);
@@ -39,6 +45,7 @@ public class CutsceneShower : MonoBehaviour
         _nextButton.gameObject.SetActive(false);
         _skipButton.onClick.AddListener(SkipCutscene);
         _cutsceneTmp.text = "";
+        _cutsceneImageStatic.color = new Color(1f, 1f, 1f, 0f);
 
         Debug.LogWarning("SET CUTSCENE SHOWER", this);
     }
@@ -69,13 +76,15 @@ public class CutsceneShower : MonoBehaviour
     {
         _isShowing = true;
 
+        _cutsceneImageStatic.gameObject.SetActive(_imageMode == ImageMode.FadeToImage);
+
         _nextButton.gameObject.SetActive(false);
-        _cutsceneImage.color = new Color(1f, 1f, 1f, 0f);
+        _cutsceneImageFade.color = new Color(1f, 1f, 1f, 0f);
         _cutsceneTmp.text = "";
 
         yield return StartCoroutine(FadeGroupCR(1f));
 
-        _cutsceneImage.sprite = cutsceneBlock.CutsceneImage;
+        _cutsceneImageFade.sprite = cutsceneBlock.CutsceneImage;
         yield return StartCoroutine(FadeImageCR(1f));
 
         Queue<string> textQueue = new Queue<string>(cutsceneBlock.CutsceneTexts);
@@ -85,27 +94,31 @@ public class CutsceneShower : MonoBehaviour
         while (i < size)
         {
             string text = textQueue.Dequeue();
+            string displayText = "";
+            int alphaIndex = 0;
 
-            bool isCode = false;
-            string tmp = "";
+            bool inCode = false;
 
             foreach (char c in text)
             {
-                yield return _wfs;
+                alphaIndex++;
 
-                if (c == '<') isCode = true;
+                if (c == '<') inCode = true;
 
-                if (isCode) tmp += c;
-                else _cutsceneTmp.text += c;
-
-                if (c == '>')
+                if (inCode)
                 {
-                    isCode = false;
-                    _cutsceneTmp.text += tmp;
-                    tmp = "";
+                    if (c == '>') inCode = false;
+
+                    continue;
                 }
 
+                displayText = text.Insert(alphaIndex, HTML_ALPHA);
+
+                _cutsceneTmp.text = displayText;
+
                 _soundPlayer?.SoundPlay();
+
+                yield return _wfs;
             }
 
             _nextButton.gameObject.SetActive(true);
@@ -134,8 +147,21 @@ public class CutsceneShower : MonoBehaviour
 
         _nextButton.gameObject.SetActive(false);
 
-        if (lastBlock) yield return StartCoroutine(FadeGroupCR(0f));
-        else yield return StartCoroutine(FadeImageCR(0f));
+        if (lastBlock)
+        {
+            _cutsceneImageStatic.gameObject.SetActive(false);
+            
+            yield return StartCoroutine(FadeGroupCR(0f));
+        }
+        else
+        {
+            if (_imageMode == ImageMode.FadeInOut) yield return StartCoroutine(FadeImageCR(0f));
+            else
+            {
+                _cutsceneImageStatic.sprite = cutsceneBlock.CutsceneImage;
+                _cutsceneImageStatic.color = Color.white;
+            }
+        }
 
         _isShowing = false;
         Debug.LogWarning("DONE SHOWING BLOCK", this);
@@ -145,13 +171,13 @@ public class CutsceneShower : MonoBehaviour
     {
         float t = 0f;
 
-        while (!Mathf.Approximately(_cutsceneImage.color.a, targetAlpha))
+        while (!Mathf.Approximately(_cutsceneImageFade.color.a, targetAlpha))
         {
-            Color newColor = _cutsceneImage.color;
+            Color newColor = _cutsceneImageFade.color;
 
-            newColor.a = Mathf.MoveTowards(_cutsceneImage.color.a, targetAlpha, t);
+            newColor.a = Mathf.MoveTowards(_cutsceneImageFade.color.a, targetAlpha, t);
 
-            _cutsceneImage.color = newColor;
+            _cutsceneImageFade.color = newColor;
 
             t = _imageFadeSpeed * Time.deltaTime;
 
