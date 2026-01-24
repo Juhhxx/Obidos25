@@ -170,7 +170,7 @@ Then, if you flip the paper, you'll see those same <b>plates</b> pointing to <b>
 The <b>ID number</b> should match the <b>ID card</b> of the person who the plate belongs to.
     -> (Continue)
 
-If someone tells you they parked on a spot that has the wrong <b>ID number</b> then they may be a mole.
+If someone tells you they parked on a spot that has the wrong <b>ID number</b>, then they may be a mole.
     -> (Continue)
 
 But cut them some slack. If they only get this wrong, they may have just forgotten.
