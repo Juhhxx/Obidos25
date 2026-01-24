@@ -22,7 +22,7 @@ MonoBehaviour:
       in fear of being arrested by the secret State Police (<i>PIDE</i>).
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 710a1cb7e5d55274bb2dcaa8de3b6448, type: 3}
     <CutsceneTexts>k__BackingField:
-    - 'In 1961 the regime started a long war for
+    - 'In 1961, the regime started a long war for
 
       its colonial possessions.'
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 18218554725a81a4a9c804d915bc30fe, type: 3}
@@ -47,6 +47,6 @@ MonoBehaviour:
       of a theater play.
     - 'The meeting''s true purpose:
 
-      Discuss a plan to overthrow the regime!'
+      discuss a plan to overthrow the regime!'
     - You are assigned to guard the entrance, questioning all attendants and making
       sure no <i>PIDE</i> agents are trying to get in.
