@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class CursorSpriteState : MonoBehaviour
 {
-    public enum CursorState { Default, Interact, Click, Hold }
+    public enum CursorState { Default, Interact, Hold, Cliked }
 
     [Serializable]
     public struct StateSprite
@@ -27,6 +27,8 @@ public class CursorSpriteState : MonoBehaviour
 
     private SpriteRenderer _spr;
 
+
+    private Vector2 pos = Vector2.zero;
     private CursorState _currentState = CursorState.Default;
 
     public CursorState CurrentState
@@ -38,11 +40,14 @@ public class CursorSpriteState : MonoBehaviour
             if (value != _currentState)
             {
                 _spr.sprite = GetSpriteState(value);
+                pos = PlayerInteraction.Instance.MousePosition;
             }
 
             _currentState = value;
         }
     }
+
+    bool posChanged = false;
 
     private void UpdateState()
     {
@@ -52,6 +57,8 @@ public class CursorSpriteState : MonoBehaviour
         {
             CurrentState = CursorState.Default;
 
+            posChanged = false;
+
             return;
         }
 
@@ -59,7 +66,13 @@ public class CursorSpriteState : MonoBehaviour
         {
             if (cur is Button)
             {
-                CurrentState = CursorState.Click;
+                if (posChanged) CurrentState = CursorState.Hold;
+                else CurrentState = CursorState.Cliked;
+                
+                if (Vector2.Distance(PlayerInteraction.Instance.MousePosition, pos) > 0.25f)
+                {
+                    posChanged = true;
+                }
             }
             else if (cur is Draggabble)
             {
@@ -69,6 +82,7 @@ public class CursorSpriteState : MonoBehaviour
         else
         {
             CurrentState = CursorState.Interact;
+            posChanged = false;
         }
     }
 

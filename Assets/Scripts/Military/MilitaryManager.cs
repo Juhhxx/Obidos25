@@ -113,6 +113,11 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(5f)]
     [SerializeField] private Cutscene _contextCutscene;
 
+    [Space(10f)]
+    [Header("Cheats")]
+    [Space(5f)]
+    [SerializeField] private bool _allowCheats;
+
     private CardManager _idCardManager;
 
     private void Awake()
@@ -270,6 +275,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     private int _suspicionLevel;
     public void SetSuspicion(int level) => _suspicionLevel = level;
 
+    // Items
     public void ShowIDCard()
     {
         _idCardBuilder?.BuildFileSprite();
@@ -388,14 +394,14 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         int moleNumber = Random.Range(1,4);
 
-        _winCheck.SetMoles(moleNumber);
-
         Debug.LogWarning($"{moleNumber} MOLES");
 
         for (int i = 0; i < moleNumber; i++)
         {
             _moles.Add(ChooseMole());
         }
+
+        _winCheck.SetMoles(moleNumber, _moles);
     }
     private Military ChooseMole()
     {
@@ -418,8 +424,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     {
         if (_militaryOrder.Count == 0)
         {
-            _winCheck.SetPortaits();
-            _winCheck.StartFinal();
+            EndInterrogation();
             return;
         }
 
@@ -432,6 +437,18 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         _answerManager.StopDialogue();
         _militaryAnimator.SetTrigger("WalkIn");
     }
+
+    private void EndInterrogation()
+    {
+        _winCheck.SetPortaits();
+        _winCheck.StartFinal();
+    }
+
+    public void Update()
+    {
+        if (_allowCheats && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.L)) EndInterrogation();
+    }
+
     public void HasWalkedIn()
     {
         if (_selectedMilitary == null) return;

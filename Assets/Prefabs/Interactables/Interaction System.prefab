@@ -273,6 +273,4 @@ MonoBehaviour:
   - CursorState: 1
     Sprite: {fileID: 21300000, guid: ed31777010acced40ac7f8658232ef89, type: 3}
   - CursorState: 2
-    Sprite: {fileID: 21300000, guid: c8d87b7d40c61f54f82e49df5e9514c8, type: 3}
-  - CursorState: 3
     Sprite: {fileID: 21300000, guid: 367c58b50ccab1943ba58d375545c0af, type: 3}

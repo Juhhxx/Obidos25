@@ -14,13 +14,26 @@ public class WinCheck : MonoBehaviour
     private List<Military> _suspects = new List<Military>();
 
     private int _numberOfMoles;
-    public void SetMoles(int num) => _numberOfMoles = num;
+    public void SetMoles(int num, List<Military> moles)
+    {
+        _numberOfMoles = num;
+
+        TextMeshProUGUI tmp = _cheat.GetComponentInChildren<TextMeshProUGUI>();
+
+        tmp.text = "";
+
+        foreach (Military m in moles)
+        {
+            tmp.text += m.GetShortName() + "\n";
+        }   
+    }
 
     [SerializeField] private GameObject _portaits;
     [SerializeField] private Sprite _markedSprite;
     [SerializeField] private TextMeshProUGUI _bufoNumber;
     [SerializeField] private Animator _bufoNumberAnim;
-
+    [SerializeField] private GameObject _cheat;
+    [SerializeField] private bool _allowCheat;
     [SerializeField] private GameObject _gameScreen;
     [SerializeField] private GameObject _accusationScreen;
     [SerializeField] private GameObject _blackScreen;
@@ -31,7 +44,7 @@ public class WinCheck : MonoBehaviour
     {
         string mole = _numberOfMoles > 1 ? "moles" : "mole";
 
-        _bufoNumber.text = $"Can you identify the <b>{_numberOfMoles} {mole}</b> attending the event?";
+        _bufoNumber.text = $"Can you identify the\n<b>{_numberOfMoles} {mole}</b> attending\nthe event?";
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {
@@ -43,11 +56,7 @@ public class WinCheck : MonoBehaviour
 
             SetUpAccusationCard setUp = child.GetComponent<SetUpAccusationCard>();
 
-            string[] names = _militaryList[i].Name.Split(" ");
-
-            string shortName = names[0] + " " + names[names.Count() - 1];
-
-            setUp.SetCard(m.Picture, shortName, m.IsMarked, m.SuspicionLevel, _markedSprite);
+            setUp.SetCard(m.Picture, m.GetShortName(), m.IsMarked, m.SuspicionLevel, _markedSprite);
             
             UnityEngine.UI.Button btt = child.GetComponent<UnityEngine.UI.Button>();
 
@@ -104,6 +113,19 @@ public class WinCheck : MonoBehaviour
             CutsceneManager.Instance.PlayCutscene(_winCutscene, () => MenuManager.Instance.LoadScene("MainMenu"));
         else
             CutsceneManager.Instance.PlayCutscene(_loseCutscene, () => MenuManager.Instance.LoadScene("MainMenu"));
+    }
+
+    private void MoleCheat()
+    {
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.M))
+        {
+            _cheat.SetActive(!_cheat.activeInHierarchy);
+        }
+    }
+
+    private void Update()
+    {
+        if (_allowCheat) MoleCheat();
     }
 
     public void StartFinal()

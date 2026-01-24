@@ -9,6 +9,14 @@ namespace Obidos25
     public class Military : ScriptableObject
     {
         [field: SerializeField] public string Name { get; private set; }
+        public string GetShortName()
+        {
+            string[] names = Name.Split(" ");
+
+            string shortName = names.First() + " " + names.Last();
+
+            return shortName;
+        }
         [field: SerializeField] public string CodeName { get; private set; }
 
         [field: Expandable]
