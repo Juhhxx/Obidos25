@@ -277,36 +277,36 @@ Soldier, did you understand everything I explained to you? Or do you need me to 
     -> All clear, Officer. <<if $page is 0>>
         {speed_normal()}
         <<jump EndTutorial>>
-    -> ID Card. <<if $page is 0>>
+    -> Tell me mora about the ID card. <<if $page is 0>>
         {speed_normal()}
         <<jump IDCard>>
-    -> Badges. <<if $page is 0>>
+    -> Tell me more about the badges. <<if $page is 0>>
         {speed_normal()}
         <<jump Badges>>
-    -> More... <<if $page is 0>>
+    -> (More...) <<if $page is 0>>
         <<set $page = 1>>
         {speed_quick()}
         <<jump AskTutorial>>
-    -> Map.<<if $page is 1>>
+    -> Tell me more about the map.<<if $page is 1>>
         {speed_normal()}
         <<jump Map>>
-    -> Parking Spots. <<if $page is 1>>
+    -> Tell me more about the parking spots. <<if $page is 1>>
         {speed_normal()}
         <<jump ParkingSpots>>
-    -> Passwords. <<if $page is 1>>
+    -> Tell me more about the passwords. <<if $page is 1>>
         {speed_normal()}
         <<jump Passwords>>
-    -> More... <<if $page is 1>>
+    -> (More...) <<if $page is 1>>
         <<set $page = 2>>
         {speed_quick()}
         <<jump AskTutorial>>
-    -> Codenames. <<if $page is 2>>
+    -> Tell me more about the codenames. <<if $page is 2>>
         {speed_normal()}
         <<jump CodeNames>>
-    -> Tickets. <<if $page is 2>>
+    -> Tell me more about the tickets. <<if $page is 2>>
         {speed_normal()}
         <<jump Tickets>>
-    -> More... <<if $page is 2>>
+    -> (More...) <<if $page is 2>>
         <<set $page = 0>>
         {speed_quick()}
         <<jump AskTutorial>>
