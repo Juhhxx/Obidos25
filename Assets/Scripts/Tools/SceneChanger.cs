@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,21 +18,23 @@ public class SceneChanger : MonoBehaviourSingleton<SceneChanger>
     }
 
 
-    public void ChangeScene(string scene)
+    public void ChangeScene(string scene, Action onLoad, bool doFade = true)
     {
-        StartCoroutine(ChangeSceneCR(scene));
+        StartCoroutine(ChangeSceneCR(scene, onLoad, doFade));
     }
 
-    private IEnumerator ChangeSceneCR(string scene)
+    private IEnumerator ChangeSceneCR(string scene, Action onLoad, bool doFade)
     {
-        _anim.SetTrigger("FadeOut");
+        if (doFade) _anim.SetTrigger("FadeOut");
 
         yield return new WaitForEndOfFrame();
-        yield return new WaitUntil(() => !AnimatorIsPlaying(_anim));
+        if (doFade) yield return new WaitUntil(() => !AnimatorIsPlaying(_anim));
 
         SceneManager.LoadScene(scene);
-;
-        _anim.SetTrigger("FadeIn");
+
+        onLoad?.Invoke();
+
+        if (doFade) _anim.SetTrigger("FadeIn");
     }
 
     private bool AnimatorIsPlaying(Animator animator)

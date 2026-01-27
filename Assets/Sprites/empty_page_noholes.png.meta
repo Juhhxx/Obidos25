@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e81a0986fff818d4d8534a4412d3fc27
+guid: d1ebb7f90845e8242aa334f986cbed00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6376283433849580698
-    second: context_scene5_0
+      213: -7043783559391058091
+    second: empty_page_noholes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: context_scene5_0
+      name: empty_page_noholes_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 480
-        height: 270
+        width: 781
+        height: 989
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9cefc5000c1d7850800000000000000
-      internalID: 6376283433849580698
+      spriteID: 55762cb1c247f3e90800000000000000
+      internalID: -7043783559391058091
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      context_scene5_0: 6376283433849580698
+      empty_page_noholes_0: -7043783559391058091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

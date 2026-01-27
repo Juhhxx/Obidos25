@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
@@ -41,7 +42,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void Quit() => Application.Quit();
 
-    public void LoadScene(string scene)
+    public void LoadScene(string scene, Action onLoad = null, bool doFade = true)
     {
         _anim.enabled = false;
 
@@ -49,7 +50,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
         Time.timeScale = 1f;
 
-        SceneChanger.Instance.ChangeScene(scene);
+        SceneChanger.Instance.ChangeScene(scene, onLoad, doFade);
     }
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 

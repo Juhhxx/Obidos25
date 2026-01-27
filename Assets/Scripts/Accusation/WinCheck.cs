@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using System;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class WinCheck : MonoBehaviour
 {
@@ -110,7 +111,10 @@ public class WinCheck : MonoBehaviour
         _blackScreen.SetActive(true);
 
         if (right)
-            CutsceneManager.Instance.PlayCutscene(_winCutscene, () => MenuManager.Instance.LoadScene("MainMenu"));
+            CutsceneManager.Instance.PlayCutscene(_winCutscene, () =>
+            {
+                MenuManager.Instance.LoadScene("MainMenu", () => CreditsManager.Instance.OpenCredits(false));
+            });
         else
             CutsceneManager.Instance.PlayCutscene(_loseCutscene, () => MenuManager.Instance.LoadScene("MainMenu"));
     }

@@ -40,4 +40,9 @@ public class ButtonMenu : MonoBehaviour
     {
         Application.OpenURL("https://epic-we.eu/");
     }
+
+    public void OpenCredits()
+    {
+        CreditsManager.Instance.OpenCredits();
+    }
 }

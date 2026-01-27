@@ -1,0 +1,1326 @@
+fileFormatVersion: 2
+guid: f63e737228f18274a9d9b999b6b3fc26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3925181200487539783
+    second: logo_strip_credit_0
+  - first:
+      213: -742187841336756719
+    second: logo_strip_credit_1
+  - first:
+      213: -9085118223333924150
+    second: logo_strip_credit_2
+  - first:
+      213: 7191244801411890249
+    second: logo_strip_credit_3
+  - first:
+      213: 4867969802467685432
+    second: logo_strip_credit_4
+  - first:
+      213: 1058173675460096878
+    second: logo_strip_credit_5
+  - first:
+      213: 6780175927976635108
+    second: logo_strip_credit_6
+  - first:
+      213: 7139510531979755298
+    second: logo_strip_credit_7
+  - first:
+      213: -4860539255491985042
+    second: logo_strip_credit_8
+  - first:
+      213: -752555562994168651
+    second: logo_strip_credit_9
+  - first:
+      213: 2849758180047080706
+    second: logo_strip_credit_10
+  - first:
+      213: -3142542586595374905
+    second: logo_strip_credit_11
+  - first:
+      213: 8471803618959078329
+    second: logo_strip_credit_12
+  - first:
+      213: 6026976300191744894
+    second: logo_strip_credit_13
+  - first:
+      213: -403214502463182535
+    second: logo_strip_credit_14
+  - first:
+      213: 5426124167669630170
+    second: logo_strip_credit_15
+  - first:
+      213: -4946346395591190151
+    second: logo_strip_credit_16
+  - first:
+      213: -4856296114100606761
+    second: logo_strip_credit_17
+  - first:
+      213: 7764769107558811355
+    second: logo_strip_credit_18
+  - first:
+      213: -8791710020478475010
+    second: logo_strip_credit_19
+  - first:
+      213: 8841297257953425062
+    second: logo_strip_credit_20
+  - first:
+      213: -5365431599146947443
+    second: logo_strip_credit_21
+  - first:
+      213: 6898444829065141770
+    second: logo_strip_credit_22
+  - first:
+      213: 4585746603480949417
+    second: logo_strip_credit_23
+  - first:
+      213: -4899965040154258943
+    second: logo_strip_credit_24
+  - first:
+      213: -57204493290859582
+    second: logo_strip_credit_25
+  - first:
+      213: -5556740200759575623
+    second: logo_strip_credit_26
+  - first:
+      213: -3979207012570767091
+    second: logo_strip_credit_27
+  - first:
+      213: 8843333320080784462
+    second: logo_strip_credit_28
+  - first:
+      213: -5635769174022629761
+    second: logo_strip_credit_29
+  - first:
+      213: 6434702834582706808
+    second: logo_strip_credit_30
+  - first:
+      213: -9169138725394075942
+    second: logo_strip_credit_31
+  - first:
+      213: -4556321454385479265
+    second: logo_strip_credit_32
+  - first:
+      213: -6653616263504794717
+    second: logo_strip_credit_33
+  - first:
+      213: 4100298055169931464
+    second: logo_strip_credit_34
+  - first:
+      213: 7388384838079626723
+    second: logo_strip_credit_35
+  - first:
+      213: -8410679604052333522
+    second: logo_strip_credit_36
+  - first:
+      213: 7132553577964068164
+    second: logo_strip_credit_37
+  - first:
+      213: -5584935759215511508
+    second: logo_strip_credit_38
+  - first:
+      213: 3319831272772134503
+    second: logo_strip_credit_39
+  - first:
+      213: 451932818711732871
+    second: logo_strip_credit_40
+  - first:
+      213: 7684445978541844591
+    second: logo_strip_credit_41
+  - first:
+      213: -6809561269016404693
+    second: logo_strip_credit_42
+  - first:
+      213: -4608408048662444189
+    second: logo_strip_credit_43
+  - first:
+      213: 6917037322336574376
+    second: logo_strip_credit_44
+  - first:
+      213: -6996218079060316413
+    second: logo_strip_credit_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo_strip_credit_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 29
+        width: 58
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744e91e518b097630800000000000000
+      internalID: 3925181200487539783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 51
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1163280371833b5f0800000000000000
+      internalID: -742187841336756719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 49
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2e0c36c1d2be180800000000000000
+      internalID: -9085118223333924150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 28
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cb709cb0f6cc360800000000000000
+      internalID: 7191244801411890249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 39
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8343a656eb08e8340800000000000000
+      internalID: 4867969802467685432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_5
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 39
+        width: 89
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63f774f9536fae00800000000000000
+      internalID: 1058173675460096878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_6
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 61
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eaa3b56516081e50800000000000000
+      internalID: 6780175927976635108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_7
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 30
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f30d88003a41360800000000000000
+      internalID: 7139510531979755298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_8
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 49
+        width: 98
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e610f83ac45eb8cb0800000000000000
+      internalID: -4860539255491985042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_9
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 25
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc0df1e3b26e85f0800000000000000
+      internalID: -752555562994168651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_10
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 40
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d487157ff5c8720800000000000000
+      internalID: 2849758180047080706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_11
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 46
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8027ada227364d0800000000000000
+      internalID: -3142542586595374905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_12
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 40
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3bce28184e19570800000000000000
+      internalID: 8471803618959078329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 50
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7380a2430f14a350800000000000000
+      internalID: 6026976300191744894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_14
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 50
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939656cdb8e776af0800000000000000
+      internalID: -403214502463182535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_15
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 50
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad44c118e277d4b40800000000000000
+      internalID: 5426124167669630170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_16
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979d0caf82c0b5bb0800000000000000
+      internalID: -4946346395591190151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_17
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d86ceaf968fa9cb0800000000000000
+      internalID: -4856296114100606761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_18
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 49
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd648f22d5002cb60800000000000000
+      internalID: 7764769107558811355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_19
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 50
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4632d11529df580800000000000000
+      internalID: -8791710020478475010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_20
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 49
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6f2fd430992ba70800000000000000
+      internalID: 8841297257953425062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_21
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 50
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ca03a43682a85b0800000000000000
+      internalID: -5365431599146947443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_22
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ede03c5033cbf50800000000000000
+      internalID: 6898444829065141770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_23
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2af625d38d3af30800000000000000
+      internalID: 4585746603480949417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_24
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 44
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102d5c1d1c3dffbb0800000000000000
+      internalID: -4899965040154258943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_25
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 44
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c397d101d4c43ff0800000000000000
+      internalID: -57204493290859582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_26
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbb7907a3e72e2b0800000000000000
+      internalID: -5556740200759575623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_27
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 44
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01e9f70e4407c8c0800000000000000
+      internalID: -3979207012570767091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_28
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c7ac5fcc4d9ba70800000000000000
+      internalID: 8843333320080784462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_29
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 44
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76d84abbc9b9c1b0800000000000000
+      internalID: -5635769174022629761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_30
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 37
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a5082b228ac4950800000000000000
+      internalID: 6434702834582706808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_31
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 35
+        width: 57
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adeab90d8eca0c080800000000000000
+      internalID: -9169138725394075942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_32
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 37
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91ccd417c1b4c0c0800000000000000
+      internalID: -4556321454385479265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_33
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 28
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abe80eb24b99a3a0800000000000000
+      internalID: -6653616263504794717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 29
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8f0ab5b5f27e830800000000000000
+      internalID: 4100298055169931464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_35
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 29
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed3e996dd0d88660800000000000000
+      internalID: 7388384838079626723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_36
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 29
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c66d83673474b80800000000000000
+      internalID: -8410679604052333522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_37
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 29
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d5df370bbebf260800000000000000
+      internalID: 7132553577964068164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_38
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 29
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28359a64825e72b0800000000000000
+      internalID: -5584935759215511508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_39
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 29
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766e0df04f8621e20800000000000000
+      internalID: 3319831272772134503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_40
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 29
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78267a11186954600800000000000000
+      internalID: 451932818711732871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_41
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 29
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f686aae47e2a4aa60800000000000000
+      internalID: 7684445978541844591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_42
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 36
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2dd40cba149f71a0800000000000000
+      internalID: -6809561269016404693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_43
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 28
+        width: 43
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3678c6fcb45ab00c0800000000000000
+      internalID: -4608408048662444189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_44
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 38
+        width: 87
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab9dffebc04eff50800000000000000
+      internalID: 6917037322336574376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_strip_credit_45
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 28
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fa17289b078ee90800000000000000
+      internalID: -6996218079060316413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logo_strip_credit_0: 3925181200487539783
+      logo_strip_credit_1: -742187841336756719
+      logo_strip_credit_10: 2849758180047080706
+      logo_strip_credit_11: -3142542586595374905
+      logo_strip_credit_12: 8471803618959078329
+      logo_strip_credit_13: 6026976300191744894
+      logo_strip_credit_14: -403214502463182535
+      logo_strip_credit_15: 5426124167669630170
+      logo_strip_credit_16: -4946346395591190151
+      logo_strip_credit_17: -4856296114100606761
+      logo_strip_credit_18: 7764769107558811355
+      logo_strip_credit_19: -8791710020478475010
+      logo_strip_credit_2: -9085118223333924150
+      logo_strip_credit_20: 8841297257953425062
+      logo_strip_credit_21: -5365431599146947443
+      logo_strip_credit_22: 6898444829065141770
+      logo_strip_credit_23: 4585746603480949417
+      logo_strip_credit_24: -4899965040154258943
+      logo_strip_credit_25: -57204493290859582
+      logo_strip_credit_26: -5556740200759575623
+      logo_strip_credit_27: -3979207012570767091
+      logo_strip_credit_28: 8843333320080784462
+      logo_strip_credit_29: -5635769174022629761
+      logo_strip_credit_3: 7191244801411890249
+      logo_strip_credit_30: 6434702834582706808
+      logo_strip_credit_31: -9169138725394075942
+      logo_strip_credit_32: -4556321454385479265
+      logo_strip_credit_33: -6653616263504794717
+      logo_strip_credit_34: 4100298055169931464
+      logo_strip_credit_35: 7388384838079626723
+      logo_strip_credit_36: -8410679604052333522
+      logo_strip_credit_37: 7132553577964068164
+      logo_strip_credit_38: -5584935759215511508
+      logo_strip_credit_39: 3319831272772134503
+      logo_strip_credit_4: 4867969802467685432
+      logo_strip_credit_40: 451932818711732871
+      logo_strip_credit_41: 7684445978541844591
+      logo_strip_credit_42: -6809561269016404693
+      logo_strip_credit_43: -4608408048662444189
+      logo_strip_credit_44: 6917037322336574376
+      logo_strip_credit_45: -6996218079060316413
+      logo_strip_credit_5: 1058173675460096878
+      logo_strip_credit_6: 6780175927976635108
+      logo_strip_credit_7: 7139510531979755298
+      logo_strip_credit_8: -4860539255491985042
+      logo_strip_credit_9: -752555562994168651
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
