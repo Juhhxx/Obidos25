@@ -252,7 +252,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "N\xE9lio Codices\nGon\xE7alo Nascimento\nC\xE1tia Nascimento\nJ\xFAlia
-    Costa\nMaria Sequeira"
+    Costa\nMaria Sequeira\nTiago Louren\xE7o"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
   m_sharedMaterial: {fileID: -4103482558663496831, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -1754,7 +1754,9 @@ MonoBehaviour:
     Programmer
     & Developer
 
-    Artist & Developer'
+    Artist & Developer
+
+    Sound Designer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
   m_sharedMaterial: {fileID: -4103482558663496831, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -3803,15 +3805,15 @@ RectTransform:
   m_GameObject: {fileID: 6514725848149478358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8479578052540077004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -190, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2915035094548081114
 CanvasRenderer:
@@ -3964,9 +3966,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6600639446030360319}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &4067081600650125835
 MonoBehaviour:
@@ -3984,7 +3986,7 @@ MonoBehaviour:
   _closeDelay: 2
   _quitButton: 27
   _fastButton: 32
-  _fastSpeed: 10
+  _fastSpeed: 3.5
 --- !u!95 &7763502765030550151
 Animator:
   serializedVersion: 7
