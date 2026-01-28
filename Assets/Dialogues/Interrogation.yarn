@@ -6,7 +6,7 @@ Hello! I'm here for the play, can I have a ticket?
 Ok. Here you go.{give_documents()}
     -> What's your name? 
 
-{get_military_name()}. 
+{get_military_name()}
 <<jump Options>>
 ===
 
