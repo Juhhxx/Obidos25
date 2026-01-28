@@ -29,7 +29,7 @@ public class CreditsManager : MonoBehaviourSingleton<CreditsManager>
     }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
-    public void OpenCredits() => OpenCredits();
+    public void OpenCredits() => OpenCredits(true);
 
     public void OpenCredits(bool doFade = true)
     {

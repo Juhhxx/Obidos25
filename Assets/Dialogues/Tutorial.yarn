@@ -277,7 +277,7 @@ Soldier, did you understand everything I explained to you? Or do you need me to 
     -> All clear, Officer. <<if $page is 0>>
         {speed_normal()}
         <<jump EndTutorial>>
-    -> Tell me mora about the ID card. <<if $page is 0>>
+    -> Tell me more about the ID card. <<if $page is 0>>
         {speed_normal()}
         <<jump IDCard>>
     -> Tell me more about the badges. <<if $page is 0>>
