@@ -87,9 +87,14 @@ public class CreditsManager : MonoBehaviourSingleton<CreditsManager>
     {
         if (Input.GetKeyDown(_quitButton))
         {
-            _creditsObjectAnim.SetTrigger("Quit");
-            _creditsAnim.SetTrigger("Stop");
+            QuitCredits();
         }
+    }
+
+    public void QuitCredits()
+    {
+        _creditsObjectAnim.SetTrigger("Quit");
+        _creditsAnim.SetTrigger("Stop");
     }
 
     private void Update()
