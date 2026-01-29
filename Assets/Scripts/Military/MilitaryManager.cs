@@ -299,11 +299,15 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Button(enabledMode: EButtonEnableMode.Always)]
     public void ShowEverythig()
     {
-        var tmp = new List<GameObject> { _badgeBooklet, _map, _parkingMap, _passwordNotepad, _codenamesPaper};
+        var objs = new List<GameObject> { _badgeBooklet, _map, _parkingMap, _passwordNotepad, _codenamesPaper};
+        var tmp = new List<GameObject>();
         var pos = new List<Vector3>();
 
-        foreach (GameObject go in tmp)
+        foreach (GameObject go in objs)
         {
+            if (go.GetComponent<CardItem>().IsItem) continue;
+
+            tmp.Add(go);
             pos.Add(go.transform.position);
 
             Vector3 dir = go.transform.position - _middlePoint.position;

@@ -37,7 +37,7 @@ MonoBehaviour:
     <CutsceneTexts>k__BackingField:
     - You are a young recruit who has joined a secret group of soldiers dissatisfied
       with the regime.
-    - "They are called <i>Movimento dos Capit\xE3es</i> (Movement of Captains)."
+    - "They are called <i>Movimento dos Capit\xE3es</i>\n(Movement of Captains)."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: f2980a1e49512754eb2c59821080cc63, type: 3}
     <CutsceneTexts>k__BackingField:
     - "1973\n\xD3bidos, Portugal"

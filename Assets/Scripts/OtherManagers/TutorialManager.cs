@@ -144,8 +144,6 @@ public class TutorialManager : MonoBehaviour
         // MilitaryManager.Instance.GivePasswordNotepad();
         // MilitaryManager.Instance.GiveCodenames();~
         
-        MilitaryManager.Instance.GenerateTickets();
-
         MilitaryManager.Instance.ShowEverythig();
         return "";
     }

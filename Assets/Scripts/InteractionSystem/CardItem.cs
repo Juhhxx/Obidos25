@@ -9,6 +9,8 @@ public class CardItem : MonoBehaviour
     [OnValueChanged("UpdateImage")]
     [SerializeField] private bool _isItem;
 
+    public bool IsItem => _isItem;
+
     [SerializeField] private GameObject _fullCard;
     [SerializeField][Layer] private string _fullLayer;
 
