@@ -138,12 +138,15 @@ public class TutorialManager : MonoBehaviour
     }
     private string GiveEverything()
     {
-        MilitaryManager.Instance.GiveBadgeBooklet();
-        MilitaryManager.Instance.GiveMap();
-        MilitaryManager.Instance.GiveParkingMap();
-        MilitaryManager.Instance.GivePasswordNotepad();
-        MilitaryManager.Instance.GiveCodenames();
+        // MilitaryManager.Instance.GiveBadgeBooklet();
+        // MilitaryManager.Instance.GiveMap();
+        // MilitaryManager.Instance.GiveParkingMap();
+        // MilitaryManager.Instance.GivePasswordNotepad();
+        // MilitaryManager.Instance.GiveCodenames();~
+        
         MilitaryManager.Instance.GenerateTickets();
+
+        MilitaryManager.Instance.ShowEverythig();
         return "";
     }
 }

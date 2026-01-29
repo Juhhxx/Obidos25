@@ -68,6 +68,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Header("Game Objects")]
     [Space(5f)]
     [SerializeField] private Transform _giveItem;
+    [SerializeField] private Transform _middlePoint;
     [SerializeField] private GameObject _idCard;
     [SerializeField] private GameObject _badgeBooklet;
     [SerializeField] private GameObject _map;
@@ -158,20 +159,6 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         SetMilitaryOrder();
         AssignParkingSpaces();
-    }
-
-    private void RebuildDynamicSprites(Language lang)
-    {
-        Debug.Log($"Updating Dynamic Sprites to {lang.DisplayName}");
-
-        _parkingMapBuilder.BuildFileSprite();
-
-        Invoke("ShowIDCard", 0.5f);
-    }
-
-    private void OnDisable()
-    {
-        LocalizationManager.OnLanguageChanged -= RebuildDynamicSprites;
     }
     
     // Password
@@ -308,6 +295,60 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         item.GetComponent<Draggabble>().OnInteractBegin();
         item.GetComponent<Draggabble>().OnInteractEnd();
     }
+
+    [Button(enabledMode: EButtonEnableMode.Always)]
+    public void ShowEverythig()
+    {
+        var tmp = new List<GameObject> { _badgeBooklet, _map, _parkingMap, _passwordNotepad, _codenamesPaper};
+        var pos = new List<Vector3>();
+
+        foreach (GameObject go in tmp)
+        {
+            pos.Add(go.transform.position);
+
+            Vector3 dir = go.transform.position - _middlePoint.position;
+
+            dir.z = 0;
+            dir = Vector3.Normalize(dir);
+
+            go.transform.position = go.transform.position + (dir * 25);
+        }
+
+        ToggleBadgeBooklet(true);
+        ToggleMap(true);
+        ToggleParkingMap(true);
+        TogglePasswordNotepad(true);
+        ToggleCodenames(true);
+
+        for (int i = 0; i < tmp.Count; i++)
+        {
+            StartCoroutine(Move(tmp[i], pos[i]));
+        }
+    }
+
+    private IEnumerator Move(GameObject document, Vector3 targetPos)
+{
+    Vector3 startPos = document.transform.position;
+    float t = 0f;
+
+    while (t < 1f)
+    {
+        t += 2f * Time.deltaTime;
+
+        float x = Mathf.Lerp(startPos.x, targetPos.x, t);
+        float y = Mathf.Lerp(startPos.y, targetPos.y, t);
+
+        document.transform.position = new Vector3(x, y, startPos.z);
+
+        yield return null;
+    }
+
+    document.transform.position = new Vector3(
+        targetPos.x,
+        targetPos.y,
+        startPos.z
+    );
+}
 
     // Military and Moles
     private void SetMilitaryOrder()

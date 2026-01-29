@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PasswordQuestion: What color are your socks?
   MondayAnswer: They're White.
-  TuesdayAnswer: Thay're Yellow.
+  TuesdayAnswer: They're Yellow.
   WednesdayAnswer: They're Orange.
   ThursdayAnswer: They're Pink.
   FridayAnswer: They're Blue.

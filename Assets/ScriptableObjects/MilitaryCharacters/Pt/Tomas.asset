@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b667bcf53852e714c8d59ca72a37a914, type: 3}
+  m_Name: Tomas
+  m_EditorClassIdentifier: Assembly-CSharp::Obidos25.Military
+  <Name>k__BackingField: "Tom\xE1s Henrique Pereira Lopes"
+  <CodeName>k__BackingField: DOG
+  <Division>k__BackingField: {fileID: 11400000, guid: 31f6868be5ea7dc42b8a7810190c5636, type: 2}
+  <Rank>k__BackingField: {fileID: 11400000, guid: b360f6858a080cd47a143229987da002, type: 2}
+  <ID>k__BackingField: '   020505432134'
+  <Height>k__BackingField: 178
+  <Features>k__BackingField: "Olho ca\xEDdo"
+  <EyeColor>k__BackingField: {fileID: 11400000, guid: f202595339564c34da9353fac089a236, type: 2}
+  <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 511ad1dacfb4f1a4784e0f20c117ce84, type: 2}
+  <Location>k__BackingField: {fileID: 11400000, guid: 8680748a2ac6c3444932a8b8604888c2, type: 2}
+  <Signature>k__BackingField: {fileID: 21300000, guid: 59191b7b56978ae47a6e20a21211fb06, type: 3}
+  <Picture>k__BackingField: {fileID: 21300000, guid: 1f31d017fd3b1a949b8ceefc72001301, type: 3}
+  <Sprite>k__BackingField:
+  - {fileID: 21300000, guid: 7b2a77461f144fe4081575195bd93d88, type: 3}
+  - {fileID: 21300000, guid: 511056646ebf58b49804d7cc6269ee32, type: 3}
+  _detailInfo:
+  - <Detail>k__BackingField: password
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0.25
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: codename
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.1
+  - <Detail>k__BackingField: location
+    <OnlyMoleWrong>k__BackingField: 0
+    <WrongProbabilityNotMole>k__BackingField: 0.3
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: parking
+    <OnlyMoleWrong>k__BackingField: 0
+    <WrongProbabilityNotMole>k__BackingField: 0.25
+    <WrongProbability>k__BackingField: 0.5
+  - <Detail>k__BackingField: division badge
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.2
+  - <Detail>k__BackingField: rank badge
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.2
+  - <Detail>k__BackingField: sprite
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.3
+  - <Detail>k__BackingField: eye color
+    <OnlyMoleWrong>k__BackingField: 1
+    <WrongProbabilityNotMole>k__BackingField: 0
+    <WrongProbability>k__BackingField: 0.15

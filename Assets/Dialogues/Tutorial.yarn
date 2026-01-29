@@ -2,6 +2,8 @@
 position: -1108,-967
 ---
 <<declare $seenTutorial = false>>
+<<declare $jumpedTutorial = false>>
+<<declare $seenID = false>>
 <<declare $page = 0>>
 ===
 
@@ -19,6 +21,7 @@ They will try to impersonate the attendees, so you'll have to double-check their
     -> Yes, Officer. But how should I do that?
         <<jump BeginTutorial>>
     -> Yes, Officer. You can count on me!
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 ===
@@ -39,8 +42,9 @@ The <b>ID Card</b>, you must ask every entrant to show you theirs.
 
 The information in these cards is crucial, use it wisely and compare it to information you have on your documents.
     -> (Continue)
-    <<if $seenTutorial is false>>
+    <<if $seenID is false>>
             {give_id()}
+            <<set $seenID = true>>
     <<endif>>
 
 <<if $seenTutorial is false>>
@@ -265,7 +269,6 @@ Keep note of the <b>level of suspicion</b> (number of wrong details) of each ind
 
 When everyone has come in, I'll meet you to know if you suspect any moles.
     -> (Continue)
-        <<set $seenTutorial = true>>
         <<set $page = 0>>
         <<jump AskTutorial>>
 ===
@@ -273,7 +276,8 @@ When everyone has come in, I'll meet you to know if you suspect any moles.
 title: AskTutorial
 position: -105,-755
 ---
-Soldier, did you understand everything I explained to you? Or do you need me to repeat?
+<<set $seenTutorial = true>>
+Soldier, did you understand everything I explained to you? Or do you need me to repeat? 
     -> All clear, Officer. <<if $page is 0>>
         {speed_normal()}
         <<jump EndTutorial>>
@@ -312,12 +316,57 @@ Soldier, did you understand everything I explained to you? Or do you need me to 
         <<jump AskTutorial>>
 ===
 
+title: AskTutorialSkip
+position: -105,-755
+---
+<<set $seenTutorial = true>>
+Soldier, what do you need me to explain?
+    -> All clear, Officer. <<if $page is 0>>
+        {speed_normal()}
+        <<jump EndTutorial>>
+    -> Tell me more about the ID card. <<if $page is 0>>
+        {speed_normal()}
+        <<jump IDCard>>
+    -> Tell me more about the badges. <<if $page is 0>>
+        {speed_normal()}
+        <<jump Badges>>
+    -> (More...) <<if $page is 0>>
+        <<set $page = 1>>
+        {speed_quick()}
+        <<jump AskTutorialSkip>>
+    -> Tell me more about the map.<<if $page is 1>>
+        {speed_normal()}
+        <<jump Map>>
+    -> Tell me more about the parking spots. <<if $page is 1>>
+        {speed_normal()}
+        <<jump ParkingSpots>>
+    -> Tell me more about the passwords. <<if $page is 1>>
+        {speed_normal()}
+        <<jump Passwords>>
+    -> (More...) <<if $page is 1>>
+        <<set $page = 2>>
+        {speed_quick()}
+        <<jump AskTutorialSkip>>
+    -> Tell me more about the codenames. <<if $page is 2>>
+        {speed_normal()}
+        <<jump CodeNames>>
+    -> Tell me more about the tickets. <<if $page is 2>>
+        {speed_normal()}
+        <<jump Tickets>>
+    -> (More...) <<if $page is 2>>
+        <<set $page = 0>>
+        {speed_quick()}
+        <<jump AskTutorialSkip>>
+===
+
 title: EndTutorial
 position: -122,-350
 ---
 <<if $seenTutorial is false>>
     Here is everything you'll need. {give_everything()}
         -> Thank you Officer. I'll do my best.
+        -> Thank you Officer. But actually, I'll need help with something.
+            <<jump AskTutorialSkip>>
 <<endif>>
 
 Great. I trust you will do a good job. Make sure no moles get in.

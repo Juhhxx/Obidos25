@@ -42,6 +42,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void Quit() => Application.Quit();
 
+    public void LoadScene(string scene) => LoadScene(scene, null, true);
     public void LoadScene(string scene, Action onLoad = null, bool doFade = true)
     {
         _anim.enabled = false;
