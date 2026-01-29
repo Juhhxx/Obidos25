@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PasswordQuestion: Que arma costumas usar?
   MondayAnswer: Uma Sniper.
-  TuesdayAnswer: Uma Rifle.
+  TuesdayAnswer: Um Rifle.
   WednesdayAnswer: Uma Espingarda.
   ThursdayAnswer: Uma Metrelhadora.
   FridayAnswer: Uma Faca.

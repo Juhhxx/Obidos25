@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Lunch
   m_EditorClassIdentifier: 
-  PasswordQuestion: What did yo uhave for lunch?
+  PasswordQuestion: What did you have for lunch?
   MondayAnswer: A good Steak.
   TuesdayAnswer: A simple Sandwich.
   WednesdayAnswer: I had Pasta with some sauce.
   ThursdayAnswer: A lovely Shepherd's Pie.
   FridayAnswer: Some Fish Fillets.
   SaturdayAnswer: A hearthy Stew.
-  SundayAnswer: A boul of Soup.
+  SundayAnswer: A bowl of Soup.

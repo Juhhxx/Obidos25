@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Gun
   m_EditorClassIdentifier: 
-  PasswordQuestion: What gun do you usually use?
-  MondayAnswer: Sniper.
-  TuesdayAnswer: Rifle.
-  WednesdayAnswer: Shotgun.
-  ThursdayAnswer: Machine Gun.
-  FridayAnswer: Knife.
-  SaturdayAnswer: Grenade.
-  SundayAnswer: Pistol.
+  PasswordQuestion: What weapon do you usually use?
+  MondayAnswer: A Sniper.
+  TuesdayAnswer: A Rifle.
+  WednesdayAnswer: A Shotgun.
+  ThursdayAnswer: A Machine Gun.
+  FridayAnswer: A Knife.
+  SaturdayAnswer: Grenades.
+  SundayAnswer: A Pistol.

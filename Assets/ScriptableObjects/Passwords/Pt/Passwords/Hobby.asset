@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Hobby
   m_EditorClassIdentifier: 
   PasswordQuestion: O que fazes no tempo livre?
-  MondayAnswer: Adoro cozinhar.
-  TuesdayAnswer: Eu gosto de fazer jardinagem.
-  WednesdayAnswer: Tirar fotos.
-  ThursdayAnswer: Uma boa caminhada.
+  MondayAnswer: Adoro Cozinhar.
+  TuesdayAnswer: Eu gosto de fazer Jardinagem.
+  WednesdayAnswer: Tirar Fotos.
+  ThursdayAnswer: Uma boa Caminhada.
   FridayAnswer: "Pintar \xE9 a minha coisa favorita."
-  SaturdayAnswer: Eu tento tocar algum instrumento.
-  SundayAnswer: Gosto de ler um bom livro.
+  SaturdayAnswer: Eu tento Tocar algum Instrumento.
+  SundayAnswer: Gosto de Ler um bom livro.

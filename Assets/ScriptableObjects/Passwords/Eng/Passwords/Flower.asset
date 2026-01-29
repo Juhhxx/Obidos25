@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Flower
   m_EditorClassIdentifier: 
   PasswordQuestion: What's you favourite flower?
-  MondayAnswer: Rose.
-  TuesdayAnswer: Sunflower.
+  MondayAnswer: Roses.
+  TuesdayAnswer: Sunflowers.
   WednesdayAnswer: Lavender.
   ThursdayAnswer: Lilies.
-  FridayAnswer: Poppy.
-  SaturdayAnswer: Orchid.
-  SundayAnswer: Carnation.
+  FridayAnswer: Poppies.
+  SaturdayAnswer: Orchids.
+  SundayAnswer: Carnations.

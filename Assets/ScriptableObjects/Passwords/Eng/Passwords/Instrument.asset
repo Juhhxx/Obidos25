@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PasswordQuestion: Do you play any instrument?
   MondayAnswer: The Piano.
-  TuesdayAnswer: A Violin.
+  TuesdayAnswer: The Violin.
   WednesdayAnswer: The Flute.
   ThursdayAnswer: The Drums!
-  FridayAnswer: A Saxophone
+  FridayAnswer: The Saxophone.
   SaturdayAnswer: The Trumpet.
   SundayAnswer: The Guitar.

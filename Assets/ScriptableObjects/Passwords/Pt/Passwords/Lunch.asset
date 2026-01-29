@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Lunch
   m_EditorClassIdentifier: 
   PasswordQuestion: "O que comeste ao almo\xE7o?"
-  MondayAnswer: Um bom bife.
-  TuesdayAnswer: Uma sandes.
-  WednesdayAnswer: Esparguete com um bom molhino.
-  ThursdayAnswer: Uma deliciosa tarte de carne.
-  FridayAnswer: "Uns fil\xE9s de peixe."
-  SaturdayAnswer: Um bom guisado.
-  SundayAnswer: Uma tigela de soupa.
+  MondayAnswer: Um bom Bife.
+  TuesdayAnswer: Uma Sandes.
+  WednesdayAnswer: Esparguete com um bom molhinho.
+  ThursdayAnswer: "Um delicioso Empad\xE3o de Carne."
+  FridayAnswer: "Uns Fil\xE9s de Pescada."
+  SaturdayAnswer: Um bom Guisado.
+  SundayAnswer: Uma tigela de Soupa.
