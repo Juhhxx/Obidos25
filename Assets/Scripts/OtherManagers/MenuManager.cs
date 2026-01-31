@@ -71,7 +71,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     public void TooglePauseMenu(bool onOff)
     {
-        AudioManager.Instance.TogglePauseAllGroups(onOff);
+        // AudioManager.Instance.TogglePauseAllGroups(onOff);
         ResetSelection();
 
         _anim.enabled = true;

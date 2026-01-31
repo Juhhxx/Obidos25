@@ -2595,11 +2595,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &1698823776 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 2023653965262401640, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-  m_PrefabInstance: {fileID: 1349954827412790064}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1790358968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,10 +3527,7 @@ MonoBehaviour:
     together young creatives, cultural institutions, and game industry professionals
     to explore and express cultural values with game-making. Through a series of
     game jams, participants designed and developed unique experiences reflecting
-    their perspectives on heritage, society, and the future.
-
-
-'
+    their perspectives on heritage, society, and the future.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
   m_sharedMaterial: {fileID: -4103482558663496831, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -3629,24 +3621,23 @@ MonoBehaviour:
   _assetType: 0
   _localizationsTexts:
   - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
-    <Text>k__BackingField: 'ptpt This game was developed in collaboration with young
-      game jammers as part of the EPIC-WE program.
-
-
-      EPIC-WE is an EU-funded
-      initiative that brings together young creatives, cultural institutions, and
-      game industry professionals to explore and express cultural values through
-      game-making. Through a series of game jams, participants designed and developed
-      unique experiences reflecting their perspectives on heritage, society, and
-      the future.'
-  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
     <Text>k__BackingField: 'This game was developed in collaboration with young game
-      jammers as part of the EPIC-WE program.
+      jammers as part of the EPIC-WE project.
 
 
       EPIC-WE is an EU-funded initiative
       that brings together young creatives, cultural institutions, and game industry
-      professionals to explore and express cultural values through game-making. Through
+      professionals to explore and express cultural values with game-making. Through
+      a series of game jams, participants designed and developed unique experiences
+      reflecting their perspectives on heritage, society, and the future.'
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'This game was developed in collaboration with young game
+      jammers as part of the EPIC-WE project.
+
+
+      EPIC-WE is an EU-funded initiative
+      that brings together young creatives, cultural institutions, and game industry
+      professionals to explore and express cultural values with game-making. Through
       a series of game jams, participants designed and developed unique experiences
       reflecting their perspectives on heritage, society, and the future.'
   _localizationsSprites: []
@@ -3670,25 +3661,6 @@ PrefabInstance:
     - target: {fileID: 667457071901681314, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018890738534648650, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1194665209399343644, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_text
-      value: 'Mole Catcher''s source code is released under the GPLv3 license
-
-        and
-        its original assets are released under the CC BY 4.0 license.
-
-
-        For
-        additional information, visit
-
-        https://epic-we.au.dk/featured-games/mole-catcher
-
-'
       objectReference: {fileID: 0}
     - target: {fileID: 1311296466572198252, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_Pivot.x
@@ -3791,10 +3763,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1797062909264108590, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797062909264108590, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3814,18 +3782,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4067081600650125835, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: _fastSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4067081600650125835, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: _titleGroup
-      value: 
-      objectReference: {fileID: 1698823776}
-    - target: {fileID: 4094535616863614654, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
     - target: {fileID: 4580752059912492878, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3838,10 +3794,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5842242748355153327, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
     - target: {fileID: 5873244872053227313, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3849,10 +3801,6 @@ PrefabInstance:
     - target: {fileID: 5873244872053227313, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5873244872053227313, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5873244872053227313, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3869,10 +3817,6 @@ PrefabInstance:
     - target: {fileID: 6558277391789293950, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558277391789293950, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 6558277391789293950, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3898,10 +3842,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6740596795121843672, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
     - target: {fileID: 7145595431908852216, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3909,10 +3849,6 @@ PrefabInstance:
     - target: {fileID: 7145595431908852216, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145595431908852216, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 790
       objectReference: {fileID: 0}
     - target: {fileID: 7145595431908852216, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3941,10 +3877,6 @@ PrefabInstance:
     - target: {fileID: 7326834903348618380, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7511545878755618529, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 8688973152446292173, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y

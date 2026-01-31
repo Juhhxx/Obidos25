@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using UnityEngine.U2D;
 
 public class LayerManager : MonoBehaviourSingleton<LayerManager>
 {
@@ -40,16 +41,21 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
 
     private void UpdateLayering()
     {
+        int k = 0;
+
         for (int i = 0; i < _draggabbles.Count; i++)
         {
+
             Draggabble drag = _draggabbles[i];
 
-            UpdateRendererOrderInLayer(drag.gameObject, i);
+            UpdateRendererOrderInLayer(drag.gameObject, k);
 
             Vector3 pos = drag.transform.position;
             pos.z = (-1f - (0.1f * i));
 
             drag.transform.position = pos;
+
+            k += 2;
         }
     }
 
@@ -75,6 +81,7 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
     public void UpdateRendererOrderInLayer(GameObject obj, int order)
     {
         SpriteRenderer[] renderers = obj.GetComponentsInChildren<SpriteRenderer>(includeInactive: true);
+        SpriteShapeRenderer[] shapeRenderers = obj.GetComponentsInChildren<SpriteShapeRenderer>(includeInactive: true);
 
         if (renderers != null || renderers.Length != 0)
         {
@@ -83,6 +90,11 @@ public class LayerManager : MonoBehaviourSingleton<LayerManager>
                 r.sortingOrder = order;
 
                 Debug.LogWarning($"Move {obj.name} to {order}");
+            }
+
+            foreach (SpriteShapeRenderer sr in shapeRenderers)
+            {
+                sr.sortingOrder = order + 1;
             }
         }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  PasswordQuestion: What fish did I catch yesterday?
+  PasswordQuestion: What fish did you catch yesterday?
   MondayAnswer: A Trout.
   TuesdayAnswer: A Salmon.
   WednesdayAnswer: Sardines.

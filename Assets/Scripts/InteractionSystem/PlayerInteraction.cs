@@ -98,8 +98,17 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
         // Debug.Log($"COLLIDED WITH : {hit.collider?.gameObject.name}");
 
+        if (_curentInteractable is Button previousButton)
+        {
+            if (previousButton.HighlightSR != null) previousButton.HighlightSR.enabled = false;
+        }
+        
         if (temp != null)
         {
+            if (temp is Button currentButton)
+            {
+                if (currentButton.HighlightSR != null) currentButton.HighlightSR.enabled = true;
+            }
             _curentInteractable = temp;
         }
         else _curentInteractable = null;

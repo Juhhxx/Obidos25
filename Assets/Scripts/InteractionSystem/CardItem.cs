@@ -13,9 +13,11 @@ public class CardItem : MonoBehaviour
 
     [SerializeField] private GameObject _fullCard;
     [SerializeField][Layer] private string _fullLayer;
+    [SerializeField] private PlaySound _fullSound;
 
     [SerializeField] private GameObject _itemCard;
     [SerializeField][Layer] private string _itemLayer;
+    [SerializeField] private PlaySound _itemSound;
 
     BoxCollider2D _collider;
     SpriteRenderer _rendererFull;
@@ -52,6 +54,15 @@ public class CardItem : MonoBehaviour
 
         // Item Sprite
         _itemCard.gameObject.SetActive(state);
+
+        if (state)
+        {
+            _itemSound?.SoundPlay();
+        }
+        else
+        {
+            _fullSound?.SoundPlay();
+        }
 
         SpriteRenderer activeRenderer = state ? _rendererItem : _rendererFull;
 

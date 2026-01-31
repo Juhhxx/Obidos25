@@ -8,8 +8,12 @@ public class BookPageManager : MonoBehaviour
     [SerializeField] private List<Sprite> _bookPages;
 
     [SerializeField] private Collider2D _backToStartButton;
+    [SerializeField] private Collider2D _firstPageButton;
     [SerializeField] private Collider2D _pageForwardButton;
     [SerializeField] private Collider2D _pageBackwardButton;
+
+    [SerializeField] private PlaySound _coverFlipSound;
+    [SerializeField] private PlaySound _pageFlipSound;
 
     private int _currentPageIndex = 0;
 
@@ -22,7 +26,15 @@ public class BookPageManager : MonoBehaviour
         _collider = GetComponentInParent<BoxCollider2D>();
 
         _pageBackwardButton.enabled = false;
+        _pageForwardButton.enabled = true;
+
         if (_backToStartButton != null) _backToStartButton.enabled = false;
+
+        if (_firstPageButton != null)
+        {
+            _firstPageButton.enabled = true;
+            _pageForwardButton.enabled = false;
+        }
     }
 
     public void SetPageSprite(int page, Sprite spr) 
@@ -38,6 +50,8 @@ public class BookPageManager : MonoBehaviour
 
         _pageForwardButton.enabled = true;
         _pageBackwardButton.enabled = true;
+
+        if (_firstPageButton != null) _firstPageButton.enabled = true;
         
         if (_backToStartButton != null) _backToStartButton.enabled = true;
 
@@ -49,8 +63,15 @@ public class BookPageManager : MonoBehaviour
         {
             _pageBackwardButton.enabled = false;
             Debug.Log("FIRST PAGE, HIDING BACKWORDS BUTTON");
+
+            if (_firstPageButton != null)
+            {
+                _pageForwardButton.enabled = false;
+            }
             
             if (_backToStartButton != null) _backToStartButton.enabled = false;
+
+            _coverFlipSound?.SoundPlay();
         }
         else if (page == _bookPages.Count - 1)
         {
@@ -58,9 +79,17 @@ public class BookPageManager : MonoBehaviour
             Debug.Log("LAST PAGE, HIDING FORWARDS BUTTON");
         }
 
+        if (page > 0)
+        {
+            if (_firstPageButton != null) _firstPageButton.enabled = false;
+
+            _pageFlipSound?.SoundPlay();
+        }
+
         if (page == 1)
         {
             if (_backToStartButton != null)  _backToStartButton.enabled = false;
+            
         }
 
         _currentPageIndex = page;
