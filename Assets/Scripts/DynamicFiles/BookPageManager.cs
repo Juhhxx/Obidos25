@@ -103,4 +103,5 @@ public class BookPageManager : MonoBehaviour
     }
 
     public void GoToFirstPage() => ChangePage(1);
+    public void Reset() => ChangePage(0);
 }

@@ -145,24 +145,26 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
     {
         [field: SerializeField] public AudioSource AudioSource { get; private set; }
         [field: SerializeField] public AudioGroup MixerGroup { get; private set; }
+        [field: SerializeField] public bool Permanent { get; private set; }
 
-        public AudioSourceInfo(AudioSource source, AudioGroup group)
+        public AudioSourceInfo(AudioSource source, AudioGroup group, bool permanent)
         {
             AudioSource = source;
             MixerGroup = group;
+            Permanent = permanent;
         }
     }
 
     [SerializeField, ReadOnly] private List<AudioSourceInfo> _activeAudioSources = new List<AudioSourceInfo>();
 
-    public void RegisterAudioSource(AudioSource source, AudioGroup group)
+    public void RegisterAudioSource(AudioSource source, AudioGroup group, bool permanent = false)
     {
         foreach (AudioSourceInfo asi in _activeAudioSources)
         {
             if (asi.AudioSource == source) return;
         }
 
-        _activeAudioSources.Add(new AudioSourceInfo(source, group));
+        _activeAudioSources.Add(new AudioSourceInfo(source, group, permanent));
     }
 
     public void UnRegisterAudioSource(AudioSource source)
@@ -179,7 +181,7 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
 
     private void ClearAllAudioSources()
     {
-       _activeAudioSources.Clear();
+        _activeAudioSources.RemoveAll(asi => !asi.Permanent);
     }
 
     [field: SerializeField] public AudioSoundPlayer SoundPlayer { get; private set; }
@@ -187,10 +189,13 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
 
     private void Awake()
     {
-        base.SingletonCheck(this, true);
+        if (base.SingletonCheck(this, true))
+        {
+            LocateAudioGroups();
+            SceneManager.sceneLoaded += (scene, mode) => ClearAllAudioSources();
 
-        LocateAudioGroups();
-        SceneManager.sceneLoaded += (scene, mode) => ClearAllAudioSources();
+            MusicPlayer.SetUp();
+        }
     }
 
     private void Start()

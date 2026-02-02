@@ -34,6 +34,7 @@ public class ChangeGravity : MonoBehaviour
     private void ChangeGravityS(GravityChange changeTo, GameObject other)
     {
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        CardItem card = other.GetComponent<CardItem>();
 
         if (rb != null)
         {
@@ -47,6 +48,7 @@ public class ChangeGravity : MonoBehaviour
                 case GravityChange.Off:
                     rb.gravityScale = 0.0f;
                     rb.linearVelocityY = 0.0f;
+                    card?.PlayDropSound();
                     break;
 
                 default:

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade0d608349ab464baf6ae98cbd00f63, type: 3}
   m_Name: FinalCutsceneGood
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
+  _cutscenMusic: {fileID: 8300000, guid: 93d79a44c46b86b4bb30c5b3fdd75712, type: 3}
   _endButtonText: Done
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}

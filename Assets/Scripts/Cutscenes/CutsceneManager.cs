@@ -11,6 +11,9 @@ public class CutsceneManager : MonoBehaviourSingleton<CutsceneManager>
     [SerializeField] private CutsceneShower _cutsceneShower;
     [SerializeField] private GameObject _cutsceneCanvas;
 
+    [SerializeField] private PlaySound _cutsceneMusic;
+
+
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void Play() => PlayCutscene(_cutscene);
 
@@ -23,6 +26,8 @@ public class CutsceneManager : MonoBehaviourSingleton<CutsceneManager>
 
     public void PlayCutscene(Cutscene cutscene, Action onFinished = null)
     {
+        _cutsceneMusic?.SoundPlay(cutscene.CutsceneMusic);
+        
         StopAllCoroutines();
         StartCoroutine(PlayCutsceneCR(cutscene, onFinished));
     }

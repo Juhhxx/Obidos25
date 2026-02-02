@@ -5,6 +5,8 @@ using NaughtyAttributes;
 [CreateAssetMenu(fileName = "Cutscene", menuName = "Scriptable Objects/Cutscene")]
 public class Cutscene : ScriptableObject
 {
+    [SerializeField] private AudioClip _cutscenMusic;
+    public AudioClip CutsceneMusic => _cutscenMusic;
     [SerializeField] private string _endButtonText = "Next";
     public string EndButtonText => _endButtonText;
     

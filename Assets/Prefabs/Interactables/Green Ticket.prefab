@@ -1,5 +1,169 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &347752785813918639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7222579956562555937}
+  - component: {fileID: 4553964539656689916}
+  m_Layer: 9
+  m_Name: Drop Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7222579956562555937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347752785813918639}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.29, y: -2.95, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8304143366924785182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4553964539656689916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347752785813918639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySound
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 2e9c33ab55b68a74c85e2669600772a5, type: 3}
+  - {fileID: 8300000, guid: 48a339d44700f4249a0431821417a346, type: 3}
+  - {fileID: 8300000, guid: 2ac77dfa2870e0440b9616ab3cb78751, type: 3}
+  _group: 3
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.8, y: 1.5}
+  _playOnStart: 0
+  _loop: 0
+  _isMusic: 0
+--- !u!1 &1161603053320994469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2630397856560599326}
+  - component: {fileID: 7239737391786605872}
+  m_Layer: 9
+  m_Name: Slide Out Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2630397856560599326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161603053320994469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.29, y: -2.95, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8304143366924785182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7239737391786605872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161603053320994469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySound
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 88048728fba314a4aa161e4047571696, type: 3}
+  _group: 3
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.8, y: 1.5}
+  _playOnStart: 0
+  _loop: 0
+  _isMusic: 0
+--- !u!1 &3272353823280362486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4968231497765892854}
+  - component: {fileID: 1356914772034773156}
+  m_Layer: 9
+  m_Name: Slide In Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968231497765892854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272353823280362486}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.29, y: -2.95, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8304143366924785182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356914772034773156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272353823280362486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySound
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 88048728fba314a4aa161e4047571696, type: 3}
+  _group: 3
+  _volume: 1
+  _changePitch: 1
+  _pitch: 1
+  _pitchRange: {x: 0.8, y: 1.5}
+  _playOnStart: 0
+  _loop: 0
+  _isMusic: 0
 --- !u!1 &6533576410307012362
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +424,18 @@ PrefabInstance:
       propertyPath: _itemCard
       value: 
       objectReference: {fileID: 6533576410307012362}
+    - target: {fileID: 8944514565945807776, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: _dropSound
+      value: 
+      objectReference: {fileID: 4553964539656689916}
+    - target: {fileID: 8944514565945807776, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: _fullSound
+      value: 
+      objectReference: {fileID: 1356914772034773156}
+    - target: {fileID: 8944514565945807776, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      propertyPath: _itemSound
+      value: 
+      objectReference: {fileID: 7239737391786605872}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8903049705769938059, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
@@ -271,6 +447,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4704094954226863795}
+    - targetCorrespondingSourceObject: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4968231497765892854}
+    - targetCorrespondingSourceObject: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2630397856560599326}
+    - targetCorrespondingSourceObject: {fileID: 5261121153814723465, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7222579956562555937}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8513172970986085126, guid: 8db5696fb7eb1ba4da370c7d08e3a787, type: 3}
       insertIndex: -1

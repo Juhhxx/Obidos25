@@ -339,6 +339,8 @@ GameObject:
   - component: {fileID: 1582878826024221888}
   - component: {fileID: 578970867627632272}
   - component: {fileID: 7926314776766612232}
+  - component: {fileID: 4942984395414516991}
+  - component: {fileID: 4032997198497360024}
   m_Layer: 5
   m_Name: Next Button
   m_TagString: Untagged
@@ -494,6 +496,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4942984395414516991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011835802735076542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bca0e0c78dccfc47bac982c23d523ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointerButtonEvents
+  OnPointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4032997198497360024}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: SoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4032997198497360024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011835802735076542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355cd986942c7c745beb7d94e657a9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySound
+  _soudsToPlay:
+  - {fileID: 8300000, guid: 1f1b0f0f3bc925c46a90b3b44f99c286, type: 3}
+  - {fileID: 8300000, guid: 603716ca22099074893233081decc6df, type: 3}
+  - {fileID: 8300000, guid: c2d0426c5092a5042b819c7931b4363d, type: 3}
+  - {fileID: 8300000, guid: 22db72f394181f641aa1c9d1332354ca, type: 3}
+  - {fileID: 8300000, guid: 9e704fab0ffcc424c85d95cd637c7b43, type: 3}
+  - {fileID: 8300000, guid: 18c9a6cf83623464db6c25b6fd2b2107, type: 3}
+  _group: 3
+  _volume: 1
+  _changePitch: 0
+  _pitch: 1
+  _pitchRange: {x: 0, y: 0}
+  _playOnStart: 0
+  _loop: 0
 --- !u!1 &1809046057334534439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,11 +1333,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   _soudsToPlay:
-  - {fileID: 8300000, guid: 94ff96eb75c582d45a0713597f41381b, type: 3}
+  - {fileID: 8300000, guid: ea47cd937cde4a24d9a4b94ba415ff55, type: 3}
+  - {fileID: 8300000, guid: 10e6e975eb1e479478b9836980a103fb, type: 3}
+  - {fileID: 8300000, guid: b265e1c26d0cd8a48b46bf20b5dbab5d, type: 3}
   _group: 3
-  _volume: 1
-  _changePitch: 0
+  _volume: 0.8
+  _changePitch: 1
   _pitch: 2.25
-  _pitchRange: {x: 0, y: 0}
+  _pitchRange: {x: 0.8, y: 1.5}
   _playOnStart: 0
   _loop: 0

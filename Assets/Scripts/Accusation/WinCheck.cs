@@ -91,6 +91,8 @@ public class WinCheck : MonoBehaviour
 
     public void CheckBufo()
     {
+        MenuManager.Instance.ResetSelection();
+        
         if (_suspects.Count != _numberOfMoles)
         {
             _bufoNumberAnim.SetTrigger("Warn");

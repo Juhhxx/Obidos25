@@ -18,6 +18,7 @@ public class PlaySound : MonoBehaviour
 
     [SerializeField] private bool _playOnStart;
     [SerializeField] private bool _loop;
+    [SerializeField] private bool _isMusic;
 
     AudioSource _audioSource;
 
@@ -30,9 +31,40 @@ public class PlaySound : MonoBehaviour
         if (_playOnStart) SoundPlay();
     }
 
+    public void SoundPlay(AudioClip sound)
+    {
+        Debug.Log("SOUND");
+
+        if (_isMusic)
+        {
+            AudioManager.Instance.MusicPlayer.PlaySong(sound);
+            return;
+        }
+
+        AudioClip clip = sound;
+
+        float pitch = _pitch;
+
+        if (_changePitch)
+        {
+            pitch = Random.Range(_pitchRange.x,_pitchRange.y);
+        }
+
+        Debug.Log($"Playing {clip.name} at pitch {pitch} in group {_group}");
+
+        if (!_audioSource.isPlaying)    
+            AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
+    }
+
     public void SoundPlay()
     {
         Debug.Log("SOUND");
+
+        if (_isMusic)
+        {
+            AudioManager.Instance.MusicPlayer.PlaySong(_soudsToPlay[0]);
+            return;
+        }
 
         int soundIdx = 0;
 

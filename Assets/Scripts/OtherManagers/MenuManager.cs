@@ -32,12 +32,26 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     {
         _anim = GetComponent<Animator>();
 
-        _anim.enabled = false;
-        _pauseMenu.SetActive(false);
-        _optionsMenu.SetActive(false);
-        _instructionsMenu.SetActive(false);
-        _confirmQuitMenu.SetActive(false);
-        _confirmMainMenu.SetActive(false);
+        ResetMenus();
+
+        SceneManager.sceneLoaded += (scene, mode) => ResetMenus();
+    }
+
+    public void ResetMenus()
+    {
+        Time.timeScale = 1f;
+
+        if (_anim != null)
+        {
+            // _anim.enabled = false;
+            _anim.SetTrigger("Reset");
+        }
+
+        _pauseMenu?.SetActive(false);
+        _optionsMenu?.SetActive(false);
+        _instructionsMenu?.SetActive(false);
+        _confirmQuitMenu?.SetActive(false);
+        _confirmMainMenu?.SetActive(false);
     }
 
     public void Quit() => Application.Quit();
@@ -45,14 +59,9 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     public void LoadScene(string scene) => LoadScene(scene, null, true);
     public void LoadScene(string scene, Action onLoad = null, bool doFade = true)
     {
-        _anim.enabled = false;
-
-        _pauseMenu.SetActive(false);
-
-        Time.timeScale = 1f;
-
         SceneChanger.Instance.ChangeScene(scene, onLoad, doFade);
     }
+
     public void ResetSelection() => EventSystem.current.SetSelectedGameObject(null);
 
     private void CheckPause()
@@ -72,6 +81,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     public void TooglePauseMenu(bool onOff)
     {
         // AudioManager.Instance.TogglePauseAllGroups(onOff);
+        _anim.ResetTrigger("Reset");
         ResetSelection();
 
         _anim.enabled = true;
@@ -89,6 +99,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     }
     public void ToogleOptionsMenu(bool onOff)
     {
+        _anim.ResetTrigger("Reset");
         _anim.enabled = true;
         _optionsOpen = onOff;
 
@@ -97,6 +108,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     }
     public void ToogleInstructionsMenu(bool onOff)
     {
+        _anim.ResetTrigger("Reset");
         _anim.enabled = true;
 
         if (onOff) _anim.SetTrigger("OpenInstructions");

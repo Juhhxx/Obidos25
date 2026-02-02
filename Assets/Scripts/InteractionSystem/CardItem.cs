@@ -19,15 +19,19 @@ public class CardItem : MonoBehaviour
     [SerializeField][Layer] private string _itemLayer;
     [SerializeField] private PlaySound _itemSound;
 
+    [SerializeField] private PlaySound _dropSound;
+
     BoxCollider2D _collider;
     SpriteRenderer _rendererFull;
     SpriteRenderer _rendererItem;
     Draggabble _drag;
+    BookPageManager _book;
 
     private void Awake()
     {
         _collider = GetComponent<BoxCollider2D>();
         _drag = GetComponent<Draggabble>();
+        _book = GetComponentInChildren<BookPageManager>();
 
         _rendererFull = _fullCard.GetComponent<SpriteRenderer>();
         _rendererItem = _itemCard.GetComponent<SpriteRenderer>();
@@ -37,7 +41,7 @@ public class CardItem : MonoBehaviour
     /// Changes the object between full form and item form.
     /// </summary>
     /// <param name="state">Which form to take, true for item, false for full.</param>
-    public void ToggleCardItemSprite(bool state)
+    public void ToggleCardItemSprite(bool state, bool playSound = true)
     {
         if (_rendererFull == null || _rendererItem == null)
         {
@@ -47,6 +51,9 @@ public class CardItem : MonoBehaviour
 
         if (_collider == null) _collider = GetComponent<BoxCollider2D>();
 
+
+        if (state == _isItem) playSound = false;
+
         _isItem = state;
 
         // Full Sprite
@@ -55,13 +62,16 @@ public class CardItem : MonoBehaviour
         // Item Sprite
         _itemCard.gameObject.SetActive(state);
 
-        if (state)
+        if (playSound)
         {
-            _itemSound?.SoundPlay();
-        }
-        else
-        {
-            _fullSound?.SoundPlay();
+            if (state)
+            {
+                _itemSound?.SoundPlay();
+            }
+            else
+            {
+                _fullSound?.SoundPlay();
+            }
         }
 
         SpriteRenderer activeRenderer = state ? _rendererItem : _rendererFull;
@@ -73,9 +83,12 @@ public class CardItem : MonoBehaviour
         _collider.UpdateColliderBasedOnSprite(activeRenderer.sprite);
 
         _drag?.ResetOffSet();
+        if (!state) _book?.Reset();
     }
 
     private void UpdateImage() => ToggleCardItemSprite(_isItem);
+
+    public void PlayDropSound() => _dropSound?.SoundPlay();
     
 }
 

@@ -105,9 +105,10 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [SerializeField] private TutorialManager _tutorialManager;
 
     [Space(10f)]
-    [Header("Music")]
+    [Header("Music & Audio")]
     [Space(5f)]
     [SerializeField] private PlaySound _backgorundSoundPlayer;
+    [SerializeField] private PlaySound _giveCardSoundPlayer;
 
     [Space(10f)]
     [Header("Cutscene")]
@@ -237,6 +238,8 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     }
     public void GiveTicket(TicketTypes type)
     {
+        _giveCardSoundPlayer?.SoundPlay();
+
         if (type == TicketTypes.Red)
         {
             _suspicionIndicator.SetActive(true);
@@ -291,7 +294,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
         item.transform.position = pos;
 
-        item.GetComponent<CardItem>().ToggleCardItemSprite(true);
+        item.GetComponent<CardItem>().ToggleCardItemSprite(true, false);
         item.GetComponent<Draggabble>().OnInteractBegin();
         item.GetComponent<Draggabble>().OnInteractEnd();
     }

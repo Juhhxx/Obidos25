@@ -491,9 +491,10 @@ position: -122,-350
         {give_tickets()}
     <<endif>>
     Here is everything you'll need. {give_everything()}
-        -> Thank you Officer. I'll do my best.
-        -> Thank you Officer. But actually, I'll need help with something.
+        -> Thank you, Officer. But actually, I'll need help with something.
             <<jump AskTutorialSkip>>
+        -> Thank you, Officer. I'll do my best.
+        
 <<endif>>
 
 Great. I trust you will do a good job. Make sure no moles get in.
