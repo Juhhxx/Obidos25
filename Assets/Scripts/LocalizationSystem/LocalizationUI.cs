@@ -8,6 +8,7 @@ public class LocalizationUI : MonoBehaviour
 {
     [SerializeField] private List<Language> _availableLanguages;
     [SerializeField] private TMP_Dropdown _languageDropdown;
+    [SerializeField] private GameObject _warningText;
 
     [SerializeField, ReadOnly] private int _selectedLanguage;
 
@@ -56,5 +57,13 @@ public class LocalizationUI : MonoBehaviour
     public void ChangeLanguage()
     {
         SelectedLanguage = _languageDropdown.value;
+    }
+
+    public void ToggleDropdown(bool onOff)
+    {
+        _languageDropdown.interactable = onOff;
+        _languageDropdown.transform.parent.GetComponent<CanvasGroup>().alpha = onOff ? 1.0f : 0.5f;
+
+        _warningText.SetActive(!onOff);
     }
 }

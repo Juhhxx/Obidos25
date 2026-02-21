@@ -23,6 +23,8 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     private bool _optionsOpen = false;
     public bool OptionsOpen => _optionsOpen;
 
+    LocalizationUI _localization;
+
     private void Awake()
     {
         base.SingletonCheck(this, true);
@@ -31,6 +33,7 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        _localization = GetComponent<LocalizationUI>();
 
         ResetMenus();
 
@@ -102,6 +105,8 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
         _anim.ResetTrigger("Reset");
         _anim.enabled = true;
         _optionsOpen = onOff;
+
+        _localization.ToggleDropdown(_noPauseScenes.Contains(SceneManager.GetActiveScene().name));
 
         if (onOff) _anim.SetTrigger("OpenOptions");
         else _anim.SetTrigger("CloseOptions");
