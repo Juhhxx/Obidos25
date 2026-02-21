@@ -6,6 +6,7 @@ using NaughtyAttributes;
 // Classes that define a text/sprite and what language it represents
 public abstract class LocalizedAssets
 {
+    [field: AllowNesting]
     [field: SerializeField] public Language Language { get; protected set; }
 
     public static T GetLocalization<T>(Language lang, List<T> localizations, GameObject go) where T : LocalizedAssets
@@ -71,6 +72,20 @@ public class LocalizedButtonSprites : LocalizedAssets
         SpritePressed = spritePress;
         SpriteSelected = spriteSel;
         SpriteDeactivated = spriteDect;
+
+        Language = language;
+    }
+}
+
+[Serializable]
+public class LocalizedScriptableObject<T> : LocalizedAssets where T : ScriptableObject
+{
+    [field: AllowNesting]
+    [field: SerializeField] public T ScriptableObject { get; private set; }
+
+    public LocalizedScriptableObject(T scriptableObject, Language language)
+    {
+        ScriptableObject = scriptableObject;
 
         Language = language;
     }

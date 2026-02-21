@@ -52,8 +52,11 @@ public class PlaySound : MonoBehaviour
 
         Debug.Log($"Playing {clip.name} at pitch {pitch} in group {_group}");
 
-        if (!_audioSource.isPlaying)    
-            AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
+        if (_audioSource != null)
+        {
+            if (!_audioSource.isPlaying)    
+                AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
+        }
     }
 
     public void SoundPlay()
@@ -84,7 +87,10 @@ public class PlaySound : MonoBehaviour
 
         Debug.Log($"Playing {clip.name} at pitch {pitch} in group {_group}");
 
-        if (!_audioSource.isPlaying)    
-            AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
+        if (_audioSource != null)
+        {
+            if (!_audioSource.isPlaying)    
+                AudioManager.Instance.SoundPlayer.PlayClipExisting(_audioSource, clip, _group, _volume, pitch);
+        }
     }
 }

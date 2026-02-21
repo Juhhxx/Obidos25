@@ -38,8 +38,18 @@ public class WinCheck : MonoBehaviour
     [SerializeField] private GameObject _gameScreen;
     [SerializeField] private GameObject _accusationScreen;
     [SerializeField] private GameObject _blackScreen;
-    [SerializeField] private Cutscene _winCutscene;
-    [SerializeField] private Cutscene _loseCutscene;
+
+    [SerializeField] private List<LocalizedScriptableObject<Cutscene>> _winCutscenes;
+    private Cutscene _winCutscene;
+
+    [SerializeField] private List<LocalizedScriptableObject<Cutscene>> _loseCutscenes;
+    private Cutscene _loseCutscene;
+
+    private void Start()
+    {
+        _winCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_winCutscenes, gameObject)?.ScriptableObject;
+        _loseCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_loseCutscenes, gameObject)?.ScriptableObject;
+    }  
 
     public void SetPortaits()
     {

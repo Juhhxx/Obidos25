@@ -9,7 +9,9 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 {
     [Header("Game Asset Library")]
     [Space(5f)]
-    [SerializeField, Expandable] private GameAssetLibrary _assetLibrary;
+    [SerializeField] private List<LocalizedScriptableObject<GameAssetLibrary>> _assetLibrarys;
+
+    private GameAssetLibrary _assetLibrary;
     public GameAssetLibrary AssetLibrary => _assetLibrary;
 
     // Military
@@ -113,7 +115,9 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     [Space(10f)]
     [Header("Cutscene")]
     [Space(5f)]
-    [SerializeField] private Cutscene _contextCutscene;
+
+    [SerializeField] private List<LocalizedScriptableObject<Cutscene>> _contextCutscenes;
+    private Cutscene _contextCutscene;
 
     [Space(10f)]
     [Header("Cheats")]
@@ -134,6 +138,9 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
 
     private void Start()
     {
+        _assetLibrary = LocalizedAssets.GetLocalization<LocalizedScriptableObject<GameAssetLibrary>>(_assetLibrarys, gameObject)?.ScriptableObject;
+        _contextCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_contextCutscenes, gameObject)?.ScriptableObject;
+
         CutsceneManager.Instance.PlayCutscene(_contextCutscene, () =>
         {
            _tutorialManager.StartDialogue();

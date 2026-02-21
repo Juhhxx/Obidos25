@@ -30,7 +30,7 @@ public class LocalizationUI : MonoBehaviour
 
     private const string SELECTEDLANG = "selectedLangIdx";
 
-    private void Start()
+    private void Awake()
     {
         SetUpLanguageMenu();
     }

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade0d608349ab464baf6ae98cbd00f63, type: 3}
+  m_Name: ContextCutscenePt
+  m_EditorClassIdentifier: Assembly-CSharp::Cutscene
+  _cutscenMusic: {fileID: 0}
+  _endButtonText: "Come\xE7ar"
+  _cutsceneBlocks:
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e1412be053c924d479e3c3413bde28ee, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Desde 1933, Portugal tem vivido sob o regime autorit\xE1rio do Estado Novo."
+    - "Este regime retirou v\xE1rias das liberdades do povo portugu\xEAs, que vive
+      com medo de ser preso pela pol\xEDcia secreta (PIDE)."
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 710a1cb7e5d55274bb2dcaa8de3b6448, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Em 1961, o regime come\xE7ou uma longa guerra\npelas suas possess\xF5es coloniais."
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e67f6a51bbbaab3488c8398994804f0f, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Esta guerra arrastou muitos jovens para \xC1frica, para lutar por um imp\xE9rio
+      em ru\xEDna."
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e2d146c46f2306340a87573d143765b3, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Ao longo dos anos, o descontentamento dentro do ex\xE9rcito come\xE7ou a crescer\u2026"
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: e81a0986fff818d4d8534a4412d3fc27, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Tu \xE9s um jovem recruta que se juntou a um grupo secreto de soldados insatisfeitos
+      com o regime."
+    - "Eles chamam-se Movimento dos Capit\xE3es."
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: f2980a1e49512754eb2c59821080cc63, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "1973\n\xD3bidos, Portugal"
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 155246877680e7c428035e2793447bd7, type: 3}
+    <CutsceneTexts>k__BackingField:
+    - "Uma reuni\xE3o secreta do grupo est\xE1 a ser realizada na Casa do Povo, sob
+      o pretexto de ser uma pe\xE7a de teatro."
+    - "O verdadeiro prop\xF3sito da reuni\xE3o:\ndiscutir um plano para derrubar
+      o regime!"
+    - Tu foste designado para guardar a entrada, deves questionar todos os atendentes
+      e ter a certeza que nenhum agente da PIDE tente entrar.
