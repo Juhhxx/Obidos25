@@ -49,7 +49,7 @@ public class WinCheck : MonoBehaviour
     {
         _winCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_winCutscenes, gameObject)?.ScriptableObject;
         _loseCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_loseCutscenes, gameObject)?.ScriptableObject;
-    }  
+    }
 
     public void SetPortaits()
     {

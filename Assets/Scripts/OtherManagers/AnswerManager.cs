@@ -19,10 +19,16 @@ public class AnswerManager : MonoBehaviour
     private Password Password => MilitaryManager.Instance.SelectedPassword;
     private WeekDay WeekDay => MilitaryManager.Instance.WeekDay;
 
-    [SerializeField] private List<string> _nameVariations;
-    [SerializeField] private List<string> _codeNameVariations;
-    [SerializeField] private List<string> _parkingVariations;
-    [SerializeField] private List<string> _locationVariations;
+    [Serializable]
+    public class VariationList
+    {
+        public List<LocalizedText> Variations;
+    }
+
+    [SerializeField] private List<VariationList> _nameVariations;
+    [SerializeField] private List<VariationList> _codeNameVariations;
+    [SerializeField] private List<VariationList> _parkingVariations;
+    [SerializeField] private List<VariationList> _locationVariations;
 
     private string _passwordAnswer;
     private string _codeNameAnswer;
@@ -131,27 +137,27 @@ public class AnswerManager : MonoBehaviour
     {
         int rnd = UnityEngine.Random.Range(0, _nameVariations.Count);
 
-        return string.Format(_nameVariations[rnd], name);
+        return string.Format(LocalizedAssets.GetLocalization<LocalizedText>(_nameVariations[rnd].Variations, gameObject).Text, name);
     }
 
     private string CodeNameVariations(string codename)
     {
         int rnd = UnityEngine.Random.Range(0, _codeNameVariations.Count);
 
-        return string.Format(_codeNameVariations[rnd], codename);
+        return string.Format(LocalizedAssets.GetLocalization<LocalizedText>(_codeNameVariations[rnd].Variations, gameObject).Text, codename);
     }
 
     private string  ParkingVariations(string parking)
     {
         int rnd = UnityEngine.Random.Range(0, _parkingVariations.Count);
 
-        return string.Format(_parkingVariations[rnd], parking);
+        return string.Format(LocalizedAssets.GetLocalization<LocalizedText>(_parkingVariations[rnd].Variations, gameObject).Text, parking);
     }
 
     private string LocationVariations(string location)
     {
         int rnd = UnityEngine.Random.Range(0, _locationVariations.Count);
 
-        return string.Format(_locationVariations[rnd], location);
+        return string.Format(LocalizedAssets.GetLocalization<LocalizedText>(_locationVariations[rnd].Variations, gameObject).Text, location);
     }
 }
