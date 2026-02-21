@@ -62,33 +62,49 @@ public class BookPageManager : MonoBehaviour
         if (page == 0)
         {
             _pageBackwardButton.enabled = false;
+            _pageBackwardButton.GetComponent<Button>().HighlightSR.enabled = false;
             Debug.Log("FIRST PAGE, HIDING BACKWORDS BUTTON");
 
             if (_firstPageButton != null)
             {
                 _pageForwardButton.enabled = false;
+                _pageForwardButton.GetComponent<Button>().HighlightSR.enabled = false;
             }
             
-            if (_backToStartButton != null) _backToStartButton.enabled = false;
+            if (_backToStartButton != null)
+            {
+                _backToStartButton.enabled = false;
+                _backToStartButton.GetComponent<Button>().HighlightSR.enabled = false;
+            }
 
             _coverFlipSound?.SoundPlay();
         }
         else if (page == _bookPages.Count - 1)
         {
             _pageForwardButton.enabled = false;
+            _pageForwardButton.GetComponent<Button>().HighlightSR.enabled = false;
+
             Debug.Log("LAST PAGE, HIDING FORWARDS BUTTON");
         }
 
         if (page > 0)
         {
-            if (_firstPageButton != null) _firstPageButton.enabled = false;
+            if (_firstPageButton != null)
+            {
+                _firstPageButton.enabled = false;
+                _firstPageButton.GetComponent<Button>().HighlightSR.enabled = false;
+            }
 
             _pageFlipSound?.SoundPlay();
         }
 
         if (page == 1)
         {
-            if (_backToStartButton != null)  _backToStartButton.enabled = false;
+            if (_backToStartButton != null)
+            {
+                _backToStartButton.enabled = false;
+                _backToStartButton.GetComponent<Button>().HighlightSR.enabled = false;
+            }
             
         }
 
