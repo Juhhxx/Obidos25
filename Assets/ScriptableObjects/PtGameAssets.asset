@@ -39,7 +39,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1a738725d753784fba091fac3eaa315, type: 2}
   - {fileID: 11400000, guid: 8ff798aa518203040914133bc23aca9b, type: 2}
   - {fileID: 11400000, guid: 483efc2c769f09441aa1b61cc59b1ffc, type: 2}
-  - {fileID: 11400000, guid: f24684143f1e1a94b971b45886c94a0a, type: 2}
   _divisionBadges:
   - {fileID: 11400000, guid: 31f6868be5ea7dc42b8a7810190c5636, type: 2}
   - {fileID: 11400000, guid: 77f961a3f732b044b9fccc404306f48d, type: 2}
