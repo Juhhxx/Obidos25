@@ -108,6 +108,8 @@ public class BookPageManager : MonoBehaviour
             
         }
 
+        PlayerInteraction.Instance.ResetInteractable();
+
         _currentPageIndex = page;
     }
 

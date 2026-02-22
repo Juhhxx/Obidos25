@@ -11,9 +11,6 @@ public class Button : Interactable
 
     private void Start()
     {
-        InteractBegin += OnButtonClickDown.Invoke;
-        InteractEnd += OnButtonClickUp.Invoke;
-
         Draggabble drag = GetComponentInParent<Draggabble>();
 
         if (drag != null)
@@ -22,6 +19,9 @@ public class Button : Interactable
             Interact        += drag.OnInteract;
             InteractEnd     += drag.OnInteractEnd;
         }
+
+        InteractBegin += OnButtonClickDown.Invoke;
+        InteractEnd += OnButtonClickUp.Invoke;
 
         HighlightSR = GetComponent<SpriteShapeRenderer>();
 
