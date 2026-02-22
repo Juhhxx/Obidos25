@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
-  m_Name: 11Marshal
+  m_Name: pt_3_Capitao
   m_EditorClassIdentifier: 
-  _name: Marshal
-  _badge: {fileID: 21300000, guid: 61d7ac566c992bf4e928ba11f36c570d, type: 3}
+  _name: "    Capit\xE3o"
+  _badge: {fileID: 21300000, guid: 575c00d97780929409e68a5ec418592f, type: 3}

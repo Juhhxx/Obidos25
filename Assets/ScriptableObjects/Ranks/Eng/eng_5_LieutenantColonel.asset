@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
-  m_Name: 4Major
-  m_EditorClassIdentifier: Assembly-CSharp::Rank
-  _name: Major
-  _badge: {fileID: 21300000, guid: c49dd81130fbd5a438023e0170e5ca1d, type: 3}
+  m_Name: eng_5_LieutenantColonel
+  m_EditorClassIdentifier: 
+  _name: Lieutenant Colonel
+  _badge: {fileID: 21300000, guid: e845206cbaaeeb64f9032cac25075bb7, type: 3}

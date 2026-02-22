@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b97fe308792ae2408811826c1259544, type: 3}
-  m_Name: Cavalry
+  m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
+  m_Name: pt_8_MajorGeneral
   m_EditorClassIdentifier: 
-  _name: Cavalaria
-  _badge: {fileID: 21300000, guid: 68cf32d90666f20419362d97592173dd, type: 3}
+  _name: '    Major General'
+  _badge: {fileID: 21300000, guid: a23ae8509c7c027489646da86de85356, type: 3}

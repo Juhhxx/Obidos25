@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
-  m_Name: 4Major
-  m_EditorClassIdentifier: Assembly-CSharp::Rank
-  _name: '    Major'
-  _badge: {fileID: 21300000, guid: c49dd81130fbd5a438023e0170e5ca1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b97fe308792ae2408811826c1259544, type: 3}
+  m_Name: Artilharia
+  m_EditorClassIdentifier: 
+  _name: Artilharia
+  _badge: {fileID: 21300000, guid: e028ce7d968786a4e8bc76210a7f1511, type: 3}

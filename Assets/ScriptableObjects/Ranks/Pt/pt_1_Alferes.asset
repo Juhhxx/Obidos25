@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
-  m_Name: 10General
-  m_EditorClassIdentifier: 
-  _name: '    General'
-  _badge: {fileID: 21300000, guid: db097590e710ac448a60bc13da530553, type: 3}
+  m_Name: pt_1_Alferes
+  m_EditorClassIdentifier: Assembly-CSharp::Rank
+  _name: '    Alferes'
+  _badge: {fileID: 21300000, guid: c294dc295ce003f4680454f6dc0ba9f7, type: 3}
