@@ -35,10 +35,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3e8f954279c35b24db0d67998ef1062d, type: 2}
   - {fileID: 11400000, guid: c559eb4d63ae9ae4098dfffa7fe57cf4, type: 2}
   - {fileID: 11400000, guid: b360f6858a080cd47a143229987da002, type: 2}
-  - {fileID: 11400000, guid: 8f8007092df144b4384dbdfcd4febf5c, type: 2}
-  - {fileID: 11400000, guid: a1a738725d753784fba091fac3eaa315, type: 2}
-  - {fileID: 11400000, guid: 8ff798aa518203040914133bc23aca9b, type: 2}
-  - {fileID: 11400000, guid: 483efc2c769f09441aa1b61cc59b1ffc, type: 2}
   _divisionBadges:
   - {fileID: 11400000, guid: 31f6868be5ea7dc42b8a7810190c5636, type: 2}
   - {fileID: 11400000, guid: 77f961a3f732b044b9fccc404306f48d, type: 2}

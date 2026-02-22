@@ -50,6 +50,7 @@ namespace Obidos25
         public void SetMole()
         {
             _isMole = true;
+            ResetWrongAnswers();
             SetWrongAnswers(true);
         }
 
@@ -95,56 +96,90 @@ namespace Obidos25
             return m;
         }
 
-        int minimumWrongAnswers = 3;
-        int maximunWrongAnswers = 6;
+        const int minimumWrongAnswers = 3;
+        const int maximunWrongAnswers = 6;
 
+        private void ResetWrongAnswers()
+        {
+            Debug.Log($"RESET WRONG ANSWERS FOR {Name}");
+            
+            _wrongAnswers = new Dictionary<string, bool>() {
+            {"password", false},
+            {"eye_color", false},
+            {"codename", false},
+            {"location", false},
+            {"parking", false},
+            {"division_badge", false},
+            {"rank_badge", false},
+            {"sprite", false},
+        };
+        }
         public void SetWrongAnswers(bool isMole)
         {
-            int wrongAnswers = 0;
+            if (!isMole) SetWrongNotMole();
+            else SetWrongMole();
+        }
 
-            foreach (DetailInfo detail in _detailInfo)
+        private void SetWrongNotMole()
+        {
+            Debug.Log($"EVALUATING {Name} AS NOT MOLE");
+
+            var tmp = _detailInfo
+                        .Where(detail => !detail.OnlyMoleWrong)
+                        .ToList();
+            
+
+            int wrongCounter = 0;
+
+            foreach (DetailInfo detail in tmp)
             {
+                string detailName = detail.Detail.ToLower().Replace(" ","_");
+
+                Debug.Log($"DECIDING {detailName}");
+
+                bool isWrong = WrongChance(detail.WrongProbabilityNotMole);
+
+                Debug.Log($"SET {detailName} AS WRONG ? {isWrong}");
+
+                _wrongAnswers[detailName] = isWrong;
+
+                if (isWrong) wrongCounter++;
+            }
+
+            Debug.Log($"{Name} HAS {wrongCounter} WRONG DETAILS");
+
+            return;       
+        }
+
+        private void SetWrongMole()
+        {
+            Debug.Log($"EVALUATING {Name} AS MOLE");
+
+            int wrongAnswers = Random.Range(minimumWrongAnswers, maximunWrongAnswers + 1);
+
+            Debug.Log($"{Name} HAS {wrongAnswers} WRONG DETAILS");
+
+            int wrong = 0;
+
+            while (wrong < wrongAnswers)
+            {
+                DetailInfo detail = _detailInfo[Random.Range(0, _detailInfo.Count)];
+
                 string detailName = detail.Detail.ToLower().Replace(" ","_");
 
                 Debug.Log($"DECIDING {detailName}");
 
                 if (_wrongAnswers[detailName]) continue;
 
-                bool answer = false;
+                // Try to make detail wrong
 
-                if (isMole)
-                {
-                    answer = WrongChance(detail.WrongProbability);
-                }
-                else
-                {
-                    if (!detail.OnlyMoleWrong) answer = WrongChance(detail.WrongProbabilityNotMole);
-                }
+                bool isWrong = WrongChance(detail.WrongProbability);
 
-                Debug.Log($"SET {detailName} AS WRONG ? {answer}");
+                Debug.Log($"SET {detailName} AS WRONG ? {isWrong}");
 
-                _wrongAnswers[detailName] = answer;
+                _wrongAnswers[detailName] = isWrong;
 
-                if (answer) wrongAnswers++;
-            }
-
-            if (isMole && wrongAnswers < minimumWrongAnswers)
-            {
-                Debug.Log($"ADDING MORE WORNG ANSWERS {minimumWrongAnswers - wrongAnswers}");
-
-                var tmp = _wrongAnswers
-                            .Where(kvp => !kvp.Value)
-                            .Select(kvp => kvp.Key)
-                            .ToList();
-
-                for (int i = 0; i < minimumWrongAnswers; i++)
-                {
-                    int rnd = Random.Range(0, tmp.Count);
-
-                    _wrongAnswers[tmp[rnd]] = true;
-
-                    tmp.RemoveAt(rnd);
-                }
+                if (isWrong) wrong++;
             }
         }
 
