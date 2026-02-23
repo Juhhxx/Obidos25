@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0a4b0b2894ef43b41b59ba5b869b74b9, type: 3}
+    - target: {fileID: 2391046443892205047, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
+      propertyPath: _localizationsSprites.Array.data[0].<Sprite>k__BackingField
+      value: 
+      objectReference: {fileID: 21300000, guid: 86cd03ba7a498484886e0f84e7890372, type: 3}
+    - target: {fileID: 2391046443892205047, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
+      propertyPath: _localizationsSprites.Array.data[1].<Sprite>k__BackingField
+      value: 
+      objectReference: {fileID: 21300000, guid: c7daca14dba45934f8e8f26011dc37eb, type: 3}
     - target: {fileID: 3940376192954431135, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
       propertyPath: _ticketType
       value: 1
@@ -52,6 +60,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6786856938327024469, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
+      propertyPath: _localizationsSprites.Array.data[0].<Sprite>k__BackingField
+      value: 
+      objectReference: {fileID: 21300000, guid: 1136a0b520771db45afeee26114052fd, type: 3}
+    - target: {fileID: 6786856938327024469, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
+      propertyPath: _localizationsSprites.Array.data[1].<Sprite>k__BackingField
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a4b0b2894ef43b41b59ba5b869b74b9, type: 3}
     - target: {fileID: 8304143366924785182, guid: 1190a501b520c6947a0dbd1979b59f3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

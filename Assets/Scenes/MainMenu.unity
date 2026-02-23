@@ -632,6 +632,7 @@ MonoBehaviour:
     <Text>k__BackingField: Back
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &240644293
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
     <Text>k__BackingField: Credits
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!114 &240644296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,6 +1652,7 @@ MonoBehaviour:
     <Text>k__BackingField: Instructions
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &690425088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1812,7 @@ MonoBehaviour:
     <Text>k__BackingField: Quit
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &859806059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +1970,7 @@ MonoBehaviour:
     <Text>k__BackingField: About
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &879617699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +2601,7 @@ MonoBehaviour:
     <Text>k__BackingField: Play
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1360184839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,6 +3887,7 @@ MonoBehaviour:
       reflecting their perspectives on heritage, society, and the future.'
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1001 &1349954827412790064
 PrefabInstance:
   m_ObjectHideFlags: 0

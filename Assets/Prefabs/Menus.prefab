@@ -959,6 +959,7 @@ MonoBehaviour:
     <Text>k__BackingField: Resolution
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &675555462639042737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1119,7 @@ MonoBehaviour:
     <Text>k__BackingField: Music
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &778880489166141573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1412,7 @@ MonoBehaviour:
     <Text>k__BackingField: Back
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1104604216307271539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1663,7 @@ MonoBehaviour:
       will be lost.)'
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1228564139968784881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1821,7 @@ MonoBehaviour:
     <Text>k__BackingField: Back
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1248757033449453818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,6 +2999,7 @@ MonoBehaviour:
     <SpritePressed>k__BackingField: {fileID: 21300000, guid: 999dc5e24b57fee44914d2a2fe60151c, type: 3}
     <SpriteSelected>k__BackingField: {fileID: 0}
     <SpriteDeactivated>k__BackingField: {fileID: 0}
+  _localizationsProjects: []
 --- !u!114 &4616095118774842679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,6 +3717,7 @@ MonoBehaviour:
     <Text>k__BackingField: Language can only be set from the main menu.
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &2486978176079101768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,6 +4369,7 @@ MonoBehaviour:
     <Text>k__BackingField: Proceed
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &3689931621494268301
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,6 +5705,7 @@ MonoBehaviour:
       be lost)'
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &4727311824279596046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,6 +6715,7 @@ MonoBehaviour:
     <Text>k__BackingField: Paused
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &5048150664081283338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6717,6 +6727,7 @@ GameObject:
   - component: {fileID: 8311620069262959221}
   - component: {fileID: 4306230499419946089}
   - component: {fileID: 6016339892875930577}
+  - component: {fileID: 3249006925463996182}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
@@ -6781,6 +6792,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3249006925463996182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048150664081283338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 1
+  _localizationsTexts: []
+  _localizationsSprites:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 910701f9a1ec49d47bb7f38b6bb3057a, type: 3}
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Sprite>k__BackingField: {fileID: 21300000, guid: 2c2b16e8061f6ad4db1c0a202fac9514, type: 3}
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &5102118583541208285
 GameObject:
   m_ObjectHideFlags: 0
@@ -6955,6 +6987,7 @@ MonoBehaviour:
     <SpritePressed>k__BackingField: {fileID: 21300000, guid: d4bea5bf98f0dd54892173bacfae3cea, type: 3}
     <SpriteSelected>k__BackingField: {fileID: 0}
     <SpriteDeactivated>k__BackingField: {fileID: 0}
+  _localizationsProjects: []
 --- !u!114 &954638212246847229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7655,6 +7688,7 @@ MonoBehaviour:
     <SpritePressed>k__BackingField: {fileID: 21300000, guid: d716af30135de4b46b5820200ccc49c8, type: 3}
     <SpriteSelected>k__BackingField: {fileID: 0}
     <SpriteDeactivated>k__BackingField: {fileID: 0}
+  _localizationsProjects: []
 --- !u!114 &8465444168741010053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7968,6 +8002,7 @@ MonoBehaviour:
     <Text>k__BackingField: Proceed
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &6080597802665775685
 GameObject:
   m_ObjectHideFlags: 0
@@ -8494,6 +8529,7 @@ MonoBehaviour:
     <SpritePressed>k__BackingField: {fileID: 21300000, guid: 64d64627fe523e240b0c816473af0a69, type: 3}
     <SpriteSelected>k__BackingField: {fileID: 0}
     <SpriteDeactivated>k__BackingField: {fileID: 0}
+  _localizationsProjects: []
 --- !u!114 &7720607369162641313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9404,6 +9440,7 @@ MonoBehaviour:
     <Text>k__BackingField: Ambience
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &7211075108001291382
 GameObject:
   m_ObjectHideFlags: 0
@@ -9692,6 +9729,7 @@ MonoBehaviour:
     <Text>k__BackingField: Language
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &7329854490069264331
 GameObject:
   m_ObjectHideFlags: 0
@@ -10172,6 +10210,7 @@ MonoBehaviour:
     <Text>k__BackingField: Back
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &7611002471963629752
 GameObject:
   m_ObjectHideFlags: 0
@@ -10366,6 +10405,7 @@ MonoBehaviour:
     <Text>k__BackingField: Sound Effects
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &7668809573437198453
 GameObject:
   m_ObjectHideFlags: 0
@@ -10859,6 +10899,7 @@ MonoBehaviour:
     <Text>k__BackingField: Back
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &8077632122154149232
 GameObject:
   m_ObjectHideFlags: 0
@@ -11016,6 +11057,7 @@ MonoBehaviour:
     <Text>k__BackingField: Options
   _localizationsSprites: []
   _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &8204059947685810353
 GameObject:
   m_ObjectHideFlags: 0
@@ -11572,6 +11614,7 @@ MonoBehaviour:
     <SpritePressed>k__BackingField: {fileID: 21300000, guid: d7728ec03ac7ba24c8821797094942a8, type: 3}
     <SpriteSelected>k__BackingField: {fileID: 0}
     <SpriteDeactivated>k__BackingField: {fileID: 0}
+  _localizationsProjects: []
 --- !u!114 &6503420563875667048
 MonoBehaviour:
   m_ObjectHideFlags: 0
