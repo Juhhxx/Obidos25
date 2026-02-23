@@ -5,7 +5,13 @@ using Obidos25;
 
 public class BookPageManager : MonoBehaviour
 {
-    [SerializeField] private List<Sprite> _bookPages;
+    [Serializable]
+    public class Page
+    {
+        [field: SerializeField] public List<LocalizedSprite> PageLocalizations { get; private set; }
+    }
+
+    [SerializeField] private List<Page> _bookPages;
 
     [SerializeField] private Collider2D _backToStartButton;
     [SerializeField] private Collider2D _firstPageButton;
@@ -35,11 +41,16 @@ public class BookPageManager : MonoBehaviour
             _firstPageButton.enabled = true;
             _pageForwardButton.enabled = false;
         }
+
+        ChangePage(0);
     }
 
     public void SetPageSprite(int page, Sprite spr) 
     {
-        _bookPages[page] = spr;
+        foreach (LocalizedSprite ls in _bookPages[page].PageLocalizations)
+        {
+            ls.UpdateSprite(spr);
+        }
 
         if (page == _currentPageIndex) ChangePage(page);
     }
@@ -55,7 +66,7 @@ public class BookPageManager : MonoBehaviour
         
         if (_backToStartButton != null) _backToStartButton.enabled = true;
 
-        _bookSR.sprite = _bookPages[page];
+        _bookSR.sprite = LocalizedAssets.GetLocalization<LocalizedSprite>(_bookPages[page].PageLocalizations, gameObject).Sprite;
 
         _collider.UpdateColliderBasedOnSprite(_bookSR.sprite);
 

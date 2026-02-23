@@ -50,6 +50,8 @@ public class LocalizedSprite : LocalizedAssets
 {
     [field: SerializeField, ShowAssetPreview] public Sprite Sprite { get; private set; }
 
+    public void UpdateSprite(Sprite spr) => Sprite = spr;
+
     public LocalizedSprite(Sprite sprite, Language language)
     {
         Sprite = sprite;
