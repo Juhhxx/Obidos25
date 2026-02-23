@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Monday
   m_EditorClassIdentifier: 
   <WeekDay>k__BackingField: 0
-  <CalendarSprite>k__BackingField: {fileID: 21300000, guid: 4b945a17109315e42836610c368b4251, type: 3}
+  <CalendarSprite>k__BackingField: {fileID: 21300000, guid: d43583788e588c140957a7745185eb1c, type: 3}

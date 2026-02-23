@@ -1,0 +1,27 @@
+﻿title: Start
+---
+Olá! Estou aqui para a peça, posso ter um bilhete?
+    -> Sim, só vou precisar de ver os seus documentos.
+
+Ok. Aqui estão.{give_documents()}
+    -> Qual é o seu nome?
+
+{get_military_name()}
+<<jump Options>>
+===
+
+title: Options
+---
+    -> {get_password_question()} (password)
+        {get_password_dialog()}
+        <<jump Options>>
+    -> Onde é que está colocado?
+        {get_location_dialog()}
+        <<jump Options>>
+    -> Qual é o seu nome de código?
+        {get_codename_dialog()}
+        <<jump Options>>
+    -> Onde é que estacionou a sua viatura?
+        {get_park_dialog()}
+        <<jump Options>>
+===

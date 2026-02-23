@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using System.Collections.Generic;
 using TMPro;
+using Yarn.Unity;
 
 public class LocalizedComponent : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class LocalizedComponent : MonoBehaviour
     [Header("Localization Variations")]
     [SerializeField, ShowIf("_assetType", LocalizationType.ButtonSprites)]
     private List<LocalizedButtonSprites> _localizationsButtonSprites;
+
+    [Header("Localization Variations")]
+    [SerializeField, ShowIf("_assetType", LocalizationType.YarnProject)]
+    private List<LocalizedYarnProject> _localizationsProjects;
 
     private void OnEnable()
     {
@@ -67,6 +72,11 @@ public class LocalizedComponent : MonoBehaviour
                 UnityEngine.UI.Button btt = GetComponent<UnityEngine.UI.Button>();
                 UpdateAsset(btt, lang);
                 break;
+            
+            case LocalizationType.YarnProject:
+                DialogueRunner runner = GetComponent<DialogueRunner>();
+                UpdateAsset(runner, lang);
+                break;
         }
     }
 
@@ -92,4 +102,8 @@ public class LocalizedComponent : MonoBehaviour
 
         button.spriteState = spriteState;
     }
+
+    private void UpdateAsset(DialogueRunner tmp, Language lang) =>
+    tmp.SetProject(LocalizedAssets.GetLocalization<LocalizedYarnProject>(lang, _localizationsProjects, gameObject).Project);
+
 }

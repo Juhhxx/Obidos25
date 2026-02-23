@@ -3,5 +3,6 @@ public enum LocalizationType
     TMP,
     Image,
     SpriteRenderer,
-    ButtonSprites
+    ButtonSprites,
+    YarnProject
 }

@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Yarn.Unity;
 
-// Classes that define a text/sprite and what language it represents
+// Classes that define a text/sprite/etc and what language it represents
 public abstract class LocalizedAssets
 {
     [field: AllowNesting]
@@ -86,6 +87,19 @@ public class LocalizedScriptableObject<T> : LocalizedAssets where T : Scriptable
     public LocalizedScriptableObject(T scriptableObject, Language language)
     {
         ScriptableObject = scriptableObject;
+
+        Language = language;
+    }
+}
+
+[Serializable]
+public class LocalizedYarnProject : LocalizedAssets
+{
+    [field: SerializeField] public YarnProject Project { get; private set; }
+
+    public LocalizedYarnProject(YarnProject project, Language language)
+    {
+        Project = project;
 
         Language = language;
     }
