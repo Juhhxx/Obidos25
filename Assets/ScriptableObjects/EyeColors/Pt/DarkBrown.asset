@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28eeaf4761be20b449f7192a4da35cb7, type: 3}
   m_Name: DarkBrown
   m_EditorClassIdentifier: Assembly-CSharp::EyeColor
-  <Name>k__BackingField: Castanho Escuro
+  <Name>k__BackingField: Cast. Escuros
   <Color>k__BackingField: {r: 0.31446534, g: 0.19416602, b: 0.09987733, a: 1}

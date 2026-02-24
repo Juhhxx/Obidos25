@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: b91084fc304fa3347b2612e8294b533d, type: 2}
   <ID>k__BackingField: 010203045618
   <Height>k__BackingField: 181
-  <Features>k__BackingField: Scar on lip
+  <Features>k__BackingField: '   Scar on lip'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 6571bed7aabebe44388767305409eb2f, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: dbf2c062091116d45bf8bc5be33ec909, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: e4e96770d8b47a94ea07629046f7a54b, type: 2}

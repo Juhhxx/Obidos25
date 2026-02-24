@@ -25,7 +25,7 @@ namespace Obidos25
         [field: Expandable]
         [field: SerializeField] public Rank Rank { get; private set; }
 
-        public string Regiment => "R" + Division?.Name[0] + Location?.IdRegion;
+        public string Regiment => "R" + Division?.Name.Replace(" ","")[0] + Location?.IdRegion;
 
         [field: SerializeField] public string ID { get; private set; }
         [field: SerializeField] public float Height { get; private set; }

@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 3241482319507661412}
   - component: {fileID: 7479003099549977977}
   - component: {fileID: 4791735096035563015}
+  - component: {fileID: 5034250906431821741}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -186,6 +187,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5034250906431821741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299073066183613242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Cr\xE9ditos a terceiros"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 3rd party credits
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &462622880118388516
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +356,7 @@ GameObject:
   - component: {fileID: 6792389831845880684}
   - component: {fileID: 1429927463936110013}
   - component: {fileID: 805661685365679682}
+  - component: {fileID: 625848229384835108}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -461,6 +484,32 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &625848229384835108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836809553352210924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "O C.F.I. n\xE3o \xE9 patrocinado nem est\xE1 associado
+      \xE0 Unity Technologies ou \xE0s suas afiliadas. \"Unity\" e o Log\xF3tipo
+      da Unity s\xE3o marcas registadas da Unity Technologies ou das suas afiliadas
+      nos EUA e noutros pa\xEDses."
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: Mole Catcher is not sponsored by or affiliated with Unity
+      Technologies or its affiliates. "Unity" and the Unity logo are trademarks of
+      Unity Technologies or its affiliates in the U.S. and elsewhere.
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &839189609081749303
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +747,7 @@ GameObject:
   - component: {fileID: 747749093042684515}
   - component: {fileID: 1257942773975035325}
   - component: {fileID: 3471480932181986559}
+  - component: {fileID: 340024168014812066}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -823,6 +873,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &340024168014812066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518663942534239422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "C\xE2mara Municipal de \xD3bidos"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "\xD3bidos City Hall"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1598102895303580704
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +905,7 @@ GameObject:
   - component: {fileID: 4938377875717616998}
   - component: {fileID: 1354588500971311029}
   - component: {fileID: 1194665209399343644}
+  - component: {fileID: 3683947211438483790}
   m_Layer: 5
   m_Name: Title (2)
   m_TagString: Untagged
@@ -892,6 +964,7 @@ MonoBehaviour:
 
     and
     its original assets are released under the CC BY 4.0 license.
+
 
     For additional
     information, visit
@@ -969,6 +1042,40 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3683947211438483790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598102895303580704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "O c\xF3digo-fonte de C.F.I. \xE9 distribu\xEDdo sob a
+      Licen\xE7a GPLv3 e os\nseus recursos originais s\xE3o distribu\xEDdos sob a
+      Licen\xE7a CC BY 4.0.\n\nPara mais informa\xE7\xF5es, visite\nhttps://epic-we.au.dk/featured-games/mole-catcher\n"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Mole Catcher''s source code is released under the GPLv3
+      license
+
+      and its original assets are released under the CC BY 4.0 license.
+
+
+      For
+      additional information, visit
+
+      https://epic-we.au.dk/featured-games/mole-catcher
+
+'
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &1719156703575466657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1315,7 @@ GameObject:
   - component: {fileID: 8368971143305529450}
   - component: {fileID: 3263369589195631784}
   - component: {fileID: 4526957955159509038}
+  - component: {fileID: 8142729782483235533}
   m_Layer: 5
   m_Name: Names
   m_TagString: Untagged
@@ -1334,6 +1442,29 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8142729782483235533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346702189831007019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Jos\xE9 Santos (Diretor)\nMiguel Ferreira (Coordenador)\nFilomena
+      Sousa\nGil Ribeiro\nJos\xE9 Penha\nMarisa Matias"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "Jos\xE9 Santos (Director)\nMiguel Ferreira (Coordinator)\nFilomena
+      Sousa\nGil Ribeiro\nJos\xE9 Penha\nMarisa Matias"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &2634216295698689821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1476,7 @@ GameObject:
   - component: {fileID: 1155643289044763062}
   - component: {fileID: 190064476790487916}
   - component: {fileID: 3029546879363442259}
+  - component: {fileID: 889218690999299477}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1470,6 +1602,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &889218690999299477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2634216295698689821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Um prot\xF3tipo de jogo cultural pela BATTLESHEEP"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: A cultural game prototype by BATTLESHEEP
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &2810611274226420485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1816,9 @@ GameObject:
   - component: {fileID: 6919675162397660501}
   - component: {fileID: 2174909273738763811}
   - component: {fileID: 5459087933572846429}
+  - component: {fileID: 3489648858289994010}
+  - component: {fileID: 6302582622646355553}
+  - component: {fileID: 7754043082766623065}
   m_Layer: 5
   m_Name: Credits Scene
   m_TagString: Untagged
@@ -1691,7 +1847,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2174909273738763811
 Animator:
@@ -1757,6 +1913,57 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!222 &3489648858289994010
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934998230234237016}
+  m_CullTransparentMesh: 1
+--- !u!114 &6302582622646355553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934998230234237016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7754043082766623065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934998230234237016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
+  m_ShowMaskGraphic: 0
 --- !u!1 &3107381629981144787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +1975,7 @@ GameObject:
   - component: {fileID: 2587890688692910998}
   - component: {fileID: 1712570960996615474}
   - component: {fileID: 6126326847776726194}
+  - component: {fileID: 1738730536440084353}
   m_Layer: 5
   m_Name: Roles
   m_TagString: Untagged
@@ -1904,6 +2112,39 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1738730536440084353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107381629981144787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Productor\nAssistente de Produ\xE7\xE3o\nArtista e Developer\nProgramador
+      e Developer\nArtista e Developer\nDesigner de Som"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: 'Producer
+
+      Assistant Producer
+
+      Artist & Developer
+
+      Programmer
+      & Developer
+
+      Artist & Developer
+
+      Sound Designer'
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &3276828107862493043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,7 +2882,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1079.4729}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &564394053921569468
 CanvasRenderer:
@@ -3295,6 +3536,7 @@ GameObject:
   - component: {fileID: 7393391230084616417}
   - component: {fileID: 4903079338646980833}
   - component: {fileID: 9179920292583706187}
+  - component: {fileID: 6620118554015707093}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -3420,6 +3662,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6620118554015707093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899429267142312492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: Este jogo foi desenvolvido em Unity.
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: This game was developed with Unity.
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &6216776195507864729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,6 +3769,7 @@ GameObject:
   - component: {fileID: 3822925753296842619}
   - component: {fileID: 7537447331296486902}
   - component: {fileID: 8964366540731577247}
+  - component: {fileID: 7265650360548933331}
   m_Layer: 5
   m_Name: Names
   m_TagString: Untagged
@@ -3634,6 +3898,33 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7265650360548933331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6282272136104523057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Filipe Daniel (Presidente)\nNuno Gaio (Chefe de Gabinete)\nBertina
+      Pinheiro\nBruno Silva\nCarlos Coutinho\nDenilson Andrade\nJo\xE3o Pedro Tormenta\nJoaquim
+      Paulo\nJos\xE9 Lopes\nNelson Lan\xE7a\nNuno Santos\nOct\xE1vio Pinto\nPatr\xEDcia
+      Roque\nPaulo Capinha\nPedro Pereira\nSusana Abrantes\nSuzana Nobre"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "Filipe Daniel (Mayor)\nNuno Gaio (Chief of Staff)\nBertina
+      Pinheiro\nBruno Silva\nCarlos Coutinho\nDenilson Andrade\nJo\xE3o Pedro Tormenta\nJoaquim
+      Paulo\nJos\xE9 Lopes\nNelson Lan\xE7a\nNuno Santos\nOct\xE1vio Pinto\nPatr\xEDcia
+      Roque\nPaulo Capinha\nPedro Pereira\nSusana Abrantes\nSuzana Nobre"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &6337449951031702804
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +5243,7 @@ GameObject:
   - component: {fileID: 6130081879144403351}
   - component: {fileID: 2610560698635426389}
   - component: {fileID: 356192790380097748}
+  - component: {fileID: 541160865720293970}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -5077,6 +5369,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &541160865720293970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650360314692957006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Universidade Lus\xF3fona"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "Lus\xF3fona University"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &7687243206187146706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,6 +5621,7 @@ GameObject:
   - component: {fileID: 7533923952346639349}
   - component: {fileID: 4744934125569562882}
   - component: {fileID: 848714985974009158}
+  - component: {fileID: 5069080391128906152}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -5433,6 +5747,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5069080391128906152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405045263680160584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Agrupamento de Escolas Josefa de \xD3bidos"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "Josefa de \xD3bidos Cluster of Schools"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &8429378149788808765
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,6 +5952,7 @@ GameObject:
   - component: {fileID: 3923719641166524979}
   - component: {fileID: 4019265511436523635}
   - component: {fileID: 2534868242916733632}
+  - component: {fileID: 2212374198295081784}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -5742,6 +6078,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2212374198295081784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996883382540252709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Munic\xEDpio de \xD3bidos"
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "\xD3bidos Municipality"
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []
 --- !u!1 &9012971708656634321
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,6 +6147,7 @@ GameObject:
   - component: {fileID: 5720456478462963963}
   - component: {fileID: 3814138740922089142}
   - component: {fileID: 6783765225847828368}
+  - component: {fileID: 5588829179600976392}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -5844,12 +6202,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mole Catcher is part of EPIC-WE's deliverables.\nEPIC-WE has received
-    funding from the European Union\u2019s Horizon Europe research and innovation
-    program under grant agreement No 10109505. Views and opinions expressed are however
-    those of the author(s) only and do not necessarily reflect those of the European
-    Union or European Commission. Neither the European Union nor the granting authority
-    can be held responsible for them."
+  m_text: "Mole Catcher faz parte dos entreg\xE1veis do EPIC-WE.\nO EPIC-WE recebeu
+    financiamento do programa de investiga\xE7\xE3o e inova\xE7\xE3o Horizon Europe
+    da Uni\xE3o Europeia sob o acordo de subven\xE7\xE3o n.\xBA 10109505. No entanto,
+    as opini\xF5es expressas s\xE3o apenas dos autores e n\xE3o refletem necessariamente
+    as da Uni\xE3o Europeia ou da Comiss\xE3o Europeia. Nem a Uni\xE3o Europeia nem
+    a autoridade concedente podem ser responsabilizadas por elas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
   m_sharedMaterial: {fileID: -4103482558663496831, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -5920,3 +6278,35 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5588829179600976392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138543906267309894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dda90162e1db44fa71794f6d41dca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedComponent
+  _assetType: 0
+  _localizationsTexts:
+  - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
+    <Text>k__BackingField: "Mole Catcher faz parte dos entreg\xE1veis do EPIC-WE.\nO
+      EPIC-WE recebeu financiamento do programa de investiga\xE7\xE3o e inova\xE7\xE3o
+      Horizon Europe da Uni\xE3o Europeia sob o acordo de subven\xE7\xE3o n.\xBA
+      10109505. No entanto, as opini\xF5es expressas s\xE3o apenas dos autores e
+      n\xE3o refletem necessariamente as da Uni\xE3o Europeia ou da Comiss\xE3o Europeia.
+      Nem a Uni\xE3o Europeia nem a autoridade concedente podem ser responsabilizadas
+      por elas."
+  - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
+    <Text>k__BackingField: "Mole Catcher is part of EPIC-WE's deliverables.\nEPIC-WE
+      has received funding from the European Union\u2019s Horizon Europe research
+      and innovation program under grant agreement No 10109505. Views and opinions
+      expressed are however those of the author(s) only and do not necessarily reflect
+      those of the European Union or European Commission. Neither the European Union
+      nor the granting authority can be held responsible for them."
+  _localizationsSprites: []
+  _localizationsButtonSprites: []
+  _localizationsProjects: []

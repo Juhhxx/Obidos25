@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
   m_Name: pt_8_MajorGeneral
   m_EditorClassIdentifier: 
-  _name: '    Major General'
+  _name: Major General
   _badge: {fileID: 21300000, guid: a23ae8509c7c027489646da86de85356, type: 3}

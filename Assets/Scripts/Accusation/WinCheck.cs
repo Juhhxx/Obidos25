@@ -45,6 +45,9 @@ public class WinCheck : MonoBehaviour
     [SerializeField] private List<LocalizedScriptableObject<Cutscene>> _loseCutscenes;
     private Cutscene _loseCutscene;
 
+    [SerializeField] private List<LocalizedText> _moleTextLocalizations;
+    [SerializeField] private List<LocalizedText> _moleNameLocalizations;
+
     private void Start()
     {
         _winCutscene = LocalizedAssets.GetLocalization<LocalizedScriptableObject<Cutscene>>(_winCutscenes, gameObject)?.ScriptableObject;
@@ -53,9 +56,11 @@ public class WinCheck : MonoBehaviour
 
     public void SetPortaits()
     {
-        string mole = _numberOfMoles > 1 ? "moles" : "mole";
+        string mole = _numberOfMoles > 1 ? LocalizedAssets.GetLocalization<LocalizedText>(_moleNameLocalizations, gameObject).Text + "s" : LocalizedAssets.GetLocalization<LocalizedText>(_moleNameLocalizations, gameObject).Text;
 
-        _bufoNumber.text = $"Can you identify the\n<b>{_numberOfMoles} {mole}</b> attending\nthe event?";
+        string text = LocalizedAssets.GetLocalization<LocalizedText>(_moleTextLocalizations, gameObject).Text;
+
+        _bufoNumber.text = string.Format(text, _numberOfMoles, mole);
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {

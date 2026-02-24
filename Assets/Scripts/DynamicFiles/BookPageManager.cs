@@ -55,7 +55,7 @@ public class BookPageManager : MonoBehaviour
         if (page == _currentPageIndex) ChangePage(page);
     }
 
-    private void ChangePage(int page)
+    private void ChangePage(int page, bool reset = true)
     {
         if (page < 0 || page >= _bookPages.Count) return;
 
@@ -73,19 +73,26 @@ public class BookPageManager : MonoBehaviour
         if (page == 0)
         {
             _pageBackwardButton.enabled = false;
-            _pageBackwardButton.GetComponent<Button>().HighlightSR.enabled = false;
+
+            Button bttn = _pageBackwardButton.GetComponent<Button>();
+            if (bttn.HighlightSR != null) bttn.HighlightSR.enabled = false;
+
             Debug.Log("FIRST PAGE, HIDING BACKWORDS BUTTON");
 
             if (_firstPageButton != null)
             {
                 _pageForwardButton.enabled = false;
-                _pageForwardButton.GetComponent<Button>().HighlightSR.enabled = false;
+
+                Button btt = _pageForwardButton.GetComponent<Button>();
+                if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
             }
             
             if (_backToStartButton != null)
             {
                 _backToStartButton.enabled = false;
-                _backToStartButton.GetComponent<Button>().HighlightSR.enabled = false;
+
+                Button btt = _backToStartButton.GetComponent<Button>();
+                if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
             }
 
             _coverFlipSound?.SoundPlay();
@@ -93,7 +100,9 @@ public class BookPageManager : MonoBehaviour
         else if (page == _bookPages.Count - 1)
         {
             _pageForwardButton.enabled = false;
-            _pageForwardButton.GetComponent<Button>().HighlightSR.enabled = false;
+            
+            Button btt = _pageForwardButton.GetComponent<Button>();
+            if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
 
             Debug.Log("LAST PAGE, HIDING FORWARDS BUTTON");
         }
@@ -103,7 +112,9 @@ public class BookPageManager : MonoBehaviour
             if (_firstPageButton != null)
             {
                 _firstPageButton.enabled = false;
-                _firstPageButton.GetComponent<Button>().HighlightSR.enabled = false;
+                
+                Button btt = _firstPageButton.GetComponent<Button>();
+                if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
             }
 
             _pageFlipSound?.SoundPlay();
@@ -114,12 +125,14 @@ public class BookPageManager : MonoBehaviour
             if (_backToStartButton != null)
             {
                 _backToStartButton.enabled = false;
-                _backToStartButton.GetComponent<Button>().HighlightSR.enabled = false;
+                
+                Button btt = _backToStartButton.GetComponent<Button>();
+                if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
             }
             
         }
 
-        PlayerInteraction.Instance.ResetInteractable();
+        if (reset) PlayerInteraction.Instance.ResetInteractable();
 
         _currentPageIndex = page;
     }
@@ -132,5 +145,5 @@ public class BookPageManager : MonoBehaviour
     }
 
     public void GoToFirstPage() => ChangePage(1);
-    public void Reset() => ChangePage(0);
+    public void Reset() => ChangePage(0, false);
 }

@@ -315,6 +315,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1044,6 +1047,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1492,6 +1498,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2167,6 +2176,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2366,6 +2378,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3089,6 +3104,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3553,6 +3571,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   OnPointerDownEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3866,15 +3887,13 @@ MonoBehaviour:
   _assetType: 0
   _localizationsTexts:
   - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
-    <Text>k__BackingField: 'This game was developed in collaboration with young game
-      jammers as part of the EPIC-WE project.
-
-
-      EPIC-WE is an EU-funded initiative
-      that brings together young creatives, cultural institutions, and game industry
-      professionals to explore and express cultural values with game-making. Through
-      a series of game jams, participants designed and developed unique experiences
-      reflecting their perspectives on heritage, society, and the future.'
+    <Text>k__BackingField: "Este jogo foi desenvolvido em colabora\xE7\xE3o com jovens
+      participantes de game jams no \xE2mbito do projeto EPIC-WE.\n\nO EPIC-WE \xE9
+      uma iniciativa financiada pela UE que re\xFAne jovens criativos, institui\xE7\xF5es
+      culturais e profissionais da ind\xFAstria dos videojogos para explorar e expressar
+      valores culturais com a cria\xE7\xE3o de jogos. Atrav\xE9s de uma s\xE9rie
+      de game jams, os participantes conceberam e desenvolveram experi\xEAncias \xFAnicas
+      que refletem as suas perspetivas sobre o patrim\xF3nio, a sociedade e o futuro."
   - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
     <Text>k__BackingField: 'This game was developed in collaboration with young game
       jammers as part of the EPIC-WE project.
@@ -3906,10 +3925,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667457071901681314, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018890738534648650, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1311296466572198252, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
@@ -4020,10 +4035,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3457445736609759801, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3923719641166524979, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4036,10 +4047,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4530322742622824118, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4580752059912492878, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4050,14 +4057,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580752059912492878, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641381891776627350, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4641381891776627350, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5873244872053227313, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
@@ -4107,30 +4106,6 @@ PrefabInstance:
     - target: {fileID: 6681742193032633263, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919675162397660501, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7145595431908852216, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4183,73 +4158,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2934998230234237016, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349954827412790068}
-    - targetCorrespondingSourceObject: {fileID: 2934998230234237016, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349954827412790067}
-    - targetCorrespondingSourceObject: {fileID: 2934998230234237016, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349954827412790066}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
---- !u!1 &1349954827412790065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2934998230234237016, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
-  m_PrefabInstance: {fileID: 1349954827412790064}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1349954827412790066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349954827412790065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
-  m_ShowMaskGraphic: 0
---- !u!114 &1349954827412790067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349954827412790065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1349954827412790068
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349954827412790065}
-  m_CullTransparentMesh: 1
 --- !u!114 &2067281540669725293
 MonoBehaviour:
   m_ObjectHideFlags: 0

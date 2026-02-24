@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 1fb843b9ac8adc44da07e06493ca0ade, type: 2}
   <ID>k__BackingField: 042599000115
   <Height>k__BackingField: 172
-  <Features>k__BackingField: Unibrow
+  <Features>k__BackingField: '   Unibrow'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 1c3741203208ab84c8358389f4b66b04, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 43e68066d7238b549b6bcb889b0f1753, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: ce7e5462b713b104092b2e2309fa563a, type: 2}

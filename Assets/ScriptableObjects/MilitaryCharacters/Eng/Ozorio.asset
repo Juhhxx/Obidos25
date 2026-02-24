@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 1fb843b9ac8adc44da07e06493ca0ade, type: 2}
   <ID>k__BackingField: 022001000710
   <Height>k__BackingField: 166
-  <Features>k__BackingField: Crooked nose
+  <Features>k__BackingField: '   Crooked nose'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 1c3741203208ab84c8358389f4b66b04, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: f42bc3e54f01a5140a4cc77e36a1a9c4, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: b76ee57412f62644ab297c7a1f60854f, type: 2}

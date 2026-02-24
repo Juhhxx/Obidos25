@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de801b30e283eb43a0fca00447a77e2, type: 3}
   m_Name: pt_11_Marechal
   m_EditorClassIdentifier: 
-  _name: '    Marechal'
+  _name: Marechal
   _badge: {fileID: 21300000, guid: 61d7ac566c992bf4e928ba11f36c570d, type: 3}

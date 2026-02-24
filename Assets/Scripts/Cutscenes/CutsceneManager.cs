@@ -26,7 +26,8 @@ public class CutsceneManager : MonoBehaviourSingleton<CutsceneManager>
 
     public void PlayCutscene(Cutscene cutscene, Action onFinished = null)
     {
-        _cutsceneMusic?.SoundPlay(cutscene.CutsceneMusic);
+        if (cutscene.CutsceneMusic != null) _cutsceneMusic?.SoundPlay(cutscene.CutsceneMusic);
+        else AudioManager.Instance.MusicPlayer.StopMusic();
         
         StopAllCoroutines();
         StartCoroutine(PlayCutsceneCR(cutscene, onFinished));
