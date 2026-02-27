@@ -27,6 +27,7 @@ public class PlaySound : MonoBehaviour
         _audioSource = gameObject.AddComponent<AudioSource>();
 
         _audioSource.loop = _loop;
+        _audioSource.playOnAwake = false;
 
         if (_playOnStart) SoundPlay();
     }

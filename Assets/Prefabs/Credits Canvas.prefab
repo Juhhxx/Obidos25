@@ -1059,7 +1059,7 @@ MonoBehaviour:
   - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
     <Text>k__BackingField: "O c\xF3digo-fonte de C.F.I. \xE9 distribu\xEDdo sob a
       Licen\xE7a GPLv3 e os\nseus recursos originais s\xE3o distribu\xEDdos sob a
-      Licen\xE7a CC BY 4.0.\n\nPara mais informa\xE7\xF5es, visite\nhttps://epic-we.au.dk/featured-games/mole-catcher\n"
+      Licen\xE7a CC BY 4.0.\n\nPara mais informa\xE7\xF5es, visite:\nhttps://epic-we.au.dk/featured-games/mole-catcher\n"
   - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
     <Text>k__BackingField: 'Mole Catcher''s source code is released under the GPLv3
       license
@@ -1068,7 +1068,7 @@ MonoBehaviour:
 
 
       For
-      additional information, visit
+      additional information, visit:
 
       https://epic-we.au.dk/featured-games/mole-catcher
 

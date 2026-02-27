@@ -3891,7 +3891,7 @@ MonoBehaviour:
       participantes de game jams no \xE2mbito do projeto EPIC-WE.\n\nO EPIC-WE \xE9
       uma iniciativa financiada pela UE que re\xFAne jovens criativos, institui\xE7\xF5es
       culturais e profissionais da ind\xFAstria dos videojogos para explorar e expressar
-      valores culturais com a cria\xE7\xE3o de jogos. Atrav\xE9s de uma s\xE9rie
+      valores culturais com a cria\xE7\xE3o de jogos.\nAtrav\xE9s de uma s\xE9rie
       de game jams, os participantes conceberam e desenvolveram experi\xEAncias \xFAnicas
       que refletem as suas perspetivas sobre o patrim\xF3nio, a sociedade e o futuro."
   - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
@@ -3901,7 +3901,9 @@ MonoBehaviour:
 
       EPIC-WE is an EU-funded initiative
       that brings together young creatives, cultural institutions, and game industry
-      professionals to explore and express cultural values with game-making. Through
+      professionals to explore and express cultural values with game-making.
+
+      Through
       a series of game jams, participants designed and developed unique experiences
       reflecting their perspectives on heritage, society, and the future.'
   _localizationsSprites: []
