@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour
     [Space(5f)]
     [SerializeField] private GameObject _dialogueSystem;
     [SerializeField] private string _tutorialDialog;
+    [SerializeField] private PlaySound _giveAllSound;
     private DialogueRunner _dialogueRunner;
     private LineView _dialogueView;
     private InMemoryVariableStorage _dialogueVariables;
@@ -145,6 +146,7 @@ public class TutorialManager : MonoBehaviour
         // MilitaryManager.Instance.GiveCodenames();~
         
         MilitaryManager.Instance.ShowEverythig();
+        _giveAllSound.SoundPlay();
         return "";
     }
 }
