@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 039e9c61e217f4f498bd56b77ce1083b, type: 2}
   <ID>k__BackingField: '   030102010023'
   <Height>k__BackingField: 175
-  <Features>k__BackingField: Nariz grande
+  <Features>k__BackingField: '   Nariz grande'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 9843b05c03537e54ca32109cf605fe04, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 4eed1d2f590216f49b4fb3da781aa16b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 979b760f0c161d94b8b434f0459184e6, type: 2}

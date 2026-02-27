@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 8c06fe0611de9094d9d445a3aa6e2573, type: 2}
   <ID>k__BackingField: '   042599000115'
   <Height>k__BackingField: 172
-  <Features>k__BackingField: Monocelha
+  <Features>k__BackingField: '   Monocelha'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 1c3741203208ab84c8358389f4b66b04, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 43e68066d7238b549b6bcb889b0f1753, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: ce7e5462b713b104092b2e2309fa563a, type: 2}

@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 8c06fe0611de9094d9d445a3aa6e2573, type: 2}
   <ID>k__BackingField: '   050101000223'
   <Height>k__BackingField: 183
-  <Features>k__BackingField: Cabelo longo
+  <Features>k__BackingField: '   Cabelo longo'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: d7490e5ef1ac516458fd438244f4f742, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 037ecbfdcf74363418f5930d4f937972, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 33cf9297a3fa51c44bcba440ffab0a61, type: 2}

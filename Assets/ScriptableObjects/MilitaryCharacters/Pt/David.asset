@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 8c06fe0611de9094d9d445a3aa6e2573, type: 2}
   <ID>k__BackingField: '   020101000111'
   <Height>k__BackingField: 180
-  <Features>k__BackingField: Sobrancelhas distintas
+  <Features>k__BackingField: '   Sobrancelhas distintas'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 9843b05c03537e54ca32109cf605fe04, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 54e244b56d0224746832f26ca0bfb614, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: a03901c961b3e5b4198393d37f68c3e4, type: 2}

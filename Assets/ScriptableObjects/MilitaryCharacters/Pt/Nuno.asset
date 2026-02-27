@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 039e9c61e217f4f498bd56b77ce1083b, type: 2}
   <ID>k__BackingField: '   010300999928'
   <Height>k__BackingField: 179
-  <Features>k__BackingField: "\xD3culos quadrados"
+  <Features>k__BackingField: "   \xD3culos quadrados"
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 5e345230b069f734689e2e07c6e5ce71, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 54e244b56d0224746832f26ca0bfb614, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: acccf2ab5506a7e4fb047230f2c5d926, type: 2}

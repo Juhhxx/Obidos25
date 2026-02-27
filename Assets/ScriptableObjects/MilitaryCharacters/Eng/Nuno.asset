@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 02354f94f47869e45922aede9502f5c6, type: 2}
   <ID>k__BackingField: 010300999928
   <Height>k__BackingField: 179
-  <Features>k__BackingField: '   Square glasses'
+  <Features>k__BackingField: Square glasses
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 6571bed7aabebe44388767305409eb2f, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 54e244b56d0224746832f26ca0bfb614, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: acccf2ab5506a7e4fb047230f2c5d926, type: 2}

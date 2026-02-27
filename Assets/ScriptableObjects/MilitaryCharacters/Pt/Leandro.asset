@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 68c6424e14d430740b2de62fe1c9615b, type: 2}
   <ID>k__BackingField: '   031100123433'
   <Height>k__BackingField: 170
-  <Features>k__BackingField: Queixo dividido
+  <Features>k__BackingField: '   Queixo dividido'
   <EyeColor>k__BackingField: {fileID: 11400000, guid: f202595339564c34da9353fac089a236, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 900f2c9a654aefa419b82f32fd0a254b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 999c885bb502f804bbb9c57974ec037c, type: 2}

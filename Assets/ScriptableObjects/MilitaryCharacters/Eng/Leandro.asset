@@ -18,7 +18,7 @@ MonoBehaviour:
   <Rank>k__BackingField: {fileID: 11400000, guid: 70f662529296aa24e88699d1921b9572, type: 2}
   <ID>k__BackingField: 031100123433
   <Height>k__BackingField: 170
-  <Features>k__BackingField: '   Split chin'
+  <Features>k__BackingField: Split chin
   <EyeColor>k__BackingField: {fileID: 11400000, guid: 59a79892d37f8ff44aa3eddbe3bdca86, type: 2}
   <ParkingSpot>k__BackingField: {fileID: 11400000, guid: 900f2c9a654aefa419b82f32fd0a254b, type: 2}
   <Location>k__BackingField: {fileID: 11400000, guid: 999c885bb502f804bbb9c57974ec037c, type: 2}
