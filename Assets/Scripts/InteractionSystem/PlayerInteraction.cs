@@ -35,10 +35,10 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
 
         ((Draggabble)_curentInteractable).ResetOffSet();
     }
-    public void ResetInteractable()
+    public void ResetInteractable(bool stillInteracting = false)
     {
         _curentInteractable?.OnInteractEnd();
-        _isInteracting = false;
+        _isInteracting = stillInteracting;
         _curentInteractable = null;
     }
 

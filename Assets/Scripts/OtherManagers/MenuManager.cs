@@ -19,6 +19,8 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
     private bool _canPause = true;
     public bool CanPause { get => _canPause; set => _canPause = value; }
+    public void SetCanPause() => _canPause = true;
+    public void SetCantPause() => _canPause = false;
 
     private bool _optionsOpen = false;
     public bool OptionsOpen => _optionsOpen;
@@ -73,11 +75,17 @@ public class MenuManager : MonoBehaviourSingleton<MenuManager>
 
         if (_noPauseScenes.Contains(SceneManager.GetActiveScene().name)) return;
 
-        if (_pauseMenu.activeInHierarchy) return;
-
         if (Input.GetKeyDown(_pauseKey))
         {
-            TooglePauseMenu(true);
+            if (_pauseMenu.activeInHierarchy)
+            {
+                // Check if other menus are open
+                if (_optionsMenu.activeInHierarchy) ToogleOptionsMenu(false);
+                else if (_instructionsMenu.activeInHierarchy) ToogleInstructionsMenu(false);
+                else if (_confirmMainMenu.activeInHierarchy) ToogleConfirmMainMenu(false);
+                else TooglePauseMenu(false);
+            }
+            else TooglePauseMenu(true);
         }
     }
 

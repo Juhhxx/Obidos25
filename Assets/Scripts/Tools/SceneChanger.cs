@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneChanger : MonoBehaviourSingleton<SceneChanger>
 {
     private Animator _anim;
+    private RawImage _image;
 
     private void Awake()
     {
@@ -15,8 +17,10 @@ public class SceneChanger : MonoBehaviourSingleton<SceneChanger>
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        _image = GetComponentInChildren<RawImage>();
+        
+        _image.raycastTarget = false;
     }
-
 
     public void ChangeScene(string scene, Action onLoad, bool doFade = true)
     {
@@ -25,6 +29,8 @@ public class SceneChanger : MonoBehaviourSingleton<SceneChanger>
 
     private IEnumerator ChangeSceneCR(string scene, Action onLoad, bool doFade)
     {
+        _image.raycastTarget = true;
+
         if (doFade) _anim.SetTrigger("FadeOut");
 
         yield return new WaitForEndOfFrame();
@@ -35,6 +41,10 @@ public class SceneChanger : MonoBehaviourSingleton<SceneChanger>
         onLoad?.Invoke();
 
         if (doFade) _anim.SetTrigger("FadeIn");
+
+        yield return new WaitUntil(() => !AnimatorIsPlaying(_anim));
+
+        _image.raycastTarget = false;
     }
 
     private bool AnimatorIsPlaying(Animator animator)

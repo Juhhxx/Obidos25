@@ -19,6 +19,7 @@ public class CutsceneShower : MonoBehaviour
     [SerializeField] private PlaySound _soundPlayer;
 
     [SerializeField] private float _textSpeed;
+    public float TextSpeed { get => _textSpeed; set { _textSpeed = value; }}
     [SerializeField] private float _imageFadeSpeed;
     [SerializeField] private float _canvasFadeSpeed;
 
