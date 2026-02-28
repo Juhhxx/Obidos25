@@ -17,21 +17,20 @@ MonoBehaviour:
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Depois de identificares quem achavas mais suspeitos, estes foram retirados
+    - "Depois de identificares os espectadores mais suspeitos, estes foram retirados
       da reuni\xE3o e posteriormente presos numa localiza\xE7\xE3o secreta."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1ad11b721a70cf34b8dbf9aa9a9ff683, type: 3}
     <CutsceneTexts>k__BackingField:
     - "A tua intui\xE7\xE3o estava incorreta e deixaste agentes da PIDE infiltrarem-se
-      na reuni\xE3o e informar o regime dos vossos planos."
+      na reuni\xE3o e informar o regime sobre os planos da revolu\xE7\xE3o."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: a6fbd1399ce2ac74aa9d1354e1f7ea18, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Alguns dias mais tarde, recebeste informa\xE7\xE3o que a maioria das pessoas
-      que foram \xE0 reuni\xE3o foram presas pela PIDE."
+    - "Alguns dias mais tarde, recebeste informa\xE7\xE3o de que a maioria daqueles
+      que estiveram na reuni\xE3o foram presos pela PIDE."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: b095aa583dc318b4798d483f520cb629, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Embora tu n\xE3o tenhas sido preso, os planos para a revolu\xE7\xE3o foram
-      arruinados."
+    - "Embora n\xE3o tenhas sido preso, os planos para a revolu\xE7\xE3o foram arruinados."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 07e96549a3852db46b3d3f409f3068ec, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "O regime durou enquanto eras vivo. E, depois da tua morte, quem sabe por quantos
-      mais anos o povo portugu\xEAs viveu sob as garras do mesmo\u2026 "
+    - "O regime durou toda a tua vida e, depois da tua morte, quem sabe por quantos
+      mais anos o povo portugu\xEAs viveu sob as suas garras\u2026"

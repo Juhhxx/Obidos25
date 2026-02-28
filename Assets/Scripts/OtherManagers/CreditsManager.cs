@@ -95,6 +95,8 @@ public class CreditsManager : MonoBehaviourSingleton<CreditsManager>
     {
         _creditsObjectAnim.SetTrigger("Quit");
         _creditsAnim.SetTrigger("Stop");
+        _creditsPlaying = false;
+        Time.timeScale = 1.00f;
     }
 
     private void Update()

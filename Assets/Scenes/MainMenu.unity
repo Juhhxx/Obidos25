@@ -357,7 +357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -173}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 500, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87346755
@@ -3791,8 +3791,11 @@ MonoBehaviour:
 
     EPIC-WE is an EU-funded initiative that brings
     together young creatives, cultural institutions, and game industry professionals
-    to explore and express cultural values with game-making. Through a series of
-    game jams, participants designed and developed unique experiences reflecting
+    to explore and express cultural values with game-making.
+
+
+    Through a series
+    of game jams, participants designed and developed unique experiences reflecting
     their perspectives on heritage, society, and the future.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b15bcd42d6e7264ab53e3eec0d88b9f, type: 2}
@@ -3891,7 +3894,7 @@ MonoBehaviour:
       participantes de game jams no \xE2mbito do projeto EPIC-WE.\n\nO EPIC-WE \xE9
       uma iniciativa financiada pela UE que re\xFAne jovens criativos, institui\xE7\xF5es
       culturais e profissionais da ind\xFAstria dos videojogos para explorar e expressar
-      valores culturais com a cria\xE7\xE3o de jogos.\nAtrav\xE9s de uma s\xE9rie
+      valores culturais com a cria\xE7\xE3o de jogos.\n\nAtrav\xE9s de uma s\xE9rie
       de game jams, os participantes conceberam e desenvolveram experi\xEAncias \xFAnicas
       que refletem as suas perspetivas sobre o patrim\xF3nio, a sociedade e o futuro."
   - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
@@ -3902,6 +3905,7 @@ MonoBehaviour:
       EPIC-WE is an EU-funded initiative
       that brings together young creatives, cultural institutions, and game industry
       professionals to explore and express cultural values with game-making.
+
 
       Through
       a series of game jams, participants designed and developed unique experiences

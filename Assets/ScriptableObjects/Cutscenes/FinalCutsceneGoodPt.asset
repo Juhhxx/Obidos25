@@ -17,18 +17,18 @@ MonoBehaviour:
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Depois de identificares quem achavas mais suspeitos, estes foram retirados
-      da reuni\xE3o e posteriormente presos numa localiza\xE7\xE3o secreta."
-    - "A tua intui\xE7\xE3o estava correta e conseguiste identificar quem estava
-      a\n tentar infiltrar-se na reuni\xE3o."
+    - "Depois de identificares os espectadores suspeitos, estes foram retirados da
+      reuni\xE3o e posteriormente presos numa localiza\xE7\xE3o secreta."
+    - "A tua intui\xE7\xE3o estava correta e conseguiste descobrir quem estava a
+      tentar infiltrar-se."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: c95ed15ef0962e34b82f680811031b00, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "A reuni\xE3o foi conduzida em segredo e um plano para come\xE7ar a revolu\xE7\xE3o
-      foi posto em andamento."
+    - "A reuni\xE3o decorreu em segredo e um plano foi posto em marcha para iniciar
+      a revolu\xE7\xE3o."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: b095aa583dc318b4798d483f520cb629, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Por causa dos teus esfor\xE7os, os agentes da PIDE foram parados e n\xE3o
-      conseguiram intervir\nnos planos para a revolu\xE7\xE3o."
+    - "Gra\xE7as aos teus esfor\xE7os, os agentes da PIDE foram impedidos de interferir
+      com o plano."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 04e156e2598e8f04eb38356170ca822f, type: 3}
     <CutsceneTexts>k__BackingField:
     - "E a revolu\xE7\xE3o foi um sucesso, libertando o povo portugu\xEAs das garras

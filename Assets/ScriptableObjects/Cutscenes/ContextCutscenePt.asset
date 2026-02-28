@@ -41,8 +41,8 @@ MonoBehaviour:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 155246877680e7c428035e2793447bd7, type: 3}
     <CutsceneTexts>k__BackingField:
     - "Uma reuni\xE3o secreta do grupo est\xE1 a ser realizada na Casa do Povo, sob
-      o pretexto de ser uma pe\xE7a de teatro."
+      o disfarce de uma pe\xE7a de teatro."
     - "O verdadeiro prop\xF3sito da reuni\xE3o:\ndiscutir um plano para derrubar
       o regime!"
-    - Tu foste designado para guardar a entrada, deves questionar todos os atendentes
-      e ter a certeza que nenhum agente da PIDE tente entrar.
+    - Tu foste designado para guardar a entrada, questionando todos os espectadores
+      e garantindo que nenhum agente da PIDE tenta entrar.
