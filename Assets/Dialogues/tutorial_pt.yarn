@@ -19,16 +19,16 @@ position: -1108,-967
 title: StartTutorial
 position: -844,-966
 ---
-Olá soldado, como é que estão a correr as preparações para o encontro?
-    -> Olá, Comandante. Está tudo preparado, estamos agora à espera dos participantes.
+Olá, Soldado. Como estão a correr as preparações para a reunião?
+    -> Olá, Coronel. Está tudo preparado, estamos agora à espera dos participantes.
 
-Boa. Infelizmente recebemos a informação que agentes da PIDE iram tentar infiltrar-se na reunião.
+Muito bem. Infelizmente recebemos informação de que agentes da PIDE poderão tentar infiltrar-se na reunião.
     -> (Continuar)
 
-Eles vão tentar passar por participantes, então vais ter de reconfirmar a sua identidade.
-    -> Sim, Comandante. Mas como devo fazer isso?
+Eles tentarão fazer-se passar por participantes, portanto terá de validar a identidade de todos.
+    -> Sim, Coronel. Mas como devo fazer isso?
         <<jump BeginTutorial>>
-    -> Sim, Comandante. Pode contar comigo!
+    -> Sim, Coronel. Pode contar comigo!
         <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
@@ -37,7 +37,7 @@ Eles vão tentar passar por participantes, então vais ter de reconfirmar a sua 
 title: BeginTutorial
 position: -557,-1164
 ---
-Não te preocupes, eu ajudo-te com o processo todo de identificar bufos.
+Não se preocupe. Vou explicar-lhe todo o processo de identificar infiltrados.
     -> Onde é que começo?
         <<jump IDCard>>
 ===
@@ -45,13 +45,13 @@ Não te preocupes, eu ajudo-te com o processo todo de identificar bufos.
 title: IDCard
 position: 91,-1164
 ---
-O <b>Cartão de Identificação</b>, tu tens de pedir a todos os que entram para mostrar o seu.
+O <b>Cartão de Identificação</b> é muito importante. Deve pedir a todos que o mostrem.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
 
-A informação neste cartão é crucial, usa-a bem e compara-a com a informação presente nos documentos.
+A informação no cartão é crucial e é preciso validá-la contra os seus documentos.
     -> (Continuar)
         <<if $seenID is false>>
                 {give_id()}
@@ -65,25 +65,13 @@ A informação neste cartão é crucial, usa-a bem e compara-a com a informaçã
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
-<<else>>
-    Podes ver o meu cartão. 
-        -> (Continuar)    
-        -> (Saltar)
-            <<jump EndTutorial>>
-<<endif>>
 
-Neste cartão podes encontrar informação pessoal de quem entra, como o seu <b>nome</b>, <b>foto</b>, <b>características faciais</b>, <b>cor dos olhos</b> e entre outras.
+Deve verificar se esta informação condiz com a pessoa à sua frente.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Esta informação é muito importante, deves ver se essa informação condiz com a pessoa à tua frente.
-    -> (Continuar)
-    -> (Saltar)
-        <<jump EndTutorial>>
-
-Depois tens a sua informação militar, como o seu <b>Nº de Identificação</b>, <b>posição</b>, <b>divisão</b> and <b>código de regimento</b>.
-    -> (Continuar)
+Depois há informação militar, como o <b>Nº de identificação</b>, <b>posto</b>, <b>arma</b> e <b>código de regimento</b>.    -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
@@ -94,8 +82,9 @@ Depois tens a sua informação militar, como o seu <b>Nº de Identificação</b>
             <<jump EndTutorial>>
 <<endif>>
 
-Mantém em mente do tempo que pode pode demorar a mudar os novos documentos quando mudas de regimento. Pode estar desatualizado sem pertencer a um bufo.
-    -> Sim, Comandante.
+
+    Já falarei mais sobre estes dados. Mas garanta que os verifica no cartão. Entendido?
+    -> Sim, Coronel.
     <<if $seenTutorial is false>>
         <<jump Badges>>
     <<else>>
@@ -112,12 +101,12 @@ Mantém em mente do tempo que pode pode demorar a mudar os novos documentos quan
 title: Badges
 position: 371,-1160
 ---
-Não te esqueças de mantar um olho nos <b>crachás</b> quando entram.
+Fique atento às <b>insígnias</b> na farda dos participantes.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Este devem estar de acordo com a <b>posição</b> and <b>divisão</b> dita no <b>Cartão de Identificação</b>.
+Estes devem estar de acordo com a <b>arma</b> e <b>posto</b> no <b>Cartão de Identificação</b>.
     -> (Continuar)
         <<if $gaveBadges is false>>
                 {give_badge_booklet()}
@@ -127,19 +116,19 @@ Este devem estar de acordo com a <b>posição</b> and <b>divisão</b> dita no <b
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
-    Sei que é muita coisa para se lembrar então toma este <b>caderno</b> para te ajudar. Ele contém informação sobre os crachás e a sua respetiva <b>posição</b> ou <b>divisão</b>. 
+    Este <b>livrete de insígnias</b> pode ajudá-lo. Contém a lista de todas as insígnias de <b>armas</b> e <b>postos</b>.
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<else>>
-    Sei que é muita coisa para se lembrar então toma este <b>caderno</b> para te ajudar. Ele contém informação sobre os crachás e a sua respetiva <b>posição</b> ou <b>divisão</b>. 
+    O <b>livrete de insígnias</b> pode ajudá-lo. Contém a lista de todas as insígnias de <b>armas</b> e <b>postos</b>. Entendido?
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<endif>>
 
-Lembra-te que nem todos os soldados poderão estar a usar todos os crachás. Não assumas que alguém é um bufo só porque não está a usar um crachá.
-    -> Sim, Comandante.
+Note que os oficiais podem não estar a usar todas as suas insígnias. Não assuma que alguém é um infiltrado só porque não está a usar uma.
+    -> Sim, Coronel.
     <<if $seenTutorial is false>>
         <<jump Map>>
     <<else>>
@@ -156,27 +145,27 @@ Lembra-te que nem todos os soldados poderão estar a usar todos os crachás. Nã
 title: Map
 position: 642,-1158
 ---
-De volta aos <b>códigos de regimento</b>, estes são mais tramados.
+De volta aos <b>códigos de regimento</b> no Cartão de Identificação, cada caractere representa um pedaço de informação.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Estás a ver, cada parte do código representa um pedaço diferente de informação.
+A primeira letra, <b>R</b>, só significa Regimento.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-A primeira letra, <b>R</b>, só significa regimento, então não é importante.
+A segunda letra, é a inicial da <b>arma</b>. Por exemplo, <b>A</b> é de <b>A</b>rtilharia.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Depois, a segunda letra, é a primeira letra da divisão de onde pertencem. Por exemplo <b>A</b> é de <b>A</b>rtilharia.
+Este, <b>mapa de regimentos</b> identifica as cidades que pertencem a cada regimento.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-E, por fim, tens o número que representa o <b>regimento</b> em que estão no momento. This is the most important piece of information in the code.
+O <b>mapa de regimentos</b> identifica as cidades que pertencem a cada regimento.
     -> (Continuar)
         <<if $gaveMap is false>>
                 {give_map()}
@@ -197,8 +186,8 @@ E, por fim, tens o número que representa o <b>regimento</b> em que estão no mo
             <<jump EndTutorial>>
 <<endif>>
 
-Nele podes ver quais cidades pertencem a cada <b>regimento</b>. Pergunta a toda a gente onde estão colocados e verifica se a informação está correta.
-    -> Sim, Comandante.
+Pergunte aos participantes onde estão colocados e valide. Entendido?
+    -> Sim, Coronel.
     <<if $seenTutorial is false>>
         <<jump ParkingSpots>>
     <<else>>
@@ -215,7 +204,7 @@ Nele podes ver quais cidades pertencem a cada <b>regimento</b>. Pergunta a toda 
 title: ParkingSpots
 position: 927,-1152
 ---
-Toda a gente que vem tem um <b>lugar de estacionamento</b> combinado por razões de segurança. Isto é importante.
+Cada participante tem um <b>lugar de estacionamento</b> associado.
     -> (Continuar)
         <<if $gaveParking is false>>
                 {give_parking_map()}
@@ -225,39 +214,24 @@ Toda a gente que vem tem um <b>lugar de estacionamento</b> combinado por razões
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
-    Deves perguntar a toda gente onde estão estacionados. Depois verifica a informação neste <b>papel</b>.
-        -> (Continuar)
-        -> (Saltar)
-            <<jump EndTutorial>>
-<<else>>
-    Deves perguntar a toda gente onde estão estacionados. Depois verifica a informação neste <b>papel</b>.
+Pergunte-lhes onde estacionaram e verifique contra a informação nesta <b>grelha de estacionamento</b>.
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<endif>>
 
-Na parte da frente do papel tens um mapa simples com os <b>lugares de estacionamento</b>, com as <b>matrículas</b> associadas a esses.
+Pergunte-lhes onde estacionaram e verifique contra a informação na <b>grelha de estacionamento</b>.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Depois, se virares o papel, tens essas mesmas <b>matrículas</b> associadas aos <b>Nºs de Identificação</b>.
+Esta tem a <b>matrícula</b> atribuída a cada lugar de estacionamento.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Os <b>Nºs de Identificação</b> devem corresponder aos <b>cartões BI</b> da pessoa a quem a matrícula pertence.
-    -> (Continuar)
-    -> (Saltar)
-        <<jump EndTutorial>>
-
-Se alguém te diz que estacionou num lugar que tem o <b>Nº de identificação</b> errado, então essa pessoa pode ser um bufo.
-    -> (Continuar)
-    -> (Saltar)
-        <<jump EndTutorial>>
-
-Mas não sejas demasiado picoinhas. Se só for isto que está errado, pode ser só esquecimento.
-    -> Sim, Comandante.
+E, no verso, contém o <b>Número de Identificação</b> associado a cada matrícula. Entendido?
+    -> Sim, Coronel.
     <<if $seenTutorial is false>>
         <<jump Passwords>>
     <<else>>
@@ -274,7 +248,7 @@ Mas não sejas demasiado picoinhas. Se só for isto que está errado, pode ser s
 title: Passwords
 position: 1186,-1148
 ---
-Lembra-te do sistema de <b>palavra passes</b> que temos instalado.
+    Lembre-se do sistema de <b>senhas secretas</b> que temos implementado.
     -> (Continuar)
         <<if $gavePasswords is false>>
                 {give_password_notepad()}
@@ -289,14 +263,14 @@ Lembra-te do sistema de <b>palavra passes</b> que temos instalado.
         -> (Saltar)
             <<jump EndTutorial>>
 <<else>>
-    Fica com este <b>caderno</b>, tem escrito todas as <b>palavras passes</b> possíveis.
+    A lista de todas as senhas activas está no <b>livrete de senhas</b>.
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<endif>>
 
-Pergunta a toda a gente que entre sobre um dos temas das palavras passes. A resposta correta depende do <b>dia da semana</b> atual.
-    -> Sim, Comandante.
+Questione os participantes sobre um dos temas das senhas. A resposta correta depende do <b>dia da semana</b> atual. Entendido?
+    -> Sim, Coronel.
     <<if $seenTutorial is false>>
         <<jump CodeNames>>
     <<else>>
@@ -314,18 +288,12 @@ title: CodeNames
 position: 1450,-1154
 ---
 <<if $seenTutorial is false>>
-    Finalmente, lembra-te dos <b>nomes de código</b> que foram dados.
+    Lembre-se dos <b>nomes de código</b> que nos foram dados.
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<else>>
-    Remeber the <b>codenames</b> we were given.
-        -> (Continuar)
-        -> (Saltar)
-            <<jump EndTutorial>>
-<<endif>>
-
-Deves perguntar a todos qual o seu, pois os bufos podem dar um errado ou baralha-los.
+    Deves perguntar a todos qual o seu, pois os bufos podem dar um errado ou baralha-los.
     -> (Continuar)
         <<if $gaveCodenames is false>>
                 {give_codenames()}
@@ -333,24 +301,9 @@ Deves perguntar a todos qual o seu, pois os bufos podem dar um errado ou baralha
         <<endif>>
     -> (Saltar)
         <<jump EndTutorial>>
-
-<<if $seenTutorial is false>>
-    Não te preocupes se não te lembrares de todos os <b>nomes de código</b>. Eles estão todos escritos aqui neste <b>papel</b>.
-    -> Sim, Comandante.
-        <<if $seenTutorial is false>>
-            <<jump Tickets>>
-        <<else>>
-            <<set $page = 0>>
-            
-            <<if $jumpedTutorial>>
-                <<jump AskTutorialSkip>>
-            <<else>>
-                <<jump AskTutorial>>
-            <<endif>>
-        <<endif>>
 <<else>>
-    Não te preocupes se não te lembrares de todos os <b>nomes de código</b>. Eles estão todos escritos aqui neste <b>papel</b>.
-    -> Sim, Comandante.
+    Pergunte a cada participante qual é o seu e valide-o contra esta <b>lista de nomes de código</b>. Entendido?
+    -> Sim, Coronel.
         <<if $seenTutorial is false>>
             <<jump Tickets>>
         <<else>>
@@ -368,7 +321,7 @@ Deves perguntar a todos qual o seu, pois os bufos podem dar um errado ou baralha
 title: Tickets
 position: 1713,-1152
 ---
-Depois de acabares de investigar, deves dar um <b>bilhete</b> a quem entrou.
+    Depois da sua investigação, deve dar um <b>bilhete</b> ao participante.
     -> (Continuar)
         <<if $gaveTickets is false>>
                 {give_tickets()}
@@ -377,18 +330,18 @@ Depois de acabares de investigar, deves dar um <b>bilhete</b> a quem entrou.
     -> (Saltar)
         <<jump EndTutorial>>
 
-Eu deixei-te duas pilhas de bilhetes diferentes. Os verdes para os aliados confirmados e os vermelhos para quem suspeitas ser um bufo. 
+    Dê um destes bilhetes <b>verdes</b> a participantes confirmados e um dos <b>vermelhos</b> a suspeitos infiltrados.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Lembra-te do <b>nível de suspeição</b> (número de detalhes errados) de cada indivíduo suspeito.
+    Terá de registar o <b>nível de suspeição</b> para cada suspeito. Isto é o número de detalhes errados que encontrou na investigação.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-Quando toda a gente entrar, eu venho ter contigo para saber de quem suspeitas ser bufo.
-    -> Sim, Comandante.
+Quando toda a gente entrar, eu virei ter consigo para discutirmos quem poderá estar infiltrado. Entendido?
+    -> Sim, Coronel.
         <<set $page = 0>>
         
         <<if $jumpedTutorial>>
@@ -402,27 +355,27 @@ title: AskTutorial
 position: -105,-755
 ---
 <<set $seenTutorial = true>>
-Soldado, percebeste tudo o que te expliquei? Ou precisas que eu me repita? 
-    -> Tudo entendido, comandante. <<if $page is 0>>
+Soldado, quer que explique o quê?
+    -> Tudo claro, Coronel. <<if $page is 0>>
         {speed_normal()}
         <<jump EndTutorial>>
     -> Diga-me mais sobre o Cartão de Identificação. <<if $page is 0>>
         {speed_normal()}
         <<jump IDCard>>
-    -> Diga-me mais sobre os crachá. <<if $page is 0>>
+    -> Diga-me mais sobre as insígnias. <<if $page is 0>>
         {speed_normal()}
         <<jump Badges>>
     -> (Mais...) <<if $page is 0>>
         <<set $page = 1>>
         {speed_quick()}
         <<jump AskTutorial>>
-    -> Diga-me mais sobre o mapa.<<if $page is 1>>
+    -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
         {speed_normal()}
         <<jump Map>>
     -> Diga-me mais sobre os lugares de estacionamento. <<if $page is 1>>
         {speed_normal()}
         <<jump ParkingSpots>>
-    -> Diga-me mais sobre as palavras passes. <<if $page is 1>>
+    -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
         {speed_normal()}
         <<jump Passwords>>
     -> (Mais...) <<if $page is 1>>
@@ -445,27 +398,27 @@ title: AskTutorialSkip
 position: -105,-755
 ---
 <<set $seenTutorial = true>>
-Soldado, o que é que precisas que te exlique?
-    -> Tudo entendido, comandante. <<if $page is 0>>
+Soldado, percebeu tudo o que expliquei? Ou precisa que eu me repita? 
+    -> Tudo claro, Coronel. <<if $page is 0>>
         {speed_normal()}
         <<jump EndTutorial>>
     -> Diga-me mais sobre o Cartão de Identificação. <<if $page is 0>>
         {speed_normal()}
         <<jump IDCard>>
-    -> Diga-me mais sobre os crachá. <<if $page is 0>>
+    -> Diga-me mais sobre as insígnias. <<if $page is 0>>
         {speed_normal()}
         <<jump Badges>>
     -> (Mais...) <<if $page is 0>>
         <<set $page = 1>>
         {speed_quick()}
         <<jump AskTutorialSkip>>
-    -> Diga-me mais sobre o mapa.<<if $page is 1>>
+    -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
         {speed_normal()}
         <<jump Map>>
     -> Diga-me mais sobre os lugares de estacionamento. <<if $page is 1>>
         {speed_normal()}
         <<jump ParkingSpots>>
-    -> Diga-me mais sobre as palavras passes. <<if $page is 1>>
+    -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
         {speed_normal()}
         <<jump Passwords>>
     -> (Mais...) <<if $page is 1>>
@@ -492,13 +445,13 @@ position: -122,-350
         {give_tickets()}
     <<endif>>
      Aqui tens tudo o que precisas. {give_everything()}
-        -> Obrigado, Comandante. Mas na verdade, eu preciso de ajuda com algo.
+        -> Obrigado, Coronel. Mas na verdade, eu preciso de ajuda com algo.
             <<jump AskTutorialSkip>>
-        -> Obrigado, Comandante. Farei o meu melhor.        
+        -> Obrigado, Coronel. Farei o meu melhor.        
 <<endif>>
 
-Boa. Eu confio que farás um bom trabalho. Tem a certeza que nenhum bufo se infiltra.
-    -> Sim, Comandante. Farei o meu melhor.
+Ótimo. Confio que fará um bom trabalho. Garanta que não entra nenhum infiltrado.
+    -> Sim, Coronel. Assim farei!
         {tutorial_end()}
 
 ===
