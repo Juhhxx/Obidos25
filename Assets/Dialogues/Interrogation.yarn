@@ -1,7 +1,7 @@
 ﻿title: Start
 ---
-Hello! I'm here for the play, can I have a ticket?
-    -> Yes, I'll just need to check your documents.
+Hello! I'm here for the play. Can I have a ticket?
+    -> Yes. I'll just need to check your identification.
 
 Ok. Here you go.{give_documents()}
     -> What's your name? 
@@ -15,7 +15,7 @@ title: Options
     -> {get_password_question()} (password)
         {get_password_dialog()}
         <<jump Options>>
-    -> Where are you located?
+   -> Where are you stationed?
         {get_location_dialog()}
         <<jump Options>>
     -> What's your code name?

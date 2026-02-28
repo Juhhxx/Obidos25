@@ -1,9 +1,9 @@
 ﻿title: Start
 ---
-Olá! Estou aqui para a peça, posso ter um bilhete?
-    -> Sim, só vou precisar de ver os seus documentos.
+Olá! Estou aqui para a peça. Posso ter um bilhete?
+    -> Sim. Só vou precisar de ver a sua identificação.
 
-Ok. Aqui estão.{give_documents()}
+Ok. Aqui está.{give_documents()}
     -> Qual é o seu nome?
 
 {get_military_name()}
