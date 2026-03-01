@@ -21,19 +21,13 @@ position: -844,-966
 ---
 Olá, Soldado. Como estão a correr as preparações para a reunião?
     -> Olá, Coronel. Está tudo preparado, estamos agora à espera dos participantes.
-Olá, Soldado. Como estão a correr as preparações para a reunião?
-    -> Olá, Coronel. Está tudo preparado, estamos agora à espera dos participantes.
 
-Muito bem. Infelizmente recebemos informação de que agentes da PIDE poderão tentar infiltrar-se na reunião.
 Muito bem. Infelizmente recebemos informação de que agentes da PIDE poderão tentar infiltrar-se na reunião.
     -> (Continuar)
 
 Eles tentarão fazer-se passar por participantes, portanto terá de validar a identidade de todos.
     -> Sim, Coronel. Mas como devo fazer isso?
-Eles tentarão fazer-se passar por participantes, portanto terá de validar a identidade de todos.
-    -> Sim, Coronel. Mas como devo fazer isso?
         <<jump BeginTutorial>>
-    -> Sim, Coronel. Pode contar comigo!
     -> Sim, Coronel. Pode contar comigo!
         <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
@@ -44,7 +38,6 @@ title: BeginTutorial
 position: -557,-1164
 ---
 Não se preocupe. Vou explicar-lhe todo o processo de identificar infiltrados.
-Não se preocupe. Vou explicar-lhe todo o processo de identificar infiltrados.
     -> Onde é que começo?
         <<jump IDCard>>
 ===
@@ -52,7 +45,6 @@ Não se preocupe. Vou explicar-lhe todo o processo de identificar infiltrados.
 title: IDCard
 position: 91,-1164
 ---
-O <b>Cartão de Identificação</b> é muito importante. Deve pedir a todos que o mostrem.
 O <b>Cartão de Identificação</b> é muito importante. Deve pedir a todos que o mostrem.
     -> (Continuar)
     -> (Saltar)
@@ -114,7 +106,6 @@ title: Badges
 position: 371,-1160
 ---
 Fique atento às <b>insígnias</b> na farda dos participantes.
-Fique atento às <b>insígnias</b> na farda dos participantes.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
@@ -148,12 +139,10 @@ title: Map
 position: 642,-1158
 ---
 De volta aos <b>códigos de regimento</b> no Cartão de Identificação, cada caractere representa um pedaço de informação.
-De volta aos <b>códigos de regimento</b> no Cartão de Identificação, cada caractere representa um pedaço de informação.
     -> (Continuar)
     -> (Saltar)
         <<jump EndTutorial>>
 
-A primeira letra, <b>R</b>, só significa Regimento.
 A primeira letra, <b>R</b>, só significa Regimento.
     -> (Continuar)
     -> (Saltar)
@@ -185,8 +174,6 @@ Por fim, há um número que identifica o <b>regimento</b> em que se está coloca
             <<jump EndTutorial>>
 <<endif>>
 
-Pergunte aos participantes onde estão colocados e valide. Entendido?
-    -> Sim, Coronel.
 Pergunte aos participantes onde estão colocados e valide. Entendido?
     -> Sim, Coronel.
     <<if $seenTutorial is false>>
@@ -265,14 +252,11 @@ Lembre-se do sistema de <b>senhas secretas</b> que temos implementado.
             <<jump EndTutorial>>
 <<else>>
     A lista de todas as senhas activas está no <b>livrete de senhas</b>.
-    A lista de todas as senhas activas está no <b>livrete de senhas</b>.
         -> (Continuar)
         -> (Saltar)
             <<jump EndTutorial>>
 <<endif>>
 
-Questione os participantes sobre um dos temas das senhas. A resposta correta depende do <b>dia da semana</b> atual. Entendido?
-    -> Sim, Coronel.
 Questione os participantes sobre um dos temas das senhas. A resposta correta depende do <b>dia da semana</b> atual. Entendido?
     -> Sim, Coronel.
     <<if $seenTutorial is false>>
@@ -361,7 +345,6 @@ Soldado, percebeu tudo o que expliquei? Ou precisa que eu me repita?
         {speed_normal()}
         <<jump IDCard>>
     -> Diga-me mais sobre as insígnias. <<if $page is 0>>
-    -> Diga-me mais sobre as insígnias. <<if $page is 0>>
         {speed_normal()}
         <<jump Badges>>
     -> (Mais...) <<if $page is 0>>
@@ -369,13 +352,11 @@ Soldado, percebeu tudo o que expliquei? Ou precisa que eu me repita?
         {speed_quick()}
         <<jump AskTutorial>>
     -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
-    -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
         {speed_normal()}
         <<jump Map>>
     -> Diga-me mais sobre os lugares de estacionamento. <<if $page is 1>>
         {speed_normal()}
         <<jump ParkingSpots>>
-    -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
     -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
         {speed_normal()}
         <<jump Passwords>>
@@ -407,7 +388,6 @@ Soldado, o que precisa que explique?
         {speed_normal()}
         <<jump IDCard>>
     -> Diga-me mais sobre as insígnias. <<if $page is 0>>
-    -> Diga-me mais sobre as insígnias. <<if $page is 0>>
         {speed_normal()}
         <<jump Badges>>
     -> (Mais...) <<if $page is 0>>
@@ -415,13 +395,11 @@ Soldado, o que precisa que explique?
         {speed_quick()}
         <<jump AskTutorialSkip>>
     -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
-    -> Diga-me mais sobre o mapa de regimentos.<<if $page is 1>>
         {speed_normal()}
         <<jump Map>>
     -> Diga-me mais sobre os lugares de estacionamento. <<if $page is 1>>
         {speed_normal()}
         <<jump ParkingSpots>>
-    -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
     -> Diga-me mais sobre as senhas secretas. <<if $page is 1>>
         {speed_normal()}
         <<jump Passwords>>
@@ -460,8 +438,6 @@ position: -122,-350
         -> Obrigado, Coronel. Farei o meu melhor.       
 <<endif>>
 
-Ótimo. Confio que fará um bom trabalho. Garanta que não entra nenhum infiltrado.
-    -> Sim, Coronel. Assim farei!
 Ótimo. Confio que fará um bom trabalho. Garanta que não entra nenhum infiltrado.
     -> Sim, Coronel. Assim farei!
         {tutorial_end()}
