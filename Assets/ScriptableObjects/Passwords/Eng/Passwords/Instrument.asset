@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Instrument
   m_EditorClassIdentifier: 
   PasswordQuestion: Do you play any instrument?
-  MondayAnswer: The Piano.
-  TuesdayAnswer: The Violin.
-  WednesdayAnswer: The Flute.
-  ThursdayAnswer: The Drums!
-  FridayAnswer: The Saxophone.
-  SaturdayAnswer: The Trumpet.
-  SundayAnswer: The Guitar.
+  MondayAnswer: The piano.
+  TuesdayAnswer: The violin.
+  WednesdayAnswer: The flute.
+  ThursdayAnswer: The drums!
+  FridayAnswer: The saxophone.
+  SaturdayAnswer: The trumpet.
+  SundayAnswer: The guitar.

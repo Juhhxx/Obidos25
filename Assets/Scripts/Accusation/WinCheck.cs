@@ -61,6 +61,17 @@ public class WinCheck : MonoBehaviour
         string text = LocalizedAssets.GetLocalization<LocalizedText>(_moleTextLocalizations, gameObject).Text;
 
         _bufoNumber.text = string.Format(text, _numberOfMoles, mole);
+
+        if (_numberOfMoles == 1 && LocalizationManager.Language.Code == LanguageCode.Pt)
+        {
+            Debug.Log("Remove s from presentes", this);
+            Debug.Log($"{_bufoNumber.text}", this);
+
+            var tmp = _bufoNumber.text;
+            tmp = tmp.Replace("presentes", "presente");
+            Debug.Log($"{tmp}", this);
+            _bufoNumber.text = tmp;
+        }
         
         for (int i = 0; i < _portaits.transform.childCount; i++)
         {

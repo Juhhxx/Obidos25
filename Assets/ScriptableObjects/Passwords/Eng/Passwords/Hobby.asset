@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Hobby
   m_EditorClassIdentifier: 
   PasswordQuestion: What do you do on your free time?
-  MondayAnswer: I love Cooking.
-  TuesdayAnswer: I like to Garden.
-  WednesdayAnswer: I enjoy taking Photos.
-  ThursdayAnswer: I love a good Hike.
+  MondayAnswer: I love cooking.
+  TuesdayAnswer: I like to garden.
+  WednesdayAnswer: I enjoy taking photos.
+  ThursdayAnswer: I love a good hike.
   FridayAnswer: Painting is my favourite thing to do.
-  SaturdayAnswer: I try to Play an instrument.
-  SundayAnswer: I like to Read a good book.
+  SaturdayAnswer: I try to play an instrument.
+  SundayAnswer: I like to read a good book.

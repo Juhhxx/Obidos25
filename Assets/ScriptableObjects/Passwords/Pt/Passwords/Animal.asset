@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Animal
   m_EditorClassIdentifier: 
-  PasswordQuestion: O que podes encontrar no parque?
+  PasswordQuestion: Que animal pode encontrar no parque?
   MondayAnswer: Uma raposa.
   TuesdayAnswer: "Um c\xE3o."
   WednesdayAnswer: Uma toupeira.

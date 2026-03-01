@@ -132,7 +132,7 @@ public class BookPageManager : MonoBehaviour
             
         }
 
-        if (reset && page == 0) PlayerInteraction.Instance.ResetInteractable(true);
+        if (reset && page == 0 && _bookPages.Count > 2) PlayerInteraction.Instance.ResetInteractable(true);
 
         _currentPageIndex = page;
     }

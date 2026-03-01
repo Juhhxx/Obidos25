@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Instrument
   m_EditorClassIdentifier: 
-  PasswordQuestion: Tocas algum instrumento?
+  PasswordQuestion: Toca algum instrumento?
   MondayAnswer: O piano.
   TuesdayAnswer: O violino.
   WednesdayAnswer: A flauta.
   ThursdayAnswer: A bateria!
-  FridayAnswer: O saxophone.
+  FridayAnswer: O saxofone.
   SaturdayAnswer: O trompete.
   SundayAnswer: A guitarra.

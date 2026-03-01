@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Gun
   m_EditorClassIdentifier: 
-  PasswordQuestion: Que arma costumas usar?
-  MondayAnswer: Uma Sniper.
-  TuesdayAnswer: Um Rifle.
-  WednesdayAnswer: Uma Espingarda.
-  ThursdayAnswer: Uma Metralhadora.
-  FridayAnswer: Uma Faca.
-  SaturdayAnswer: Granadas!
-  SundayAnswer: Uma Pistola.
+  PasswordQuestion: Qual a arma que prefere?
+  MondayAnswer: "Uma espingarda de precis\xE3o."
+  TuesdayAnswer: Uma espingarda.
+  WednesdayAnswer: "Uma ca\xE7adeira."
+  ThursdayAnswer: Uma metralhadora.
+  FridayAnswer: Uma faca.
+  SaturdayAnswer: Uma granada!
+  SundayAnswer: Uma pistola.

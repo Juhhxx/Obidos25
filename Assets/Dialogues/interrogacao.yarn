@@ -12,7 +12,7 @@ Ok. Aqui está.{give_documents()}
 
 title: Options
 ---
-    -> {get_password_question()} (password)
+    -> {get_password_question()} (senha)
         {get_password_dialog()}
         <<jump Options>>
     -> Onde é que está colocado?
@@ -21,7 +21,7 @@ title: Options
     -> Qual é o seu nome de código?
         {get_codename_dialog()}
         <<jump Options>>
-    -> Onde é que estacionou a sua viatura?
+    -> Em que lugar estacionou a sua viatura?
         {get_park_dialog()}
         <<jump Options>>
 ===

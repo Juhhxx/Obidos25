@@ -4,6 +4,12 @@ using UnityEngine;
 public class Language : ScriptableObject
 {
     public string DisplayName;
-    public string Code;
+    public LanguageCode Code;
     public Sprite Flag;
+}
+
+public enum LanguageCode
+{
+    Pt,
+    Eng
 }

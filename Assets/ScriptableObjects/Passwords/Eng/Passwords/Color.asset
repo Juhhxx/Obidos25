@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Color
   m_EditorClassIdentifier: 
   PasswordQuestion: What color are your socks?
-  MondayAnswer: They're White.
-  TuesdayAnswer: They're Yellow.
-  WednesdayAnswer: They're Orange.
-  ThursdayAnswer: They're Pink.
-  FridayAnswer: They're Blue.
-  SaturdayAnswer: They're Purple.
-  SundayAnswer: They're Red.
+  MondayAnswer: They're white.
+  TuesdayAnswer: They're yellow.
+  WednesdayAnswer: They're orange.
+  ThursdayAnswer: They're pink.
+  FridayAnswer: They're blue.
+  SaturdayAnswer: They're purple.
+  SundayAnswer: They're red.

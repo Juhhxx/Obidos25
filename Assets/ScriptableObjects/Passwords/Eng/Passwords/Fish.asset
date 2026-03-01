@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   PasswordQuestion: What fish did you catch yesterday?
-  MondayAnswer: A Trout.
-  TuesdayAnswer: A Salmon.
-  WednesdayAnswer: Sardines.
-  ThursdayAnswer: A Bass.
-  FridayAnswer: A Mackerel.
-  SaturdayAnswer: A Scabbardfish.
-  SundayAnswer: A Cod.
+  MondayAnswer: A trout.
+  TuesdayAnswer: A salmon.
+  WednesdayAnswer: A sardine.
+  ThursdayAnswer: A bass.
+  FridayAnswer: A mackerel.
+  SaturdayAnswer: A scabbardfish.
+  SundayAnswer: A cod.

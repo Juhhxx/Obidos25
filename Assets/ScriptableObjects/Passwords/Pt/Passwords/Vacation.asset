@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Vacation
   m_EditorClassIdentifier: 
-  PasswordQuestion: "Onde costumas ir de f\xE9rias?"
+  PasswordQuestion: "Onde costuma ir de f\xE9rias?"
   MondayAnswer: "\xC0 Madeira."
   TuesdayAnswer: "Fico s\xF3 por Lisboa."
   WednesdayAnswer: "Algarve sem d\xFAvida!"

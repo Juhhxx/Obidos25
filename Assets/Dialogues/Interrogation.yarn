@@ -1,7 +1,7 @@
 ﻿title: Start
 ---
 Hello! I'm here for the play. Can I have a ticket?
-    -> Yes. I'll just need to check your identification.
+    -> Yes. I’ll just need to see your identification.
 
 Ok. Here you go.{give_documents()}
     -> What's your name? 
@@ -18,10 +18,10 @@ title: Options
    -> Where are you stationed?
         {get_location_dialog()}
         <<jump Options>>
-    -> What's your code name?
+    -> What’s your codename?
         {get_codename_dialog()}
         <<jump Options>>
-    -> Where did you park?
+    -> What parking spot did you use?
         {get_park_dialog()}
         <<jump Options>>
 ===

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8544109504b2ad24d97f530c3722a7bb, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  PasswordQuestion: "O que \xE9 que eu pesquei ontem?"
+  PasswordQuestion: O que pescou ontem?
   MondayAnswer: Uma Truta.
   TuesdayAnswer: "Um Salm\xE3o."
-  WednesdayAnswer: Umas Sardinhas.
+  WednesdayAnswer: Uma Sardinha.
   ThursdayAnswer: Um Robalo.
   FridayAnswer: Uma Cavala.
   SaturdayAnswer: Um Peixe-espada!

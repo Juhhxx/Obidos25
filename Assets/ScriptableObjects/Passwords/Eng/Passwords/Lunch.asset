@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Lunch
   m_EditorClassIdentifier: 
   PasswordQuestion: What did you have for lunch?
-  MondayAnswer: A good Steak.
-  TuesdayAnswer: A simple Sandwich.
-  WednesdayAnswer: I had Pasta with some sauce.
-  ThursdayAnswer: A lovely Shepherd's pie.
-  FridayAnswer: Some Fish fillets.
-  SaturdayAnswer: A hearthy Stew.
-  SundayAnswer: A bowl of Soup.
+  MondayAnswer: A good steak.
+  TuesdayAnswer: A simple sandwich.
+  WednesdayAnswer: I had pasta with some sauce.
+  ThursdayAnswer: A lovely shepherd's pie.
+  FridayAnswer: Some fish fillets.
+  SaturdayAnswer: A hearty stew.
+  SundayAnswer: A bowl of soup.

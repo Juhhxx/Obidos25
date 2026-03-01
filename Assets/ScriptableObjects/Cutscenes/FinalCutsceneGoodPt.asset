@@ -29,7 +29,7 @@ MonoBehaviour:
     <CutsceneTexts>k__BackingField:
     - "Gra\xE7as aos teus esfor\xE7os, os agentes da PIDE foram impedidos de interferir
       com o plano."
-  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 04e156e2598e8f04eb38356170ca822f, type: 3}
+  - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 68a0721fe88944747874b80445b17878, type: 3}
     <CutsceneTexts>k__BackingField:
     - "E a revolu\xE7\xE3o foi um sucesso, libertando o povo portugu\xEAs das garras
       do regime!"
