@@ -15,8 +15,8 @@ MonoBehaviour:
   PasswordQuestion: "O que comeu ao almo\xE7o?"
   MondayAnswer: Um bom bife.
   TuesdayAnswer: Uma sandes.
-  WednesdayAnswer: Esparguete com um bom molhinho.
+  WednesdayAnswer: Esparguete com molho.
   ThursdayAnswer: "Um delicioso empad\xE3o."
-  FridayAnswer: Um filete de peixe.
+  FridayAnswer: Uns filetes de peixe.
   SaturdayAnswer: Um bom guisado.
   SundayAnswer: Uma tigela de sopa.

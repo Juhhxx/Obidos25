@@ -17,8 +17,8 @@ MonoBehaviour:
   _cutsceneBlocks:
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1bb299cf226bf8c45b3e8b00285f2795, type: 3}
     <CutsceneTexts>k__BackingField:
-    - "Depois de identificares os espectadores mais suspeitos, estes foram retirados
-      da reuni\xE3o e posteriormente presos numa localiza\xE7\xE3o secreta."
+    - "Depois de identificares os espectadores suspeitos, estes foram retirados da
+      reuni\xE3o e posteriormente presos numa localiza\xE7\xE3o secreta."
   - <CutsceneImage>k__BackingField: {fileID: 21300000, guid: 1ad11b721a70cf34b8dbf9aa9a9ff683, type: 3}
     <CutsceneTexts>k__BackingField:
     - "A tua intui\xE7\xE3o estava incorreta e deixaste agentes da PIDE infiltrarem-se

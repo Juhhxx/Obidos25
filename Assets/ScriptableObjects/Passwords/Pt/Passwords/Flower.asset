@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Flower
   m_EditorClassIdentifier: 
   PasswordQuestion: Qual a sua flor favorita?
-  MondayAnswer: Uma rosa.
-  TuesdayAnswer: O girassol.
+  MondayAnswer: Rosas.
+  TuesdayAnswer: Girassois.
   WednesdayAnswer: Lavanda.
-  ThursdayAnswer: "O l\xEDrio."
-  FridayAnswer: Uma papoila.
-  SaturdayAnswer: "Uma orqu\xEDdea."
-  SundayAnswer: O cravo.
+  ThursdayAnswer: "L\xEDrios."
+  FridayAnswer: Papoilas.
+  SaturdayAnswer: "Orqu\xEDdeas."
+  SundayAnswer: Cravos.

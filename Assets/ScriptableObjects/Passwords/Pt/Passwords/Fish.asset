@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   PasswordQuestion: O que pescou ontem?
-  MondayAnswer: Uma Truta.
-  TuesdayAnswer: "Um Salm\xE3o."
-  WednesdayAnswer: Uma Sardinha.
-  ThursdayAnswer: Um Robalo.
-  FridayAnswer: Uma Cavala.
-  SaturdayAnswer: Um Peixe-espada!
-  SundayAnswer: Um Bacalhau.
+  MondayAnswer: Uma truta.
+  TuesdayAnswer: "Um salm\xE3o."
+  WednesdayAnswer: Uma sardinha.
+  ThursdayAnswer: Um robalo.
+  FridayAnswer: Uma cavala.
+  SaturdayAnswer: Um peixe-espada!
+  SundayAnswer: Um bacalhau.

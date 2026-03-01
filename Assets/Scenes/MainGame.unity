@@ -12672,7 +12672,7 @@ MonoBehaviour:
     - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
       <Text>k__BackingField: No {0}, como indicado.
     - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
-      <Text>k__BackingField: '{0}, as requested'
+      <Text>k__BackingField: '{0}, as requested.'
   - Variations:
     - <Language>k__BackingField: {fileID: 11400000, guid: 03d706e019aa4394b92368be7b224aae, type: 2}
       <Text>k__BackingField: No {0}, parece-me.
