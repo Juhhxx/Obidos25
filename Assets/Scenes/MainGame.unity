@@ -12543,7 +12543,7 @@ MonoBehaviour:
     <ScriptableObject>k__BackingField: {fileID: 11400000, guid: 4b3328706a95669409d4975b5014446d, type: 2}
   - <Language>k__BackingField: {fileID: 11400000, guid: 7b0215d60accb7d44a8044e700ad11f3, type: 2}
     <ScriptableObject>k__BackingField: {fileID: 11400000, guid: 63a52f264b1eae246913859c3e07a3ad, type: 2}
-  _allowCheats: 1
+  _allowCheats: 0
 --- !u!4 &1646238816
 Transform:
   m_ObjectHideFlags: 0
@@ -12577,7 +12577,7 @@ MonoBehaviour:
   _bufoNumber: {fileID: 1046412003}
   _bufoNumberAnim: {fileID: 1307587093}
   _cheat: {fileID: 375506278}
-  _allowCheat: 1
+  _allowCheat: 0
   _gameScreen: {fileID: 875620729}
   _accusationScreen: {fileID: 176102964}
   _blackScreen: {fileID: 1319170099}
@@ -15284,6 +15284,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3923719641166524979, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067081600650125835, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
+      propertyPath: _fastButton
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4580752059912492878, guid: 4cf2705446ad2a64c8a2375de671e74d, type: 3}
