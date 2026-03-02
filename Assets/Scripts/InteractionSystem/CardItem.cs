@@ -83,6 +83,7 @@ public class CardItem : MonoBehaviour
         _collider.UpdateColliderBasedOnSprite(activeRenderer.sprite);
 
         _drag?.ResetOffSet();
+        
         if (!state) _book?.Reset();
     }
 

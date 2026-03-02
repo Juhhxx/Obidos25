@@ -30,6 +30,7 @@ namespace Obidos25
         [field: SerializeField] public string ID { get; private set; }
         [field: SerializeField] public float Height { get; private set; }
         [field: SerializeField] public string Features { get; private set; }
+        [field: Expandable]
         [field: SerializeField] public EyeColor EyeColor { get; private set; }
         [field: SerializeField] public ParkingSpot ParkingSpot { get; private set; }
         public void SetParking(ParkingSpot ps) => ParkingSpot = ps;

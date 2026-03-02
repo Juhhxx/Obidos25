@@ -276,7 +276,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
     public void ShowIDCard()
     {
         _idCardBuilder?.BuildFileSprite();
-        _idCard.SetActive(true);
+        GiveItem(_idCard);
     }
 
     public void GiveBadgeBooklet() => GiveItem(_badgeBooklet);
@@ -316,6 +316,7 @@ public class MilitaryManager : MonoBehaviourSingleton<MilitaryManager>
         foreach (GameObject go in objs)
         {
             if (go.GetComponent<CardItem>().IsItem) continue;
+            if (go.activeInHierarchy) continue;
 
             tmp.Add(go);
             pos.Add(go.transform.position);

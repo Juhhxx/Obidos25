@@ -42,7 +42,7 @@ public class BookPageManager : MonoBehaviour
             _pageForwardButton.enabled = false;
         }
 
-        ChangePage(0);
+        ChangePage(0, false);
     }
 
     public void SetPageSprite(int page, Sprite spr) 
@@ -52,7 +52,7 @@ public class BookPageManager : MonoBehaviour
             ls.UpdateSprite(spr);
         }
 
-        if (page == _currentPageIndex) ChangePage(page);
+        if (page == _currentPageIndex) ChangePage(page, false);
     }
 
     private void ChangePage(int page, bool reset = true)
@@ -129,7 +129,6 @@ public class BookPageManager : MonoBehaviour
                 Button btt = _backToStartButton.GetComponent<Button>();
                 if (btt.HighlightSR != null) btt.HighlightSR.enabled = false;
             }
-            
         }
 
         if (reset && page == 0 && _bookPages.Count > 2) PlayerInteraction.Instance.ResetInteractable(true);
@@ -145,5 +144,9 @@ public class BookPageManager : MonoBehaviour
     }
 
     public void GoToFirstPage() => ChangePage(1);
-    public void Reset() => ChangePage(0, false);
+    public void Reset()
+    {
+        Debug.Log($"RESETING BOOK {name}", this);
+        ChangePage(0, false);
+    }
 }

@@ -37,6 +37,7 @@ public class PlayerInteraction : MonoBehaviourSingleton<PlayerInteraction>
     }
     public void ResetInteractable(bool stillInteracting = false)
     {
+        Debug.Log($"RESET INTERACTABLE (former: {_curentInteractable?.name})", this);
         _curentInteractable?.OnInteractEnd();
         _isInteracting = stillInteracting;
         _curentInteractable = null;

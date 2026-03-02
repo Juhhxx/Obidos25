@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PasswordQuestion: Qual a sua flor favorita?
   MondayAnswer: Rosas.
-  TuesdayAnswer: Girassois.
+  TuesdayAnswer: "Girass\xF3is."
   WednesdayAnswer: Lavanda.
   ThursdayAnswer: "L\xEDrios."
   FridayAnswer: Papoilas.

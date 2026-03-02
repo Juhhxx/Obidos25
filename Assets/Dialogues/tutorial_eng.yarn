@@ -20,7 +20,7 @@ title: StartTutorial
 position: -844,-966
 ---
 Hello, Soldier. How are the preparations for the meeting going?
-    -> Hello, Colonel. Everything has been set up, we are now awaiting the attendees.
+    -> Hello, Colonel. Everything is ready. We await the attendees.
 
 Good. Unfortunately we've received information that PIDE agents might try to infiltrate the meeting.
     -> (Continue)
@@ -48,6 +48,7 @@ position: 91,-1164
 The <b>ID Card</b> is very important. You must ask every entrant to show you theirs.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 The information in the card is crucial and you need to check it against your documents.
@@ -57,33 +58,39 @@ The information in the card is crucial and you need to check it against your doc
                 <<set $seenID = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
     Here, have my card. Drag it onto your table.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<else>>
     You can check my card. 
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<endif>>
 
 In it you can find personal details like <b>name</b>, <b>photo</b>, <b>eye color</b>, <b>distinctive signs</b>, and so on.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 You must check if the person in front of you matches this information.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 Then there's military info, like <b>ID no.</b>, <b>rank</b>, <b>branch</b> and <b>regiment code</b>.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
@@ -108,6 +115,7 @@ position: 371,-1160
 Keep your eyes out for the <b>insignias</b> the entrants are wearing.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 These must match the <b>branch</b> and <b>rank</b> stated in the <b>ID Card</b>.
@@ -117,6 +125,7 @@ These must match the <b>branch</b> and <b>rank</b> stated in the <b>ID Card</b>.
                 <<set $gaveBadges = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
@@ -141,16 +150,19 @@ position: 642,-1158
 Back to the <b>regiment code</b> in the ID Card, each character represents a piece of information.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 The first letter, <b>R</b>, just stands for Regiment.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 The second letter is the <b>branch</b> initial. For example, <b>A</b> stands for Artillery.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 Finally, there's a number identifying the <b>regiment</b> one is stationed at.
@@ -160,17 +172,20 @@ Finally, there's a number identifying the <b>regiment</b> one is stationed at.
                 <<set $gaveMap = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
     This <b>regiment map</b> identifies which cities belong to each regiment.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<else>>
     The <b>regiment map</b> identifies which cities belong to each regiment.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<endif>>
 
@@ -199,23 +214,27 @@ Each attendant has an assigned <b>parking spot</b>.
                 <<set $gaveParking = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
     Ask them where they parked and verify it against the information in this <b>parking grid</b>.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<else>>
     Ask them where they parked and verify the information in the <b>parking grid</b>.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<endif>>
 
 It has the <b>license plate</b> assigned to each parking spot.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 And, on the back, it contains the <b>ID no.</b> associated with each license plate. Understood?
@@ -243,17 +262,20 @@ Remember the <b>password</b> system we have in place.
                 <<set $gavePasswords = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
     The list of all active passwords is in this <b>password booklet</b>.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<else>>
     The list of all active passwords is in the <b>password booklet</b>.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<endif>>
 
@@ -282,6 +304,7 @@ Remember the <b>codenames</b> we were all given.
                 <<set $gaveCodenames = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
@@ -310,23 +333,27 @@ At the end of your investigation, you should give the entrant a <b>ticket</b>.
                 <<set $gaveTickets = true>>
         <<endif>>
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 <<if $seenTutorial is false>>
     Give one of these <b>green</b> tickets to confirmed participants and a <b>red</b> one to suspected moles.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<else>>
     Give one <b>green</b> ticket to confirmed participants and a <b>red</b> one to suspected moles.
         -> (Continue)
         -> (Skip)
+            <<set $jumpedTutorial = true>>
             <<jump EndTutorial>>
 <<endif>>
 
 You’ll have to register the <b>level of suspicion</b> for each suspected mole. That’s the number of wrong details you found in your investigation.
     -> (Continue)
     -> (Skip)
+        <<set $jumpedTutorial = true>>
         <<jump EndTutorial>>
 
 Once everyone is inside, we'll meet for you to identify any moles. Understood?
@@ -347,6 +374,7 @@ position: -105,-755
 Soldier, did you understand everything I explained to you? Or do you need me to repeat? 
     -> All clear, Colonel. <<if $page is 0>>
         {speed_normal()}
+        <<set $jumpedTutorial = false>>
         <<jump EndTutorial>>
     -> Tell me more about the ID card. <<if $page is 0>>
         {speed_normal()}
@@ -390,6 +418,7 @@ position: -105,-755
 Soldier, what do you need me to explain?
     -> All clear, Colonel. <<if $page is 0>>
         {speed_normal()}
+        <<set $jumpedTutorial = false>>
         <<jump EndTutorial>>
     -> Tell me more about the ID card. <<if $page is 0>>
         {speed_normal()}
@@ -429,7 +458,10 @@ Soldier, what do you need me to explain?
 title: EndTutorial
 position: -122,-350
 ---
-<<if $seenTutorial is false>>
+<<if $jumpedTutorial is true>>
+    <<if $seenTutorial is true>>
+        <<jump AskTutorialSkip>>
+    <<endif>>
     <<if $gaveTickets is false>>
         {give_tickets()}
     <<endif>>
@@ -443,7 +475,6 @@ position: -122,-350
             <<set $gaveTickets = true>>
             <<jump AskTutorialSkip>>
         -> Thank you, Colonel. I'll do my best.
-        
 <<endif>>
 
 Great. I trust you will do a good job. Make sure no moles get in.
