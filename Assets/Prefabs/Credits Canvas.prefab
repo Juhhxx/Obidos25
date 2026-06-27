@@ -4790,7 +4790,7 @@ MonoBehaviour:
   _titleDelay: 2
   _closeDelay: 2
   _quitButton: 27
-  _fastButton: 32
+  _fastButton: 0
   _fastSpeed: 5
 --- !u!95 &7763502765030550151
 Animator:
